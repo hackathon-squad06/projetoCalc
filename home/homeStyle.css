@@ -1,38 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    width: 100vw;
-    height: 100vh;
     font-family: 'Montserrat', sans-serif;
 }
 
-.divLogo {
-    width: 100px;
-    font-weight: 700;
-    font-size: 1.125rem;
-    margin-left: 2rem;
-    transform: translateY(20px);
-    text-align: left;
+.logoSquad {
+    width: 9rem;
+    height: 1rem;
+    transform: translate(-30rem, 0.9375rem);
 }
 
 .divHeader{
     text-align: right;
-    margin-right: 4rem;
+    height: 2.5rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
 }
-
-/* header {
-    display: inline;
-    width: 100vw;
-    height: 80px;
-} */
 
 header h3 {
-    display: inline;
+    display: inline-block;
     font-size: 1rem;
-    margin-left: 2rem;
-    font-weight: 500;
+    margin-right: 3rem;
+    font-weight: 500;    
+    transform: translate(0, 0.625rem);
 }
 
-
-.containerWelcome {
+.sectionWelcome {
     background-color: #933380;
     color: #fff;
     height: 27rem;
@@ -40,36 +39,74 @@ header h3 {
 
 #textoWelcome {
     width: 23rem;
-    margin-left: 12rem;
+    margin-left: 9rem;
     text-align: justify;
-    transform: translateY(50px)
+    transform: translateY(3.2rem);
 }
 
 #textoWelcome h1 {
     font-size: 1.75rem;
     font-weight: 400;
     line-height: 1.5;
+    margin-bottom: 2rem;
 }
 
 #textoWelcome h2 {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
+    margin-top: 1rem;
 }
 
 .iconeInfo {
-    width: 1rem;
-    height: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
     transform: translateY(20%);
+    cursor: pointer;
 }
 
+.tooltiptext {
+    /* visibility: hidden; */
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    background-color: black;
+    color: #fff;
+    border-radius: 0.37rem;
+    padding: 0.5rem 0.6rem;
+    width: 15rem;
+    text-align: justify;
+    font-size: 0.8rem;
+ 
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    transform: translate(-54%, 2rem);
+  }
+  
+  .iconeInfo:hover + .tooltiptext {
+    /* visibility: visible; */
+    opacity: 1;
+  }
 
-.containerCalc {
-    /* text-align: center; */
+  .iconeInfo + .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+
+
+.sectionCalc {
     height: 32rem;
+    background-color: white;
 }
 
-#sectionCalc {
+#divCalc {
     display: flex;
     flex-direction: column;
     margin-left: auto;
@@ -96,7 +133,7 @@ input[type=number] {
     display: block;
 }
 
-.inputVar span {
+.tituloInput {
     text-align: left;
     font-size: 1rem;
     font-weight: 500;
@@ -104,6 +141,7 @@ input[type=number] {
 
 .inputVar input {
     display: block;
+    padding: 1rem;
     width: 20rem;
     height: 3rem;
     border-radius: 0.5rem;
