@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto Calculadora</title>
+  <link rel="stylesheet" href="homeStyle.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class='divLogo'>
+    <span class="logo">SQUAD 06</span>
+  </div>
+  <div class='divHeader'>
+    <header>
+      <h3>Home</h3>
+      <h3>Página 2</h3>
+      <h3>Página 3</h3>
+    </header>
+  </div>
+
+  <div class="containerWelcome">
+    <section id="textoWelcome">
+      <h1>O que vale mais a pena: alugar ou comprar um imóvel?</h1>
+      <h2>
+        Pensando em se mudar e quer saber o que vale mais a pena de acordo com
+        o seu perfil?
+      </h2>
+      <h2>Faça a simulação e invista em um bom negócio</h2>
+    </section>
+  </div>
+
+  <div class="containerCalc">
+    <section id="sectionCalc">
+      <div class="inputVar" id="valorCompra">
+        <span>Valor de compra</span>
+        <img src="images/info_icon.svg" alt="iconeInfo" class='iconeInfo'>
+        <!-- <button class="svgInfo"></button> -->
+        <input placeholder="R$" type="number">
+      </div>
+      <div class="inputVar" id="valorAluguel">
+        <span>Valor do aluguel</span>
+        <img src="images/info_icon.svg" alt="iconeInfo" class='iconeInfo'>
+        <!-- <button class="svgInfo"></button> -->
+        <input placeholder="R$" type="number">
+      </div>
+      <div class="inputVar" id="custosLocacao">
+        <span>Outros custos com locação</span>
+        <!-- <button class="svgInfo"> -->
+        <img src="images/info_icon.svg" alt="iconeInfo" class='iconeInfo'>
+        <!-- </button> -->
+        <input
+          placeholder="R$ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp por mês"
+          type="number">
+      </div>
+    </section>
+  </div>
+
+  <script src="homeScript.js"></script>
+</body>
+
+</html>

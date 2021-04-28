@@ -1,0 +1,135 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.divLogo {
+    width: 100px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-left: 2rem;
+    transform: translateY(20px);
+    text-align: left;
+}
+
+.divHeader{
+    text-align: right;
+    margin-right: 4rem;
+}
+
+/* header {
+    display: inline;
+    width: 100vw;
+    height: 80px;
+} */
+
+header h3 {
+    display: inline;
+    font-size: 1rem;
+    margin-left: 2rem;
+    font-weight: 500;
+}
+
+
+.containerWelcome {
+    background-color: #933380;
+    color: #fff;
+    height: 27rem;
+}
+
+#textoWelcome {
+    width: 23rem;
+    margin-left: 12rem;
+    text-align: justify;
+    transform: translateY(50px)
+}
+
+#textoWelcome h1 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#textoWelcome h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.iconeInfo {
+    width: 1rem;
+    height: 1rem;
+    transform: translateY(20%);
+}
+
+
+.containerCalc {
+    /* text-align: center; */
+    height: 32rem;
+}
+
+#sectionCalc {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    width: 50rem;
+    height: 27rem;
+    border: 1px solid #C4C4C4;
+    border-radius: 0.5rem;
+}
+
+/* Remove as setas do campo input='number' */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.inputVar {
+    display: block;
+}
+
+.inputVar span {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.inputVar input {
+    display: block;
+    width: 20rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #C4C4C4;
+}
+
+.inputVar input:focus { 
+    border: 1px solid #933380;
+    outline: 0;
+  }
+
+
+#valorCompra {
+    text-align: left;
+    margin-left: 2.5rem;
+    margin-top: 4rem;
+}
+
+#valorAluguel {
+    margin-left: 27rem;
+    transform: translateY(-5rem);
+}
+
+#custosLocacao {
+    text-align: left;
+    margin-left: 2.5rem;
+    margin-top: 2rem;
+}
