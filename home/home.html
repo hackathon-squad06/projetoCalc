@@ -14,18 +14,19 @@
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <div>
-        <span class="logo">Squad 06</span>
-        <span>Home</span>
-        <span>Página 2</span>
-        <span>Página 3</span>
-      </div>
-    </div>
-  </header>
-  <div class="container">
-    <section id="welcome">
+  <div class='divLogo'>
+    <span class="logo">SQUAD 06</span>
+  </div>
+  <div class='divHeader'>
+    <header>
+      <h3>Home</h3>
+      <h3>Página 2</h3>
+      <h3>Página 3</h3>
+    </header>
+  </div>
+
+  <div class="containerWelcome">
+    <section id="textoWelcome">
       <h1>O que vale mais a pena: alugar ou comprar um imóvel?</h1>
       <h2>
         Pensando em se mudar e quer saber o que vale mais a pena de acordo com
@@ -33,26 +34,30 @@
       </h2>
       <h2>Faça a simulação e invista em um bom negócio</h2>
     </section>
-    <section id="calc">
-      <div class="containerCalc">
-        <div class="inputVar" id="valorCompra">
-          <span>Valor de compra</span>
-          <button class="svgInfo"></button>
-          <input placeholder="R$" type="text">
-        </div>
-        <div class="inputVar" id="valorAluguel">
-          <span>Valor do aluguel</span>
-          <button class="svgInfo"></button>
-          <input placeholder="R$" type="text">
-        </div>
-        <div class="inputVar" id="custosLocacao">
-          <span>Outros custos com a locação</span>
-          <button class="svgInfo">
-            <img src="images/info_icon.svg" alt="iconeInfo">
-          </button>
-          <input placeholder="R$ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp por mês"
-            type="text">
-        </div>
+  </div>
+
+  <div class="containerCalc">
+    <section id="sectionCalc">
+      <div class="inputVar" id="valorCompra">
+        <span>Valor de compra</span>
+        <img src="images/info_icon.svg" alt="iconeInfo" class='iconeInfo'>
+        <!-- <button class="svgInfo"></button> -->
+        <input placeholder="R$" type="number">
+      </div>
+      <div class="inputVar" id="valorAluguel">
+        <span>Valor do aluguel</span>
+        <img src="images/info_icon.svg" alt="iconeInfo" class='iconeInfo'>
+        <!-- <button class="svgInfo"></button> -->
+        <input placeholder="R$" type="number">
+      </div>
+      <div class="inputVar" id="custosLocacao">
+        <span>Outros custos com locação</span>
+        <!-- <button class="svgInfo"> -->
+        <img src="images/info_icon.svg" alt="iconeInfo" class='iconeInfo'>
+        <!-- </button> -->
+        <input
+          placeholder="R$ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp por mês"
+          type="number">
       </div>
     </section>
   </div>
