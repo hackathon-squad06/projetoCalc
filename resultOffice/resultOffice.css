@@ -39,7 +39,7 @@ body {
 #painel_despesas {
     display:flex;
     width:48rem;
-    margin-bottom:2rem;
+    margin-bottom:1rem;
 }
 
 #despesas, #despesas_valor {
@@ -65,9 +65,10 @@ body {
 }
 
 #painel_despesas img {
-    margin-left:15rem;
+    margin-left:5rem;
     border-radius:0.5rem;
-    width:15rem;
+    width:24rem;
+    box-shadow:0rem 0rem 0.5rem 0rem #000;
 }
 
 #economia_total {
