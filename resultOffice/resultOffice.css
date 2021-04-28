@@ -12,30 +12,39 @@ body {
 }
 
 #resultado_pagina {
+    display:flex;
+    justify-content:center;
+    align-items:center;
     background-color:#2782B9;
     color:#fff;
-    height:27rem;
+    height:22rem;
     width:100vw;
     max-width:100%;
 }
 
+.container {
+    display:flex;
+    justify-content:center;
+    width:50rem;
+}
+
 .texto_resultado {
-    width: 23rem;
-    margin-left: 12rem;
-    text-align: justify;
-    transform: translateY(50px)
+    display:flex;
+    flex-direction:column;
+    text-align:center;
 }
 
 .texto_resultado h1 {
-    font-size: 1.75rem;
-    font-weight: 400;
-    line-height: 1.5;
+    font-size:1.75rem;
+    font-weight:400;
+    line-height:1.5;
+    margin-bottom:1rem;
 }
 
 .texto_resultado h2 {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
+    font-size:1rem;
+    font-weight:400;
+    line-height:1.5;
 }
 
 #resultado_info {
@@ -47,7 +56,7 @@ body {
     flex-direction:column;
     height:35rem;
     width:50rem;
-    border:0.063rem solid #444;
+    border:0.063rem solid #999;
     border-radius:1rem;
     padding:0rem 1rem;
     background-image:url(/resultOffice/images/kkArtboard\ 1.png);
