@@ -8,27 +8,29 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.logoSquad {
-    width: 9rem;
-    height: 1rem;
-    transform: translate(-30rem, 0.9375rem);
-}
-
 .divHeader{
     text-align: right;
-    height: 2.5rem;
+    height: 3rem;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background-color: white;
+    background: white;
+}
+
+.logoSquad {
+    display: block;
+    text-align: left;
+    width: 9rem;
+    height: 1rem;
+    transform: translateY(0.9375rem);
 }
 
 header h3 {
     display: inline-block;
     font-size: 1rem;
     margin-right: 3rem;
-    font-weight: 500;    
-    transform: translate(0, 0.625rem);
+    font-weight: 500;
+    /* transform: translate(0, 0.625rem); */
 }
 
 .sectionWelcome {
@@ -38,10 +40,12 @@ header h3 {
 }
 
 #textoWelcome {
+    display: block;
     width: 23rem;
-    margin-left: 9rem;
+    margin-left: auto;
+    margin-right: auto;
     text-align: justify;
-    transform: translateY(3.2rem);
+    transform: translate(-12rem, 5rem);
 }
 
 #textoWelcome h1 {
@@ -124,7 +128,6 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 input[type=number] {
   -moz-appearance: textfield;
 }
