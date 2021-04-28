@@ -6,10 +6,40 @@
 
 body {
     display:flex;
-    justify-content:center;
+    flex-direction:column;
     align-items:center;
-    height:100vh;
     font-family: 'Montserrat', sans-serif;
+}
+
+#resultado_pagina {
+    background-color:#2782B9;
+    color:#fff;
+    height:27rem;
+    width:100vw;
+    max-width:100%;
+}
+
+.texto_resultado {
+    width: 23rem;
+    margin-left: 12rem;
+    text-align: justify;
+    transform: translateY(50px)
+}
+
+.texto_resultado h1 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.texto_resultado h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#resultado_info {
+    margin:1rem 0rem;
 }
 
 .quadro {
@@ -21,7 +51,7 @@ body {
     border-radius:1rem;
     padding:0rem 1rem;
     background-image:url(/resultOffice/images/kkArtboard\ 1.png);
-    background-color:#f5f5f5;
+    background-color:#fff;
 }
 
 #titulo {
