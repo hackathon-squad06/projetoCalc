@@ -78,7 +78,7 @@
             >IPCA Anual. Não sabe? Considere a inflação entre 3% e 5% ao
             ano.</span
           >
-          <input placeholder="%" type="number" />
+          <input placeholder="% anual" type="number" />
           <input type="range" name="slider" id="sliderValorValorizacao" />
         </div>
         <div class="inputVar" id="valorIgpm">
@@ -87,7 +87,7 @@
           <span class="tooltiptext"
             >Não sabe? Considere um valor entre 4% e 6% ao ano.</span
           >
-          <input placeholder="%" type="number" />
+          <input placeholder="% anual" type="number" />
           <input type="range" name="slider" id="sliderValorIgpm" />
         </div>
       </div>
@@ -164,7 +164,9 @@
           <input type="range" name="slider" id="sliderPrazoFin" />
         </div>
       </div>
-      <button class="botaoCalcular" type="button">CALCULAR</button>
+      <div class="buttonCalc">
+        <button class="botaoCalcular" type="button">CALCULAR</button>
+      </div>
     </section>
 
     <script src="homeScript.js"></script>

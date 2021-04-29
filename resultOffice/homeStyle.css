@@ -111,8 +111,9 @@ header a:hover {
 
 .tooltiptext {
     opacity: 0;
-    -webkit-transition: opacity 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out;
+    display: none;
+    -webkit-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     border-radius: 0.37rem;
@@ -129,6 +130,7 @@ header a:hover {
   
 .iconeInfo:hover + .tooltiptext {
     opacity: 1;
+    display: inline-block;
 }
 
 .iconeInfo + .tooltiptext::after {
@@ -145,12 +147,17 @@ header a:hover {
 .containerDados {
     display: flex;
     flex-direction: column;
+    padding: 2rem;
     margin-left: auto;
     margin-right: auto;
     margin-top: 4rem;
     width: 50rem;
     border: 1px solid #C4C4C4;
     border-radius: 0.5rem;
+}
+
+.buttonCalc {
+    margin-top: 4rem;
 }
 
 /* Remove as setas do campo input='number' */
@@ -193,13 +200,12 @@ input[type=number] {
 .titleContainer {
     font-weight: bold;
     color: #2782B9;
-    margin: 2rem 2rem 3rem 2.5rem;
+    margin: 2rem 2rem 2.5rem 0rem;
 }
 
 
 #valorCompra {
     text-align: left;
-    margin-left: 2.5rem;
 }
 
 #valorAluguel {
@@ -209,7 +215,6 @@ input[type=number] {
 
 #custosLocacao {
     text-align: left;
-    margin-left: 2.5rem;
     transform: translateY(-5.5rem);
     /* margin-top: 2rem; */
 }
