@@ -19,7 +19,7 @@ body {
 
 .divHeader{
     text-align: right;
-    height: 3.2rem;
+    height: 3.5rem;
     /* position: -webkit-sticky;
     position: sticky;
     top: 0; */
@@ -29,10 +29,9 @@ body {
 header img {
     display: block;
     text-align: left;
-    width: 9rem;
-    height: 1rem;
-    margin-left: 1rem;
-    transform: translateY(1.2rem);
+    height: 1.2rem;
+    margin-left: 3rem;
+    transform: translateY(1.4rem);
 }
 
 header a {
@@ -88,7 +87,7 @@ header a:hover {
     margin: auto;
     margin-left: 2rem;
     transform: translateY(1rem);
-    background-image: url('https://mixkit.imgix.net/art/preview/mixkit-co-workers-doing-a-high-five-after-a-planning-meeting-396-original-large.png');
+    background-image: url('images/img-welcome-workers.png');
     border-radius: 2rem;
     background-size: cover;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.18); 
@@ -213,6 +212,8 @@ input[type=range] {
 .buttonCalcular {
     display: block;
     font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    /* letter-spacing: 1px; */
     width: 15rem;
     height: 4rem;
     padding: 0.8rem;
@@ -233,16 +234,85 @@ input[type=range] {
 }
 
 footer {
-    height: 5rem;
+    height: 18rem;
     background-color: #933380
 }
 
 footer img {
     display: block;
     text-align: left;
-    width: 9rem;
-    height: 1rem;
-    margin-left: 1rem;
-    transform: translateY(2rem);
-    fill: white;
+    height: 1.3rem;
+    margin-left: 3rem;
+    transform: translateY(3rem);
+}
+
+.infoFooter {
+    display: block;
+    width: 30rem;
+    margin-left: 3rem;
+    margin-top: 5rem;
+    color: white;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.linksFooter {
+    display: block;
+    width: 10rem;
+    margin-left: 38rem;
+    margin-top: -3rem;
+    color: white;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+footer a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #178bd3;
+}
+
+hr.solid {
+    border-top: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 1px;
+    width: 95%;
+    margin: auto;
+    transform: translateY(1rem);
+}
+
+.divider {
+	position: relative;
+	margin-top: 2rem;
+	height: 1px;
+}
+
+.div-transparent:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+    background-image: linear-gradient(to right, transparent, rgb(191, 193, 196), transparent);
+}
+
+.direitosFooter {
+    display: block;
+    width: 30rem;
+    margin-left: 3rem;
+    margin-top: 1.5rem;
+    color: white;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 0.7rem;
+    font-weight: 400;
 }
