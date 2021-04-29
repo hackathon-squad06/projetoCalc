@@ -94,13 +94,31 @@
       <div class="containerDados">
         <span class="titleContainer">Dados Financiamento</span>
         <div class="inputVar" id="valorEntrada">
-          <span class="tituloInput">Valor de entrada</span>
+          <span class="tituloInput">Valor da entrada</span>
           <img src="images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
           <span class="tooltiptext"
             >Este valor é variável conforme o banco onde está negociando o financiamento. Geralmente está em torno de 20% e 30%.</span
           >
           <input placeholder="R$" type="number" />
           <input type="range" name="slider" id="sliderValorEntrada" />
+        </div>
+        <div class="inputVar" id="valorCustosFin">
+          <span class="tituloInput">Custos adicionais</span>
+          <img src="images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+          <span class="tooltiptext"
+            >Nesse campo entram custos com vistoria, registro em cartório, emissão e registro de contrato, ITBI, escritura. Estes custos estão discriminados em seu contrato. Caso não souber, calcule um valor de 5% sobre o valor total do imóvel.</span
+          >
+          <input placeholder="R$" type="number" />
+          <input type="range" name="slider" id="sliderCustosFin" />
+        </div>
+        <div class="inputVar" id="valorPrazoFin">
+          <span class="tituloInput">Prazo de financiamento</span>
+          <img src="images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+          <span class="tooltiptext"
+            >Quanto maior o tempo de financiamento, menor será o valor da parcela inicial. Em contrapartida, o valor de juros pagos durante todo o periodo serão maiores.</span
+          >
+          <input placeholder="em meses" type="number" />
+          <input type="range" name="slider" id="sliderPrazoFin" />
         </div>
       </div>
       <button class="botaoCalcular" type="button">CALCULAR</button>
