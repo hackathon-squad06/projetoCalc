@@ -137,7 +137,32 @@
         </div>
       </div>
       <div class="containerDados">
-        <span class="titleContainer"> Dados do investimento </span>
+        <span class="titleContainer">Dados do investimento </span>
+        <div class="inputVar" id="valorInvestimento">
+          <span class="tituloInput">Valor do investimento mensal</span>
+          <img src="images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+          <span class="tooltiptext"
+            >Diferença entre o valor da prestação e o valor do aluguel, no qual deverá ser aplicado mensalmente.</span
+          >
+          <input placeholder="R$" type="number" />
+        </div>
+        <div class="inputVar" id="valorDepositoIn">
+          <span class="tituloInput">Depósito inicial</span>
+          <img src="images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+          <span class="tooltiptext"
+            >O valor do depósito será igual ao valor de entrada e custos do financiamento, pois presume-se que você possui esse valor em mãos.</span
+          >
+          <input placeholder="R$" type="number" />
+        </div>
+        <div class="inputVar" id="valorRentabilidade">
+          <span class="tituloInput">Rentabilidade mensal</span>
+          <img src="images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+          <span class="tooltiptext"
+            >Rentabilidade mensal no qual o depósito inicial +  valor investido mensal serão aplicados. Caso não conheça, sugerimos aplicar a rentabilidade de uma renda fixa atual.</span
+          >
+          <input placeholder="% em meses" type="number" />
+          <input type="range" name="slider" id="sliderPrazoFin" />
+        </div>
       </div>
       <button class="botaoCalcular" type="button">CALCULAR</button>
     </section>
