@@ -111,8 +111,8 @@ header a:hover {
     opacity: 0;
     /* display: none; */
     visibility: hidden;
-    -webkit-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     border-radius: 0.37rem;
