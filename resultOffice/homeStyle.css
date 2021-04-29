@@ -219,6 +219,11 @@ input[type=number] {
     /* margin-top: 2rem; */
 }
 
+#valorIgpm {
+    margin-left: 27rem;
+    transform: translateY(-8.5rem);
+}
+
 .botaoCalcular {
     display: block;
     font-size: 1.3rem;
