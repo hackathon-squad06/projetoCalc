@@ -1,6 +1,6 @@
 # projetoCalc
 Projeto Hackathon - Squad 06
 
-feature-variaveisHome branch
+feature-cssVariaveisHome branch
 
-Feature focada em adicionar as variáveis para os cálculos
+Feature focada em estilizar as variáveis para os cálculos
