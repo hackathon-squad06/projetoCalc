@@ -11,9 +11,9 @@ body {
 .divHeader{
     text-align: right;
     height: 3rem;
-    position: -webkit-sticky;
+    /* position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 0; */
     background: white;
 }
 
@@ -22,30 +22,49 @@ body {
     text-align: left;
     width: 9rem;
     height: 1rem;
-    transform: translateY(0.9375rem);
+    transform: translateY(1.2rem);
 }
 
-header h3 {
+/* header h3 {
     display: inline-block;
     font-size: 1rem;
     margin-right: 3rem;
     font-weight: 500;
+} */
+
+/* header h3:hover {
+    color: blue;
+} */
+
+header a {
+    display: inline-block;
+    font-size: 1rem;
+    margin-right: 3rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
     /* transform: translate(0, 0.625rem); */
+}
+
+header a:hover {
+    color: #933380;
 }
 
 .sectionWelcome {
     background-color: #933380;
     color: #fff;
     height: 27rem;
+    text-align: center;
 }
 
 #textoWelcome {
-    display: block;
+    display: inline-block;
     width: 23rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 3rem;
+    margin-right: 2rem;
     text-align: justify;
-    transform: translate(-12rem, 5rem);
+    padding: 1rem;
+    /* transform: translate(-12rem, 5rem); */
 }
 
 #textoWelcome h1 {
@@ -62,6 +81,25 @@ header h3 {
     margin-top: 1rem;
 }
 
+#imagemWelcome {
+    height: 20rem;
+    width: 20rem;
+    display: inline-block;
+    margin: auto;
+    margin-left: 2rem;
+    transform: translateY(2rem);
+    background-image: url('https://mixkit.imgix.net/art/preview/mixkit-co-workers-doing-a-high-five-after-a-planning-meeting-396-original-large.png');
+    border-radius: 2rem;
+    background-size: cover;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.18); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.18);
+}
+
+.sectionCalc {
+    height: 32rem;
+    background-color: white;
+}
+
 .iconeInfo {
     width: 1.2rem;
     height: 1.2rem;
@@ -70,10 +108,9 @@ header h3 {
 }
 
 .tooltiptext {
-    /* visibility: hidden; */
     opacity: 0;
-    -webkit-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
     background-color: black;
     color: #fff;
     border-radius: 0.37rem;
@@ -89,7 +126,6 @@ header h3 {
   }
   
   .iconeInfo:hover + .tooltiptext {
-    /* visibility: visible; */
     opacity: 1;
   }
 
@@ -103,12 +139,6 @@ header h3 {
     border-style: solid;
     border-color: transparent transparent black transparent;
   }
-
-
-.sectionCalc {
-    height: 32rem;
-    background-color: white;
-}
 
 #divCalc {
     display: flex;
@@ -152,8 +182,9 @@ input[type=number] {
     border: 1px solid #C4C4C4;
 }
 
-.inputVar input:focus { 
-    border: 1px solid #933380;
+.inputVar input:focus {
+    background-color: #f1ddf1;
+    /* border: 1px solid #933380; */
     outline: 0;
   }
 
@@ -172,5 +203,26 @@ input[type=number] {
 #custosLocacao {
     text-align: left;
     margin-left: 2.5rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
+}
+
+.botaoCalcular {
+    display: block;
+    font-size: 1.3rem;
+    width: 15rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    margin: auto;
+    color: white;
+    background-color: #a53b90;
+    border: 1px solid #C4C4C4;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.botaoCalcular:hover{
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.18);
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.18);
+    background-color: #af008c;
 }
