@@ -3,6 +3,15 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* Remove as setas do campo input='number' */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -26,17 +35,6 @@ body {
     transform: translateY(1.2rem);
 }
 
-/* header h3 {
-    display: inline-block;
-    font-size: 1rem;
-    margin-right: 3rem;
-    font-weight: 500;
-} */
-
-/* header h3:hover {
-    color: blue;
-} */
-
 header a {
     display: inline-block;
     font-size: 1rem;
@@ -50,6 +48,7 @@ header a {
 header a:hover {
     color: #933380;
 }
+
 
 .sectionWelcome {
     background-color: #933380;
@@ -66,7 +65,6 @@ header a:hover {
     margin-left: -1rem;
     text-align: justify;
     padding: 1rem;
-    /* transform: translate(-12rem, 5rem); */
 }
 
 #textoWelcome h1 {
@@ -97,8 +95,8 @@ header a:hover {
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.18);
 }
 
+
 .sectionCalc {
-    height: 35rem;
     background-color: white;
 }
 
@@ -111,6 +109,8 @@ header a:hover {
 
 .tooltiptext {
     opacity: 0;
+    /* display: none; */
+    visibility: hidden;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
     background-color: rgba(0, 0, 0, 0.8);
@@ -128,6 +128,8 @@ header a:hover {
 }
   
 .iconeInfo:hover + .tooltiptext {
+    /* display: inline-block; */
+    visibility: visible;
     opacity: 1;
 }
 
@@ -142,34 +144,38 @@ header a:hover {
     border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
 }
 
-#divCalc {
-    display: flex;
-    flex-direction: column;
+
+.containerDados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 7rem 10rem 10rem;
+    grid-gap: 1rem;
+    width: 50rem;
     margin-left: auto;
     margin-right: auto;
     margin-top: 4rem;
-    width: 50rem;
-    height: 31rem;
-    border: 1px solid #C4C4C4;
+    border: 2px solid #C4C4C4;
     border-radius: 0.5rem;
 }
 
-/* Remove as setas do campo input='number' */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type=number] {
-  -moz-appearance: textfield;
+.titleContainer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.2rem;
+    color: #2782B9;
+    margin: 3rem 2rem 2rem 3rem;
 }
 
 .inputVar {
-    display: inline-block;
+    margin-left: 3rem;
+    margin-bottom: 3em;
 }
 
 .tituloInput {
-    text-align: left;
+    /* display: inline-block;
+    text-align: left; */
     font-size: 1rem;
     font-weight: 500;
 }
@@ -177,7 +183,7 @@ input[type=number] {
 .inputVar input {
     display: block;
     padding: 1rem;
-    width: 20rem;
+    width: 18rem;
     height: 3rem;
     border-radius: 0.5rem;
     margin-top: 0.5rem;
@@ -185,51 +191,43 @@ input[type=number] {
 }
 
 .inputVar input:focus {
-    /* background-color: #f1ddf1; */
     background-color: #daeef8;
-    /* border: 1px solid #933380; */
     outline: 0;
 }
 
-
-#valorCompra {
-    text-align: left;
-    margin-left: 2.5rem;
-    margin-top: 4rem;
+input[type=range] {
+    margin-top: -0.3rem;
+    /* display: none; */
 }
 
-#valorAluguel {
-    margin-left: 27rem;
-    transform: translateY(-8.5rem);
+#valorRentabilidade {
+    transform: translateY(-2rem);
 }
 
-#custosLocacao {
-    text-align: left;
-    margin-left: 2.5rem;
-    transform: translateY(-5.5rem);
-    /* margin-top: 2rem; */
+
+.buttonCalc {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
 }
 
-.botaoCalcular {
+.buttonCalcular {
     display: block;
     font-size: 1.3rem;
     width: 15rem;
-    height: 5rem;
+    height: 4rem;
     padding: 0.8rem;
     border-radius: 0.5rem;
     margin: auto;
     color: white;
     transform: translateY(-3.5rem);
-    /* background-color: #a53b90; */
     background-color: #2782B9;
     border: 1px solid #C4C4C4;
     cursor: pointer;
     transition: all 0.2s;
 }
 
-.botaoCalcular:hover{
+.buttonCalcular:hover{
     box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.18);
     box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.18);
-    /* background-color: #af008c; */
     background-color: #178bd3;
 }
