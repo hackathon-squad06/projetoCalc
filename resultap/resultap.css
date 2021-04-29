@@ -134,3 +134,11 @@ h1 {
 .valores li {
     background-color:#B8D0DB;
 }
+
+.painel_info:nth-child(3n) .topicos li {
+        background-color:#933380;
+}
+
+.painel_info:nth-child(3n) .valores li {
+    background-color:#B795B7;
+}
