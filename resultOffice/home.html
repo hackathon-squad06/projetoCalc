@@ -36,8 +36,8 @@
     </section>
 
     <section class="sectionCalc">
-      <div id="divDadosImovel">
-        <span id="titleImovel">Dados do imóvel</span>
+      <div class="containerDados" id="divDadosImovel">
+        <span class="titleContainer">Dados do imóvel</span>
         <div class="inputVar" id="valorCompra">
           <span class="tituloInput">Valor de compra</span>
           <img src="images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
@@ -75,7 +75,8 @@
           <span class="tituloInput">Valorização anual do imóvel</span>
           <img src="images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
           <span class="tooltiptext"
-            >IPCA Anual. Não sabe? Considere a inflação entre 3% e 5% ao ano.</span
+            >IPCA Anual. Não sabe? Considere a inflação entre 3% e 5% ao
+            ano.</span
           >
           <input placeholder="%" type="number" />
           <input type="range" name="slider" id="sliderValorValorizacao" />
@@ -88,6 +89,18 @@
           >
           <input placeholder="%" type="number" />
           <input type="range" name="slider" id="sliderValorIgpm" />
+        </div>
+      </div>
+      <div class="containerDados">
+        <span class="titleContainer">Dados Financiamento</span>
+        <div class="inputVar" id="valorEntrada">
+          <span class="tituloInput">Valor de entrada</span>
+          <img src="images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+          <span class="tooltiptext"
+            >Este valor é variável conforme o banco onde está negociando o financiamento. Geralmente está em torno de 20% e 30%.</span
+          >
+          <input placeholder="R$" type="number" />
+          <input type="range" name="slider" id="sliderValorEntrada" />
         </div>
       </div>
       <button class="botaoCalcular" type="button">CALCULAR</button>
