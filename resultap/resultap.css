@@ -56,34 +56,16 @@ header a:hover {
     align-items:center;
     background-color:#2782B9;
     color:#fff;
-    height:10rem;
+    height:8rem;
     width:100vw;
     max-width:100%;
 }
 
-.container {
-    display:flex;
-    justify-content:center;
-    width:50rem;
-}
-
-.texto_resultado {
-    display:flex;
-    flex-direction:column;
-    text-align:center;
-}
-
-.texto_resultado h1 {
+h1 {
     font-size:1.75rem;
     font-weight:400;
     line-height:1.5;
     margin-bottom:1rem;
-}
-
-.texto_resultado h2 {
-    font-size:1rem;
-    font-weight:400;
-    line-height:1.5;
 }
 
 #resultado_info {
@@ -109,11 +91,6 @@ header a:hover {
     margin:1rem 0rem;
 }
 
-.descricao {
-    font-size:1.5rem;
-    margin:2rem 0rem 0.5rem 0rem;
-}
-
 .quadro img {
     margin-left:5rem;
     border-radius:0.5rem;
@@ -126,11 +103,34 @@ header a:hover {
     background-color:#933380;
     color:#fff;
     border-radius:0.3rem;
-    padding:1rem;
+    padding:0.3rem;
     width:fit-content;
 }
 
-.valores_totais:nth-child(even) {
+.painel_info {
+    display:flex;
+    width:48rem;
+    margin-bottom:1rem;
+}
+
+.topicos, .valores {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+
+.topicos li, .valores li {
+    padding:0.5rem;
+    border:0.063rem solid #fff;
+    border-radius:0.3rem;
+    list-style:none;
+}
+
+.topicos li {
     background-color:#2782B9;
-    margin:1rem 0rem;
+    color:#fff;    
+}
+
+.valores li {
+    background-color:#B8D0DB;
 }
