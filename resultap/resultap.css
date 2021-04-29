@@ -11,6 +11,45 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.divHeader{
+    display:flex;
+    text-align: right;
+    height: 3.2rem;
+    /* position: -webkit-sticky;
+    position: sticky;
+    top: 0; */
+    background: white;
+}
+
+header {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logoSquad {
+    display: block;
+    text-align: left;
+    width: 9rem;
+    height: 1rem;
+    margin-left: 1rem;
+    /*transform: translateY(1.2rem);*/
+}
+
+header a {
+    display: inline-block;
+    font-size: 1rem;
+    margin-right: 3rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    /* transform: translate(0, 0.625rem); */
+}
+
+header a:hover {
+    color: #933380;
+}
+
 #resultado_pagina {
     display:flex;
     justify-content:center;
