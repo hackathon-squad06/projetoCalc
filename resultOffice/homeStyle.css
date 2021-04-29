@@ -142,14 +142,13 @@ header a:hover {
     border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
 }
 
-#divCalc {
+#divDadosImovel {
     display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     margin-top: 4rem;
     width: 50rem;
-    height: 31rem;
     border: 1px solid #C4C4C4;
     border-radius: 0.5rem;
 }
@@ -189,6 +188,12 @@ input[type=number] {
     background-color: #daeef8;
     /* border: 1px solid #933380; */
     outline: 0;
+}
+
+#titleImovel {
+    font-weight: bold;
+    color: #2782B9;
+    margin: 2rem 2rem 0rem 2.5rem;
 }
 
 
