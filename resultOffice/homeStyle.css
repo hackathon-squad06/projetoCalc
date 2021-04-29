@@ -26,7 +26,7 @@ body {
     background: white;
 }
 
-.logoSquad {
+header img {
     display: block;
     text-align: left;
     width: 9rem;
@@ -230,4 +230,19 @@ input[type=range] {
     box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.18);
     box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.18);
     background-color: #178bd3;
+}
+
+footer {
+    height: 5rem;
+    background-color: #933380
+}
+
+footer img {
+    display: block;
+    text-align: left;
+    width: 9rem;
+    height: 1rem;
+    margin-left: 1rem;
+    transform: translateY(2rem);
+    fill: white;
 }
