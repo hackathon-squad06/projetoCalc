@@ -1,6 +1,6 @@
 # projetoCalc
 Projeto Hackathon - Squad 06
 
-feature-cssVariaveisHome branch
+feature-footerHome branch
 
-Feature focada em estilizar as variáveis para os cálculos
+Feature focada em criar e estilizar o footer da Home
