@@ -1,6 +1,6 @@
 # projetoCalc
 Projeto Hackathon - Squad 06
 
-feature-darkMode branch
+feature-displayResultado branch
 
-Feature focada em criar e estilizar o darkMode da Home
+Feature focada em mostrar o resultado na página Result Ap
