@@ -9,15 +9,19 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 input[type=number] {
   -moz-appearance: textfield;
 }
 
+
+
 body {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     font-family: 'Montserrat', sans-serif;
 }
-
-
 
 header{
     display:flex;
@@ -33,7 +37,8 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    width:50rem;
+    padding:0rem 2rem;
+    width:100rem; /*50rem para ficar no centro da página*/
 }
 
 .container img {
@@ -57,9 +62,14 @@ nav a:hover {
 
 
 .sectionWelcome {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:25rem;
+    width:100vw;
+    max-width:100%;
     background-color: #933380;
     color: #fff;
-    height: 25rem;
     text-align: center;
 }
 
@@ -90,9 +100,6 @@ nav a:hover {
 #imagemWelcome {
     height: 19rem;
     width: 19rem;
-    display: inline-block;
-    margin: auto;
-    margin-left: 2rem;
     transform: translateY(1rem);
     background-image: url('/images/img-welcome-workers.png');
     border-radius: 2rem;
@@ -226,13 +233,13 @@ input[type=range] {
     height:4rem;
     padding:0.8rem;
     border-radius:0.5rem;
-    color:white;
+    color:#fff;
     background-color:#2782B9;
     border: 1px solid#C4C4C4;
     cursor:pointer;
     margin:1rem 0rem;
     text-decoration:none;
-    margin:2rem 0rem;
+    margin:2.5rem 0rem;
 }
 
 .btnCalcular:hover {
@@ -240,38 +247,36 @@ input[type=range] {
 }
 
 
-
 footer {
-    height:18rem;
+    display:flex;
+    justify-content:center;
+    height:16rem;
+    width:100vw;
+    max-width:100%;
     background-color:#933380
 }
 
-footer img {
-    display:block;
-    text-align:left;
-    height:1.3rem;
-    margin-left:3rem;
-    transform:translateY(3rem);
+/* .column usando no container do footer*/
+.column {
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:space-evenly;
 }
 
 .infoFooter {
-    display: block;
-    width: 30rem;
-    margin-left: 3rem;
-    margin-top: 5rem;
-    color: white;
-    text-align: justify;
-    line-height: 1.5;
-    font-size: 0.9rem;
-    font-weight: 400;
+    display:flex;
+    justify-content:space-between;
+    width:46rem;
+    color:#fff;
+    line-height:1.5;
+    font-size:0.9rem;
+    font-weight:400;
 }
 
 .linksFooter {
     display: block;
-    width: 10rem;
-    margin-left: 38rem;
-    margin-top: -3rem;
-    color: white;
+    width:fit-content;
+    color: #fff;
     text-align: left;
     line-height: 1.5;
     font-size: 0.9rem;
@@ -279,8 +284,9 @@ footer img {
 }
 
 footer a {
-    display: block;
-    color: white;
+    display:flex;
+    width:fit-content;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -288,40 +294,31 @@ footer a:hover {
     color: #178bd3;
 }
 
-hr.solid {
-    border-top: 1px solid rgba(255, 255, 255, 0);
-    border-radius: 1px;
-    width: 95%;
-    margin: auto;
-    transform: translateY(1rem);
-}
-
 .divider {
-	position: relative;
-	margin-top: 2rem;
-	height: 1px;
+	position:relative;
+    top:11rem;
+	height:0.063rem;
+    width:95vw;
+    max-width:100%;
 }
 
 .div-transparent:before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 5%;
-	right: 5%;
-	width: 90%;
-	height: 1px;
-    background-image: linear-gradient(to right, transparent, rgb(191, 193, 196), transparent);
+	content:"";
+	position:absolute;
+	top:0;
+	left:5%;
+	right:5%;
+	width:90%;
+	height:0.063rem;
+    background-image: linear-gradient(to right, transparent, #bfc1c4, transparent);
 }
 
 .direitosFooter {
-    display: block;
+    display:flex;
     width: 30rem;
-    margin-left: 3rem;
-    margin-top: 1.5rem;
-    color: white;
+    color: #fff;
     text-align: justify;
     line-height: 1.5;
     font-size: 0.7rem;
     font-weight: 400;
 }
-

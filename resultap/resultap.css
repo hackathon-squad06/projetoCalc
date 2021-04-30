@@ -25,14 +25,8 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    width:50rem; /*50rem para ficar no centro da página*/
-}
-
-/* .column usando no container do footer*/
-.column {
-    flex-direction:column;
-    align-items:flex-start;
-    justify-content:space-around;
+    padding:0rem 2rem;
+    width:100rem; /*50rem para ficar no centro da página*/
 }
 
 .container img {
@@ -80,15 +74,16 @@ h1 {
     flex-direction:column;
     height:35rem;
     width:50rem;
-    border:0.063rem solid #999;
+    border:0.126rem solid #C4C4C4;
     border-radius:1rem;
-    padding:0rem 1rem;
+    padding:1rem;
     background-image:url(/images/kkArtboard\ 1.png);
     background-color:#fff;
 }
 
+/* newHeight - Altera a altura do quadro*/
 .newHeight {
-    height:10rem;
+    height:12rem;
     text-align:justify;
 }
 
@@ -101,14 +96,7 @@ h1 {
     font-size:2rem;
     font-weight:700;
     color:#2782B9;
-    margin:1rem 0rem;
-}
-
-.quadro img {
-    margin-left:5rem;
-    border-radius:0.5rem;
-    width:24rem;
-    box-shadow:0rem 0rem 0.5rem 0rem #000;
+    margin:0.5rem 0rem;
 }
 
 .valoresTotais {
@@ -173,11 +161,11 @@ h1 {
     height: 4rem;
     padding: 0.8rem;
     border-radius: 0.5rem;
-    color: white;
+    color: #fff;
     background-color: #2782B9;
     border: 1px solid #C4C4C4;
     cursor: pointer;
-    margin:2rem 0rem;
+    margin:2.5rem 0rem;
     text-decoration:none;
 }
 
@@ -190,17 +178,24 @@ h1 {
 footer {
     display:flex;
     justify-content:center;
-    height:18rem;
+    height:16rem;
     width:100vw;
     max-width:100%;
     background-color:#933380
 }
 
+/* .column usando no container do footer*/
+.column {
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:space-evenly;
+}
+
 .infoFooter {
     display:flex;
     justify-content:space-between;
-    width:50rem;
-    color:white;
+    width:46rem;
+    color:#fff;
     line-height:1.5;
     font-size:0.9rem;
     font-weight:400;
@@ -208,8 +203,8 @@ footer {
 
 .linksFooter {
     display: block;
-    width: 10rem;
-    color: white;
+    width:fit-content;
+    color:#fff;
     text-align: left;
     line-height: 1.5;
     font-size: 0.9rem;
@@ -217,8 +212,9 @@ footer {
 }
 
 footer a {
-    display: block;
-    color: white;
+    display:flex;
+    width:fit-content;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -226,10 +222,29 @@ footer a:hover {
     color: #178bd3;
 }
 
+.divider {
+	position:relative;
+    top:11rem;
+	height:0.063rem;
+    width:95vw;
+    max-width:100%;
+}
+
+.div-transparent:before {
+	content:"";
+	position:absolute;
+	top:0;
+	left:5%;
+	right:5%;
+	width:90%;
+	height:0.063rem;
+    background-image: linear-gradient(to right, transparent, #bfc1c4, transparent);
+}
+
 .direitosFooter {
     display:flex;
     width: 30rem;
-    color: white;
+    color:#fff;
     text-align: justify;
     line-height: 1.5;
     font-size: 0.7rem;
