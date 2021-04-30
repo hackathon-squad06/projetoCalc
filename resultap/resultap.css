@@ -15,9 +15,9 @@ body {
     display:flex;
     text-align: right;
     height: 3.2rem;
-    /* position: -webkit-sticky;
-    position: sticky;
-    top: 0; */
+    /*position: -webkit-sticky;
+    position: sticky;*/
+    top: 0; 
     background: white;
 }
 
@@ -84,6 +84,16 @@ h1 {
     background-color:#fff;
 }
 
+.new_height {
+    height:10rem;
+    text-align:justify;
+}
+
+.quadro p {
+    font-size:1.2rem;
+    margin:0.5rem 0rem;
+}
+
 #titulo {
     font-size:2rem;
     font-weight:700;
@@ -121,7 +131,8 @@ h1 {
 
 .topicos li, .valores li {
     padding:0.5rem;
-    border:0.063rem solid #fff;
+    margin:0.030rem;
+    border:0.030rem solid #fff;
     border-radius:0.3rem;
     list-style:none;
 }
