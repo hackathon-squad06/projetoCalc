@@ -87,7 +87,7 @@ header a:hover {
     margin: auto;
     margin-left: 2rem;
     transform: translateY(1rem);
-    background-image: url('images/img-welcome-workers.png');
+    background-image: url('/images/img-welcome-workers.png');
     border-radius: 2rem;
     background-size: cover;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.18); 
