@@ -1,6 +1,6 @@
 # projetoCalc
 Projeto Hackathon - Squad 06
 
-feature-footerHome branch
+feature-darkMode branch
 
-Feature focada em criar e estilizar o footer da Home
+Feature focada em criar e estilizar o darkMode da Home

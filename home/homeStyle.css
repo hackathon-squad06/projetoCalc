@@ -3,6 +3,59 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --body-bg: white;
+    --header-bg: white;
+    --nav-text: black;
+    --nav-hover: #2782B9;
+    --welcome-bg: #933380;
+    --welcome-text: white;
+    --box-shadow: rgba(0,0,0,0.18);
+    --calc-bg: white;
+    --tituloInput-text: black;
+    --tooltip-bg: rgba(0, 0, 0, 0.8);
+    --tooltip-text: white;
+    --contDados-border: #C4C4C4;
+    --contDados-title: #2782B9;
+    --inputVar-bg: white;
+    --inputVar-border: #C4C4C4;
+    --inputVar-focus: #daeef8;
+    --buttonCalc-bg: #2782B9;
+    --buttonCalc-border: #C4C4C4;
+    --buttonCalc-hover: #178bd3;
+    --footer-bg: #933380;
+    --footer-text: white;
+    --footer-hover: #178bd3;
+    --footer-divider: rgb(191, 193, 196);
+}
+
+.dark-mode:root {
+    --body-bg: #202040;
+    --header-bg: #202040;
+    --nav-text: #e7e7e7;
+    --nav-hover: #b030b0;
+    --welcome-bg: #602080;
+    --welcome-text: #e7e7e7;
+    --box-shadow: rgba(0,0,0,0.18);
+    --calc-bg: #202040;
+    --tituloInput-text: #e7e7e7;
+    --tooltip-bg: black;
+    --tooltip-text: white;
+    --contDados-border: #b030b0;
+    --contDados-title: #68bef3;
+    --inputVar-bg: #e7e7e7;
+    --inputVar-border: #C4C4C4;
+    --inputVar-focus: #f1f7fa;
+    --buttonCalc-bg: #962b96;
+    --buttonCalc-border: #C4C4C4;
+    --buttonCalc-hover: #b030b0;
+    --footer-bg: #602080;
+    --footer-text: #e7e7e7;
+    --footer-hover: #b030b0;
+    --footer-divider: rgb(191, 193, 196);
+}
+
 /* Remove as setas do campo input='number' */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -14,44 +67,60 @@ input[type=number] {
 }
 
 body {
+    background-color: var(--body-bg);
     font-family: 'Montserrat', sans-serif;
 }
 
-.divHeader{
-    text-align: right;
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: center;
     height: 3.5rem;
     /* position: -webkit-sticky;
     position: sticky;
     top: 0; */
-    background: white;
+    background: var(--header-bg);
 }
 
-header img {
-    display: block;
-    text-align: left;
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50rem;
+}
+
+.container img {
+    /* display: flex; */
     height: 1.2rem;
-    margin-left: 3rem;
-    transform: translateY(1.4rem);
 }
 
-header a {
-    display: inline-block;
-    font-size: 1rem;
-    margin-right: 3rem;
+#modeSwitch {
+    cursor: pointer;
+    display: inline;
+    height: 1.2rem;
+    text-align: right;
+    transform: translate(1rem, 0.2rem);
+}
+
+nav a {
+    font-size: 1.2rem;
+    padding: 0.7rem;
     font-weight: 500;
-    color: black;
+    color: var(--nav-text);
     text-decoration: none;
-    /* transform: translate(0, 0.625rem); */
 }
 
-header a:hover {
-    color: #933380;
+nav a:hover {
+    color: var(--nav-hover);
+    border-bottom:0.3rem solid var(--nav-hover);
 }
 
 
+/* SECTION WELCOME */
 .sectionWelcome {
-    background-color: #933380;
-    color: #fff;
+    background-color: var(--welcome-bg);
+    color: var(--welcome-text);
     height: 25rem;
     text-align: center;
 }
@@ -90,13 +159,13 @@ header a:hover {
     background-image: url('/images/img-welcome-workers.png');
     border-radius: 2rem;
     background-size: cover;
-    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.18); 
-    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.18);
+    -webkit-box-shadow: 5px 5px 15px 5px var(--box-shadow); 
+    box-shadow: 5px 5px 15px 5px var(--box-shadow);
 }
 
-
+/* SECTION CALC */
 .sectionCalc {
-    background-color: white;
+    background-color: var(--calc-bg);
 }
 
 .iconeInfo {
@@ -112,8 +181,8 @@ header a:hover {
     visibility: hidden;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-text);
     border-radius: 0.37rem;
     padding: 0.5rem 0.6rem;
     width: 15rem;
@@ -140,7 +209,7 @@ header a:hover {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+    border-color: transparent transparent var(--tooltip-bg) transparent;
 }
 
 
@@ -153,7 +222,7 @@ header a:hover {
     margin-left: auto;
     margin-right: auto;
     margin-top: 4rem;
-    border: 2px solid #C4C4C4;
+    border: 2px solid var(--contDados-border);
     border-radius: 0.5rem;
 }
 
@@ -163,7 +232,7 @@ header a:hover {
     font-weight: bold;
     text-align: left;
     font-size: 1.2rem;
-    color: #2782B9;
+    color: var(--contDados-title);
     margin: 3rem 2rem 2rem 3rem;
 }
 
@@ -177,26 +246,34 @@ header a:hover {
     text-align: left; */
     font-size: 1rem;
     font-weight: 500;
+    color: var(--tituloInput-text);
 }
 
 .inputVar input {
     display: block;
     padding: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
     width: 18rem;
     height: 3rem;
     border-radius: 0.5rem;
     margin-top: 0.5rem;
-    border: 1px solid #C4C4C4;
+    background-color: var(--inputVar-bg);
+    border: 1px solid var(--inputVar-border);
 }
 
 .inputVar input:focus {
-    background-color: #daeef8;
+    background-color: var(--inputVar-focus);
     outline: 0;
 }
 
+/* .inputReadonly {
+    
+} */
+
 input[type=range] {
     margin-top: -0.3rem;
-    /* display: none; */
+    display: none;
 }
 
 #valorRentabilidade {
@@ -221,21 +298,21 @@ input[type=range] {
     margin: auto;
     color: white;
     transform: translateY(-3.5rem);
-    background-color: #2782B9;
-    border: 1px solid #C4C4C4;
+    background-color: var(--buttonCalc-bg);
+    border: 1px solid var(--buttonCalc-border);
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .buttonCalcular:hover{
-    box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.18);
-    box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.18);
-    background-color: #178bd3;
+    /* box-shadow: 1px 1px 2px 1px var(--box-shadow);
+    box-shadow: 1px 1px 2px 1px var(--box-shadow); */
+    background-color: var(--buttonCalc-hover);
 }
 
 footer {
     height: 18rem;
-    background-color: #933380
+    background-color: var(--footer-bg);
 }
 
 footer img {
@@ -251,7 +328,7 @@ footer img {
     width: 30rem;
     margin-left: 3rem;
     margin-top: 5rem;
-    color: white;
+    color: var(--footer-text);
     text-align: justify;
     line-height: 1.5;
     font-size: 0.9rem;
@@ -263,7 +340,7 @@ footer img {
     width: 10rem;
     margin-left: 38rem;
     margin-top: -3rem;
-    color: white;
+    color: var(--footer-text);
     text-align: left;
     line-height: 1.5;
     font-size: 0.9rem;
@@ -272,21 +349,21 @@ footer img {
 
 footer a {
     display: block;
-    color: white;
+    color: var(--footer-text);
     text-decoration: none;
 }
 
 footer a:hover {
-    color: #178bd3;
+    color: var(--footer-hover);
 }
 
-hr.solid {
+/* hr.solid {
     border-top: 1px solid rgba(255, 255, 255, 0);
     border-radius: 1px;
     width: 95%;
     margin: auto;
     transform: translateY(1rem);
-}
+} */
 
 .divider {
 	position: relative;
@@ -302,7 +379,7 @@ hr.solid {
 	right: 5%;
 	width: 90%;
 	height: 1px;
-    background-image: linear-gradient(to right, transparent, rgb(191, 193, 196), transparent);
+    background-image: linear-gradient(to right, transparent, var(--footer-divider), transparent);
 }
 
 .direitosFooter {
@@ -310,7 +387,7 @@ hr.solid {
     width: 30rem;
     margin-left: 3rem;
     margin-top: 1.5rem;
-    color: white;
+    color: var(--footer-text);
     text-align: justify;
     line-height: 1.5;
     font-size: 0.7rem;
