@@ -40,8 +40,8 @@
     --box-shadow: rgba(0,0,0,0.18);
     --calc-bg: #202040;
     --tituloInput-text: #e7e7e7;
-    --tooltip-bg: white;
-    --tooltip-text: black;
+    --tooltip-bg: black;
+    --tooltip-text: white;
     --contDados-border: #b030b0;
     --contDados-title: #68bef3;
     --inputVar-bg: #e7e7e7;
@@ -90,7 +90,7 @@ header{
     width: 50rem;
 }
 
-.container img .logoSquad {
+.container img {
     /* display: flex; */
     height: 1.2rem;
 }
@@ -252,6 +252,8 @@ nav a:hover {
 .inputVar input {
     display: block;
     padding: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
     width: 18rem;
     height: 3rem;
     border-radius: 0.5rem;
@@ -264,6 +266,10 @@ nav a:hover {
     background-color: var(--inputVar-focus);
     outline: 0;
 }
+
+/* .inputReadonly {
+    
+} */
 
 input[type=range] {
     margin-top: -0.3rem;
@@ -299,8 +305,8 @@ input[type=range] {
 }
 
 .buttonCalcular:hover{
-    box-shadow: 1px 1px 2px 1px var(--box-shadow);
-    box-shadow: 1px 1px 2px 1px var(--box-shadow);
+    /* box-shadow: 1px 1px 2px 1px var(--box-shadow);
+    box-shadow: 1px 1px 2px 1px var(--box-shadow); */
     background-color: var(--buttonCalc-hover);
 }
 

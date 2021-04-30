@@ -61,7 +61,7 @@
                 <input type="range" class="slider" name="slider" id="sliderValorAluguel" />
             </div>
 
-            <div class="inputVar" id="custosLocacao">
+            <div class="inputVar" id="custosLocacao" style="display: none">
                 <span class="tituloInput">Outros custos com locação</span>
                 <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                 <span class="tooltiptext">Como condomínio e IPTU são custos que você terá alugando ou
@@ -79,7 +79,7 @@
                 <input type="range" class="slider" name="slider" id="sliderValorValorizacao" />
             </div>
 
-            <div class="inputVar" id="valorIgpm">
+            <div class="inputVar" id="valorIgpm" style="display: none">
                 <span class="tituloInput">Valor do IGPM anual</span>
                 <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                 <span class="tooltiptext">Não sabe? Considere um valor entre 4% e 6% ao ano.</span>
@@ -137,7 +137,7 @@
                 <span class="tooltiptext">Diferença entre o valor da prestação e o valor do aluguel, no qual deverá ser
                     aplicado
                     mensalmente.</span>
-                <input placeholder="R$" type="number" />
+                <input class='inputReadonly' placeholder="R$" type="number" readonly="true" />
             </div>
 
             <div class="inputVar" id="valorDepositoIn">
@@ -146,7 +146,7 @@
                 <span class="tooltiptext">O valor do depósito será igual ao valor de entrada e custos do financiamento,
                     pois
                     presume-se que você possui esse valor em mãos.</span>
-                <input placeholder="R$" type="number" />
+                <input class='inputReadonly' placeholder="R$" type="number" readonly="true" />
             </div>
 
             <div class="inputVar" id="valorRentabilidade">
