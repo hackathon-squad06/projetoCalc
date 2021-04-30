@@ -17,8 +17,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.divHeader{
-    text-align: right;
+
+
+header{
+    display:flex;
+    justify-content:center;
     height: 3.5rem;
     /* position: -webkit-sticky;
     position: sticky;
@@ -26,27 +29,31 @@ body {
     background: white;
 }
 
-header img {
-    display: block;
-    text-align: left;
+.container {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:50rem;
+}
+
+.container img {
+    display:flex;
     height: 1.2rem;
-    margin-left: 3rem;
-    transform: translateY(1.4rem);
 }
 
-header a {
-    display: inline-block;
-    font-size: 1rem;
-    margin-right: 3rem;
-    font-weight: 500;
-    color: black;
-    text-decoration: none;
-    /* transform: translate(0, 0.625rem); */
+nav a {
+    font-size:1.2rem;
+    padding:0.7rem;
+    font-weight:500;
+    color:black;
+    text-decoration:none;
 }
 
-header a:hover {
-    color: #933380;
+nav a:hover {
+    color:#2782B9;
+    border-bottom:0.3rem solid #2782B9; 
 }
+
 
 
 .sectionWelcome {
