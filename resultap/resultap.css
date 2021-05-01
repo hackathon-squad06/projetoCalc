@@ -12,7 +12,7 @@
     --resultado-bg: #2782B9;
     --resultado-text: #fff;
     --quadro-border: #C4C4C4;
-    --quadro-bg: #fff;
+    --quadro-bg: #ececec;
     --quadro-title: #2782B9;
     --valoresTotais-bg: #933380;
     --valoresTotais-texto: #fff;
@@ -40,7 +40,7 @@
     --resultado-bg: #602080;
     --resultado-text: #e7e7e7;
     --quadro-border: #b030b0;
-    --quadro-bg: #fff;
+    --quadro-bg: #202040;
     --quadro-title: #68bef3;
     --valoresTotais-bg: #933380;
     --valoresTotais-texto: #fff;
@@ -91,11 +91,17 @@ header{
     height: 1.2rem;
 }
 
+nav {
+    display:flex;
+    align-items:center;
+}
+
 nav a {
     font-size:1.2rem;
+    padding:0.9rem;
     font-weight:500;
-    padding:0.7rem;
     color:var(--nav-text);
+    border-bottom:0.3rem solid transparent;
     text-decoration:none;
 }
 
@@ -103,6 +109,14 @@ nav a:hover {
     color:var(--nav-hover);
     border-bottom:0.3rem solid var(--nav-hover);
 }
+
+nav div {
+    margin-left:1.5rem;
+    padding:1rem;
+    cursor:pointer;
+}
+
+
 
 #resultadoPagina {
     display:flex;

@@ -102,17 +102,29 @@ header{
     height: 1.2rem;
 }
 
+nav {
+    display:flex;
+    align-items:center;
+}
+
 nav a {
     font-size:1.2rem;
-    padding:0.7rem;
+    padding:0.9rem;
     font-weight:500;
     color:var(--nav-text);
+    border-bottom:0.3rem solid transparent;
     text-decoration:none;
 }
 
 nav a:hover {
     color:var(--nav-hover);
     border-bottom:0.3rem solid var(--nav-hover);
+}
+
+nav div {
+    margin-left:1.5rem;
+    padding:1rem;
+    cursor:pointer;
 }
 
 
