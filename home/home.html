@@ -47,7 +47,7 @@
                 <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                 <span class="tooltiptext">Aqui é muito fácil: é só colocar o valor do imóvel que você
                     gostaria de comprar.</span>
-                <input placeholder="R$" type="number" />
+                <input required id="inputValorImovel" placeholder="R$" type="number" />
                 <input type="range" class="slider" name="slider" id="sliderValorCompra" />
             </div>
 
@@ -57,7 +57,7 @@
                 <span class="tooltiptext">Você só precisa levar em consideração o valor de aluguel de um
                     imóvel semelhante ao que pretende comprar.
                 </span>
-                <input placeholder="R$" type="number" />
+                <input required id="inputAluguel" placeholder="R$" type="number" />
                 <input type="range" class="slider" name="slider" id="sliderValorAluguel" />
             </div>
 
@@ -75,7 +75,7 @@
                 <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                 <span class="tooltiptext">IPCA Anual. Não sabe? Considere a inflação entre 3% e 5% ao
                     ano.</span>
-                <input placeholder="% anual" type="number" />
+                <input required id="inputValorizacao" placeholder="% anual" type="number" />
                 <input type="range" class="slider" name="slider" id="sliderValorValorizacao" />
             </div>
 
@@ -95,7 +95,7 @@
                 <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                 <span class="tooltiptext">Este valor é variável conforme o banco onde está negociando o
                     financiamento. Geralmente está em torno de 20% e 30%.</span>
-                <input placeholder="R$" type="number" />
+                <input required id="inputEntrada" placeholder="R$" type="number" />
                 <input type="range" class="slider" name="slider" id="sliderValorEntrada" />
             </div>
 
@@ -106,7 +106,7 @@
                     emissão e registro de contrato, ITBI, escritura. Estes custos estão
                     discriminados em seu contrato. Caso não souber, calcule um valor de
                     5% sobre o valor total do imóvel.</span>
-                <input placeholder="R$" type="number" />
+                <input required id="inputCustosAd" placeholder="R$" type="number" />
                 <input type="range" class="slider" name="slider" id="sliderCustosFin" />
             </div>
 
@@ -116,7 +116,7 @@
                 <span class="tooltiptext">Quanto maior o tempo de financiamento, menor será o valor da
                     parcela inicial. Em contrapartida, o valor de juros pagos durante
                     todo o periodo serão maiores.</span>
-                <input placeholder="em anos" type="number" />
+                <input required id="inputPrazoFin" placeholder="em anos" type="number" />
                 <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
             </div>
 
@@ -124,7 +124,7 @@
                 <span class="tituloInput">Taxa de financiamento</span>
                 <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                 <span class="tooltiptext">Custo efetivo total (CET) presente no contrato.</span>
-                <input placeholder="% anual" type="number" />
+                <input required id="inputTaxaFin" placeholder="% anual" type="number" />
                 <input type="range" class="slider" name="slider" id="sliderTaxaFin" />
             </div>
         </div>
@@ -137,7 +137,7 @@
                 <span class="tooltiptext">Diferença entre o valor da prestação e o valor do aluguel, no qual deverá ser
                     aplicado
                     mensalmente.</span>
-                <input class='inputReadonly' placeholder="R$" type="number" readonly="true" />
+                <input name="inputValorMensal" id="inputValorMensal" class='inputReadonly' placeholder="R$" type="number" readonly="true" />
             </div>
 
             <div class="inputVar" id="valorDepositoIn">
@@ -146,22 +146,22 @@
                 <span class="tooltiptext">O valor do depósito será igual ao valor de entrada e custos do financiamento,
                     pois
                     presume-se que você possui esse valor em mãos.</span>
-                <input class='inputReadonly' placeholder="R$" type="number" readonly="true" />
+                <input name="inputDeposito" required id="inputDeposito" class='inputReadonly' placeholder="R$" type="number" readonly="true" />
             </div>
 
             <div class="inputVar" id="valorRentabilidade">
-                <span class="tituloInput">Rentabilidade mensal</span>
+                <span class="tituloInput">Rentabilidade anual</span>
                 <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                <span class="tooltiptext">Rentabilidade mensal no qual o depósito inicial + valor investido mensal serão
+                <span class="tooltiptext">Rentabilidade anual no qual o depósito inicial + valor investido mensal serão
                     aplicados. Caso não conheça, sugerimos aplicar a rentabilidade de uma renda fixa atual.</span>
-                <input placeholder="% ao mês" type="number" />
+                <input required id="inputRentabilidade" placeholder="% anual" type="number" />
                 <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
             </div>
         </div>
     </section>
 
     <div class="buttonCalc">
-        <button class="buttonCalcular" type="button">CALCULAR</button>
+        <button onclick="calcular()" class="buttonCalcular">CALCULAR</button>
     </div>
 
     <footer>

@@ -1,9 +1,8 @@
-
 const html = document.querySelector('html');
 const switchDarkMode = document.getElementById('modeSwitch');
 const logoSquadHeader = document.getElementById('logoSquadHeader');
 
-switchDarkMode.onclick = function () {
+function switchMode() {
   html.classList.toggle('dark-mode')
 
   if (html.classList.contains('dark-mode')) {
@@ -14,3 +13,5 @@ switchDarkMode.onclick = function () {
     switchDarkMode.src = "/images/dark-mode-black.svg";
   }
 }
+
+switchMode()
