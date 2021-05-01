@@ -34,9 +34,9 @@ function calcular () {
     const mF = m.toFixed(2)
     console.log(c, iF, iFinF, n, valorFinanciado, parcelaF, totalPago, valorImovelFuturoF, totalJurosPago, valorInvestidoMensalF, depositoInicial, mF)
 
-    sessionStorage.setItem('soma', soma)
-    sessionStorage.setItem('multiplicado', multiplicado)
-    window.location.href = "/resultap/resultap.html"
+    // sessionStorage.setItem('soma', soma)
+    // sessionStorage.setItem('multiplicado', multiplicado)
+    // window.location.href = "/resultap/resultap.html"
 }
 
 document.getElementById('inputEntrada').addEventListener('change', function () {

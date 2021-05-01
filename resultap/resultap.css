@@ -11,46 +11,43 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.divHeader{
+header{
     display:flex;
-    text-align: right;
-    height: 3.2rem;
-    /*position: -webkit-sticky;
-    position: sticky;*/
-    top: 0; 
+    justify-content:center;
+    height: 3.5rem;
+    /* position: -webkit-sticky;
+    position: sticky;
+    top: 0; */
     background: white;
 }
 
-header {
+.container {
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
+    padding:0rem 2rem;
+    width:100rem; /*50rem para ficar no centro da página*/
 }
 
-.logoSquad {
-    display: block;
-    text-align: left;
-    width: 9rem;
-    height: 1rem;
-    margin-left: 1rem;
-    /*transform: translateY(1.2rem);*/
+.container img {
+    display:flex;
+    height: 1.2rem;
 }
 
-header a {
-    display: inline-block;
-    font-size: 1rem;
-    margin-right: 3rem;
-    font-weight: 500;
-    color: black;
-    text-decoration: none;
-    /* transform: translate(0, 0.625rem); */
+nav a {
+    font-size:1.2rem;
+    font-weight:500;
+    padding:0.7rem;
+    color:black;
+    text-decoration:none;
 }
 
-header a:hover {
-    color: #933380;
+nav a:hover {
+    color:#933380;
+    border-bottom:0.3rem solid #933380; 
 }
 
-#resultado_pagina {
+#resultadoPagina {
     display:flex;
     justify-content:center;
     align-items:center;
@@ -68,7 +65,7 @@ h1 {
     margin-bottom:1rem;
 }
 
-#resultado_info {
+#resultadoInfo {
     margin:1rem 0rem;
 }
 
@@ -77,15 +74,16 @@ h1 {
     flex-direction:column;
     height:35rem;
     width:50rem;
-    border:0.063rem solid #999;
+    border:0.126rem solid #C4C4C4;
     border-radius:1rem;
-    padding:0rem 1rem;
+    padding:1rem;
     background-image:url(/images/kkArtboard\ 1.png);
     background-color:#fff;
 }
 
-.new_height {
-    height:10rem;
+/* newHeight - Altera a altura do quadro*/
+.newHeight {
+    height:12rem;
     text-align:justify;
 }
 
@@ -98,17 +96,10 @@ h1 {
     font-size:2rem;
     font-weight:700;
     color:#2782B9;
-    margin:1rem 0rem;
+    margin:0.5rem 0rem;
 }
 
-.quadro img {
-    margin-left:5rem;
-    border-radius:0.5rem;
-    width:24rem;
-    box-shadow:0rem 0rem 0.5rem 0rem #000;
-}
-
-.valores_totais {
+.valoresTotais {
     font-size:2rem;
     background-color:#933380;
     color:#fff;
@@ -117,7 +108,7 @@ h1 {
     width:fit-content;
 }
 
-.painel_info {
+.painelInfo {
     display:flex;
     width:48rem;
     margin-bottom:1rem;
@@ -146,22 +137,22 @@ h1 {
     background-color:#B8D0DB;
 }
 
-.painel_info:nth-child(3n) .topicos li {
+.painelInfo:nth-child(3n) .topicos li {
         background-color:#933380;
 }
 
-.painel_info:nth-child(3n) .valores li {
+.painelInfo:nth-child(3n) .valores li {
     background-color:#B795B7;
 }
 
 
-#aviso_info {
+#avisoInfo {
     display:flex;
     flex-direction:column;
     align-items:center;
 }
 
-#btn_calc {
+#btnCalcNovamente {
     display:flex;
     justify-content:center;
     align-items:center;
@@ -170,14 +161,92 @@ h1 {
     height: 4rem;
     padding: 0.8rem;
     border-radius: 0.5rem;
-    color: white;
+    color: #fff;
     background-color: #2782B9;
     border: 1px solid #C4C4C4;
     cursor: pointer;
-    margin:1rem 0rem;
+    margin:2.5rem 0rem;
     text-decoration:none;
 }
 
-#btn_calc:hover{
+#btnCalcNovamente:hover {
     background-color: #178bd3;
+}
+
+
+
+footer {
+    display:flex;
+    justify-content:center;
+    height:16rem;
+    width:100vw;
+    max-width:100%;
+    background-color:#933380
+}
+
+/* .column usando no container do footer*/
+.column {
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:space-evenly;
+}
+
+.infoFooter {
+    display:flex;
+    justify-content:space-between;
+    width:46rem;
+    color:#fff;
+    line-height:1.5;
+    font-size:0.9rem;
+    font-weight:400;
+}
+
+.linksFooter {
+    display: block;
+    width:fit-content;
+    color:#fff;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+footer a {
+    display:flex;
+    width:fit-content;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #178bd3;
+}
+
+.divider {
+	position:relative;
+    top:11rem;
+	height:0.063rem;
+    width:95vw;
+    max-width:100%;
+}
+
+.div-transparent:before {
+	content:"";
+	position:absolute;
+	top:0;
+	left:5%;
+	right:5%;
+	width:90%;
+	height:0.063rem;
+    background-image: linear-gradient(to right, transparent, #bfc1c4, transparent);
+}
+
+.direitosFooter {
+    display:flex;
+    width: 30rem;
+    color:#fff;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 0.7rem;
+    font-weight: 400;
 }

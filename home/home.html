@@ -8,9 +8,7 @@
     <title>Projeto Calculadora</title>
     <link rel="stylesheet" href="homeStyle.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -126,7 +124,7 @@
                     <span class="tituloInput">Taxa de financiamento</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Custo efetivo total (CET) presente no contrato.</span>
-                    <input required id="inputTaxaFin" placeholder="% anual" type="number" />
+                    <input required id="inputTaxaFin" placeholder="% anual" type="number" min="0" value="0" step=".01" />
                     <input type="range" class="slider" name="slider" id="sliderTaxaFin" />
                 </div>
             </div>
@@ -156,38 +154,42 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Rentabilidade anual no qual o depósito inicial + valor investido mensal serão
                         aplicados. Caso não conheça, sugerimos aplicar a rentabilidade de uma renda fixa atual.</span>
-                    <input required id="inputRentabilidade" placeholder="% anual" type="number" />
+                    <input required id="inputRentabilidade" placeholder="% anual" type="number" min="0" value="0" step=".01" />
                     <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
                 </div>
             </div>
+
+            <div class="buttonCalc">
+                <input type="submit" class="btnCalcular" id='btnCalcular' value="CALCULAR">        
+            </div>
+
         </section>
-
-        <div class="buttonCalc">
-            <input type="submit" class="buttonCalcular" id='btnCalcular' value="CALCULAR">        
-        </div>
-
     </form>
+    
+    <div class="wrapper">
+        <div class="divider div-transparent"></div>
+    </div>
 
     <footer>
-        <img src="/images/squad06-logo-white.svg" alt="logoSquad" class="logoSquad" />
-        <div class="infoFooter">
-            <p>SQUAD 06 é parte do Hackathon promovido pelo Grupo FCamara em conjunto com Alura.</p>
-        </div>
-        <div class="linksFooter">
-            <a href="home.html">Home</a>
-            <a href="resultOffice.html">Result Office</a>
-            <a href="home.html">Página 3</a>
-        </div>
-        <div class="wrapper">
-            <div class="divider div-transparent"></div>
-        </div>
-        <div class="direitosFooter">
-            ® SQUAD 06 Consultoria Ltda.<br>2021 - Todos os direitos reservados
+        <div class="container column">
+            <img src="/images/squad06-logo-white.svg" alt="logoSquad" class="logoSquad" />
+            <div class="infoFooter">
+                <p>SQUAD 06 é parte do Hackathon promovido pelo Grupo FCamara<br> em conjunto com Alura.</p>
+                <div class="linksFooter">
+                    <a href="home.html">Home</a>
+                    <a href="resultOffice.html">Result Office</a>
+                    <a href="home.html">Página 3</a>
+                </div>
+            </div>
+            <div class="direitosFooter">
+                ® SQUAD 06 Consultoria Ltda.<br>2021 - Todos os direitos reservados
+            </div>
         </div>
     </footer>
 
     <script src="homeScript.js"></script>
     <script src="darkMode.js"></script>
+
 </body>
 
 </html>

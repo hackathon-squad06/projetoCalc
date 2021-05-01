@@ -14,4 +14,4 @@ function switchMode() {
   }
 }
 
-switchMode()
+// switchMode()
