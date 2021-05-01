@@ -33,6 +33,10 @@ function calcular () {
     const m = (c*(1 + (iF/100)) ** n ) + (valorInvestidoMensalF * (((((1 + (iF/100))) ** n ) - 1 ) / (iF/100)))
     const mF = m.toFixed(2)
     console.log(c, iF, iFinF, n, valorFinanciado, parcelaF, totalPago, valorImovelFuturoF, totalJurosPago, valorInvestidoMensalF, depositoInicial, mF)
+
+    sessionStorage.setItem('soma', soma)
+    sessionStorage.setItem('multiplicado', multiplicado)
+    window.location.href = "/resultap/resultap.html"
 }
 
 document.getElementById('inputEntrada').addEventListener('change', function () {
