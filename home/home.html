@@ -8,9 +8,7 @@
     <title>Projeto Calculadora</title>
     <link rel="stylesheet" href="homeStyle.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -40,7 +38,7 @@
     </section>
 
     <form onsubmit="calcular();return false">
-        <section class=" sectionCalc">
+        <section class="sectionCalc">
             <div class="containerDados" id="divDadosImovel">
                 <span class="titleContainer">Dados do imóvel</span>
 
@@ -49,7 +47,7 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Aqui é muito fácil: é só colocar o valor do imóvel que você
                         gostaria de comprar.</span>
-                    <input type="number" id="inputValorCompra" placeholder="R$" required />
+                    <input required id="inputValorImovel" placeholder="R$" type="number" />
                     <input type="range" class="slider" name="slider" id="sliderValorCompra" />
                 </div>
 
@@ -59,7 +57,7 @@
                     <span class="tooltiptext">Você só precisa levar em consideração o valor de aluguel de um
                         imóvel semelhante ao que pretende comprar.
                     </span>
-                    <input type="number" id="inputValorAluguel" placeholder="R$" required />
+                    <input required id="inputAluguel" placeholder="R$" type="number" />
                     <input type="range" class="slider" name="slider" id="sliderValorAluguel" />
                 </div>
 
@@ -77,7 +75,7 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">IPCA Anual. Não sabe? Considere a inflação entre 3% e 5% ao
                         ano.</span>
-                    <input placeholder="% anual" type="number" />
+                    <input required id="inputValorizacao" placeholder="% anual" type="number" name="inputValorizacao" min="0" value="0" step=".01" />
                     <input type="range" class="slider" name="slider" id="sliderValorValorizacao" />
                 </div>
 
@@ -97,7 +95,7 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Este valor é variável conforme o banco onde está negociando o
                         financiamento. Geralmente está em torno de 20% e 30%.</span>
-                    <input placeholder="R$" type="number" id='inputValorEntrada' />
+                    <input required id="inputEntrada" placeholder="R$" type="number" />
                     <input type="range" class="slider" name="slider" id="sliderValorEntrada" />
                 </div>
 
@@ -108,7 +106,7 @@
                         emissão e registro de contrato, ITBI, escritura. Estes custos estão
                         discriminados em seu contrato. Caso não souber, calcule um valor de
                         5% sobre o valor total do imóvel.</span>
-                    <input placeholder="R$" type="number" id='inputCustosFin' />
+                    <input required id="inputCustosAd" placeholder="R$" type="number" />
                     <input type="range" class="slider" name="slider" id="sliderCustosFin" />
                 </div>
 
@@ -118,7 +116,7 @@
                     <span class="tooltiptext">Quanto maior o tempo de financiamento, menor será o valor da
                         parcela inicial. Em contrapartida, o valor de juros pagos durante
                         todo o periodo serão maiores.</span>
-                    <input placeholder="em anos" type="number" />
+                    <input required id="inputPrazoFin" placeholder="em anos" type="number" />
                     <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
                 </div>
 
@@ -126,7 +124,7 @@
                     <span class="tituloInput">Taxa de financiamento</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Custo efetivo total (CET) presente no contrato.</span>
-                    <input placeholder="% anual" type="number" />
+                    <input required id="inputTaxaFin" placeholder="% anual" type="number" min="0" value="0" step=".01" />
                     <input type="range" class="slider" name="slider" id="sliderTaxaFin" />
                 </div>
             </div>
@@ -136,62 +134,62 @@
                 <div class="inputVar" id="valorInvestimento">
                     <span class="tituloInput">Valor do investimento mensal</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                    <span class="tooltiptext">Diferença entre o valor da prestação e o valor do aluguel, no qual deverá
-                        ser
+                    <span class="tooltiptext">Diferença entre o valor da prestação e o valor do aluguel, no qual deverá ser
                         aplicado
                         mensalmente.</span>
-                    <input class='inputReadonly' placeholder="R$" type="number" readonly="true" />
+                    <input name="inputValorMensal" id="inputValorMensal" class='inputReadonly' placeholder="R$" type="number" readonly="true" />
                 </div>
 
                 <div class="inputVar" id="valorDepositoIn">
                     <span class="tituloInput">Depósito inicial</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                    <span class="tooltiptext">O valor do depósito será igual ao valor de entrada e custos do
-                        financiamento,
+                    <span class="tooltiptext">O valor do depósito será igual ao valor de entrada e custos do financiamento,
                         pois
                         presume-se que você possui esse valor em mãos.</span>
-                    <input class='inputReadonly' placeholder="R$" type="number" id='inputDepositoIn'
-                        name='inputDepositoIn' readonly="true" />
+                    <input name="inputDeposito" required id="inputDeposito" class='inputReadonly' placeholder="R$" type="number" readonly="true" />
                 </div>
 
                 <div class="inputVar" id="valorRentabilidade">
-                    <span class="tituloInput">Rentabilidade mensal</span>
+                    <span class="tituloInput">Rentabilidade anual</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                    <span class="tooltiptext">Rentabilidade mensal no qual o depósito inicial + valor investido mensal
-                        serão
+                    <span class="tooltiptext">Rentabilidade anual no qual o depósito inicial + valor investido mensal serão
                         aplicados. Caso não conheça, sugerimos aplicar a rentabilidade de uma renda fixa atual.</span>
-                    <input placeholder="% ao mês" type="number" />
+                    <input required id="inputRentabilidade" placeholder="% anual" type="number" min="0" value="0" step=".01" />
                     <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
                 </div>
             </div>
-        </section>
 
-        <div class="buttonCalc">
-            <input type="submit" class="buttonCalcular" id='btnCalcular' value="CALCULAR">
-        </div>
+            <div class="buttonCalc">
+                <input type="submit" class="btnCalcular" id='btnCalcular' value="CALCULAR">        
+            </div>
+
+        </section>
     </form>
+    
+    <div class="wrapper">
+        <div class="divider div-transparent"></div>
+    </div>
 
     <footer>
-        <img src="/images/squad06-logo-white.svg" alt="logoSquad" class="logoSquad" />
-        <div class="infoFooter">
-            <p>SQUAD 06 é parte do Hackathon promovido pelo Grupo FCamara em conjunto com Alura.</p>
-        </div>
-        <div class="linksFooter">
-            <a href="home.html">Home</a>
-            <a href="resultOffice.html">Result Office</a>
-            <a href="home.html">Página 3</a>
-        </div>
-        <div class="wrapper">
-            <div class="divider div-transparent"></div>
-        </div>
-        <div class="direitosFooter">
-            ® SQUAD 06 Consultoria Ltda.<br>2021 - Todos os direitos reservados
+        <div class="container column">
+            <img src="/images/squad06-logo-white.svg" alt="logoSquad" class="logoSquad" />
+            <div class="infoFooter">
+                <p>SQUAD 06 é parte do Hackathon promovido pelo Grupo FCamara<br> em conjunto com Alura.</p>
+                <div class="linksFooter">
+                    <a href="home.html">Home</a>
+                    <a href="resultOffice.html">Result Office</a>
+                    <a href="home.html">Página 3</a>
+                </div>
+            </div>
+            <div class="direitosFooter">
+                ® SQUAD 06 Consultoria Ltda.<br>2021 - Todos os direitos reservados
+            </div>
         </div>
     </footer>
 
     <script src="homeScript.js"></script>
-    <script src="calculo.js"></script>
     <script src="darkMode.js"></script>
+
 </body>
 
 </html>

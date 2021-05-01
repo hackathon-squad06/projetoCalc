@@ -1,6 +1,6 @@
 # projetoCalc
 Projeto Hackathon - Squad 06
 
-feature-displayResultado branch
+feature-juncaoCalculosEDisplayResultado branch
 
-Feature focada em mostrar o resultado na página Result Ap
+Feature focada em juntar outras branches
