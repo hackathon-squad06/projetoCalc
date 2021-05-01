@@ -6,20 +6,33 @@ function calcular () {
     const custosAd = parseFloat(document.getElementById('inputCustosAd').value);
     const prazoFin = parseFloat(document.getElementById('inputPrazoFin').value);
     const taxaFin = parseFloat(document.getElementById('inputTaxaFin').value);
-    const depositoMensal = parseFloat(document.getElementById('inputValorMensal').value);
-    const deposito = parseFloat(document.getElementById('inputDeposito').value);
     const rentabilidade = parseFloat(document.getElementById('inputRentabilidade').value);
 
     const c = entrada
-    const i = ((1 + (rentabilidade/100)) ** (1/12))-1
+    const i = (((1 + (rentabilidade/100)) ** (1/12))-1)*100
     const iF = i.toFixed(2)
-    const iFin = ((1 + (taxaFin/100)) ** (1/12))-1
-    const iFinF = iFin.toFixed(2)
+    const iFin = (((1 + (taxaFin/100)) ** (1/12))-1)*100
+    const iFinF = iFin.toFixed(3)
+    const valorizacaoImovel = (((1 + (valorizacao/100)) ** (1/12))-1)*100
+    const valorizacaoImovelF = valorizacaoImovel.toFixed(2)
     const n = prazoFin * 12
     const valorFinanciado = valorImovel - c
-    const parcela = valorFinanciado * ((((1 + iFin) ** n) * iFin) / (((1 + iFin) ** n) - 1))
+    const parcela = valorFinanciado * ((((1 + iFin/100) ** n) * iFin/100) / (((1 + iFin/100) ** n) - 1))
     const parcelaF = parcela.toFixed(2)
-    console.log(c, iF, iFinF, n, valorFinanciado, parcelaF)
+    const totalPago = parcelaF * n
+    const valorImovelFuturo = valorImovel * (1 + (valorizacaoImovelF/100)) ** n
+    const valorImovelFuturoF = valorImovelFuturo.toFixed(2)
+    const valorInvestidoMensal = parcelaF - aluguel
+    const valorInvestidoMensalF = valorInvestidoMensal.toFixed(0)
+    const depositoInicial = entrada + custosAd
+    if (totalPago > valorFinanciado) {
+        var totalJurosPago = totalPago - valorFinanciado
+    } else {
+        var totalJurosPago = valorFinanciado - totalPago
+    }
+    const m = (c*(1 + (iF/100)) ** n ) + (valorInvestidoMensalF * (((((1 + (iF/100))) ** n ) - 1 ) / (iF/100)))
+    const mF = m.toFixed(2)
+    console.log(c, iF, iFinF, n, valorFinanciado, parcelaF, totalPago, valorImovelFuturoF, totalJurosPago, valorInvestidoMensalF, depositoInicial, mF)
 }
 
 document.getElementById('inputEntrada').addEventListener('change', function () {
