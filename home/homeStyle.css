@@ -5,29 +5,30 @@
 }
 
 :root {
-    --body-bg: white;
-    --header-bg: white;
-    --nav-text: black;
+    --body-bg: #fff;
+    --header-bg: #fff;
+    --nav-text: #000;
     --nav-hover: #2782B9;
     --welcome-bg: #933380;
-    --welcome-text: white;
+    --welcome-text: #fff;
     --box-shadow: rgba(0,0,0,0.18);
-    --calc-bg: white;
-    --tituloInput-text: black;
+    --calc-bg: #fff;
     --tooltip-bg: rgba(0, 0, 0, 0.8);
-    --tooltip-text: white;
+    --tooltip-text: #fff;
     --contDados-border: #C4C4C4;
     --contDados-title: #2782B9;
-    --inputVar-bg: white;
+    --tituloInput-text: #000;
+    --inputVar-bg: #fff;
     --inputVar-border: #C4C4C4;
     --inputVar-focus: #daeef8;
     --buttonCalc-bg: #2782B9;
+    --buttonCalc-text: #fff;
     --buttonCalc-border: #C4C4C4;
     --buttonCalc-hover: #178bd3;
     --footer-bg: #933380;
-    --footer-text: white;
+    --footer-text: #fff;
     --footer-hover: #178bd3;
-    --footer-divider: rgb(191, 193, 196);
+    --footer-divider: #bfc1c4;
 }
 
 .dark-mode:root {
@@ -39,21 +40,22 @@
     --welcome-text: #e7e7e7;
     --box-shadow: rgba(0,0,0,0.18);
     --calc-bg: #202040;
-    --tituloInput-text: #e7e7e7;
-    --tooltip-bg: black;
-    --tooltip-text: white;
+    --tooltip-bg: #000;
+    --tooltip-text: #fff;
     --contDados-border: #b030b0;
     --contDados-title: #68bef3;
+    --tituloInput-text: #e7e7e7;
     --inputVar-bg: #e7e7e7;
     --inputVar-border: #C4C4C4;
     --inputVar-focus: #f1f7fa;
     --buttonCalc-bg: #962b96;
+    --buttonCalc-text: #fff;
     --buttonCalc-border: #C4C4C4;
     --buttonCalc-hover: #b030b0;
     --footer-bg: #602080;
     --footer-text: #e7e7e7;
     --footer-hover: #b030b0;
-    --footer-divider: rgb(191, 193, 196);
+    --footer-divider: #bfc1c4;
 }
 
 /* Remove as setas do campo input='number' */
@@ -74,6 +76,7 @@ body {
     flex-direction:column;
     align-items:center;
     font-family: 'Montserrat', sans-serif;
+    background: var(--body-bg);
 }
 
 header{
@@ -83,7 +86,7 @@ header{
     /* position: -webkit-sticky;
     position: sticky;
     top: 0; */
-    background: white;
+    background: var(--header-bg);
 }
 
 .container {
@@ -103,13 +106,13 @@ nav a {
     font-size:1.2rem;
     padding:0.7rem;
     font-weight:500;
-    color:black;
+    color:var(--nav-text);
     text-decoration:none;
 }
 
 nav a:hover {
-    color:#2782B9;
-    border-bottom:0.3rem solid #2782B9; 
+    color:var(--nav-hover);
+    border-bottom:0.3rem solid var(--nav-hover);
 }
 
 
@@ -121,8 +124,7 @@ nav a:hover {
     height:25rem;
     width:100vw;
     max-width:100%;
-    background-color: #933380;
-    color: #fff;
+    background-color: var(--welcome-bg);
     text-align: center;
 }
 
@@ -134,6 +136,7 @@ nav a:hover {
     margin-left: -1rem;
     text-align: justify;
     padding: 1rem;
+    color: var(--welcome-text);
 }
 
 #textoWelcome h1 {
@@ -157,8 +160,8 @@ nav a:hover {
     background-image: url('/images/img-welcome-workers.png');
     border-radius: 2rem;
     background-size: cover;
-    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.18); 
-    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.18);
+    -webkit-box-shadow: 5px 5px 15px 5px var(--box-shadow); 
+    box-shadow: 5px 5px 15px 5px var(--box-shadow);
 }
 
 
@@ -167,7 +170,7 @@ nav a:hover {
     display:flex;
     flex-direction:column;
     align-items:center;
-    background-color: white;
+    background-color: var(--calc-bg);
 }
 
 .iconeInfo {
@@ -183,8 +186,8 @@ nav a:hover {
     visibility: hidden;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-text);
     border-radius: 0.37rem;
     padding: 0.5rem 0.6rem;
     width: 15rem;
@@ -211,7 +214,7 @@ nav a:hover {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+    border-color: transparent transparent var(--tooltip-bg); transparent;
 }
 
 
@@ -225,7 +228,7 @@ nav a:hover {
     margin-left: auto;
     margin-right: auto;
     margin-top: 4rem;
-    border: 2px solid #C4C4C4;
+    border: 2px solid var(--contDados-border);
     border-radius: 0.5rem;
 }
 
@@ -235,7 +238,7 @@ nav a:hover {
     font-weight: bold;
     text-align: left;
     font-size: 1.2rem;
-    color: #2782B9;
+    color: var(--contDados-title);
     margin: 3rem 2rem 2rem 3rem;
 }
 
@@ -249,6 +252,7 @@ nav a:hover {
     text-align: left; */
     font-size: 1rem;
     font-weight: 500;
+    color: var(--tituloInput-text);
 }
 
 .inputVar input {
@@ -258,11 +262,12 @@ nav a:hover {
     height: 3rem;
     border-radius: 0.5rem;
     margin-top: 0.5rem;
-    border: 1px solid #C4C4C4;
+    border: 1px solid var(--inputVar-border);
+    background-color: var(--inputVar-bg);
 }
 
 .inputVar input:focus {
-    background-color: #daeef8;
+    background-color: var(--inputVar-focus);
     outline: 0;
 }
 
@@ -286,9 +291,9 @@ input[type=range] {
     height:4rem;
     padding:0.8rem;
     border-radius:0.5rem;
-    color:#fff;
-    background-color:#2782B9;
-    border: 1px solid#C4C4C4;
+    color:var(--buttonCalc-text);
+    background-color:var(--buttonCalc-bg);
+    border: 1px solid var(--buttonCalc-border);
     cursor:pointer;
     margin:1rem 0rem;
     text-decoration:none;
@@ -296,7 +301,7 @@ input[type=range] {
 }
 
 .btnCalcular:hover {
-    background-color: #178bd3;
+    background-color: var(--buttonCalc-hover);
 }
 
 
@@ -306,7 +311,7 @@ footer {
     height:16rem;
     width:100vw;
     max-width:100%;
-    background-color:#933380
+    background-color:var(--footer-bg);
 }
 
 /* .column usando no container do footer*/
@@ -320,7 +325,7 @@ footer {
     display:flex;
     justify-content:space-between;
     width:46rem;
-    color:#fff;
+    color:var(--footer-text);
     line-height:1.5;
     font-size:0.9rem;
     font-weight:400;
@@ -329,7 +334,7 @@ footer {
 .linksFooter {
     display: block;
     width:fit-content;
-    color: #fff;
+    color: var(--footer-text);
     text-align: left;
     line-height: 1.5;
     font-size: 0.9rem;
@@ -339,12 +344,12 @@ footer {
 footer a {
     display:flex;
     width:fit-content;
-    color: #fff;
+    color: var(--footer-text);
     text-decoration: none;
 }
 
 footer a:hover {
-    color: #178bd3;
+    color: var(--footer-hover);
 }
 
 .divider {
@@ -363,13 +368,13 @@ footer a:hover {
 	right:5%;
 	width:90%;
 	height:0.063rem;
-    background-image: linear-gradient(to right, transparent, #bfc1c4, transparent);
+    background-image: linear-gradient(to right, transparent, var(--footer-divider), transparent);
 }
 
 .direitosFooter {
     display:flex;
     width: 30rem;
-    color: #fff;
+    color: var(--footer-text);
     text-align: justify;
     line-height: 1.5;
     font-size: 0.7rem;
