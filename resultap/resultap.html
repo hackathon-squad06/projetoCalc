@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,35 +10,37 @@
     <link rel="stylesheet" type="text/css" href="resultap.css">
     <title>Result</title>
 </head>
+
 <body>
 
     <div class="divHeader">
         <header>
-          <img src="/images/squad06-logo.svg" alt="logoSquad" class="logoSquad" />
-          <a href="/home/home.html">Home</a>
-          <a href="/resultap/resultap.html">Result AP</a>
-          <a href="home.html">Página 3</a>
+            <img src="/images/squad06-logo.svg" alt="logoSquad" class="logoSquad" />
+            <a href="/home/home.html">Home</a>
+            <a href="/resultap/resultap.html">Result AP</a>
+            <a href="home.html">Página 3</a>
         </header>
     </div>
-    
+
     <section id="resultado_pagina">
         <h1>O ideal para você é <span>Alugar</span></h1>
     </section>
 
     <section id="resultado_info">
         <div class="quadro">
-            <p id="titulo">Compare as opções<p>
-            
+            <p id="titulo">Compare as opções
+            <p>
+
             <p>Dados gerais</p>
             <div class="painel_info">
                 <ul class="topicos">
                     <li>Valor do imóvel na data atual</li>
                     <li>Valor do imóvel após o período de X meses</li>
                 </ul>
-    
+
                 <ul class="valores">
-                    <li id="">R$250.000,00</li>
-                    <li id="">R$340.000,00</li>
+                    <li id="resultadoSomado">R$250.000,00</li>
+                    <li id="resultadoMultiplicado">R$340.000,00</li>
                 </ul>
             </div>
 
@@ -47,7 +50,7 @@
                     <li>Valor total pago no financiado</li>
                     <li>Valor pago em juros</li>
                 </ul>
-    
+
                 <ul class="valores">
                     <li id="">R$450.000,00</li>
                     <li id="">R$230.000,00</li>
@@ -60,7 +63,7 @@
                     <li>Valor total do investimento no período de X meses</li>
                     <li>Será possível comprar seu imóvel à vista após </li>
                 </ul>
-    
+
                 <ul class="valores">
                     <li id="">R$475.000,00</li>
                     <li id="">25 anos</li>
@@ -71,10 +74,18 @@
 
     <section id="aviso_info">
         <div class="quadro new_height">
-            <p>A decisão de adquirir um imóvel é muito importante e muitos fatores precisam ser ponderados. A calculadora do <strong>Squad 6 Consultoria</strong> aborda apenas lado financeiro e apresenta estimativas baseadas nos valores digitados. É relevante lembrar que seus objetivos de vida precisam ser levados em consideração juntamente com o lado financeiro e talvez faça sentido para você e sua família adquirirem um imóvel por meio de um financiamento.</p>
+            <p>A decisão de adquirir um imóvel é muito importante e muitos fatores precisam ser ponderados. A
+                calculadora do <strong>Squad 6 Consultoria</strong> aborda apenas lado financeiro e apresenta
+                estimativas baseadas nos valores digitados. É relevante lembrar que seus objetivos de vida precisam ser
+                levados em consideração juntamente com o lado financeiro e talvez faça sentido para você e sua família
+                adquirirem um imóvel por meio de um financiamento.</p>
         </div>
 
-        <a id="btn_calc" href="">CALCULAR NOVAMENTE</a>
+        <a id="btn_calc" onclick="retornar()">CALCULAR NOVAMENTE</a>
     </section>
+
+    <script src="/home/calculo.js"></script>
+    <script src="/resultap/resultap.js"></script>
 </body>
+
 </html>

@@ -280,6 +280,10 @@ input[type=range] {
     transform: translateY(-2rem);
 }
 
+.placeHolderNumber {
+    color: red;
+}
+
 
 .buttonCalc {
     margin-top: 8rem;

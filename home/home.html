@@ -21,7 +21,8 @@
                 <a href="/home/home.html">Home</a>
                 <a href="/resultap/resultap.html">Result AP</a>
                 <a href="home.html">Página 3</a>
-                <img src="/images/dark-mode-black.svg" alt="darkMode" class="modeSwitch" id='modeSwitch' />
+                <img src="/images/dark-mode-black.svg" alt="darkMode" class="modeSwitch" id='modeSwitch'
+                    onclick="switchMode()" />
             </nav>
         </div>
     </header>
@@ -38,131 +39,137 @@
         <div id="imagemWelcome"></div>
     </section>
 
-    <section class="sectionCalc">
-        <div class="containerDados" id="divDadosImovel">
-            <span class="titleContainer">Dados do imóvel</span>
+    <form onsubmit="calcular();return false">
+        <section class=" sectionCalc">
+            <div class="containerDados" id="divDadosImovel">
+                <span class="titleContainer">Dados do imóvel</span>
 
-            <div class="inputVar" id="valorCompra">
-                <span class="tituloInput">Valor de compra</span>
-                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                <span class="tooltiptext">Aqui é muito fácil: é só colocar o valor do imóvel que você
-                    gostaria de comprar.</span>
-                <input placeholder="R$" type="number" />
-                <input type="range" class="slider" name="slider" id="sliderValorCompra" />
+                <div class="inputVar" id="valorCompra">
+                    <span class="tituloInput">Valor de compra</span>
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Aqui é muito fácil: é só colocar o valor do imóvel que você
+                        gostaria de comprar.</span>
+                    <input type="number" id="inputValorCompra" placeholder="R$" required />
+                    <input type="range" class="slider" name="slider" id="sliderValorCompra" />
+                </div>
+
+                <div class="inputVar" id="valorAluguel">
+                    <span class="tituloInput">Valor do aluguel</span>
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Você só precisa levar em consideração o valor de aluguel de um
+                        imóvel semelhante ao que pretende comprar.
+                    </span>
+                    <input type="number" id="inputValorAluguel" placeholder="R$" required />
+                    <input type="range" class="slider" name="slider" id="sliderValorAluguel" />
+                </div>
+
+                <div class="inputVar" id="custosLocacao" style="display: none">
+                    <span class="tituloInput">Outros custos com locação</span>
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Como condomínio e IPTU são custos que você terá alugando ou
+                        comprando, eles não precisam ser incluídos aqui.</span>
+                    <input placeholder="R$ por mês" type="number" />
+                    <input type="range" class="slider" name="slider" id="sliderCustosLocacao" />
+                </div>
+
+                <div class="inputVar" id="valorValorizacao">
+                    <span class="tituloInput">Valorização anual do imóvel</span>
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">IPCA Anual. Não sabe? Considere a inflação entre 3% e 5% ao
+                        ano.</span>
+                    <input placeholder="% anual" type="number" />
+                    <input type="range" class="slider" name="slider" id="sliderValorValorizacao" />
+                </div>
+
+                <div class="inputVar" id="valorIgpm" style="display: none">
+                    <span class="tituloInput">Valor do IGPM anual</span>
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Não sabe? Considere um valor entre 4% e 6% ao ano.</span>
+                    <input placeholder="% anual" type="number" />
+                    <input type="range" class="slider" name="slider" id="sliderValorIgpm" />
+                </div>
             </div>
 
-            <div class="inputVar" id="valorAluguel">
-                <span class="tituloInput">Valor do aluguel</span>
-                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                <span class="tooltiptext">Você só precisa levar em consideração o valor de aluguel de um
-                    imóvel semelhante ao que pretende comprar.
-                </span>
-                <input placeholder="R$" type="number" />
-                <input type="range" class="slider" name="slider" id="sliderValorAluguel" />
+            <div class="containerDados">
+                <span class="titleContainer">Dados Financiamento</span>
+                <div class="inputVar" id="valorEntrada">
+                    <span class="tituloInput">Valor da entrada</span>
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Este valor é variável conforme o banco onde está negociando o
+                        financiamento. Geralmente está em torno de 20% e 30%.</span>
+                    <input placeholder="R$" type="number" id='inputValorEntrada' />
+                    <input type="range" class="slider" name="slider" id="sliderValorEntrada" />
+                </div>
+
+                <div class="inputVar" id="valorCustosFin">
+                    <span class="tituloInput">Custos adicionais</span>
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Nesse campo entram custos com vistoria, registro em cartório,
+                        emissão e registro de contrato, ITBI, escritura. Estes custos estão
+                        discriminados em seu contrato. Caso não souber, calcule um valor de
+                        5% sobre o valor total do imóvel.</span>
+                    <input placeholder="R$" type="number" id='inputCustosFin' />
+                    <input type="range" class="slider" name="slider" id="sliderCustosFin" />
+                </div>
+
+                <div class="inputVar" id="valorPrazoFin">
+                    <span class="tituloInput">Prazo de financiamento</span>
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Quanto maior o tempo de financiamento, menor será o valor da
+                        parcela inicial. Em contrapartida, o valor de juros pagos durante
+                        todo o periodo serão maiores.</span>
+                    <input placeholder="em anos" type="number" />
+                    <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
+                </div>
+
+                <div class="inputVar" id="valorTaxaFin">
+                    <span class="tituloInput">Taxa de financiamento</span>
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Custo efetivo total (CET) presente no contrato.</span>
+                    <input placeholder="% anual" type="number" />
+                    <input type="range" class="slider" name="slider" id="sliderTaxaFin" />
+                </div>
             </div>
 
-            <div class="inputVar" id="custosLocacao" style="display: none">
-                <span class="tituloInput">Outros custos com locação</span>
-                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                <span class="tooltiptext">Como condomínio e IPTU são custos que você terá alugando ou
-                    comprando, eles não precisam ser incluídos aqui.</span>
-                <input placeholder="R$ por mês" type="number" />
-                <input type="range" class="slider" name="slider" id="sliderCustosLocacao" />
-            </div>
+            <div class="containerDados">
+                <span class="titleContainer">Dados do investimento </span>
+                <div class="inputVar" id="valorInvestimento">
+                    <span class="tituloInput">Valor do investimento mensal</span>
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Diferença entre o valor da prestação e o valor do aluguel, no qual deverá
+                        ser
+                        aplicado
+                        mensalmente.</span>
+                    <input class='inputReadonly' placeholder="R$" type="number" readonly="true" />
+                </div>
 
-            <div class="inputVar" id="valorValorizacao">
-                <span class="tituloInput">Valorização anual do imóvel</span>
-                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                <span class="tooltiptext">IPCA Anual. Não sabe? Considere a inflação entre 3% e 5% ao
-                    ano.</span>
-                <input placeholder="% anual" type="number" />
-                <input type="range" class="slider" name="slider" id="sliderValorValorizacao" />
-            </div>
+                <div class="inputVar" id="valorDepositoIn">
+                    <span class="tituloInput">Depósito inicial</span>
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">O valor do depósito será igual ao valor de entrada e custos do
+                        financiamento,
+                        pois
+                        presume-se que você possui esse valor em mãos.</span>
+                    <input class='inputReadonly' placeholder="R$" type="number" id='inputDepositoIn'
+                        name='inputDepositoIn' readonly="true" />
+                </div>
 
-            <div class="inputVar" id="valorIgpm" style="display: none">
-                <span class="tituloInput">Valor do IGPM anual</span>
-                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                <span class="tooltiptext">Não sabe? Considere um valor entre 4% e 6% ao ano.</span>
-                <input placeholder="% anual" type="number" />
-                <input type="range" class="slider" name="slider" id="sliderValorIgpm" />
+                <div class="inputVar" id="valorRentabilidade">
+                    <span class="tituloInput">Rentabilidade mensal</span>
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Rentabilidade mensal no qual o depósito inicial + valor investido mensal
+                        serão
+                        aplicados. Caso não conheça, sugerimos aplicar a rentabilidade de uma renda fixa atual.</span>
+                    <input placeholder="% ao mês" type="number" />
+                    <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
+                </div>
             </div>
+        </section>
+
+        <div class="buttonCalc">
+            <input type="submit" class="buttonCalcular" id='btnCalcular' value="CALCULAR">
         </div>
-
-        <div class="containerDados">
-            <span class="titleContainer">Dados Financiamento</span>
-            <div class="inputVar" id="valorEntrada">
-                <span class="tituloInput">Valor da entrada</span>
-                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                <span class="tooltiptext">Este valor é variável conforme o banco onde está negociando o
-                    financiamento. Geralmente está em torno de 20% e 30%.</span>
-                <input placeholder="R$" type="number" />
-                <input type="range" class="slider" name="slider" id="sliderValorEntrada" />
-            </div>
-
-            <div class="inputVar" id="valorCustosFin">
-                <span class="tituloInput">Custos adicionais</span>
-                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                <span class="tooltiptext">Nesse campo entram custos com vistoria, registro em cartório,
-                    emissão e registro de contrato, ITBI, escritura. Estes custos estão
-                    discriminados em seu contrato. Caso não souber, calcule um valor de
-                    5% sobre o valor total do imóvel.</span>
-                <input placeholder="R$" type="number" />
-                <input type="range" class="slider" name="slider" id="sliderCustosFin" />
-            </div>
-
-            <div class="inputVar" id="valorPrazoFin">
-                <span class="tituloInput">Prazo de financiamento</span>
-                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                <span class="tooltiptext">Quanto maior o tempo de financiamento, menor será o valor da
-                    parcela inicial. Em contrapartida, o valor de juros pagos durante
-                    todo o periodo serão maiores.</span>
-                <input placeholder="em anos" type="number" />
-                <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
-            </div>
-
-            <div class="inputVar" id="valorTaxaFin">
-                <span class="tituloInput">Taxa de financiamento</span>
-                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                <span class="tooltiptext">Custo efetivo total (CET) presente no contrato.</span>
-                <input placeholder="% anual" type="number" />
-                <input type="range" class="slider" name="slider" id="sliderTaxaFin" />
-            </div>
-        </div>
-
-        <div class="containerDados">
-            <span class="titleContainer">Dados do investimento </span>
-            <div class="inputVar" id="valorInvestimento">
-                <span class="tituloInput">Valor do investimento mensal</span>
-                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                <span class="tooltiptext">Diferença entre o valor da prestação e o valor do aluguel, no qual deverá ser
-                    aplicado
-                    mensalmente.</span>
-                <input class='inputReadonly' placeholder="R$" type="number" readonly="true" />
-            </div>
-
-            <div class="inputVar" id="valorDepositoIn">
-                <span class="tituloInput">Depósito inicial</span>
-                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                <span class="tooltiptext">O valor do depósito será igual ao valor de entrada e custos do financiamento,
-                    pois
-                    presume-se que você possui esse valor em mãos.</span>
-                <input class='inputReadonly' placeholder="R$" type="number" readonly="true" />
-            </div>
-
-            <div class="inputVar" id="valorRentabilidade">
-                <span class="tituloInput">Rentabilidade mensal</span>
-                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                <span class="tooltiptext">Rentabilidade mensal no qual o depósito inicial + valor investido mensal serão
-                    aplicados. Caso não conheça, sugerimos aplicar a rentabilidade de uma renda fixa atual.</span>
-                <input placeholder="% ao mês" type="number" />
-                <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
-            </div>
-        </div>
-    </section>
-
-    <div class="buttonCalc">
-        <button class="buttonCalcular" type="button">CALCULAR</button>
-    </div>
+    </form>
 
     <footer>
         <img src="/images/squad06-logo-white.svg" alt="logoSquad" class="logoSquad" />
@@ -183,6 +190,7 @@
     </footer>
 
     <script src="homeScript.js"></script>
+    <script src="calculo.js"></script>
     <script src="darkMode.js"></script>
 </body>
 
