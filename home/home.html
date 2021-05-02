@@ -50,7 +50,7 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Aqui é muito fácil: é só colocar o valor do imóvel que você
                         gostaria de comprar.</span>
-                    <input required id="inputValorImovel" placeholder="R$" type="number" />
+                    <input required onkeyup="formatarReais()" id="inputValorImovel" placeholder="R$" type="text" />
                     <input type="range" class="slider" name="slider" id="sliderValorCompra" />
                 </div>
 
@@ -200,6 +200,7 @@
 
     <script src="homeScript.js"></script>
     <script src="darkModeHome.js"></script>
+    <script src="coin.js"></script>
 
 </body>
 

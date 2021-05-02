@@ -61,9 +61,6 @@
 }
 
 body {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
     font-family: 'Montserrat', sans-serif;
     background: var(--body-bg);
 }
@@ -137,6 +134,9 @@ h1 {
 }
 
 #resultadoInfo {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     margin:1rem 0rem;
 }
 
@@ -148,6 +148,7 @@ h1 {
     border:0.126rem solid var(--quadro-border);
     border-radius:1rem;
     padding:1rem;
+    margin-top:1rem;
     background-image:url(/images/kkArtboard\ 1.png);
     background-color:var(--quadro-bg);
 }
@@ -217,11 +218,6 @@ h1 {
 }
 
 
-#avisoInfo {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
 
 #btnCalcNovamente {
     display:flex;
