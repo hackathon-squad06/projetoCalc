@@ -1,16 +1,16 @@
 // const btn = document.getElementById('btnCalcular');
 
-function calcular() {
-  const valorCompra = parseFloat(document.getElementById("inputValorCompra").value);
-  const valorAluguel = parseFloat(document.getElementById("inputValorAluguel").value);
+// function calcular() {
+//   const valorCompra = parseFloat(document.getElementById("inputValorCompra").value);
+//   const valorAluguel = parseFloat(document.getElementById("inputValorAluguel").value);
 
-  const soma = valorCompra + valorAluguel
-  const multiplicado = valorCompra * valorAluguel
+//   const soma = valorCompra + valorAluguel
+//   const multiplicado = valorCompra * valorAluguel
 
-  sessionStorage.setItem('soma', soma)
-  sessionStorage.setItem('multiplicado', multiplicado)
-  window.location.href = "/resultap/resultap.html"
-}
+//   sessionStorage.setItem('soma', soma)
+//   sessionStorage.setItem('multiplicado', multiplicado)
+//   window.location.href = "/resultap/resultap.html"
+// }
 
 
 // document.getElementById('inputValorEntrada').addEventListener('change', function () {
