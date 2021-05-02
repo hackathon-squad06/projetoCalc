@@ -1,6 +1,6 @@
 # projetoCalc
 Projeto Hackathon - Squad 06
 
-feature-juncaoCalculosEDisplayResultado branch
+feature-rangeSlider branch
 
-Feature focada em juntar outras branches
+Feature focada na funcionalidade do slider
