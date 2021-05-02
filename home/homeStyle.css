@@ -223,7 +223,7 @@ nav div {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent var(--tooltip-bg);
+    border-color: transparent transparent var(--tooltip-bg) transparent;
 }
 
 
