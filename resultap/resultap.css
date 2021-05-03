@@ -12,8 +12,9 @@
     --resultado-bg: #2782B9;
     --resultado-text: #fff;
     --quadro-border: #C4C4C4;
-    --quadro-bg: #fff;
+    --quadro-bg: #ececec;
     --quadro-title: #2782B9;
+    --quadro-p: #000;
     --valoresTotais-bg: #933380;
     --valoresTotais-texto: #fff;
     --topicosLi-border: #fff;
@@ -22,6 +23,7 @@
     --valoresLi-bg: #B8D0DB;
     --painelInfoTopicos-bg: #933380;
     --painelInfoValores-bg: #B795B7;
+    --avisoInfo-shadow: 0px 0px #000;
     --buttonCalc-bg: #2782B9;
     --buttonCalc-text: #fff;
     --buttonCalc-border: #C4C4C4;
@@ -40,16 +42,18 @@
     --resultado-bg: #602080;
     --resultado-text: #e7e7e7;
     --quadro-border: #b030b0;
-    --quadro-bg: #fff;
-    --quadro-title: #68bef3;
+    --quadro-bg: #e7e7e7;
+    --quadro-title: #2782B9;
+    --quadro-p: #000;
     --valoresTotais-bg: #933380;
     --valoresTotais-texto: #fff;
-    --topicosLi-border: #fff;
+    --topicosLi-border: #C4C4C4;
     --topicosLi-bg: #2782B9;
-    --topicosLi-text: #fff;
+    --topicosLi-text: #e7e7e7;
     --valoresLi-bg: #B8D0DB;
     --painelInfoTopicos-bg: #933380;
     --painelInfoValores-bg: #B795B7;
+    --avisoInfo-shadow: 0px 0px #000;
     --buttonCalc-bg: #962b96;
     --buttonCalc-text: #fff;
     --buttonCalc-border: #C4C4C4;
@@ -58,10 +62,11 @@
     --footer-text: #e7e7e7;
     --footer-hover: #b030b0;
     --footer-divider: #bfc1c4;
+    
 }
 
 body {
-    display:flex;
+    /* display:flex; */
     flex-direction:column;
     align-items:center;
     font-family: 'Montserrat', sans-serif;
@@ -91,11 +96,17 @@ header{
     height: 1.2rem;
 }
 
+nav {
+    display:flex;
+    align-items:center;
+}
+
 nav a {
     font-size:1.2rem;
+    padding:0.9rem;
     font-weight:500;
-    padding:0.7rem;
     color:var(--nav-text);
+    border-bottom:0.3rem solid transparent;
     text-decoration:none;
 }
 
@@ -103,6 +114,14 @@ nav a:hover {
     color:var(--nav-hover);
     border-bottom:0.3rem solid var(--nav-hover);
 }
+
+nav div {
+    margin-left:1.5rem;
+    padding:1rem;
+    cursor:pointer;
+}
+
+
 
 #resultadoPagina {
     display:flex;
@@ -123,13 +142,16 @@ h1 {
 }
 
 #resultadoInfo {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     margin:1rem 0rem;
 }
 
 .quadro {
     display:flex;
     flex-direction:column;
-    height:35rem;
+    /* height:40rem; */
     width:50rem;
     border:0.126rem solid var(--quadro-border);
     border-radius:1rem;
@@ -147,6 +169,7 @@ h1 {
 .quadro p {
     font-size:1.2rem;
     margin:0.5rem 0rem;
+    color: var(--quadro-p);
 }
 
 #titulo {
@@ -208,6 +231,11 @@ h1 {
     flex-direction:column;
     align-items:center;
 }
+
+#avisoInfo p {
+    text-shadow: var(--avisoInfo-shadow);
+}
+
 
 #btnCalcNovamente {
     display:flex;

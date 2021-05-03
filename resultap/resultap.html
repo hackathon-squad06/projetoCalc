@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-sacalable=0">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
@@ -22,8 +22,9 @@
                 <a href="/home/home.html">Home</a>
                 <a href="/resultap/resultap.html">Result AP</a>
                 <a href="/home/home.html">Sobre nós</a>
-                <img src="/images/dark-mode-black.svg" alt="darkMode" class="modeSwitch" id='modeSwitch'
-                    onclick="switchMode()" />
+                <div class="modeSwitch" onclick="switchMode()">
+                    <img src="/images/dark-mode-black.svg" id='modeSwitch' />
+                </div>
             </nav>
         </div>
     </header>
@@ -40,39 +41,49 @@
             <p>Dados gerais</p>
             <div class="painelInfo">
                 <ul class="topicos">
-                    <li>Valor do imóvel na data atual</li>
-                    <li>Valor do imóvel após o período de X meses</li>
+                    <li>Valor do imóvel atual</li>
+                    <li>Valor do imóvel corrigido após <span id='anos'>X</span> anos</li>
                 </ul>
 
                 <ul class="valores">
-                    <li id="valorImovel">R$250.000,00</li>
-                    <li id="valorImovelFuturo">R$340.000,00</li>
+                    <li id="valorImovelAtual">R$0.000,00</li>
+                    <li id="valorImovelFuturo">R$0.000,00</li>
                 </ul>
             </div>
 
             <p>Opção de financiamento</p>
             <div class="painelInfo">
                 <ul class="topicos">
-                    <li>Valor total pago no financiado</li>
-                    <li>Valor pago em juros</li>
+                    <li>Valor total pago no imóvel financiado</li>
+                    <li>Valor financiado</li>
+                    <li>Valor total pago no financiamento</li>
+                    <li>Valor total pago em juros</li>
+                    <li>Valor da parcela na "tabela price"</li>
                 </ul>
 
                 <ul class="valores">
-                    <li id="totalFinanciamento">R$450.000,00</li>
-                    <li id="totalJurosPago">R$230.000,00</li>
+                    <li id="totalPagoImovel">R$0.000,00</li>
+                    <li id="valorFinanciado">R$0.000,00</li>
+                    <li id="totalPagoFinanciado">R$0.000,00</li>
+                    <li id="totalJurosPago">R$0.000,00</li>
+                    <li id="valorParcela">R$0,00</li>
                 </ul>
             </div>
 
             <p>Opção de alugar e investir</p>
             <div class="painelInfo">
                 <ul class="topicos">
-                    <li>Valor total do investimento no período de X meses</li>
-                    <li>Será possível comprar seu imóvel à vista após </li>
+                    <li>Valor investido mensalmente</li>
+                    <li>Valor total do investimento após <span id='anosFinal'>X</span> anos</li>
+                    <li>Valor restante após a compra do imóvel</li>
+                    <li>Você atingiria o valor do imóvel corrigido em</li>
                 </ul>
 
                 <ul class="valores">
-                    <li id="totalInvestimento">R$475.000,00</li>
-                    <li id="">25 anos</li>
+                    <li id="valorInvestidoMensal">R$0,00</li>
+                    <li id="valorTotalInvestimento">R$0.000,00</li>
+                    <li id="valorRestante">R$0.000,00</li>
+                    <li id="prazoRentabilidade">0</li>
                 </ul>
             </div>
         </div>

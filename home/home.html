@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet" />
+    <script src="darkModeHome.js" defer></script>
 </head>
 
 <body>
@@ -21,8 +22,9 @@
                 <a href="/home/home.html">Home</a>
                 <a href="/resultap/resultap.html">Result AP</a>
                 <a href="/home/home.html">Sobre nós</a>
-                <img src="/images/dark-mode-black.svg" alt="darkMode" class="modeSwitch" id='modeSwitch'
-                    onclick="switchMode()" />
+                <div class="modeSwitch">
+                    <img src="/images/dark-mode-black.svg" id='modeSwitch' />
+                </div>
             </nav>
         </div>
     </header>
@@ -49,8 +51,8 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Aqui é muito fácil: é só colocar o valor do imóvel que você
                         gostaria de comprar.</span>
-                    <input required id="inputValorImovel" placeholder="R$" type="number" />
-                    <input type="range" class="slider" name="slider" id="sliderValorCompra" />
+                    <input required id="inputValorImovel" placeholder="R$" type="number" onblur="formatarMoeda(this)" />
+                    <input type="range" class="slider" id="sliderValorCompra" />
                 </div>
 
                 <div class="inputVar" id="valorAluguel">
@@ -59,8 +61,8 @@
                     <span class="tooltiptext">Você só precisa levar em consideração o valor de aluguel de um
                         imóvel semelhante ao que pretende comprar.
                     </span>
-                    <input required id="inputAluguel" placeholder="R$" type="number" />
-                    <input type="range" class="slider" name="slider" id="sliderValorAluguel" />
+                    <input required id="inputAluguel" placeholder="R$" type="number" onblur="formatarMoeda(this)" />
+                    <input type="range" class="slider" id="sliderValorAluguel" />
                 </div>
 
                 <div class="inputVar" id="custosLocacao" style="display: none">
@@ -78,7 +80,7 @@
                     <span class="tooltiptext">IPCA Anual. Não sabe? Considere a inflação entre 3% e 5% ao
                         ano.</span>
                     <input required id="inputValorizacao" placeholder="% anual" type="number" name="inputValorizacao"
-                        min="0" value="0" step=".01" />
+                        min="0" value="0" step=".01" onblur="formatarPorcentagem(this)" />
                     <input type="range" class="slider" name="slider" id="sliderValorValorizacao" />
                 </div>
 
@@ -98,7 +100,7 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Este valor é variável conforme o banco onde está negociando o
                         financiamento. Geralmente está em torno de 20% e 30%.</span>
-                    <input required id="inputEntrada" placeholder="R$" type="number" />
+                    <input required id="inputEntrada" placeholder="R$" type="number" onblur="formatarMoeda(this)" />
                     <input type="range" class="slider" name="slider" id="sliderValorEntrada" />
                 </div>
 
@@ -109,7 +111,7 @@
                         emissão e registro de contrato, ITBI, escritura. Estes custos estão
                         discriminados em seu contrato. Caso não souber, calcule um valor de
                         5% sobre o valor total do imóvel.</span>
-                    <input required id="inputCustosAd" placeholder="R$" type="number" />
+                    <input required id="inputCustosAd" placeholder="R$" type="number" onblur="formatarMoeda(this)" />
                     <input type="range" class="slider" name="slider" id="sliderCustosFin" />
                 </div>
 
@@ -119,7 +121,8 @@
                     <span class="tooltiptext">Quanto maior o tempo de financiamento, menor será o valor da
                         parcela inicial. Em contrapartida, o valor de juros pagos durante
                         todo o periodo serão maiores.</span>
-                    <input required id="inputPrazoFin" placeholder="em anos" type="number" />
+                    <input required id="inputPrazoFin" placeholder="em anos" type="number"
+                        onblur="formatarAnos(this)" />
                     <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
                 </div>
 
@@ -127,8 +130,8 @@
                     <span class="tituloInput">Taxa de financiamento</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Custo efetivo total (CET) presente no contrato.</span>
-                    <input required id="inputTaxaFin" placeholder="% anual" type="number" min="0" value="0"
-                        step=".01" />
+                    <input required id="inputTaxaFin" placeholder="% anual" type="number" min="0" value="0" step=".01"
+                        onblur="formatarPorcentagem(this)" />
                     <input type="range" class="slider" name="slider" id="sliderTaxaFin" />
                 </div>
             </div>
@@ -164,7 +167,7 @@
                         serão
                         aplicados. Caso não conheça, sugerimos aplicar a rentabilidade de uma renda fixa atual.</span>
                     <input required id="inputRentabilidade" placeholder="% anual" type="number" min="0" value="0"
-                        step=".01" />
+                        step=".01" onblur="formatarPorcentagem(this)" />
                     <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
                 </div>
             </div>
@@ -198,7 +201,9 @@
     </footer>
 
     <script src="homeScript.js"></script>
-    <script src="darkModeHome.js"></script>
+    <!-- <script src="darkModeHome.js"></script> -->
+    <script src="formatNumbers.js"></script>
+    <script src="calculo.js"></script>
 
 </body>
 

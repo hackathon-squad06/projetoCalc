@@ -1,44 +1,15 @@
-// const btn = document.getElementById('btnCalcular');
 
-function calcular() {
-  const valorCompra = parseFloat(document.getElementById("inputValorCompra").value);
-  const valorAluguel = parseFloat(document.getElementById("inputValorAluguel").value);
+function nper(rate, pmt, pv, fv) {
 
-  const soma = valorCompra + valorAluguel
-  const multiplicado = valorCompra * valorAluguel
-
-  sessionStorage.setItem('soma', soma)
-  sessionStorage.setItem('multiplicado', multiplicado)
-  window.location.href = "/resultap/resultap.html"
+  const z = pmt * (1 + rate * 1) / rate
+  return Math.log10((-fv + z) / (pv + z)) / Math.log10(1 + rate)
 }
 
+// console.log(nper(0.0491/12, -400, -45000, 359928))
 
-// document.getElementById('inputValorEntrada').addEventListener('change', function () {
-//   let depositoInicial = document.getElementsByName('inputDepositoIn')[0];
-//   let valorEntrada = parseFloat(document.getElementById('inputValorEntrada').value);
-//   let custosAdicionais = parseFloat(document.getElementById('inputCustosFin').value);
-//   const deposito = valorEntrada + custosAdicionais
-//   if (isNaN(custosAdicionais)) {
-//     console.log('custos adicionais vazio')
-//   } else if (isNaN(deposito)) {
-//     depositoInicial.placeholder = 'Adicione o Valor de entrada'
-//   } else {
-//     depositoInicial.placeholder = deposito
-//   }
-//   console.log(deposito)
-// })
+var taxaAnual = 5.88 // taxa anual 
+var i = ((1 + taxaAnual / 100) ** (1 / 12)) - 1 // taxa convertida mensal
 
-// document.getElementById('inputCustosFin').addEventListener('change', function () {
-//   let depositoInicial = document.getElementsByName('inputDepositoIn')[0];
-//   let valorEntrada = parseFloat(document.getElementById('inputValorEntrada').value);
-//   let custosAdicionais = parseFloat(document.getElementById('inputCustosFin').value);
-//   const deposito = valorEntrada + custosAdicionais
-//   if (isNaN(valorEntrada)) {
-//     console.log('valorEntrada vazio')
-//   } else if (isNaN(deposito)) {
-//     depositoInicial.placeholder = 'Adicione os Custos adicionais'
-//   } else {
-//     depositoInicial.placeholder = deposito
-//   }
-//   console.log(deposito)
-// })
+// console.log(Math.ceil(nper(i, -300, -25000, 350000)))
+
+// console.log(Math.ceil(nper(i, -650, -55000, 450000)))
