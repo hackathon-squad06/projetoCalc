@@ -1,6 +1,6 @@
 # projetoCalc
 Projeto Hackathon - Squad 06
 
-feature-rangeSlider branch
+feature-darkMode branch
 
-Feature focada na funcionalidade do slider e formatação dos inputs
+Feature focada na funcionalidade do tema escuro para o site
