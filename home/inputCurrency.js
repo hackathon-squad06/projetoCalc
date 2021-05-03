@@ -1,4 +1,4 @@
-function formatarReais() {
+/*function formatarReais() {
     var digitou = document.querySelector("#inputValorImovel");
     var valor = digitou.value;
 
@@ -20,10 +20,9 @@ function formatarReais() {
     
     //Transforma a string em número
     digitou.onblur = function () {
-      console.log(valor)
       valor = valor.replace(/[.]/g, "")
       valor = valor.replace(/[,]/g, ".")
       valor = Number(valor)
-      console.log(valor)
     }
 }
+*/

@@ -50,7 +50,7 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Aqui é muito fácil: é só colocar o valor do imóvel que você
                         gostaria de comprar.</span>
-                    <input required onkeyup="formatarReais()" id="inputValorImovel" placeholder="R$" type="text" />
+                    <input required onkeyup="formatarReais(this)" id="inputValorImovel" placeholder="R$" type="text" />
                     <input type="range" class="slider" name="slider" id="sliderValorCompra" />
                 </div>
 
@@ -60,7 +60,7 @@
                     <span class="tooltiptext">Você só precisa levar em consideração o valor de aluguel de um
                         imóvel semelhante ao que pretende comprar.
                     </span>
-                    <input required id="inputAluguel" placeholder="R$" type="number" />
+                    <input required onkeyup="formatarReais(this)" id="inputAluguel" placeholder="R$" type="text" />
                     <input type="range" class="slider" name="slider" id="sliderValorAluguel" />
                 </div>
 
@@ -69,7 +69,7 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Como condomínio e IPTU são custos que você terá alugando ou
                         comprando, eles não precisam ser incluídos aqui.</span>
-                    <input placeholder="R$ por mês" type="number" />
+                    <input onkeyup="formatarReais(this)" placeholder="R$ por mês" type="text" />
                     <input type="range" class="slider" name="slider" id="sliderCustosLocacao" />
                 </div>
 
@@ -99,7 +99,7 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Este valor é variável conforme o banco onde está negociando o
                         financiamento. Geralmente está em torno de 20% e 30%.</span>
-                    <input required id="inputEntrada" placeholder="R$" type="number" />
+                    <input required onkeyup="formatarReais(this)" id="inputEntrada" placeholder="R$" type="text" />
                     <input type="range" class="slider" name="slider" id="sliderValorEntrada" />
                 </div>
 
@@ -110,7 +110,7 @@
                         emissão e registro de contrato, ITBI, escritura. Estes custos estão
                         discriminados em seu contrato. Caso não souber, calcule um valor de
                         5% sobre o valor total do imóvel.</span>
-                    <input required id="inputCustosAd" placeholder="R$" type="number" />
+                    <input required onkeyup="formatarReais(this)" id="inputCustosAd" placeholder="R$" type="text" />
                     <input type="range" class="slider" name="slider" id="sliderCustosFin" />
                 </div>
 
