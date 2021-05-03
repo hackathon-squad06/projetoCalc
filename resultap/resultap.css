@@ -151,7 +151,7 @@ h1 {
 .quadro {
     display:flex;
     flex-direction:column;
-    height:40rem;
+    /* height:40rem; */
     width:50rem;
     border:0.126rem solid var(--quadro-border);
     border-radius:1rem;

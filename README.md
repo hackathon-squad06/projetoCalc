@@ -1,6 +1,6 @@
 # projetoCalc
 Projeto Hackathon - Squad 06
 
-feature-darkMode branch
+feature-juncaoTesteCalculosEDarkMode branch
 
-Feature focada na funcionalidade do tema escuro para o site
+Feature focada em juntar as branches darkMode e testeCalculos
