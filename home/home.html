@@ -50,7 +50,7 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Aqui é muito fácil: é só colocar o valor do imóvel que você
                         gostaria de comprar.</span>
-                    <input required onkeyup="formatarReais(this)" id="inputValorImovel" placeholder="R$" type="text" />
+                    <input required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDeCompra)" id="inputValorImovel" placeholder="R$" type="text" />
                     <input type="range" class="slider" name="slider" id="sliderValorCompra" />
                 </div>
 
@@ -60,7 +60,7 @@
                     <span class="tooltiptext">Você só precisa levar em consideração o valor de aluguel de um
                         imóvel semelhante ao que pretende comprar.
                     </span>
-                    <input required onkeyup="formatarReais(this)" id="inputAluguel" placeholder="R$" type="text" />
+                    <input required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDoAluguel)" id="inputAluguel" placeholder="R$" type="text" />
                     <input type="range" class="slider" name="slider" id="sliderValorAluguel" />
                 </div>
 
@@ -99,7 +99,7 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Este valor é variável conforme o banco onde está negociando o
                         financiamento. Geralmente está em torno de 20% e 30%.</span>
-                    <input required onkeyup="formatarReais(this)" id="inputEntrada" class="dadosCampos" placeholder="R$" type="text" />
+                    <input required onkeyup="formatarReais(this)" id="inputEntrada" class="dadosCampos" onchange="entrada()" onblur="calcDeposito(valorDaEntrada), valorInvestimentoMensal (valorDaEntrada)" placeholder="R$" type="text" />
                     <input type="range" class="slider" name="slider" id="sliderValorEntrada" />
                 </div>
 
@@ -110,7 +110,7 @@
                         emissão e registro de contrato, ITBI, escritura. Estes custos estão
                         discriminados em seu contrato. Caso não souber, calcule um valor de
                         5% sobre o valor total do imóvel.</span>
-                    <input required onkeyup="formatarReais(this)" id="inputCustosAd" class="dadosCampos" onchange="custos()" placeholder="R$" type="text" />
+                    <input required onkeyup="formatarReais(this)" id="inputCustosAd" class="dadosCampos" onchange="custos()" onblur="calcDeposito(custosAdicionais), valorInvestimentoMensal (custosAdicionais)" placeholder="R$" type="text" />
                     <input type="range" class="slider" name="slider" id="sliderCustosFin" />
                 </div>
 
@@ -120,7 +120,7 @@
                     <span class="tooltiptext">Quanto maior o tempo de financiamento, menor será o valor da
                         parcela inicial. Em contrapartida, o valor de juros pagos durante
                         todo o periodo serão maiores.</span>
-                    <input required id="inputPrazoFin" placeholder="em anos" type="number" />
+                    <input required id="inputPrazoFin" onblur="valorInvestimentoMensal ()" placeholder="em anos" type="number" />
                     <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
                 </div>
 
@@ -128,7 +128,7 @@
                     <span class="tituloInput">Taxa de financiamento</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Custo efetivo total (CET) presente no contrato.</span>
-                    <input required id="inputTaxaFin" placeholder="% anual" type="number" min="0" value="0"
+                    <input required id="inputTaxaFin" onblur="valorInvestimentoMensal ()" placeholder="% anual" type="number" min="0" value="0"
                         step=".01" />
                     <input type="range" class="slider" name="slider" id="sliderTaxaFin" />
                 </div>

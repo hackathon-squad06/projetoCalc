@@ -1,4 +1,4 @@
-function calcular () {
+/*function calcular () {
     const valorImovel = parseFloat(document.getElementById('inputValorImovel').value);
     const aluguel = parseFloat(document.getElementById('inputAluguel').value);
     const valorizacao = parseFloat(document.getElementById('inputValorizacao').value);
@@ -40,7 +40,10 @@ function calcular () {
     sessionStorage.setItem('valorJurosPago', totalJurosPago)
     sessionStorage.setItem('valorInvestimentoTotal', mF)
     window.location.href = "/resultap/resultap.html"
-}
+} */
+
+
+
 
 /*
 document.getElementById('inputEntrada').addEventListener('change', function () {
@@ -114,6 +117,9 @@ document.getElementById('inputAluguel').addEventListener('change', function () {
     }
   })*/
 
+  // Recomentar acima
+
+/*
   document.getElementById('inputEntrada').addEventListener('change', function () {
     let depositoMensal = document.getElementsByName('inputValorMensal')[0];
     let valorImovel = parseFloat(document.getElementById('inputValorImovel').value);
@@ -180,7 +186,7 @@ document.getElementById('inputTaxaFin').addEventListener('change', function () {
     } else {
       depositoMensal.placeholder = investimentoMensal2
     }
-  })
+  }) */
 
 
 
@@ -245,7 +251,8 @@ function aluguel () {
   valorDoAluguel = valorDoAluguel[0]
 }
 
-valorEntrada.addEventListener("change", entrada)
+let chamarEntrada = document.getElementById("inputEntrada")
+chamarEntrada.addEventListener("change", entrada)
 function entrada () {
   valorDaEntrada = valorDaEntrada[0]
 }
@@ -256,22 +263,47 @@ function custos () {
   custosAdicionais = custosAdicionais[0]
 }
 
-  
 
+
+function calcDeposito() {
+  let depositoInicial = document.getElementsByName('inputDeposito')[0];
+  let deposito = valorDaEntrada + custosAdicionais
+  depositoInicial.placeholder = deposito
+}
+
+function valorInvestimentoMensal () {
+  let investimentoMensal = document.getElementsByName('inputValorMensal')[0];
+  let taxaFin = parseFloat(document.getElementById('inputTaxaFin').value);
+  let prazoFin = parseFloat(document.getElementById('inputPrazoFin').value);
+
+  let valorFinanciado = valorDeCompra - valorDaEntrada
+  let prazoFinMes = prazoFin * 12
+  let taxaFinMes = ((1 + (taxaFin/100)) ** (1/12))-1
+  const parcelaFin = valorFinanciado * ((((1 + taxaFinMes) ** prazoFinMes) * taxaFinMes) / (((1 + taxaFinMes) ** prazoFinMes) - 1))
+  const parcelaFin2 = parcelaFin.toFixed(2)
+  const investimentoMensalValor = parcelaFin2 - valorDoAluguel
+  const investimentoMensalFinal = investimentoMensalValor.toFixed(0)
+
+  investimentoMensal.placeholder = investimentoMensalFinal
+}
+
+
+
+//let ativarFuncoes = document.querySelectorAll(".dadosCampos")
+//ativarFuncoes.addEventListener("change", chamada)
 
 /*
-let ativarFuncoes = document.querySelectorAll(".dadosCampos")
-ativarFuncoes.addEventListener("change", chamada)
-
 function chamada () {
   testando ()
 }
 
 function testando () {
-  let depositoInicial = document.getElementsByName('inputDeposito')[0];
+  //let depositoInicial = document.getElementsByName('inputDeposito')[0];
   let valorEntrada = valorDaEntrada[0];
   let custosAdicionais = custosAdicionais[0];
   const deposito = valorEntrada + custosAdicionais
+
+  console.log(deposito)
   if (isNaN(custosAdicionais)) {
   } else if (isNaN(deposito)) {
     depositoInicial.placeholder = 'Adicione o Valor de entrada'
@@ -279,7 +311,8 @@ function testando () {
     depositoInicial.placeholder = deposito
   }
   console.log(deposito)
-}*/
+}
+*/
 
 
 
@@ -306,67 +339,8 @@ function valorImovel (numImovel) {
     } else {
       depositoMensal.placeholder = investimentoMensal2
   }
-}
-
-
-
-function aluguel(numAluguel) {
-  let depositoMensal = document.getElementsByName('inputValorMensal')[0];
-  let valorImovel = parseFloat(document.getElementById('inputValorImovel').value);
-  let valorEntrada = parseFloat(document.getElementById('inputEntrada').value);
-  let valorAluguel = numAluguel;
-  console.log(valorAluguel)
-
-  let taxaFin = parseFloat(document.getElementById('inputTaxaFin').value);
-  let prazoFin = parseFloat(document.getElementById('inputPrazoFin').value);
-  let valorFinanciado = valorImovel - valorEntrada
-  let prazoFinMes = prazoFin * 12
-  let taxaFinMes = ((1 + (taxaFin/100)) ** (1/12))-1
-  const parcelaFin = valorFinanciado * ((((1 + taxaFinMes) ** prazoFinMes) * taxaFinMes) / (((1 + taxaFinMes) ** prazoFinMes) - 1))
-  const parcelaFin2 = parcelaFin.toFixed(2)
-  const investimentoMensal = parcelaFin2 - valorAluguel
-  const investimentoMensal2 = investimentoMensal.toFixed(0)
-
-  if (isNaN(valorEntrada)) {
-  } else if (isNaN(investimentoMensal2)) {
-      depositoMensal.placeholder = 'Adicione os dados para o cálculo'
-    } else {
-      depositoMensal.placeholder = investimentoMensal2
-  }
-}
-
-
-
-function valorEntrada(valorDaEntrada) {
-  //let depositoInicial = document.getElementsByName('inputDeposito')[0];
-  let valorEntrada = valorDaEntrada[0];
-  console.log(valorEntrada)
-  let custosAdicionais = numCustosAd;
-  const deposito = valorEntrada + custosAdicionais
-
-  if (isNaN(custosAdicionais)) {
-  } else if (isNaN(deposito)) {
-    depositoInicial.placeholder = 'Adicione o Valor de entrada'
-  } else {
-    depositoInicial.placeholder = deposito
-  }
-}
-/*
-
-
-function custosAd(numCustosAd, numEntrada) {
-  let depositoInicial = document.getElementsByName('inputDeposito')[0];
-  let valorEntrada = numEntrada;
-  let custosAdicionais = numCustosAd;
-  console.log(custosAdicionais)
-
-  const deposito = valorEntrada + custosAdicionais
-  console.log(deposito)
-
-  if (isNaN(valorEntrada)) {
-  } else if (isNaN(deposito)) {
-    depositoInicial.placeholder = 'Adicione os Custos adicionais'
-  } else {
-    depositoInicial.placeholder = deposito
-  }
 }*/
+
+
+
+
