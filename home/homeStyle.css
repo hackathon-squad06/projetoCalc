@@ -58,6 +58,8 @@
     --footer-divider: #bfc1c4;
 }
 
+
+
 /* Remove as setas do campo input='number' */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

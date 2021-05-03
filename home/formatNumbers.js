@@ -60,11 +60,11 @@ function formatarMoeda(element) {
 
   if (isNaN(valor)) {
     // console.log('é NaN')
-    digitou.type = Text
+    digitou.type = 'text'
     valor = n.toLocaleString("pt-BR", myObj);
     digitou.value = valorDigitado;
   } else {
-    digitou.type = Text
+    digitou.type = 'text'
     valor = n.toLocaleString("pt-BR", myObj);
     digitou.value = valor;
   }
