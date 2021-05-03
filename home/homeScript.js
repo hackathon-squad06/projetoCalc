@@ -211,31 +211,84 @@ function formatarReais(campo) {
     valor = valor.replace(/[,]/g, ".")
     valor = Number(valor)
 
-    //Direciona os valores para cada função
-    
+    //Direciona os valores cada array
     if (id == "inputValorImovel") {
       const numImovel = valor
-      valorImovel (numImovel)
+      valorDeCompra.splice(0, 1, numImovel)
     } else if (id == "inputAluguel") {
       const numAluguel = valor
-      aluguel (numAluguel)
+      valorDoAluguel.splice(0, 1, numAluguel)
     } else if (id == "inputEntrada") {
       const numEntrada = valor
-      valorEntrada (numEntrada)
+      valorDaEntrada.splice(0, 1, numEntrada)
     } else if (id == "inputCustosAd") {
       const numCustosAd = valor
-      custosAd (numCustosAd)
+      custosAdicionais.splice(0, 1, numCustosAd)
     }
-  } 
+  }
 }
 
 
 
+// Retira o valor da arry
+
+  let valorDeCompra = []
+  let valorDoAluguel = []
+  let valorDaEntrada = []
+  let custosAdicionais = []
+
+  valorCompra.addEventListener("change", compra)
+  function compra () {
+    valorDeCompra = valorDeCompra[0]
+  }
+
+  valorEntrada.addEventListener("change", aluguel)
+  function aluguel () {
+    valorDoAluguel = valorDoAluguel[0]
+  }
+
+  valorEntrada.addEventListener("change", entrada)
+  function entrada () {
+    valorDaEntrada = valorDaEntrada[0]
+  }
+
+  valorEntrada.addEventListener("change", custos)
+  function custos () {
+    custosAdicionais = custosAdicionais[0]
+  }
+
+  
+
+
+/*
+let ativarFuncoes = document.querySelectorAll(".dadosCampos")
+ativarFuncoes.addEventListener("change", chamada)
+
+function chamada () {
+  testando ()
+}
+
+function testando () {
+  let depositoInicial = document.getElementsByName('inputDeposito')[0];
+  let valorEntrada = valorDaEntrada[0];
+  let custosAdicionais = custosAdicionais[0];
+  const deposito = valorEntrada + custosAdicionais
+  if (isNaN(custosAdicionais)) {
+  } else if (isNaN(deposito)) {
+    depositoInicial.placeholder = 'Adicione o Valor de entrada'
+  } else {
+    depositoInicial.placeholder = deposito
+  }
+  console.log(deposito)
+}*/
+
+
+
+/*
 function valorImovel (numImovel) {
   let depositoMensal = document.getElementsByName('inputValorMensal')[0];
   let valorImovel = numImovel;
   console.log(valorImovel)
-
   let valorEntrada = parseFloat(document.getElementById('inputEntrada').value);
   let valorAluguel = parseFloat(document.getElementById('inputAluguel').value);
   let taxaFin = parseFloat(document.getElementById('inputTaxaFin').value);
@@ -285,11 +338,10 @@ function aluguel(numAluguel) {
 
 
 
-function valorEntrada(numEntrada, numCustosAd) {
-  let depositoInicial = document.getElementsByName('inputDeposito')[0];
-  let valorEntrada = numEntrada;
+function valorEntrada(valorDaEntrada) {
+  //let depositoInicial = document.getElementsByName('inputDeposito')[0];
+  let valorEntrada = valorDaEntrada[0];
   console.log(valorEntrada)
-
   let custosAdicionais = numCustosAd;
   const deposito = valorEntrada + custosAdicionais
 
@@ -300,7 +352,7 @@ function valorEntrada(numEntrada, numCustosAd) {
     depositoInicial.placeholder = deposito
   }
 }
-
+/*
 
 
 function custosAd(numCustosAd, numEntrada) {
@@ -318,4 +370,4 @@ function custosAd(numCustosAd, numEntrada) {
   } else {
     depositoInicial.placeholder = deposito
   }
-}
+}*/
