@@ -110,7 +110,7 @@
                         emissão e registro de contrato, ITBI, escritura. Estes custos estão
                         discriminados em seu contrato. Caso não souber, calcule um valor de
                         5% sobre o valor total do imóvel.</span>
-                    <input required onkeyup="formatarReais(this)" id="inputCustosAd" class="dadosCampos" placeholder="R$" type="text" />
+                    <input required onkeyup="formatarReais(this)" id="inputCustosAd" class="dadosCampos" onchange="custos()" placeholder="R$" type="text" />
                     <input type="range" class="slider" name="slider" id="sliderCustosFin" />
                 </div>
 

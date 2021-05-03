@@ -211,7 +211,7 @@ function formatarReais(campo) {
     valor = valor.replace(/[,]/g, ".")
     valor = Number(valor)
 
-    //Direciona os valores cada array
+    //Direciona os valores para cada função
     if (id == "inputValorImovel") {
       const numImovel = valor
       valorDeCompra.splice(0, 1, numImovel)
@@ -228,34 +228,33 @@ function formatarReais(campo) {
   }
 }
 
+let valorDeCompra = []
+let valorDoAluguel = []
+let valorDaEntrada = []
+let custosAdicionais = []
 
+//console.log(valorDeCompra, valorDoAluguel, valorDaEntrada, custosAdicionais)
 
-// Retira o valor da arry
+valorCompra.addEventListener("change", compra)
+function compra () {
+  valorDeCompra = valorDeCompra[0]
+}
 
-  let valorDeCompra = []
-  let valorDoAluguel = []
-  let valorDaEntrada = []
-  let custosAdicionais = []
+valorAluguel.addEventListener("change", aluguel)
+function aluguel () {
+  valorDoAluguel = valorDoAluguel[0]
+}
 
-  valorCompra.addEventListener("change", compra)
-  function compra () {
-    valorDeCompra = valorDeCompra[0]
-  }
+valorEntrada.addEventListener("change", entrada)
+function entrada () {
+  valorDaEntrada = valorDaEntrada[0]
+}
 
-  valorEntrada.addEventListener("change", aluguel)
-  function aluguel () {
-    valorDoAluguel = valorDoAluguel[0]
-  }
-
-  valorEntrada.addEventListener("change", entrada)
-  function entrada () {
-    valorDaEntrada = valorDaEntrada[0]
-  }
-
-  valorEntrada.addEventListener("change", custos)
-  function custos () {
-    custosAdicionais = custosAdicionais[0]
-  }
+let chamarCusto = document.getElementById("inputCustosAd")
+chamarCusto.addEventListener("change", custos)
+function custos () {
+  custosAdicionais = custosAdicionais[0]
+}
 
   
 
