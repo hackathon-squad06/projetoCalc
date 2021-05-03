@@ -48,6 +48,8 @@ function calcular() {
   }
   const prazoRentabilidade = Math.ceil(nper(iF, -valorInvestidoMensalF, -depositoInicial, valorImovelFuturoF))
   const prazoRentabilidadeAnos = Math.ceil(prazoRentabilidade/12)
+  const valorPagoFinanciamento = c + totalPago
+  const sobraInvestimento = mF - valorImovelFuturoF
   console.log(
     c,
     iF,
@@ -61,7 +63,9 @@ function calcular() {
     valorInvestidoMensalF,
     depositoInicial,
     mF,
-    prazoRentabilidadeAnos
+    prazoRentabilidadeAnos,
+    valorPagoFinanciamento,
+    sobraInvestimento
   );
 
 //   sessionStorage.setItem('valorImovel', valorImovel)
