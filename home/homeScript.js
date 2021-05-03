@@ -19,26 +19,62 @@ function calcular() {
   const valorFinanciado = valorImovel - c
   const parcela = valorFinanciado * ((((1 + iFin / 100) ** n) * iFin / 100) / (((1 + iFin / 100) ** n) - 1))
   const parcelaF = parcela.toFixed(2)
-  const totalPago = parcelaF * n
+  const totalPago = Math.ceil(parcelaF * n);
   const valorImovelFuturo = valorImovel * (1 + (valorizacaoImovelF / 100)) ** n
   const valorImovelFuturoF = valorImovelFuturo.toFixed(2)
   const valorInvestidoMensal = parcelaF - aluguel
-  const valorInvestidoMensalF = valorInvestidoMensal.toFixed(0)
+  const valorInvestidoMensalF = valorInvestidoMensal.toFixed(2)
   const depositoInicial = entrada + custosAd
   if (totalPago > valorFinanciado) {
-    var totalJurosPago = totalPago - valorFinanciado
+    var totalJurosPago = Math.ceil(totalPago - valorFinanciado);
   } else {
-    var totalJurosPago = valorFinanciado - totalPago
+    var totalJurosPago = Math.ceil(valorFinanciado - totalPago);
   }
-  const m = (c * (1 + (iF / 100)) ** n) + (valorInvestidoMensalF * (((((1 + (iF / 100))) ** n) - 1) / (iF / 100)))
-  const mF = m.toFixed(2)
-  console.log(c, iF, iFinF, n, valorFinanciado, parcelaF, totalPago, valorImovelFuturoF, totalJurosPago, valorInvestidoMensalF, depositoInicial, mF)
+  const m = c * (1 + iF / 100) ** n + valorInvestidoMensalF * (((1 + iF / 100) ** n - 1) / (iF / 100));
+  const mF = m.toFixed(2);
+  function nper(rate, pmt, pv, fv) {
+    const z = pmt * (1 + (rate / 100) * 1) / (rate / 100)
+    return Math.log10((-fv + z) / (pv + z)) / Math.log10(1 + (rate / 100))
+  }
+  const prazoRentabilidade = Math.ceil(nper(iF, -valorInvestidoMensalF, -depositoInicial, valorImovelFuturoF))
+  const prazoRentabilidadeAnos = Math.ceil(prazoRentabilidade / 12)
+  const valorPagoFinanciamento = Math.ceil(c + totalPago)
+  const sobraInvestimento = Math.ceil(mF - valorImovelFuturoF)
+  console.log(
+    c,
+    iF,
+    iFinF,
+    n,
+    valorFinanciado,
+    parcelaF,
+    totalPago,
+    valorImovelFuturoF,
+    totalJurosPago,
+    valorInvestidoMensalF,
+    depositoInicial,
+    mF,
+    prazoRentabilidadeAnos,
+    valorPagoFinanciamento,
+    sobraInvestimento
+  );
 
   sessionStorage.setItem('valorImovel', valorImovel)
   sessionStorage.setItem('valorImovelFuturo', valorImovelFuturoF)
   sessionStorage.setItem('valorTotalPago', totalPago)
   sessionStorage.setItem('valorJurosPago', totalJurosPago)
   sessionStorage.setItem('valorInvestimentoTotal', mF)
+  sessionStorage.setItem('entrada', c)
+  sessionStorage.setItem('taxaRendimento', iF)
+  sessionStorage.setItem('taxaFinanciamento', iFinF)
+  sessionStorage.setItem('prazoFinanciamento', n)
+  sessionStorage.setItem('prazoFinanciamentoAnos', prazoFin)
+  sessionStorage.setItem('valorFinanciado', valorFinanciado)
+  sessionStorage.setItem('parcelaFinanciamento', parcelaF)
+  sessionStorage.setItem('valorInvestimentoMensalmente', valorInvestidoMensalF)
+  sessionStorage.setItem('valorDepositoInicial', depositoInicial)
+  sessionStorage.setItem('prazoRentabilidadeAnos', prazoRentabilidadeAnos)
+  sessionStorage.setItem('valorTotalPagoFinancimento', valorPagoFinanciamento)
+  sessionStorage.setItem('sobraInvestimento', sobraInvestimento)
   window.location.href = "/resultap/resultap.html"
 }
 
@@ -185,14 +221,3 @@ document.getElementById('inputTaxaFin').addEventListener('change', function () {
     depositoMensal.placeholder = 'R$ ' + investimentoMensal2 + ',00';
   }
 })
-
-
-function formatarMoeda(valor) {
-  var n = new Number(valor);
-  var myObj = {
-    style: "currency",
-    currency: "BRL"
-  }
-  valor = n.toLocaleString("pt-BR", myObj);
-  return valor
-}
