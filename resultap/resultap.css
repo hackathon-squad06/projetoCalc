@@ -66,9 +66,6 @@
 }
 
 body {
-    /* display:flex; */
-    flex-direction:column;
-    align-items:center;
     font-family: 'Montserrat', sans-serif;
     background: var(--body-bg);
 }
@@ -151,11 +148,11 @@ h1 {
 .quadro {
     display:flex;
     flex-direction:column;
-    /* height:40rem; */
     width:50rem;
     border:0.126rem solid var(--quadro-border);
     border-radius:1rem;
     padding:1rem;
+    margin-top:1rem;
     background-image:url(/images/kkArtboard\ 1.png);
     background-color:var(--quadro-bg);
 }
@@ -231,11 +228,6 @@ h1 {
     flex-direction:column;
     align-items:center;
 }
-
-#avisoInfo p {
-    text-shadow: var(--avisoInfo-shadow);
-}
-
 
 #btnCalcNovamente {
     display:flex;
