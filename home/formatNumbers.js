@@ -1,50 +1,3 @@
-// (function () {
-
-//   function emit(target, name) {
-//     let event
-//     if (document.createEvent) {
-//       event = document.createEvent("HTMLEvents");
-//       event = new Event(name, { "bubbles": true, "cancelable": true });
-
-//     } else {
-//       event = document.createEventObject();
-//       event.eventType = name;
-//     }
-
-//     event.eventName = name;
-
-//     if (document.createEvent) {
-//       target.dispatchEvent(event);
-//     } else {
-//       target.fireEvent("on" + event.eventType, event);
-//     }
-//   }
-
-//   var outputsSelector = "input[type=number][source],select[source]";
-
-//   function onChange(e) {
-//     var outputs = document.querySelectorAll(outputsSelector)
-//     for (var index = 0; index < outputs.length; index++) {
-//       var item = outputs[index]
-//       var source = document.querySelector(item.getAttribute('source'));
-//       if (source) {
-//         if (item === e.target) {
-//           source.value = item.value
-//           emit(source, 'input')
-//           emit(source, 'change')
-//         }
-
-//         if (source === e.target) {
-//           item.value = source.value
-//         }
-//       }
-//     }
-//   }
-
-//   document.addEventListener('change', onChange)
-//   document.addEventListener('input', onChange)
-// }());
-
 
 function formatarMoeda(element) {
   var id = element.id
@@ -78,58 +31,52 @@ function formatarMoeda(element) {
 
 function formatarAnos(element) {
   var id = element.id
-  var digitou = document.getElementById(id)
-  var valorDigitado = digitou.value
-  var valor = valorDigitado;
-  // console.log(valor)
+  var campo = document.getElementById(id)
+  var valor = campo.value
   var n = valor.toLocaleString();
 
-  if (isNaN(valor)) {
-    // console.log('é NaN')
-    digitou.type = 'text';
-    valor = n + ' anos';
-    digitou.value = valorDigitado;
+  if (valor == '' || valor < 0 || isNaN(valor)) {
+    console.log('é NaN')
+    campo.type = 'text';
+    campo.value = null;
   } else {
-    digitou.type = 'text';
+    campo.type = 'text';
     valor = n + ' anos';
-    digitou.value = valor;
+    campo.value = valor;
   }
-  digitou.onclick = function () {
-    digitou.type = 'text';
+  campo.onclick = function () {
+    campo.type = 'text';
     valor = n + ' em anos';
-    digitou.value = valor;
-    digitou.type = 'number';
+    campo.value = valor;
+    campo.type = 'number';
   }
 }
 
 function formatarPorcentagem(element) {
   var id = element.id
-  var digitou = document.getElementById(id)
-  var valorDigitado = digitou.value
-  var valor = valorDigitado;
-  // console.log(valor)
+  var campo = document.getElementById(id)
+  var valor = campo.value
   var n = valor.toLocaleString();
 
-  if (isNaN(valor)) {
-    // console.log('é NaN')
-    digitou.type = 'text';
-    valor = n + ' %';
-    digitou.value = valorDigitado;
+  if (valor == '' || valor < 0 || isNaN(valor)) {
+    console.log('é NaN')
+    campo.type = 'text';
+    campo.value = null;
   } else {
-    digitou.type = 'text';
+    campo.type = 'text';
     valor = n + ' %';
-    digitou.value = valor;
+    campo.value = valor;
   }
-  digitou.onclick = function () {
-    digitou.type = 'text';
+  campo.onclick = function () {
+    campo.type = 'text';
     valor = n + ' em %';
-    digitou.value = valor;
-    digitou.type = 'number';
+    campo.value = valor;
+    campo.type = 'number';
   }
 }
 
 function realParseFloat(s) {
-  s = s.replace(/[^\d,.-]/g, ''); // strip everything except numbers, dots, commas and negative sign
+  s = s.replace(/[^\d,.-]/g, '');
   if (navigator.language.substring(0, 2) !== "de" && /^-?(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?$/.test(s)) // if not in German locale and matches #,###.######
   {
     s = s.replace(/,/g, ''); // strip out commas

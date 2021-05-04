@@ -11,6 +11,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet" />
+    <script src="homeScript.js" defer></script>
+    <script src="darkModeHome.js" defer></script>
 </head>
 
 <body>
@@ -51,7 +53,7 @@
                     <span class="tooltiptext">Aqui é muito fácil: é só colocar o valor do imóvel que você
                         gostaria de comprar.</span>
                     <input required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDeCompra)"
-                        id="inputValorImovel" placeholder="R$" type="text" />
+                        id="inputValorImovel" placeholder="R$" type="text" maxlength="17" />
                     <input type="range" class="slider" name="slider" id="sliderValorCompra" />
                 </div>
 
@@ -62,7 +64,7 @@
                         imóvel semelhante ao que pretende comprar.
                     </span>
                     <input required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDoAluguel)"
-                        id="inputAluguel" placeholder="R$" type="text" />
+                        id="inputAluguel" placeholder="R$" type="text" maxlength="17" />
                     <input type="range" class="slider" name="slider" id="sliderValorAluguel" />
                 </div>
 
@@ -80,8 +82,8 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">IPCA Anual. Não sabe? Considere a inflação entre 3% e 5% ao
                         ano.</span>
-                    <input required id="inputValorizacao" placeholder="% anual" type="number" name="inputValorizacao"
-                        min="0" value="0" step=".01" onblur="formatarPorcentagem(this)" />
+                    <input required id="inputValorizacao" placeholder="% anual" type="text" name="inputValorizacao"
+                        min="0" step=".01" onfocusout="formatarPorcentagem(this)" />
                     <input type="range" class="slider" name="slider" id="sliderValorValorizacao" />
                 </div>
 
@@ -104,7 +106,7 @@
                     <input required onkeyup="formatarReais(this)" id="inputEntrada" class="dadosCampos"
                         onchange="entrada()"
                         onblur="calcDeposito(valorDaEntrada, custosAdicionais), valorInvestimentoMensal (valorDaEntrada)"
-                        placeholder="R$" type="text" />
+                        placeholder="R$" type="text" maxlength="17" />
                     <input type="range" class="slider" name="slider" id="sliderValorEntrada" />
                 </div>
 
@@ -118,7 +120,7 @@
                     <input required onkeyup="formatarReais(this)" id="inputCustosAd" class="dadosCampos"
                         onchange="custos()"
                         onblur="calcDeposito(valorDaEntrada, custosAdicionais), valorInvestimentoMensal (custosAdicionais)"
-                        placeholder="R$" type="text" />
+                        placeholder="R$" type="text" maxlength="17" />
                     <input type="range" class="slider" name="slider" id="sliderCustosFin" />
                 </div>
 
@@ -128,8 +130,8 @@
                     <span class="tooltiptext">Quanto maior o tempo de financiamento, menor será o valor da
                         parcela inicial. Em contrapartida, o valor de juros pagos durante
                         todo o periodo serão maiores.</span>
-                    <input required id="inputPrazoFin" onblur="valorInvestimentoMensal (), formatarAnos(this)"
-                        placeholder="em anos" type="number" />
+                    <input required id="inputPrazoFin" onblur="valorInvestimentoMensal ()"
+                        onfocusout="formatarAnos(this)" placeholder="em anos" type="text" min="0" step="1" />
                     <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
                 </div>
 
@@ -137,8 +139,8 @@
                     <span class="tituloInput">Taxa de financiamento</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Custo efetivo total (CET) presente no contrato.</span>
-                    <input required id="inputTaxaFin" onblur="valorInvestimentoMensal (), formatarPorcentagem(this)"
-                        placeholder="% anual" type="number" min="0" value="0" step=".01" />
+                    <input required id="inputTaxaFin" onblur="valorInvestimentoMensal ()"
+                        onfocusout="formatarPorcentagem(this)" placeholder="% anual" type="text" min="0" step=".01" />
                     <input type="range" class="slider" name="slider" id="sliderTaxaFin" />
                 </div>
             </div>
@@ -173,8 +175,8 @@
                     <span class="tooltiptext">Rentabilidade anual no qual o depósito inicial + valor investido mensal
                         serão
                         aplicados. Caso não conheça, sugerimos aplicar a rentabilidade de uma renda fixa atual.</span>
-                    <input required id="inputRentabilidade" placeholder="% anual" type="number" min="0" value="0"
-                        step=".01" onblur="formatarPorcentagem(this)" />
+                    <input required id="inputRentabilidade" placeholder="% anual" type="text" min="0" step=".01"
+                        onfocusout="formatarPorcentagem(this)" />
                     <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
                 </div>
             </div>
@@ -206,11 +208,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="homeScript.js"></script>
-    <script src="darkModeHome.js"></script>
-    <script src="formatNumbers.js"></script>
-    <script src="calculo.js"></script>
 
 </body>
 
