@@ -170,7 +170,7 @@ nav div {
 #imagemWelcome {
     height: 19rem;
     width: 19rem;
-    transform: translateY(1rem);
+    margin-top:2rem;
     background-image: url('/images/img-welcome-workers.png');
     border-radius: 2rem;
     background-size: cover;
@@ -291,10 +291,6 @@ nav div {
 input[type=range] {
     margin-top: -0.3rem;
     display: none;
-}
-
-#valorRentabilidade {
-    transform: translateY(-2rem);
 }
 
 
@@ -422,12 +418,78 @@ footer a:hover {
     }
 }
 
-@media (max-width: 725px) {
-    /*footer {
-        width:48rem;
+@media (max-width: 715px) {
+    .sectionWelcome {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:25rem;
+        width:100vw;
+        max-width:100%;
+        text-align: center;
+    }
+    #textoWelcome {
+        width: 20rem;
+        margin-right: 1rem;
+        margin-left: -1rem;
+    }
+    #textoWelcome h1 {
+        font-size: 1.5rem;
+    }
+    #textoWelcome h2 {
+        font-size: 0.75rem;
+    }
+    #imagemWelcome {
+        height: 16rem;
+        width: 16rem;
+    }
+    .containerDados {
+        display:flex;
+        flex-direction:column;
+        grid-gap:0;
+        width:35rem;
+    }
+    .titleContainer {
+        margin: 3rem 3.18rem 2rem 3.18rem;
+    }
+    .inputVar {
+        height:10rem;
+    }
+    .column {
+        padding:1rem;
+        width:37.5rem;
+    }
+    footer {
+        width:51.9rem;
     }
     .infoFooter {
-        width:42rem;
-    }*/
+        width:35rem;
+    }    
 }
 
+
+@media (max-width: 595px) {
+    .containerDados {
+        display:flex;
+        flex-direction:column;
+        grid-gap:0;
+        width: 24rem;
+    }
+    
+    .titleContainer {
+        display:flex;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        font-weight: bold;
+        text-align: left;
+        font-size: 1.2rem;
+        color: var(--contDados-title);
+        margin: 3rem 3.18rem 2rem 3.18rem;
+    }
+
+    .inputVar {
+        height:10rem;
+    }
+}
+
+/*415px*/
