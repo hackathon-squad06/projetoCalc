@@ -118,6 +118,10 @@ nav div {
     cursor:pointer;
 }
 
+.modeSwitch:hover {
+    cursor: pointer;
+}
+
 
 
 #resultadoPagina {
@@ -223,11 +227,6 @@ h1 {
 }
 
 
-#avisoInfo {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
 
 #btnCalcNovamente {
     display:flex;

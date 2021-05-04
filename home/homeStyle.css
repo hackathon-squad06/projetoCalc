@@ -124,6 +124,10 @@ nav div {
     cursor:pointer;
 }
 
+.modeSwitch:hover {
+    cursor: pointer;
+}
+
 
 
 .sectionWelcome {

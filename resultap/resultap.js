@@ -54,7 +54,7 @@ const valorRestanteDisplay = document.getElementById("valorRestante");
 valorRestanteDisplay.innerHTML = sobraInvestimento;
 
 const prazoRentabilidadeDisplay = document.getElementById("prazoRentabilidade");
-prazoRentabilidadeDisplay.style.textAlign = 'right';
+prazoRentabilidadeDisplay.style.textAlign = 'left';
 if (prazoRentabilidadeAnos == null) {
   prazoRentabilidadeAnos = 0
 }
