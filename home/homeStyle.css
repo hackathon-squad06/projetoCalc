@@ -1,0 +1,395 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-bg: #fff;
+    --header-bg: #fff;
+    --nav-text: #000;
+    --nav-hover: #2782B9;
+    --welcome-bg: #933380;
+    --welcome-text: #fff;
+    --box-shadow: rgba(0,0,0,0.18);
+    --calc-bg: #fff;
+    --tooltip-bg: rgba(0, 0, 0, 0.8);
+    --tooltip-text: #fff;
+    --contDados-border: #C4C4C4;
+    --contDados-title: #2782B9;
+    --tituloInput-text: #000;
+    --inputVar-bg: #fff;
+    --inputVar-border: #C4C4C4;
+    --inputVar-focus: #daeef8;
+    --buttonCalc-bg: #2782B9;
+    --buttonCalc-text: #fff;
+    --buttonCalc-border: #C4C4C4;
+    --buttonCalc-hover: #178bd3;
+    --footer-bg: #933380;
+    --footer-text: #fff;
+    --footer-hover: #178bd3;
+    --footer-divider: #bfc1c4;
+}
+
+.dark-mode:root {
+    --body-bg: #202040;
+    --header-bg: #202040;
+    --nav-text: #e7e7e7;
+    --nav-hover: #b030b0;
+    --welcome-bg: #602080;
+    --welcome-text: #e7e7e7;
+    --box-shadow: rgba(0,0,0,0.18);
+    --calc-bg: #202040;
+    --tooltip-bg: #000;
+    --tooltip-text: #fff;
+    --contDados-border: #b030b0;
+    --contDados-title: #68bef3;
+    --tituloInput-text: #e7e7e7;
+    --inputVar-bg: #e7e7e7;
+    --inputVar-border: #C4C4C4;
+    --inputVar-focus: #f1f7fa;
+    --buttonCalc-bg: #962b96;
+    --buttonCalc-text: #fff;
+    --buttonCalc-border: #C4C4C4;
+    --buttonCalc-hover: #b030b0;
+    --footer-bg: #602080;
+    --footer-text: #e7e7e7;
+    --footer-hover: #b030b0;
+    --footer-divider: #bfc1c4;
+}
+
+
+
+/* Remove as setas do campo input='number' */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--body-bg);
+}
+
+header{
+    display:flex;
+    justify-content:center;
+    height: 3.5rem;
+    /* position: -webkit-sticky;
+    position: sticky;
+    top: 0; */
+    background: var(--header-bg);
+}
+
+.container {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0rem 2rem;
+    width:100rem; /*50rem para ficar no centro da página*/
+}
+
+.container img {
+    display:flex;
+    height: 1.2rem;
+}
+
+nav {
+    display:flex;
+    align-items:center;
+}
+
+nav a {
+    font-size:1.2rem;
+    padding:0.9rem;
+    font-weight:500;
+    color:var(--nav-text);
+    border-bottom:0.3rem solid transparent;
+    text-decoration:none;
+}
+
+nav a:hover {
+    color:var(--nav-hover);
+    border-bottom:0.3rem solid var(--nav-hover);
+}
+
+nav div {
+    margin-left:1.5rem;
+    padding:1rem;
+    cursor:pointer;
+}
+
+.modeSwitch:hover {
+    cursor: pointer;
+}
+
+
+
+.sectionWelcome {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:25rem;
+    width:100vw;
+    max-width:100%;
+    background-color: var(--welcome-bg);
+    text-align: center;
+}
+
+#textoWelcome {
+    display: inline-block;
+    width: 23rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-left: -1rem;
+    text-align: justify;
+    padding: 1rem;
+    color: var(--welcome-text);
+}
+
+#textoWelcome h1 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+#textoWelcome h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
+#imagemWelcome {
+    height: 19rem;
+    width: 19rem;
+    transform: translateY(1rem);
+    background-image: url('/images/img-welcome-workers.png');
+    border-radius: 2rem;
+    background-size: cover;
+    -webkit-box-shadow: 5px 5px 15px 5px var(--box-shadow); 
+    box-shadow: 5px 5px 15px 5px var(--box-shadow);
+}
+
+
+
+.sectionCalc {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color: var(--calc-bg);
+}
+
+.iconeInfo {
+    width: 1.2rem;
+    height: 1.2rem;
+    transform: translateY(20%);
+    cursor: pointer;
+}
+
+.tooltiptext {
+    opacity: 0;
+    /* display: none; */
+    visibility: hidden;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-text);
+    border-radius: 0.37rem;
+    padding: 0.5rem 0.6rem;
+    width: 15rem;
+    text-align: justify;
+    font-size: 0.8rem;
+ 
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    transform: translate(-54%, 2rem);
+}
+  
+.iconeInfo:hover + .tooltiptext {
+    /* display: inline-block; */
+    visibility: visible;
+    opacity: 1;
+}
+
+.iconeInfo + .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--tooltip-bg) transparent;
+}
+
+
+
+.containerDados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 7rem 10rem 10rem;
+    grid-gap: 1rem;
+    width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    border: 2px solid var(--contDados-border);
+    border-radius: 0.5rem;
+}
+
+.titleContainer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.2rem;
+    color: var(--contDados-title);
+    margin: 3rem 2rem 2rem 3rem;
+}
+
+.inputVar {
+    margin-left: 3rem;
+    margin-bottom: 3em;
+}
+
+.tituloInput {
+    /* display: inline-block;
+    text-align: left; */
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--tituloInput-text);
+}
+
+.inputVar input {
+    display: block;
+    padding: 1rem;
+    width: 18rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--inputVar-border);
+    background-color: var(--inputVar-bg);
+}
+
+.inputVar input:focus {
+    background-color: var(--inputVar-focus);
+    outline: 0;
+}
+
+input[type=range] {
+    margin-top: -0.3rem;
+    display: none;
+}
+
+#valorRentabilidade {
+    transform: translateY(-2rem);
+}
+
+
+
+.btnCalcular {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1rem;
+    width:15rem;
+    height:4rem;
+    padding:0.8rem;
+    border-radius:0.5rem;
+    color:var(--buttonCalc-text);
+    background-color:var(--buttonCalc-bg);
+    border: 1px solid var(--buttonCalc-border);
+    cursor:pointer;
+    margin:1rem 0rem;
+    text-decoration:none;
+    margin:2.5rem 0rem;
+}
+
+.btnCalcular:hover {
+    background-color: var(--buttonCalc-hover);
+}
+
+
+footer {
+    display:flex;
+    justify-content:center;
+    height:16rem;
+    width:100vw;
+    max-width:100%;
+    background-color:var(--footer-bg);
+}
+
+/* .column usando no container do footer*/
+.column {
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:space-evenly;
+}
+
+.infoFooter {
+    display:flex;
+    justify-content:space-between;
+    width:46rem;
+    color:var(--footer-text);
+    line-height:1.5;
+    font-size:0.9rem;
+    font-weight:400;
+}
+
+.linksFooter {
+    display: block;
+    width:fit-content;
+    color: var(--footer-text);
+    text-align: left;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+footer a {
+    display:flex;
+    width:fit-content;
+    color: var(--footer-text);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--footer-hover);
+}
+
+.divider {
+	position:relative;
+    top:11rem;
+	height:0.063rem;
+    width:95vw;
+    max-width:100%;
+}
+
+.div-transparent:before {
+	content:"";
+	position:absolute;
+	top:0;
+	left:5%;
+	right:5%;
+	width:90%;
+	height:0.063rem;
+    background-image: linear-gradient(to right, transparent, var(--footer-divider), transparent);
+}
+
+.direitosFooter {
+    display:flex;
+    width: 30rem;
+    color: var(--footer-text);
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 0.7rem;
+    font-weight: 400;
+}
