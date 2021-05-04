@@ -1,6 +1,6 @@
 # projetoCalc
 Projeto Hackathon - Squad 06
 
-feature-juncaoTesteCalculosEDarkMode branch
+feature-juncaoFormatacao branch
 
-Feature focada em juntar as branches darkMode e testeCalculos
+Feature focada em juntar as branches darkMode e adjust
