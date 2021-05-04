@@ -32,12 +32,11 @@
 
     <section class="sectionWelcome">
         <div id="textoWelcome">
-            <h1>O que vale mais a pena: alugar ou comprar um imóvel?</h1>
+            <h1>Financiar ou alugar um imóvel: o que é melhor pra você?</h1>
             <h2>
-                Pensando em se mudar e quer saber o que vale mais a pena de acordo com
-                o seu perfil?
+                Será que vale a pena financiar aquele imóvel? Ou seria melhor alugar e investir a diferença entre a parcela do financiamento e o valor do aluguel?
             </h2>
-            <h2>Faça a simulação e invista em um bom negócio</h2>
+            <h2>Simule as duas opções de acordo com sua realidade.</h2>
         </div>
         <div id="imagemWelcome"></div>
     </section>
@@ -50,8 +49,7 @@
                 <div class="inputVar" id="valorCompra">
                     <span class="tituloInput">Valor de compra</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                    <span class="tooltiptext">Aqui é muito fácil: é só colocar o valor do imóvel que você
-                        gostaria de comprar.</span>
+                    <span class="tooltiptext">Neste campo vai o valor do imóvel que deseja comprar.</span>
                     <input required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDeCompra)"
                         id="inputValorImovel" placeholder="R$" type="text" maxlength="17" />
                     <input type="range" class="slider" name="slider" id="sliderValorCompra" />
@@ -60,9 +58,7 @@
                 <div class="inputVar" id="valorAluguel">
                     <span class="tituloInput">Valor do aluguel</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                    <span class="tooltiptext">Você só precisa levar em consideração o valor de aluguel de um
-                        imóvel semelhante ao que pretende comprar.
-                    </span>
+                    <span class="tooltiptext">Preencha este campo com o valor do aluguel do mesmo imóvel que deseja comprar.</span>
                     <input required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDoAluguel)"
                         id="inputAluguel" placeholder="R$" type="text" maxlength="17" />
                     <input type="range" class="slider" name="slider" id="sliderValorAluguel" />
@@ -80,8 +76,7 @@
                 <div class="inputVar" id="valorValorizacao">
                     <span class="tituloInput">Valorização anual do imóvel</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                    <span class="tooltiptext">IPCA Anual. Não sabe? Considere a inflação entre 3% e 5% ao
-                        ano.</span>
+                    <span class="tooltiptext">Leve em conta o IPCA anual. Não sabe? Considere entre 1% e 4%.</span>
                     <input required id="inputValorizacao" placeholder="% anual" type="text" name="inputValorizacao"
                         min="0" step=".01" onfocusout="formatarPorcentagem(this)" />
                     <input type="range" class="slider" name="slider" id="sliderValorValorizacao" />
@@ -102,7 +97,7 @@
                     <span class="tituloInput">Valor da entrada</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Este valor é variável conforme o banco onde está negociando o
-                        financiamento. Geralmente está em torno de 20% e 30%.</span>
+                        financiamento. Geralmente, o valor mínimo exigido pelo banco é 20% do valor do imóvel.</span>
                     <input required onkeyup="formatarReais(this)" id="inputEntrada" class="dadosCampos"
                         onchange="entrada()"
                         onblur="calcDeposito(valorDaEntrada, custosAdicionais), valorInvestimentoMensal (valorDaEntrada)"
@@ -115,8 +110,8 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Nesse campo entram custos com vistoria, registro em cartório,
                         emissão e registro de contrato, ITBI, escritura. Estes custos estão
-                        discriminados em seu contrato. Caso não souber, calcule um valor de
-                        5% sobre o valor total do imóvel.</span>
+                        discriminados em seu contrato com o banco. Caso não souber, calcule um valor de
+                        5% sobre o valor do imóvel.</span>
                     <input required onkeyup="formatarReais(this)" id="inputCustosAd" class="dadosCampos"
                         onchange="custos()"
                         onblur="calcDeposito(valorDaEntrada, custosAdicionais), valorInvestimentoMensal (custosAdicionais)"
@@ -127,9 +122,7 @@
                 <div class="inputVar" id="valorPrazoFin">
                     <span class="tituloInput">Prazo de financiamento</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                    <span class="tooltiptext">Quanto maior o tempo de financiamento, menor será o valor da
-                        parcela inicial. Em contrapartida, o valor de juros pagos durante
-                        todo o periodo serão maiores.</span>
+                    <span class="tooltiptext">Quanto maior o tempo de financiamento, menor será o valor das parcelas. Em contrapartida, o valor pago em juros será maior.</span>
                     <input required id="inputPrazoFin" onblur="valorInvestimentoMensal ()"
                         onfocusout="formatarAnos(this)" placeholder="em anos" type="text" min="0" step="1" />
                     <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
@@ -150,10 +143,7 @@
                 <div class="inputVar" id="valorInvestimento">
                     <span class="tituloInput">Valor do investimento mensal</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                    <span class="tooltiptext">Diferença entre o valor da prestação e o valor do aluguel, no qual deverá
-                        ser
-                        aplicado
-                        mensalmente.</span>
+                    <span class="tooltiptext">Este campo é a diferença entre o valor da prestação do financiamento e o valor do aluguel, no qual deverá ser guardado e aplicado mensalmente.</span>
                     <input name="inputValorMensal" id="inputValorMensal" class='inputReadonly' placeholder="R$"
                         type="number" readonly="true" />
                 </div>
@@ -161,10 +151,7 @@
                 <div class="inputVar" id="valorDepositoIn">
                     <span class="tituloInput">Depósito inicial</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                    <span class="tooltiptext">O valor do depósito será igual ao valor de entrada e custos do
-                        financiamento,
-                        pois
-                        presume-se que você possui esse valor em mãos.</span>
+                    <span class="tooltiptext">O valor do depósito será igual ao valor de entrada + custos do financiamento, pois presume-se que você possui este valor em mãos.</span>
                     <input name="inputDeposito" required id="inputDeposito" class='inputReadonly' placeholder="R$"
                         type="number" readonly="true" />
                 </div>
@@ -172,9 +159,7 @@
                 <div class="inputVar" id="valorRentabilidade">
                     <span class="tituloInput">Rentabilidade anual</span>
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                    <span class="tooltiptext">Rentabilidade anual no qual o depósito inicial + valor investido mensal
-                        serão
-                        aplicados. Caso não conheça, sugerimos aplicar a rentabilidade de uma renda fixa atual.</span>
+                    <span class="tooltiptext">Rentabilidade anual no qual o depósito inicial + valor investido mensal serão aplicados. Caso não tenha rendimentos, sugerimos aplicar a rentabilidade atual de uma renda fixa.</span>
                     <input required id="inputRentabilidade" placeholder="% anual" type="text" min="0" step=".01"
                         onfocusout="formatarPorcentagem(this)" />
                     <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
