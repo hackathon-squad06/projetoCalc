@@ -16,27 +16,32 @@ function calcular() {
   const valorFinanciado = valorDeCompra - c
   const parcela = valorFinanciado * ((((1 + iFin / 100) ** n) * iFin / 100) / (((1 + iFin / 100) ** n) - 1))
   const parcelaF = parcela.toFixed(2)
-  const totalPago = Math.ceil(parcelaF * n);
+  const totalPagoF = parcelaF * n
+  const totalPago = parseFloat(totalPagoF.toFixed(2))
   const valorImovelFuturo = valorDeCompra * (1 + (valorizacaoImovelF / 100)) ** n
   const valorImovelFuturoF = valorImovelFuturo.toFixed(2)
   const valorInvestidoMensal = parcelaF - valorDoAluguel
-  const valorInvestidoMensalF = valorInvestidoMensal.toFixed(0)
+  const valorInvestidoMensalF = valorInvestidoMensal.toFixed(2)
   const depositoInicial = valorDaEntrada + custosAdicionais
   if (totalPago > valorFinanciado) {
-    var totalJurosPago = Math.ceil(totalPago - valorFinanciado);
+	var totalJurosPagoF = totalPago - valorFinanciado
+    var totalJurosPago = parseFloat(totalJurosPagoF.toFixed(2))
   } else {
-    var totalJurosPago = Math.ceil(valorFinanciado - totalPago);
+	var totalJurosPagoF = valorFinanciado - totalPago
+    var totalJurosPago = parseFloat(totalJurosPagoF.toFixed(2))
   }
-  const m = c * (1 + iF / 100) ** n + valorInvestidoMensalF * (((1 + iF / 100) ** n - 1) / (iF / 100));
-  const mF = m.toFixed(2);
+  const m = c * (1 + iF / 100) ** n + valorInvestidoMensalF * (((1 + iF / 100) ** n - 1) / (iF / 100))
+  const mF = m.toFixed(2)
   function nper(rate, pmt, pv, fv) {
     const z = pmt * (1 + (rate / 100) * 1) / (rate / 100)
     return Math.log10((-fv + z) / (pv + z)) / Math.log10(1 + (rate / 100))
   }
   const prazoRentabilidade = Math.ceil(nper(iF, -valorInvestidoMensalF, -depositoInicial, valorImovelFuturoF))
   const prazoRentabilidadeAnos = Math.ceil(prazoRentabilidade / 12)
-  const valorPagoFinanciamento = Math.ceil(c + totalPago)
-  const sobraInvestimento = Math.ceil(mF - valorImovelFuturoF)
+  const valorPagoFinanciamentoF = c + totalPago
+  const valorPagoFinanciamento = parseFloat(valorPagoFinanciamentoF.toFixed(2))
+  const sobraInvestimentoF = mF - valorImovelFuturoF
+  const sobraInvestimento = parseFloat(sobraInvestimentoF.toFixed(2))
   if ( mF >= valorImovelFuturoF ) {
 	var melhorOpcao = 'Alugar'
   } else {
