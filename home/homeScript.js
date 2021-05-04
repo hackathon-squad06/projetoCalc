@@ -21,7 +21,11 @@ function calcular() {
   const valorImovelFuturo = valorDeCompra * (1 + (valorizacaoImovelF / 100)) ** n
   const valorImovelFuturoF = parseFloat(valorImovelFuturo.toFixed(2))
   const valorInvestidoMensal = parcelaF - valorDoAluguel
-  const valorInvestidoMensalF = valorInvestidoMensal.toFixed(2)
+  if (valorInvestidoMensal > 0) {
+	var valorInvestidoMensalF = valorInvestidoMensal.toFixed(2)
+  } else {
+	var valorInvestidoMensalF = 0
+  }
   const depositoInicial = valorDaEntrada + custosAdicionais
   if (totalPago > valorFinanciado) {
 	var totalJurosPagoF = totalPago - valorFinanciado
