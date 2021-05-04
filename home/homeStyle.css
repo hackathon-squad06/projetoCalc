@@ -8,8 +8,8 @@
 :root {
     --body-bg: #fff;
     --header-bg: #fff;
-    --nav-text: #000;
-    --nav-hover: #2782B9;
+    --menu-text: #000;
+    --menu-hover: #2782B9;
     --welcome-bg: #933380;
     --welcome-text: #fff;
     --box-shadow: rgba(0,0,0,0.18);
@@ -35,8 +35,8 @@
 .dark-mode:root {
     --body-bg: #202040;
     --header-bg: #202040;
-    --nav-text: #e7e7e7;
-    --nav-hover: #b030b0;
+    --menu-text: #e7e7e7;
+    --menu-hover: #b030b0;
     --welcome-bg: #602080;
     --welcome-text: #e7e7e7;
     --box-shadow: rgba(0,0,0,0.18);
@@ -105,21 +105,39 @@ nav {
     align-items:center;
 }
 
-nav a {
+.menuMobile {
+    display:none;
+    flex-direction:column;
+    justify-content:space-evenly;
+    width:2.18rem;
+    height:2.18rem;
+    margin:3.1rem 0rem;
+}
+
+.menuLine {
+    background-color:var(--menu-text);
+    height:0.189rem;
+}
+
+.menuMobile:hover .menuLine {
+    background-color:var(--menu-hover);
+}
+
+.menu a {
     font-size:1.2rem;
-    padding:0.9rem;
+    padding:0.7rem;
     font-weight:500;
-    color:var(--nav-text);
+    color:var(--menu-text);
     border-bottom:0.3rem solid transparent;
     text-decoration:none;
 }
 
-nav a:hover {
-    color:var(--nav-hover);
-    border-bottom:0.3rem solid var(--nav-hover);
+.menu a:hover {
+    color:var(--menu-hover);
+    border-bottom:0.3rem solid var(--menu-hover);
 }
 
-nav div {
+.modeSwitch {
     margin-left:1.5rem;
     padding:1rem;
     cursor:pointer;
@@ -419,15 +437,6 @@ footer a:hover {
 }
 
 @media (max-width: 715px) {
-    .sectionWelcome {
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        height:25rem;
-        width:100vw;
-        max-width:100%;
-        text-align: center;
-    }
     #textoWelcome {
         width: 20rem;
         margin-right: 1rem;
@@ -467,26 +476,29 @@ footer a:hover {
     }    
 }
 
-
 @media (max-width: 595px) {
+    .menuMobile {
+        display:flex;
+    }
+    .menu {
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        background-color:var(--header-bg);
+    }
+    .menu a:hover {
+        color:var(--menu-text);
+        background-color:var(--menu-hover);
+    }
     .containerDados {
         display:flex;
         flex-direction:column;
         grid-gap:0;
         width: 24rem;
     }
-    
-    .titleContainer {
-        display:flex;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        font-weight: bold;
-        text-align: left;
-        font-size: 1.2rem;
-        color: var(--contDados-title);
-        margin: 3rem 3.18rem 2rem 3.18rem;
-    }
-
     .inputVar {
         height:10rem;
     }
