@@ -19,7 +19,7 @@ function calcular() {
   const totalPagoF = parcelaF * n
   const totalPago = parseFloat(totalPagoF.toFixed(2))
   const valorImovelFuturo = valorDeCompra * (1 + (valorizacaoImovelF / 100)) ** n
-  const valorImovelFuturoF = valorImovelFuturo.toFixed(2)
+  const valorImovelFuturoF = parseFloat(valorImovelFuturo.toFixed(2))
   const valorInvestidoMensal = parcelaF - valorDoAluguel
   const valorInvestidoMensalF = valorInvestidoMensal.toFixed(2)
   const depositoInicial = valorDaEntrada + custosAdicionais
@@ -201,6 +201,8 @@ function valorInvestimentoMensal() {
 
   if (isNaN(investimentoMensalFinal)) {
     investimentoMensal.placeholder = 'Adicione os dados para o cálculo'
+  } else if (investimentoMensalFinal < 0 ) {
+    investimentoMensal.placeholder = 'R$ 0,00'
   } else {
     investimentoMensal.placeholder = 'R$ ' + investimentoMensalFinal + ',00';
   }
