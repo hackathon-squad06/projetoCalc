@@ -37,6 +37,11 @@ function calcular() {
   const prazoRentabilidadeAnos = Math.ceil(prazoRentabilidade / 12)
   const valorPagoFinanciamento = Math.ceil(c + totalPago)
   const sobraInvestimento = Math.ceil(mF - valorImovelFuturoF)
+  if ( mF >= valorImovelFuturoF ) {
+	var melhorOpcao = 'Alugar'
+  } else {
+	var melhorOpcao = 'Financiar'
+  }
   console.log(
     c,
     iF,
@@ -73,6 +78,7 @@ function calcular() {
   sessionStorage.setItem('prazoRentabilidadeAnos', prazoRentabilidadeAnos)
   sessionStorage.setItem('valorTotalPagoFinancimento', valorPagoFinanciamento)
   sessionStorage.setItem('sobraInvestimento', sobraInvestimento)
+  sessionStorage.setItem('melhorOpcao', melhorOpcao)
   window.location.href = "/resultap/resultap.html"
 }
 

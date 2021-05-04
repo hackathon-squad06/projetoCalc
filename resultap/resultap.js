@@ -15,6 +15,7 @@ let valorDepositoInicial = formatarMoeda(sessionStorage.getItem("valorDepositoIn
 let prazoRentabilidadeAnos = sessionStorage.getItem("prazoRentabilidadeAnos");
 let valorTotalPagoFinancimento = formatarMoeda(sessionStorage.getItem("valorTotalPagoFinancimento"));
 let sobraInvestimento = formatarMoeda(sessionStorage.getItem("sobraInvestimento"));
+let melhorOpcao = sessionStorage.getItem("melhorOpcao");
 
 
 const valorImovelDisplay = document.getElementById("valorImovelAtual");
@@ -59,6 +60,9 @@ if (prazoRentabilidadeAnos == null) {
   prazoRentabilidadeAnos = 0
 }
 prazoRentabilidadeDisplay.innerHTML = prazoRentabilidadeAnos + ' anos';
+
+const melhorOpcaoDisplay = document.getElementById("melhorOpcao");
+melhorOpcaoDisplay.innerHTML = melhorOpcao;
 
 
 

@@ -122,7 +122,10 @@ nav div {
     cursor: pointer;
 }
 
-
+#melhorOpcao {
+    font-weight: bold;
+    font-size: 1.9rem;
+}
 
 #resultadoPagina {
     display:flex;
