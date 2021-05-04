@@ -92,7 +92,7 @@ header{
     justify-content:space-between;
     align-items:center;
     padding:0rem 2rem;
-    width:100rem; /*50rem para ficar no centro da página*/
+    width:100rem;
 }
 
 .container img {
@@ -117,6 +117,10 @@ nav {
 .menuLine {
     background-color:var(--menu-text);
     height:0.189rem;
+}
+
+.menuMobile:hover {
+    cursor:pointer;
 }
 
 .menuMobile:hover .menuLine {
@@ -477,6 +481,9 @@ footer a:hover {
 }
 
 @media (max-width: 595px) {
+    body {
+        overflow-x:hidden;
+    }
     .menuMobile {
         display:flex;
     }
@@ -493,6 +500,27 @@ footer a:hover {
         color:var(--menu-text);
         background-color:var(--menu-hover);
     }
+    .sectionWelcome {
+        flex-direction:column;
+        height:auto;
+    }
+    #textoWelcome {
+        width: 23rem;
+        margin:0;
+    }
+    #textoWelcome h1 {
+        font-size: 1.75rem;
+        margin-bottom:1rem;
+    }
+    #textoWelcome h2 {
+        font-size: 1rem;
+    }
+    #imagemWelcome {
+        height: 16rem;
+        width: 16rem;
+        margin-top:0;
+        margin-bottom:2rem;
+    }
     .containerDados {
         display:flex;
         flex-direction:column;
@@ -502,6 +530,56 @@ footer a:hover {
     .inputVar {
         height:10rem;
     }
+    .divider {
+        top:12.5rem;
+    }
+    .column {
+        width:25rem;
+    }
+    footer {
+        flex-direction:column;
+        height:auto;
+    }
+    .infoFooter {
+        flex-direction:column;
+        width:fit-content;
+    }
+    .infoFooter p {
+        margin-top:1rem;
+    }
+    .linksFooter {
+        margin:1rem 0rem 1.5rem 0rem;
+    }
+    .linksFooter a {
+        padding:0.2rem;
+    }
+    .direitosFooter {
+        width:fit-content;
+    }
 }
 
-/*415px*/
+@media (max-width:410px) {
+    .containerDados {
+        width:21rem;
+    }
+}
+
+@media (max-width:355px) {
+    #textoWelcome {
+        width: 20rem;
+        margin:0;
+    }
+    #textoWelcome h1 {
+        font-size: 1.5rem;
+        margin-bottom:1rem;
+    }
+    #textoWelcome h2 {
+        font-size:0.75rem;
+    }
+    .containerDados {
+        width:19rem;
+    }
+    .infoFooter p {
+        font-size:0.75rem;
+    }
+}
