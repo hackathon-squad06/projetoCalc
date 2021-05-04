@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    outline: 0;
     box-sizing: border-box;
 }
 
@@ -233,31 +234,34 @@ nav div {
 
 
 .containerDados {
+    display:flex;
+    justify-content:center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 7rem 10rem 10rem;
     grid-gap: 1rem;
     width: 50rem;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 4rem;
     border: 2px solid var(--contDados-border);
     border-radius: 0.5rem;
 }
 
 .titleContainer {
+    display:flex;
     grid-column-start: 1;
     grid-column-end: 3;
     font-weight: bold;
     text-align: left;
     font-size: 1.2rem;
     color: var(--contDados-title);
-    margin: 3rem 2rem 2rem 3rem;
+    margin: 3rem 3.18rem 2rem 3.18rem;
 }
 
 .inputVar {
-    margin-left: 3rem;
-    margin-bottom: 3em;
+    display:flex;
+    flex-direction:column;
+    margin-right:auto;
+    margin-left:auto;
 }
 
 .tituloInput {
@@ -345,7 +349,8 @@ footer {
 }
 
 .linksFooter {
-    display: block;
+    display:flex;
+    flex-direction:column;
     width:fit-content;
     color: var(--footer-text);
     text-align: left;
@@ -393,3 +398,36 @@ footer a:hover {
     font-size: 0.7rem;
     font-weight: 400;
 }
+
+
+
+@media (max-width: 830px) {
+    .containerDados {
+        width: 43.8rem;
+        margin-left:0;
+        margin-right:0;
+    }
+    .titleContainer {
+        margin-left:1.63rem;
+    }
+    .column {
+        padding:1rem;
+        width:45.8rem;
+    }
+    footer {
+        width:51.9rem;
+    }
+    .infoFooter {
+        width:42rem;
+    }
+}
+
+@media (max-width: 725px) {
+    /*footer {
+        width:48rem;
+    }
+    .infoFooter {
+        width:42rem;
+    }*/
+}
+
