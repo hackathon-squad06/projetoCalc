@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="container">
-            <img src="/images/squad06-logo.svg" alt="logoSquad" class="logoSquad" id='logoSquadHeader' />
+            <img src="/images/s6-logo-white.png" alt="logoSquad" class="logoSquad" id='logoSquadHeader' />
             <nav>
                 <div class="menuMobile">
                     <div class="menuLine"></div>
@@ -24,12 +24,12 @@
                     <div class="menuLine"></div>
                 </div>
                 <div class="menu">
-                    <a href="/imovelCalc.html">Home</a>
-                    <a href="/carroResult.html">Result AP</a>
-                    <a href="/carroCalc.html">Sobre nós</a>
+                    <a href="/index.html">Home</a>
+                    <a href="/imovelCalc.html">Imóvel</a>
+                    <a href="/carroCalc.html">Automóvel</a>
                 </div>
                 <div class=" modeSwitch">
-                        <img src="/images/dark-mode-black.svg" id='modeSwitch' />
+                    <img src="/images/dark-mode-white.svg" id='modeSwitch' />
                 </div>
             </nav>
         </div>
@@ -60,7 +60,8 @@
                         </span>
                     </div>
 
-                    <input required onkeyup="formatarReais(this)" id="inputValorSeguro" placeholder="R$" type="text" maxlength="17" />
+                    <input required onkeyup="formatarReais(this)" id="inputValorSeguro" placeholder="R$" type="text"
+                        maxlength="12" />
                 </div>
 
                 <div class="inputVar" id="valorIpva">
@@ -72,7 +73,8 @@
                         </span>
                     </div>
 
-                    <input required onkeyup="formatarReais(this)" id="inputIpva" placeholder="R$" type="text" maxlength="17" />
+                    <input required onkeyup="formatarReais(this)" id="inputIpva" placeholder="R$" type="text"
+                        maxlength="10" />
                 </div>
 
                 <div class="inputVar" id="valorSeguroObr">
@@ -84,7 +86,8 @@
                         </span>
                     </div>
 
-                    <input required onkeyup="formatarReais(this)" id="inputSeguroObr" placeholder="R$" type="text" maxlength="17" />
+                    <input required onkeyup="formatarReais(this)" id="inputSeguroObr" placeholder="R$" type="text"
+                        maxlength="9" />
                 </div>
 
                 <div class="inputVar" id="valorEstacionamento">
@@ -96,7 +99,8 @@
                         </span>
                     </div>
 
-                    <input required onkeyup="formatarReais(this)" id="inputEstacionamento" placeholder="R$" type="text" maxlength="17" />
+                    <input required onkeyup="formatarReais(this)" id="inputEstacionamento" placeholder="R$" type="text"
+                        maxlength="9" />
                 </div>
 
                 <div class="inputVar" id="valorManutencao">
@@ -104,11 +108,13 @@
                         <span class="tituloInput">Manutenção nos últimos 6 meses</span>
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">
-                            Quanto você gastou com manutenção nos últimos 6 meses? Considere troca de óleo, lavagens, revisões, balanceamento, acidentes, alinhamento, etc.
+                            Quanto você gastou com manutenção nos últimos 6 meses? Considere troca de óleo, lavagens,
+                            revisões, balanceamento, acidentes, alinhamento, etc.
                         </span>
                     </div>
 
-                    <input required onkeyup="formatarReais(this)" id="inputManutencao" placeholder="R$" type="text" maxlength="17" />
+                    <input required onkeyup="formatarReais(this)" id="inputManutencao" placeholder="R$" type="text"
+                        maxlength="12" />
                 </div>
 
                 <div class="inputVar" id="valorKm">
@@ -120,7 +126,8 @@
                         </span>
                     </div>
 
-                    <input required onkeyup="formatarKm(this)" id="inputKm" placeholder="KM/dia" type="text" maxlength="17" />
+                    <input required onfocusout="formatarKm(this)" id="inputKm" placeholder="KM/dia" type="text"
+                        maxlength="4" />
                 </div>
 
                 <div class="inputVar" id="valorConsumo">
@@ -132,7 +139,8 @@
                         </span>
                     </div>
 
-                    <input required onkeyup="formatarKmLitro(this)" id="inputConsumo" placeholder="KM/Litro" type="text" maxlength="17" />
+                    <input required onfocusout="formatarKmLitro(this)" id="inputConsumo" placeholder="KM/Litro"
+                        type="text" maxlength="4" />
                 </div>
 
                 <div class="inputVar" id="valorCombustivel">
@@ -144,7 +152,8 @@
                         </span>
                     </div>
 
-                    <input required onkeyup="formatarReais(this)" id="inputCombustivel" placeholder="R$" type="text" maxlength="17" />
+                    <input required onkeyup="formatarReais(this)" id="inputCombustivel" placeholder="R$" type="text"
+                        maxlength="8" />
                 </div>
 
                 <div class="inputVar" id="valorApp">
@@ -152,11 +161,13 @@
                         <span class="tituloInput">Uso do aplicativo por semana</span>
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">
-                            Em sua rotina, faria quantas corridas por semana? Considere idas ao trabalho, mercado, academia, etc.
+                            Em sua rotina, faria quantas corridas por semana? Considere idas ao trabalho, mercado,
+                            academia, etc.
                         </span>
                     </div>
 
-                    <input required onkeyup="formatarCorridas(this)" id="inputApp" placeholder="Corridas/semana" type="text" maxlength="17" />
+                    <input required onfocusout="formatarCorridas(this)" id="inputApp" placeholder="Corridas/semana"
+                        type="text" maxlength="4" />
                 </div>
 
                 <div class="inputVar" id="valorCorrida">
@@ -164,11 +175,13 @@
                         <span class="tituloInput">Qual o custo médio por corrida?</span>
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">
-                            Qual é a média de preço das suas corridas? Não sabe? Sugerimos simular em um aplicativo, como Uber, 99Taxi, etc.
+                            Qual é a média de preço das suas corridas? Não sabe? Sugerimos simular em um aplicativo,
+                            como Uber, 99Taxi, etc.
                         </span>
                     </div>
 
-                    <input required onkeyup="formatarReais(this)" id="inputCorridas" placeholder="R$" type="text" maxlength="17" />
+                    <input required onkeyup="formatarReais(this)" id="inputCorridas" placeholder="R$" type="text"
+                        maxlength="9" />
                 </div>
 
 
@@ -177,7 +190,7 @@
             <div class="buttonCalc">
                 <input type="submit" class="btnCalcular" id='btnCalcular' value="CALCULAR">
             </div>
-            
+
 
         </section>
     </form>
@@ -188,13 +201,13 @@
 
     <footer>
         <div class="container column">
-            <img src="/images/squad06-logo-white.svg" alt="logoSquad" class="logoSquad" />
+            <img src="/images/s6-logo-white.png" alt="logoSquad" class="logoSquad" id='logoSquadHeader' />
             <div class="infoFooter">
                 <p>SQUAD 06 é parte do Hackathon promovido<br>pelo Grupo FCamara em conjunto com Alura.</p>
                 <div class="linksFooter">
-                    <a href="/imovelCalc.html">Home</a>
-                    <a href="/carroResult.html">Result AP</a>
-                    <a href="/carroCalc.html">Sobre nós</a>
+                    <a href="/index.html">Home</a>
+                    <a href="/imovelCalc.html">Imóvel</a>
+                    <a href="/carroCalc.html">Automóvel</a>
                 </div>
             </div>
             <div class="direitosFooter">

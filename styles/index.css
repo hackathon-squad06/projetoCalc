@@ -7,33 +7,33 @@
 /* style="display: none;" */
 :root {
   --body-bg: #f3f3f3;
-  --header-bg: #933380;
-  --menu-text: #fff;
-  --menu-hover: #2782B9;
+  --header-bg: #282852;
+  --menu-text: #f3f3f3;
+  --menu-hover: #72caec;
   --calc-bg: #f3f3f3;
   --contDados-bg: #fff;
   --contDados-title: #2782B9;
   --contDados-label: #2a88c2;
   --contDados-text: #000;
-  --footer-bg: #933380;
+  --footer-bg: #282852;
   --footer-text: #fff;
-  --footer-hover: #178bd3;
+  --footer-hover: #72caec;
   --footer-divider: #bfc1c4;
 }
 
 .dark-mode:root {
   --body-bg: #202040;
-  --header-bg: #602080;
-  --menu-text: #fff;
-  --menu-hover: #b030b0;
-  --calc-bg: #202040;
+  --header-bg: #282852;
+  --menu-text: #f3f3f3;
+  --menu-hover: #72caec;
+  --calc-bg: #22272e;
   --contDados-bg: #292953;
   --contDados-title: #f3f3f3;
   --contDados-label: #e7e7e7;
   --contDados-text: #f3f3f3;
-  --footer-bg: #602080;
-  --footer-text: #e7e7e7;
-  --footer-hover: #b030b0;
+  --footer-bg: #282852;
+  --footer-text: #f3f3f3;
+  --footer-hover: #72caec;
   --footer-divider: #bfc1c4;
 }
 
@@ -147,19 +147,21 @@ nav {
 }
 
 #textoWelcome h1 {
-  font-size: 1.75rem;
-  font-weight: 600;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-  color: var(--contDados-title);
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: var(--contDados-title);
 }
 
 #textoWelcome h2 {
-  font-size: 1.1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  margin-top: 1rem;
-  color: var(--contDados-text);
+    text-align: justify;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 1rem;
+    color: var(--contDados-text);
 }
 
 #imagemImovel {

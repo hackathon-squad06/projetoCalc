@@ -5,14 +5,14 @@
 }
 
 :root {
-    --body-bg: #fff;
-    --header-bg: #fff;
-    --nav-text: #000;
-    --nav-hover: #2782B9;
-    --resultado-bg: #933380;
+    --body-bg: #f3f3f3;
+    --header-bg: #282852;
+    --menu-text: #f3f3f3;
+    --menu-hover: #72caec;
+    --resultado-bg: #1f648f;
     --resultado-text: #fff;
     --quadro-border: #C4C4C4;
-    --quadro-bg: #ececec;
+    --quadro-bg: #fff;
     --quadro-title: #2782B9;
     --quadro-p: #000;
     --tooltip-bg: rgba(0, 0, 0, 0.8);
@@ -25,48 +25,45 @@
     --valoresLi-bg: #B8D0DB;
     --painelInfoTopicos-bg: #933380;
     --painelInfoValores-bg: #B795B7;
-    --avisoInfo-shadow: 0px 0px #000;
     --buttonCalc-bg: #2782B9;
     --buttonCalc-text: #fff;
     --buttonCalc-border: #C4C4C4;
     --buttonCalc-hover: #178bd3;
-    --footer-bg: #933380;
-    --footer-text: #fff;
-    --footer-hover: #178bd3;
+    --footer-bg: #282852;
+    --footer-text: #f3f3f3;
+    --footer-hover: #72caec;
     --footer-divider: #bfc1c4;
 }
 
 .dark-mode:root {
-    --body-bg: #202040;
-    --header-bg: #202040;
-    --nav-text: #e7e7e7;
-    --nav-hover: #b030b0;
+    --body-bg: #22272e;
+    --header-bg: #282852;
+    --menu-text: #f3f3f3;
+    --menu-hover: #72caec;
     --resultado-bg: #602080;
-    --resultado-text: #e7e7e7;
+    --resultado-text: #f3f3f3;
     --quadro-border: #b030b0;
-    --quadro-bg: #e7e7e7;
-    --quadro-title: #2782B9;
-    --quadro-p: #000;
+    --quadro-bg: #2d333b;
+    --quadro-title: #f3f3f3;
+    --quadro-p: #f3f3f3;
     --tooltip-bg: #000;
     --tooltip-text: #fff;
     --valoresTotais-bg: #933380;
-    --valoresTotais-texto: #fff;
+    --valoresTotais-texto: #f3f3f3;
     --topicosLi-border: #C4C4C4;
     --topicosLi-bg: #2782B9;
-    --topicosLi-text: #e7e7e7;
+    --topicosLi-text: #f3f3f3;
     --valoresLi-bg: #B8D0DB;
     --painelInfoTopicos-bg: #933380;
     --painelInfoValores-bg: #B795B7;
-    --avisoInfo-shadow: 0px 0px #000;
     --buttonCalc-bg: #962b96;
     --buttonCalc-text: #fff;
     --buttonCalc-border: #C4C4C4;
     --buttonCalc-hover: #b030b0;
-    --footer-bg: #602080;
-    --footer-text: #e7e7e7;
-    --footer-hover: #b030b0;
+    --footer-bg: #282852;
+    --footer-text: #f3f3f3;
+    --footer-hover: #72caec;
     --footer-divider: #bfc1c4;
-    
 }
 
 body {
@@ -106,14 +103,14 @@ nav a {
     font-size:1.2rem;
     padding:0.9rem;
     font-weight:500;
-    color:var(--nav-text);
+    color:var(--menu-text);
     border-bottom:0.3rem solid transparent;
     text-decoration:none;
 }
 
 nav a:hover {
-    color:var(--nav-hover);
-    border-bottom:0.3rem solid var(--nav-hover);
+    color:var(--menu-hover);
+    border-bottom:0.3rem solid var(--menu-hover);
 }
 
 nav div {
@@ -159,7 +156,7 @@ h1 {
     border:0.126rem solid var(--quadro-border);
     border-radius:1rem;
     padding:1rem;
-    margin-top:1rem;
+    margin-top:2rem;
     background-image:url(/images/kkArtboard\ 1.png);
     background-color:var(--quadro-bg);
 }
@@ -296,9 +293,9 @@ h1 {
     border-radius: 0.5rem;
     color: var(--buttonCalc-text);
     background-color: var(--buttonCalc-bg);
-    border: 1px solid var(--buttonCalc-border);
+    border: 0px solid var(--buttonCalc-border);
     cursor: pointer;
-    margin:2.5rem 0rem;
+    margin:3.5rem 0rem;
     text-decoration:none;
 }
 

@@ -6,10 +6,10 @@
 
 :root {
     --body-bg: #f3f3f3;
-    --header-bg: #fff;
-    --menu-text: #000;
-    --menu-hover: #2782B9;
-    --resultado-bg: #933380;
+    --header-bg: #282852;
+    --menu-text: #f3f3f3;
+    --menu-hover: #72caec;
+    --resultado-bg: #1f648f;
     --resultado-text: #fff;
     --quadro-border: #C4C4C4;
     --quadro-bg: #fff;
@@ -25,46 +25,44 @@
     --valoresLi-bg: #B8D0DB;
     --painelInfoTopicos-bg: #933380;
     --painelInfoValores-bg: #B795B7;
-    --avisoInfo-shadow: 0px 0px #000;
     --buttonCalc-bg: #2782B9;
     --buttonCalc-text: #fff;
     --buttonCalc-border: #C4C4C4;
     --buttonCalc-hover: #178bd3;
-    --footer-bg: #933380;
-    --footer-text: #fff;
-    --footer-hover: #178bd3;
+    --footer-bg: #282852;
+    --footer-text: #f3f3f3;
+    --footer-hover: #72caec;
     --footer-divider: #bfc1c4;
 }
 
 .dark-mode:root {
-    --body-bg: #202040;
-    --header-bg: #202040;
-    --menu-text: #e7e7e7;
-    --menu-hover: #b030b0;
+    --body-bg: #22272e;
+    --header-bg: #282852;
+    --menu-text: #f3f3f3;
+    --menu-hover: #72caec;
     --resultado-bg: #602080;
-    --resultado-text: #e7e7e7;
+    --resultado-text: #f3f3f3;
     --quadro-border: #b030b0;
-    --quadro-bg: #292953;
-    --quadro-title: #2782B9;
-    --quadro-p: #e7e7e7;
+    --quadro-bg: #2d333b;
+    --quadro-title: #f3f3f3;
+    --quadro-p: #f3f3f3;
     --tooltip-bg: #000;
     --tooltip-text: #fff;
     --valoresTotais-bg: #933380;
-    --valoresTotais-texto: #e7e7e7;
+    --valoresTotais-texto: #f3f3f3;
     --topicosLi-border: #C4C4C4;
     --topicosLi-bg: #2782B9;
-    --topicosLi-text: #e7e7e7;
+    --topicosLi-text: #f3f3f3;
     --valoresLi-bg: #B8D0DB;
     --painelInfoTopicos-bg: #933380;
     --painelInfoValores-bg: #B795B7;
-    --avisoInfo-shadow: 0px 0px #000;
     --buttonCalc-bg: #962b96;
     --buttonCalc-text: #fff;
     --buttonCalc-border: #C4C4C4;
     --buttonCalc-hover: #b030b0;
-    --footer-bg: #602080;
-    --footer-text: #e7e7e7;
-    --footer-hover: #b030b0;
+    --footer-bg: #282852;
+    --footer-text: #f3f3f3;
+    --footer-hover: #72caec;
     --footer-divider: #bfc1c4;
 }
 
@@ -97,7 +95,7 @@ header{
 }
 
 .logoSquad {
-    height:1.5rem;
+    height:1.2rem;
 }
 
 nav {
@@ -191,7 +189,7 @@ h1 {
     background-color:var(--quadro-bg);
     border-radius:1rem;
     padding:1rem;
-    margin-top:1rem;
+    margin-top:2rem;
 }
 
 .quadro p {
