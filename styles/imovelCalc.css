@@ -97,9 +97,13 @@ header{
     width:100rem;
 }
 
-.container img {
+#modeSwitch {
     display:flex;
     height: 1.2rem;
+}
+
+.logoSquad {
+    height:1.5rem;
 }
 
 nav {
