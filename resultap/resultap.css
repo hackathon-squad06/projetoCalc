@@ -9,12 +9,14 @@
     --header-bg: #fff;
     --nav-text: #000;
     --nav-hover: #2782B9;
-    --resultado-bg: #2782B9;
+    --resultado-bg: #933380;
     --resultado-text: #fff;
     --quadro-border: #C4C4C4;
     --quadro-bg: #ececec;
     --quadro-title: #2782B9;
     --quadro-p: #000;
+    --tooltip-bg: rgba(0, 0, 0, 0.8);
+    --tooltip-text: #fff;
     --valoresTotais-bg: #933380;
     --valoresTotais-texto: #fff;
     --topicosLi-border: #fff;
@@ -45,6 +47,8 @@
     --quadro-bg: #e7e7e7;
     --quadro-title: #2782B9;
     --quadro-p: #000;
+    --tooltip-bg: #000;
+    --tooltip-text: #fff;
     --valoresTotais-bg: #933380;
     --valoresTotais-texto: #fff;
     --topicosLi-border: #C4C4C4;
@@ -118,10 +122,6 @@ nav div {
     cursor:pointer;
 }
 
-.modeSwitch:hover {
-    cursor: pointer;
-}
-
 #melhorOpcao {
     font-weight: bold;
     font-size: 1.9rem;
@@ -181,6 +181,61 @@ h1 {
     font-weight:700;
     color:var(--quadro-title);
     margin:0.5rem 0rem;
+}
+
+.divTooltip {
+    display: inline-block;
+    margin-top: -1.23rem;
+    transform: translateX(-7.5rem);
+
+}
+
+.iconeInfo {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-top: -1.2rem;
+    transform: translate(16rem, -0.3rem);
+    cursor: pointer;
+}
+
+.tooltiptext {
+    opacity: 0;
+    /* display: none; */
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-text);
+    border-radius: 0.37rem;
+    padding: 0.5rem 0.6rem;
+    width: 12rem;
+    text-align: justify;
+    font-size: 0.8rem;
+ 
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    /* transform: translate(52.5%, 1rem); */
+    transform: translate(138%, -47%);
+}
+  
+.iconeInfo + .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--tooltip-bg) transparent;
+}
+
+.iconeInfo:hover + .tooltiptext {
+    /* display: inline-block; */
+    visibility: visible;
+    opacity: 1;
 }
 
 .valoresTotais {
