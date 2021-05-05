@@ -5,16 +5,17 @@
 }
 
 :root {
-    --body-bg: #fff;
+    --body-bg: #f3f3f3;
     --header-bg: #fff;
     --nav-text: #000;
     --nav-hover: #2782B9;
     --welcome-bg: #933380;
     --welcome-text: #fff;
     --box-shadow: rgba(0,0,0,0.18);
-    --calc-bg: #fff;
+    --calc-bg: #f3f3f3;
     --tooltip-bg: rgba(0, 0, 0, 0.8);
     --tooltip-text: #fff;
+    --contDados-bg: #fff;
     --contDados-border: #C4C4C4;
     --contDados-title: #2782B9;
     --tituloInput-text: #000;
@@ -42,6 +43,7 @@
     --calc-bg: #202040;
     --tooltip-bg: #000;
     --tooltip-text: #fff;
+    --contDados-bg: #292953;
     --contDados-border: #b030b0;
     --contDados-title: #68bef3;
     --tituloInput-text: #e7e7e7;
@@ -242,6 +244,7 @@ nav div {
     margin-right: auto;
     margin-top: 4rem;
     border: 2px solid var(--contDados-border);
+    background: var(--contDados-bg);
     border-radius: 0.5rem;
 }
 

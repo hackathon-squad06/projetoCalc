@@ -83,7 +83,7 @@
                     <span class="tooltiptext">IPCA Anual. Não sabe? Considere a inflação entre 3% e 5% ao
                         ano.</span>
                     <input required id="inputValorizacao" placeholder="% anual" type="text" name="inputValorizacao"
-                        min="0" step=".01" onfocusout="formatarPorcentagem(this)" />
+                        min="0" step=".01" onfocusout="formatarPorcentagem(this)" maxlength="6" />
                     <input type="range" class="slider" name="slider" id="sliderValorValorizacao" />
                 </div>
 
@@ -131,7 +131,8 @@
                         parcela inicial. Em contrapartida, o valor de juros pagos durante
                         todo o periodo serão maiores.</span>
                     <input required id="inputPrazoFin" onblur="valorInvestimentoMensal ()"
-                        onfocusout="formatarAnos(this)" placeholder="em anos" type="text" min="0" step="1" />
+                        onfocusout="formatarAnos(this)" placeholder="em anos" type="text" min="0" step="1"
+                        maxlength="3" />
                     <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
                 </div>
 
@@ -140,7 +141,8 @@
                     <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                     <span class="tooltiptext">Custo efetivo total (CET) presente no contrato.</span>
                     <input required id="inputTaxaFin" onblur="valorInvestimentoMensal ()"
-                        onfocusout="formatarPorcentagem(this)" placeholder="% anual" type="text" min="0" step=".01" />
+                        onfocusout="formatarPorcentagem(this)" placeholder="% anual" type="text" min="0" step=".01"
+                        maxlength="6" />
                     <input type="range" class="slider" name="slider" id="sliderTaxaFin" />
                 </div>
             </div>
@@ -176,7 +178,7 @@
                         serão
                         aplicados. Caso não conheça, sugerimos aplicar a rentabilidade de uma renda fixa atual.</span>
                     <input required id="inputRentabilidade" placeholder="% anual" type="text" min="0" step=".01"
-                        onfocusout="formatarPorcentagem(this)" />
+                        onfocusout="formatarPorcentagem(this)" maxlength="6" />
                     <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
                 </div>
             </div>
