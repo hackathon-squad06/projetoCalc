@@ -88,7 +88,7 @@ function calcular() {
   sessionStorage.setItem('valorTotalPagoFinancimento', valorPagoFinanciamento)
   sessionStorage.setItem('sobraInvestimento', sobraInvestimento)
   sessionStorage.setItem('melhorOpcao', melhorOpcao)
-  window.location.href = "/resultap/resultap.html"
+  window.location.href = "/imovelResult.html"
 }
 
 function formatarReais(campo) {
