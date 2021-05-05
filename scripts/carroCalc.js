@@ -25,12 +25,25 @@ function calcular() {
     var gastosTotaisCarro = parseFloat(gastosTotaisCarroF.toFixed(2))
     var diferencaF = gastosTotaisCarro - gastosApp
     var diferenca = parseFloat(diferencaF.toFixed(2))
+    if (diferenca > 0) {
+      var melhorOpcao = 'usar o aplicativo de corridas'
+    } else {
+      var melhorOpcao = 'usar o carro'
+    }
 
-
-    console.log(gastosTotaisCarro, gastosAnuais, gastosEstacionamento, gastosManutencao, gastosCombustivel, gastosApp, usoApp, diferenca);
+    console.log(gastosTotaisCarro, gastosAnuais, gastosEstacionamento, gastosManutencao, gastosCombustivel, gastosApp, usoApp, diferenca, melhorOpcao);
 
     sessionStorage.setItem("gastosTotaisCarro", gastosTotaisCarro);
-    //   window.location.href = "/uberResult.html";
+    sessionStorage.setItem("gastosAnuais", gastosAnuais);
+    sessionStorage.setItem("gastosEstacionamento", gastosEstacionamento);
+    sessionStorage.setItem("gastosManutencao", gastosManutencao);
+    sessionStorage.setItem("gastosCombustivel", gastosCombustivel)
+    sessionStorage.setItem("gastosApp", gastosApp);
+    sessionStorage.setItem("usoApp", usoApp);
+    sessionStorage.setItem("diferenca", diferenca);
+    sessionStorage.setItem("melhorOpcao", melhorOpcao);
+
+      window.location.href = "/carroResult.html";
 }
 
 function formatarReais(campo) {
