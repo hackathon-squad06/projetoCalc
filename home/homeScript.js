@@ -22,16 +22,16 @@ function calcular() {
   const valorImovelFuturoF = parseFloat(valorImovelFuturo.toFixed(2))
   const valorInvestidoMensal = parcelaF - valorDoAluguel
   if (valorInvestidoMensal > 0) {
-	var valorInvestidoMensalF = valorInvestidoMensal.toFixed(2)
+    var valorInvestidoMensalF = valorInvestidoMensal.toFixed(2)
   } else {
-	var valorInvestidoMensalF = 0
+    var valorInvestidoMensalF = 0
   }
   const depositoInicial = valorDaEntrada + custosAdicionais
   if (totalPago > valorFinanciado) {
-	var totalJurosPagoF = totalPago - valorFinanciado
+    var totalJurosPagoF = totalPago - valorFinanciado
     var totalJurosPago = parseFloat(totalJurosPagoF.toFixed(2))
   } else {
-	var totalJurosPagoF = valorFinanciado - totalPago
+    var totalJurosPagoF = valorFinanciado - totalPago
     var totalJurosPago = parseFloat(totalJurosPagoF.toFixed(2))
   }
   const m = c * (1 + iF / 100) ** n + valorInvestidoMensalF * (((1 + iF / 100) ** n - 1) / (iF / 100))
@@ -46,8 +46,8 @@ function calcular() {
   const valorPagoFinanciamento = parseFloat(valorPagoFinanciamentoF.toFixed(2))
   const sobraInvestimentoF = mF - valorImovelFuturoF
   const sobraInvestimento = parseFloat(sobraInvestimentoF.toFixed(2))
-  if ( mF >= valorImovelFuturoF ) {
-	var melhorOpcao = 'Alugar'
+  if (mF >= valorImovelFuturoF) {
+    var melhorOpcao = 'Alugar'
   } else {
     var melhorOpcao = 'Financiar'
   }
@@ -205,36 +205,12 @@ function valorInvestimentoMensal() {
 
   if (isNaN(investimentoMensalFinal)) {
     investimentoMensal.placeholder = 'Adicione os dados para o cálculo'
-  } else if (investimentoMensalFinal < 0 ) {
+  } else if (investimentoMensalFinal < 0) {
     investimentoMensal.placeholder = 'R$ 0,00'
   } else {
     investimentoMensal.placeholder = 'R$ ' + investimentoMensalFinal + ',00';
   }
 }
-
-
-// function formatarAnos(element) {
-//   var id = element.id
-//   var campo = document.getElementById(id)
-//   var valor = campo.value
-//   var n = valor.toLocaleString();
-
-//   if (valor == '' || valor < 0 || isNaN(valor)) {
-//     console.log('é NaN')
-//     campo.type = 'text';
-//     campo.value = null;
-//   } else {
-//     campo.type = 'text';
-//     valor = n + ' anos';
-//     campo.value = valor;
-//   }
-//   campo.onclick = function () {
-//     campo.type = 'text';
-//     valor = n + ' em anos';
-//     campo.value = valor;
-//     campo.type = 'number';
-//   }
-// }
 
 function formatarAnos(element) {
   var id = element.id
