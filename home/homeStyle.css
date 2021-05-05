@@ -74,7 +74,7 @@ input[type=number] {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: var(--body-bg);
+    background-color: var(--body-bg);
 }
 
 header{
@@ -84,7 +84,7 @@ header{
     /* position: -webkit-sticky;
     position: sticky;
     top: 0; */
-    background: var(--header-bg);
+    background-color: var(--header-bg);
 }
 
 .container {
@@ -111,7 +111,6 @@ nav {
     justify-content:space-evenly;
     width:2.18rem;
     height:2.18rem;
-    margin:3.1rem 0rem;
 }
 
 .menuLine {
@@ -256,9 +255,7 @@ nav {
 
 
 .containerDados {
-    display:flex;
-    justify-content:center;
-    display: grid;
+    display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 7rem 10rem 10rem;
     grid-gap: 1rem;
@@ -309,12 +306,6 @@ nav {
     background-color: var(--inputVar-focus);
     outline: 0;
 }
-
-input[type=range] {
-    margin-top: -0.3rem;
-    display: none;
-}
-
 
 
 .btnCalcular {
@@ -459,11 +450,17 @@ footer a:hover {
     .containerDados {
         display:flex;
         flex-direction:column;
+        align-items:center;
         grid-gap:0;
         width:35rem;
     }
+    .titleContainer{
+        width:fit-content;
+        justify-content:center;
+        margin:0;
+    }
     .titleContainer {
-        margin: 3rem 3.18rem 2rem 3.18rem;
+        margin: 3rem 1rem 2rem 1rem;
     }
     .inputVar {
         height:10rem;
@@ -481,7 +478,8 @@ footer a:hover {
 }
 
 @media (max-width: 595px) {
-    body {
+    html, body {
+        left:0;
         overflow-x:hidden;
     }
     .menuMobile {
@@ -527,6 +525,12 @@ footer a:hover {
         grid-gap:0;
         width: 24rem;
     }
+    .tooltiptext {
+        width: 10rem;
+        text-align:left;
+        font-size: 0.8rem;
+        transform: translate(-60%, 2rem);
+    }
     .inputVar {
         height:10rem;
     }
@@ -562,6 +566,9 @@ footer a:hover {
     .containerDados {
         width:21rem;
     }
+    .tooltiptext {
+        transform: translate(-80%, 2rem);
+    }
 }
 
 @media (max-width:355px) {
@@ -577,7 +584,16 @@ footer a:hover {
         font-size:0.75rem;
     }
     .containerDados {
-        width:19rem;
+        width:18.5rem;
+    }
+    .inputVar input {
+        width:16rem;
+    }
+    .tooltiptext {
+        transform: translate(-95%, 2rem);
+    }
+    .column {
+        width:20rem;
     }
     .infoFooter p {
         font-size:0.75rem;

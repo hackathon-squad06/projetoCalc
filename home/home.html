@@ -63,7 +63,6 @@
 
                     <input required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDeCompra)"
                         id="inputValorImovel" placeholder="R$" type="text" />
-                    <input type="range" class="slider" name="slider" id="sliderValorCompra" />
                 </div>
 
                 <div class="inputVar" id="valorAluguel">
@@ -76,8 +75,7 @@
                     </div>
 
                     <input required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDoAluguel)"
-                        id="inputAluguel" placeholder="R$" type="text" />
-                    <input type="range" class="slider" name="slider" id="sliderValorAluguel" />
+                        id="inputAluguel" class="allInputs" placeholder="R$" type="text" />
                 </div>
 
                 <div class="inputVar" id="custosLocacao" style="display: none">
@@ -90,7 +88,6 @@
                     </div>
 
                     <input onkeyup="formatarReais(this)" placeholder="R$ por mês" type="text" />
-                    <input type="range" class="slider" name="slider" id="sliderCustosLocacao" />
                 </div>
 
                 <div class="inputVar" id="valorValorizacao">
@@ -102,7 +99,6 @@
 
                     <input required id="inputValorizacao" placeholder="% anual" type="number" name="inputValorizacao"
                         min="0" value="0" step=".01" onblur="formatarPorcentagem(this)" />
-                    <input type="range" class="slider" name="slider" id="sliderValorValorizacao" />
                 </div>
 
                 <div class="inputVar" id="valorIgpm" style="display: none">
@@ -113,7 +109,6 @@
                     </div>
 
                     <input placeholder="% anual" type="number" />
-                    <input type="range" class="slider" name="slider" id="sliderValorIgpm" />
                 </div>
             </div>
 
@@ -132,7 +127,6 @@
                         onchange="entrada()"
                         onblur="calcDeposito(valorDaEntrada, custosAdicionais), valorInvestimentoMensal (valorDaEntrada)"
                         placeholder="R$" type="text" />
-                    <input type="range" class="slider" name="slider" id="sliderValorEntrada" />
                 </div>
 
                 <div class="inputVar" id="valorCustosFin">
@@ -149,7 +143,6 @@
                         onchange="custos()"
                         onblur="calcDeposito(valorDaEntrada, custosAdicionais), valorInvestimentoMensal (custosAdicionais)"
                         placeholder="R$" type="text" />
-                    <input type="range" class="slider" name="slider" id="sliderCustosFin" />
                 </div>
 
                 <div class="inputVar" id="valorPrazoFin">
@@ -164,7 +157,6 @@
 
                     <input required id="inputPrazoFin" onblur="valorInvestimentoMensal (), formatarAnos(this)"
                         placeholder="em anos" type="number" />
-                    <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
                 </div>
 
                 <div class="inputVar" id="valorTaxaFin">
@@ -176,7 +168,6 @@
 
                     <input required id="inputTaxaFin" onblur="valorInvestimentoMensal (), formatarPorcentagem(this)"
                         placeholder="% anual" type="number" min="0" value="0" step=".01" />
-                    <input type="range" class="slider" name="slider" id="sliderTaxaFin" />
                 </div>
             </div>
 
@@ -218,7 +209,6 @@
 
                     <input required id="inputRentabilidade" placeholder="% anual" type="number" min="0" value="0"
                         step=".01" onblur="formatarPorcentagem(this)" />
-                    <input type="range" class="slider" name="slider" id="sliderPrazoFin" />
                 </div>
             </div>
 
@@ -229,7 +219,7 @@
         </section>
     </form>
 
-    <div class="wrapper">
+    <div class="wrapperDivider">
         <div class="divider div-transparent"></div>
     </div>
 
