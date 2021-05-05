@@ -1,19 +1,36 @@
 function calcular() {
-  const valorSeguro = realParseFloat(document.getElementById("inputValorSeguro").value);
-  const valorIpva = realParseFloat(document.getElementById("inputIpva").value);
-  const valorSeguroObr = realParseFloat(document.getElementById("inputSeguroObr").value);
-  const valorEstacionamento = realParseFloat(document.getElementById("inputEstacionamento").value);
-  const valorManutencao = realParseFloat(document.getElementById("inputManutencao").value);
-  const valorKms = realParseFloat(document.getElementById("inputKms").value);
-  const valorConsumo = realParseFloat(document.getElementById("inputConsumo").value);
-  const valorCombustivel = realParseFloat(document.getElementById("inputCombustivel").value);
-  const numeroCorridas = realParseFloat(document.getElementById("inputApp").value);
-  const valorCorridas = realParseFloat(document.getElementById("inputCorridas").value);
+    const valorSeguro = realParseFloat(document.getElementById("inputValorSeguro").value);
+    const valorIpva = realParseFloat(document.getElementById("inputIpva").value);
+    const valorSeguroObr = realParseFloat(document.getElementById("inputSeguroObr").value);
+    const valorEstacionamento = realParseFloat(document.getElementById("inputEstacionamento").value);
+    const valorManutencao = realParseFloat(document.getElementById("inputManutencao").value);
+    const valorKm = realParseFloat(document.getElementById("inputKm").value);
+    const valorConsumo = realParseFloat(document.getElementById("inputConsumo").value);
+    const valorCombustivel = realParseFloat(document.getElementById("inputCombustivel").value);
+    const numeroCorridas = realParseFloat(document.getElementById("inputApp").value);
+    const valorCorridas = realParseFloat(document.getElementById("inputCorridas").value);
 
-  console.log(valorSeguro);
+    const gastosAnuaisF = valorSeguro + valorIpva + valorSeguroObr
+    const gastosAnuais = parseFloat(gastosAnuaisF.toFixed(2))
+    const gastosEstacionamentoF = valorEstacionamento * 12
+    const gastosEstacionamento = parseFloat(gastosEstacionamentoF.toFixed(2))
+    const gastosManutencaoF = valorManutencao * 2
+    const gastosManutencao = parseFloat(gastosManutencaoF.toFixed(2))
+    const gastosCombustivelF = ((valorKm / valorConsumo) * valorCombustivel) * 253
+    const gastosCombustivel = parseFloat(gastosCombustivelF.toFixed(2))
+    const gastosAppF = (numeroCorridas * valorCorridas) * 36.14
+    const gastosApp = parseFloat(gastosAppF.toFixed(2))
+    const usoApp = Math.ceil(numeroCorridas * 36.14)
+    var gastosTotaisCarroF = (gastosAnuais + gastosEstacionamento + gastosManutencao + gastosCombustivel)
+    var gastosTotaisCarro = parseFloat(gastosTotaisCarroF.toFixed(2))
+    var diferencaF = gastosTotaisCarro - gastosApp
+    var diferenca = parseFloat(diferencaF.toFixed(2))
 
-  sessionStorage.setItem("melhorOpcao", melhorOpcao);
-//   window.location.href = "/uberResult.html";
+
+    console.log(gastosTotaisCarro, gastosAnuais, gastosEstacionamento, gastosManutencao, gastosCombustivel, gastosApp, usoApp, diferenca);
+
+    sessionStorage.setItem("gastosTotaisCarro", gastosTotaisCarro);
+    //   window.location.href = "/uberResult.html";
 }
 
 function formatarReais(campo) {
@@ -47,39 +64,34 @@ function formatarReais(campo) {
   };
 }
 
-let nImovel = [];
-let nAluguel = [];
-let nEntrada = [];
-let nAdicionais = [];
-
-function formatarKms(element) {
-  var id = element.id;
-  var campo = document.getElementById(id);
-  var valor = campo.value;
-  var containWord = /[a-z]/i.test(valor);
-  var containSimbol = /[`~!@#$%^&*()_|+\-=?;:'"<>\{\}\[\]\\\/]/gi.test(valor);
-
-  if (containWord || containSimbol) {
-    console.log("contem caracteres");
-    valorA = valor.replace(/[`~!@#$%^&*()_|+\-=?;:'"<>\{\}\[\]\\\/]/gi, "");
-    valor = valorA.replace(/[\D]+/g, "");
-    campo.value = valor;
-  }
-  if (valor == "" || valor < 0) {
-    console.log("é NaN");
-    valor = "";
-    campo.value = null;
-  } else if (campo.value.includes("KMs")) {
-    valor = valor;
-    campo.value = valor;
-  } else {
-    valor = valor + " KMs";
-    campo.value = valor;
-  }
-  campo.onclick = function () {
-    valor = valor.replace(" KMs", "");
-    campo.value = valor;
-  };
+function formatarKm(element) {
+    var id = element.id
+    var campo = document.getElementById(id)
+    var valor = campo.value
+    var containWord = /[a-z]/i.test(valor)
+    var containSimbol = /[`~!@#$%^&*()_|+\-=?;:'"<>\{\}\[\]\\\/]/gi.test(valor)
+  
+    if (containWord || containSimbol) {
+      console.log('contem caracteres')
+      valorA = valor.replace(/[`~!@#$%^&*()_|+\-=?;:'"<>\{\}\[\]\\\/]/gi, '')
+      valor = valorA.replace(/[\D]+/g, '')
+      campo.value = valor;
+    }
+    if (valor == '' || valor < 0) {
+      console.log('é NaN')
+      valor = ''
+      campo.value = null;
+    } else if (campo.value.includes('KM/dia')) {
+      valor = valor;
+      campo.value = valor;
+    } else {
+      valor = valor + ' KM/dia';
+      campo.value = valor;
+    }
+    campo.onclick = function () {
+      valor = valor.replace(' KM/dia', '');
+      campo.value = valor;
+    }
 }
 
 function formatarKmLitro(element) {
@@ -99,15 +111,15 @@ function formatarKmLitro(element) {
       console.log("é NaN");
       valor = "";
       campo.value = null;
-    } else if (campo.value.includes("KMs/Litro")) {
+    } else if (campo.value.includes("KM/Litro")) {
       valor = valor;
       campo.value = valor;
     } else {
-      valor = valor + " KMs/Litro";
+      valor = valor + " KM/Litro";
       campo.value = valor;
     }
     campo.onclick = function () {
-      valor = valor.replace(" KMs/Litro", "");
+      valor = valor.replace(" KM/Litro", "");
       campo.value = valor;
     };
 }
