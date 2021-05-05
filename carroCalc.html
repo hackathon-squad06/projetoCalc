@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=0" />
+    <title>Projeto Calculadora</title>
+    <link rel="stylesheet" href="/styles/carroCalc.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="/images/squad06-logo.svg" alt="logoSquad" class="logoSquad" id='logoSquadHeader' />
+            <nav>
+                <div class="menuMobile">
+                    <div class="menuLine"></div>
+                    <div class="menuLine"></div>
+                    <div class="menuLine"></div>
+                </div>
+                <div class="menu">
+                    <a href="/imovelCalc.html">Home</a>
+                    <a href="/carroResult.html">Result AP</a>
+                    <a href="/carroCalc.html">Sobre nós</a>
+                </div>
+                <div class=" modeSwitch">
+                        <img src="/images/dark-mode-black.svg" id='modeSwitch' />
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="sectionWelcome">
+        <div id="textoWelcome">
+            <h1>Você tem carro?<br> Já pensou em aposentá-lo?</h1>
+            <h2>
+                Já parou para pensar e calcular se usar um aplicativo de corridas seria mais vantajoso no seu dia-a-dia?
+            </h2>
+            <h2>Esta ferramenta irá comparar os gastos de um carro e uso de aplicativo de corridas por 1 ano.</h2>
+        </div>
+        <div id="imagemWelcome"></div>
+    </section>
+
+    <form autocomplete="off" onsubmit="calcular();return false">
+        <section class="sectionCalc">
+            <div class="containerDados" id="divDadosImovel">
+                <span class="titleContainer">Insira os dados para comparação:</span>
+
+                <div class="inputVar" id="valorSeguro">
+                    <div class="wrapper">
+                        <span class="tituloInput">Valor do seguro</span>
+                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                        <span class="tooltiptext">
+                            Quanto você paga no seguro do seu carro?
+                        </span>
+                    </div>
+
+                    <input required onkeyup="formatarReais(this)" id="inputValorSeguro" placeholder="R$" type="text" maxlength="17" />
+                </div>
+
+                <div class="inputVar" id="valorIpva">
+                    <div class="wrapper">
+                        <span class="tituloInput">Valor do IPVA</span>
+                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                        <span class="tooltiptext">
+                            Quanto você paga no IPVA do seu carro?
+                        </span>
+                    </div>
+
+                    <input required onkeyup="formatarReais(this)" id="inputIpva" placeholder="R$" type="text" maxlength="17" />
+                </div>
+
+                <div class="inputVar" id="valorSeguroObr">
+                    <div class="wrapper">
+                        <span class="tituloInput">Valor do licenciamento</span>
+                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                        <span class="tooltiptext">
+                            Quanto você paga no licenciamento do seu carro?
+                        </span>
+                    </div>
+
+                    <input required onkeyup="formatarReais(this)" id="inputSeguroObr" placeholder="R$" type="text" maxlength="17" />
+                </div>
+
+                <div class="inputVar" id="valorEstacionamento">
+                    <div class="wrapper">
+                        <span class="tituloInput">Estacionamento/mês</span>
+                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                        <span class="tooltiptext">
+                            Você precisa gastar com estacionamento todo mês? Quanto?
+                        </span>
+                    </div>
+
+                    <input required onkeyup="formatarReais(this)" id="inputEstacionamento" placeholder="R$" type="text" maxlength="17" />
+                </div>
+
+                <div class="inputVar" id="valorManutencao">
+                    <div class="wrapper">
+                        <span class="tituloInput">Manutenção nos últimos 6 meses</span>
+                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                        <span class="tooltiptext">
+                            Quanto você gastou com manutenção nos últimos 6 meses? Considere troca de óleo, lavagens, revisões, balanceamento, acidentes, alinhamento, etc.
+                        </span>
+                    </div>
+
+                    <input required onkeyup="formatarReais(this)" id="inputManutencao" placeholder="R$" type="text" maxlength="17" />
+                </div>
+
+                <div class="inputVar" id="valorKm">
+                    <div class="wrapper">
+                        <span class="tituloInput">Quantos KM você dirige por dia?</span>
+                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                        <span class="tooltiptext">
+                            Considere uma média da sua rotina. Ex: idas ao trabalho, idas à faculdade, etc.
+                        </span>
+                    </div>
+
+                    <input required onkeyup="formatarKm(this)" id="inputKm" placeholder="KM/dia" type="text" maxlength="17" />
+                </div>
+
+                <div class="inputVar" id="valorConsumo">
+                    <div class="wrapper">
+                        <span class="tituloInput">Quantos KM seu carro faz por Litro?</span>
+                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                        <span class="tooltiptext">
+                            Qual é o rendimento do seu carro em KM.
+                        </span>
+                    </div>
+
+                    <input required onkeyup="formatarKmLitro(this)" id="inputConsumo" placeholder="KM/Litro" type="text" maxlength="17" />
+                </div>
+
+                <div class="inputVar" id="valorCombustivel">
+                    <div class="wrapper">
+                        <span class="tituloInput">Valor do combustível que usa</span>
+                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                        <span class="tooltiptext">
+                            Considere um valor aproximado do combustível que utiliza no seu carro.
+                        </span>
+                    </div>
+
+                    <input required onkeyup="formatarReais(this)" id="inputCombustivel" placeholder="R$" type="text" maxlength="17" />
+                </div>
+
+                <div class="inputVar" id="valorApp">
+                    <div class="wrapper">
+                        <span class="tituloInput">Uso do aplicativo por semana</span>
+                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                        <span class="tooltiptext">
+                            Em sua rotina, faria quantas corridas por semana? Considere idas ao trabalho, mercado, academia, etc.
+                        </span>
+                    </div>
+
+                    <input required onkeyup="formatarCorridas(this)" id="inputApp" placeholder="Corridas/semana" type="text" maxlength="17" />
+                </div>
+
+                <div class="inputVar" id="valorCorrida">
+                    <div class="wrapper">
+                        <span class="tituloInput">Qual o custo médio por corrida?</span>
+                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                        <span class="tooltiptext">
+                            Qual é a média de preço das suas corridas? Não sabe? Sugerimos simular em um aplicativo, como Uber, 99Taxi, etc.
+                        </span>
+                    </div>
+
+                    <input required onkeyup="formatarReais(this)" id="inputCorridas" placeholder="R$" type="text" maxlength="17" />
+                </div>
+
+
+            </div>
+
+            <div class="buttonCalc">
+                <input type="submit" class="btnCalcular" id='btnCalcular' value="CALCULAR">
+            </div>
+            
+
+        </section>
+    </form>
+
+    <div class="wrapperDivider">
+        <div class="divider div-transparent"></div>
+    </div>
+
+    <footer>
+        <div class="container column">
+            <img src="/images/squad06-logo-white.svg" alt="logoSquad" class="logoSquad" />
+            <div class="infoFooter">
+                <p>SQUAD 06 é parte do Hackathon promovido<br>pelo Grupo FCamara em conjunto com Alura.</p>
+                <div class="linksFooter">
+                    <a href="/imovelCalc.html">Home</a>
+                    <a href="/carroResult.html">Result AP</a>
+                    <a href="/carroCalc.html">Sobre nós</a>
+                </div>
+            </div>
+            <div class="direitosFooter">
+                ® SQUAD 06 Consultoria Ltda.<br>2021 - Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script src="/scripts/carroCalc.js"></script>
+    <script src="/scripts/darkMode.js"></script>
+    <script src="/scripts/menuMobile.js"></script>
+
+</body>
+
+</html>

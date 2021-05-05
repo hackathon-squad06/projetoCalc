@@ -97,13 +97,9 @@ header{
     width:100rem;
 }
 
-#modeSwitch {
+.container img {
     display:flex;
     height: 1.2rem;
-}
-
-.logoSquad {
-    height:1.5rem;
 }
 
 nav {
@@ -182,9 +178,10 @@ nav {
 
 #textoWelcome h1 {
     font-size: 1.75rem;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.5;
     margin-bottom: 2rem;
+    text-align: left;
 }
 
 #textoWelcome h2 {
@@ -192,6 +189,7 @@ nav {
     font-weight: 400;
     line-height: 1.5;
     margin-top: 1rem;
+    text-align: justify;
 }
 
 #imagemWelcome {
@@ -238,7 +236,7 @@ nav {
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-    transform: translate(-54%, -102%);
+    transform: translate(-54%, 2rem);
 }
   
 .iconeInfo:hover + .tooltiptext {
@@ -250,8 +248,7 @@ nav {
 .iconeInfo + .tooltiptext::after {
     content: " ";
     position: absolute;
-    transform: rotate(180deg);
-    top: 100%;  /* At the top of the tooltip */
+    bottom: 100%;  /* At the top of the tooltip */
     left: 50%;
     margin-left: -5px;
     border-width: 5px;
@@ -264,13 +261,14 @@ nav {
 .containerDados {
     display:grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 7rem 10rem 10rem;
-    grid-gap: 1rem;
+    /* grid-template-rows: 4rem 4rem 4rem 4rem; */
+    grid-gap: 3rem;
     width: 50rem;
     margin-top: 4rem;
     border: 2px solid var(--contDados-border);
     background: var(--contDados-bg);
     border-radius: 0.5rem;
+    padding: 2rem;
 }
 
 .titleContainer {
@@ -280,8 +278,8 @@ nav {
     font-weight: bold;
     text-align: left;
     font-size: 1.2rem;
-    color: var(--tituloInput-text);
-    margin: 3rem 3.18rem 2rem 3.18rem;
+    color: var(--contDados-title);
+    margin: 1rem 3.18rem 2rem 2.8rem;
 }
 
 .inputVar {
@@ -486,6 +484,10 @@ footer a:hover {
 }
 
 @media (max-width: 595px) {
+    html, body {
+        left:0;
+        overflow-x:hidden;
+    }
     .menuMobile {
         display:flex;
     }
@@ -533,7 +535,7 @@ footer a:hover {
         width: 10rem;
         text-align:left;
         font-size: 0.8rem;
-        transform: translate(-55%, -102%);
+        transform: translate(-60%, 2rem);
     }
     .inputVar {
         height:10rem;
@@ -571,13 +573,7 @@ footer a:hover {
         width:21rem;
     }
     .tooltiptext {
-        transform: translate(-95%, -102%);
-    }
-    .iconeInfo + .tooltiptext::after {
-        left: 90%;
-    }
-    .column {
-        width:23rem;
+        transform: translate(-80%, 2rem);
     }
 }
 
@@ -598,6 +594,9 @@ footer a:hover {
     }
     .inputVar input {
         width:16rem;
+    }
+    .tooltiptext {
+        transform: translate(-95%, 2rem);
     }
     .column {
         width:20rem;

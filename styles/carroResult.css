@@ -5,14 +5,14 @@
 }
 
 :root {
-    --body-bg: #f3f3f3;
+    --body-bg: #fff;
     --header-bg: #fff;
-    --menu-text: #000;
-    --menu-hover: #2782B9;
+    --nav-text: #000;
+    --nav-hover: #2782B9;
     --resultado-bg: #933380;
     --resultado-text: #fff;
     --quadro-border: #C4C4C4;
-    --quadro-bg: #fff;
+    --quadro-bg: #ececec;
     --quadro-title: #2782B9;
     --quadro-p: #000;
     --tooltip-bg: rgba(0, 0, 0, 0.8);
@@ -39,18 +39,18 @@
 .dark-mode:root {
     --body-bg: #202040;
     --header-bg: #202040;
-    --menu-text: #e7e7e7;
-    --menu-hover: #b030b0;
+    --nav-text: #e7e7e7;
+    --nav-hover: #b030b0;
     --resultado-bg: #602080;
     --resultado-text: #e7e7e7;
     --quadro-border: #b030b0;
-    --quadro-bg: #292953;
+    --quadro-bg: #e7e7e7;
     --quadro-title: #2782B9;
-    --quadro-p: #e7e7e7;
+    --quadro-p: #000;
     --tooltip-bg: #000;
     --tooltip-text: #fff;
     --valoresTotais-bg: #933380;
-    --valoresTotais-texto: #e7e7e7;
+    --valoresTotais-texto: #fff;
     --topicosLi-border: #C4C4C4;
     --topicosLi-bg: #2782B9;
     --topicosLi-text: #e7e7e7;
@@ -66,6 +66,7 @@
     --footer-text: #e7e7e7;
     --footer-hover: #b030b0;
     --footer-divider: #bfc1c4;
+    
 }
 
 body {
@@ -91,13 +92,9 @@ header{
     width:100rem; /*50rem para ficar no centro da página*/
 }
 
-#modeSwitch {
+.container img {
     display:flex;
     height: 1.2rem;
-}
-
-.logoSquad {
-    height:1.5rem;
 }
 
 nav {
@@ -105,52 +102,25 @@ nav {
     align-items:center;
 }
 
-.menuMobile {
-    display:none;
-    flex-direction:column;
-    justify-content:space-evenly;
-    width:2.18rem;
-    height:2.18rem;
-}
-
-.menuLine {
-    background-color:var(--menu-text);
-    height:0.189rem;
-}
-
-.menuMobile:hover {
-    cursor:pointer;
-}
-
-.menuMobile:hover .menuLine {
-    background-color:var(--menu-hover);
-}
-
-.menu a {
+nav a {
     font-size:1.2rem;
-    padding:0.7rem;
+    padding:0.9rem;
     font-weight:500;
-    color:var(--menu-text);
+    color:var(--nav-text);
     border-bottom:0.3rem solid transparent;
     text-decoration:none;
 }
 
-.menu a:hover {
-    color:var(--menu-hover);
-    border-bottom:0.3rem solid var(--menu-hover);
+nav a:hover {
+    color:var(--nav-hover);
+    border-bottom:0.3rem solid var(--nav-hover);
 }
 
-.modeSwitch {
+nav div {
     margin-left:1.5rem;
     padding:1rem;
     cursor:pointer;
 }
-
-.modeSwitch:hover {
-    cursor: pointer;
-}
-
-
 
 #melhorOpcao {
     font-weight: bold;
@@ -163,7 +133,6 @@ nav {
     align-items:center;
     background-color:var(--resultado-bg);
     color: var(--resultado-text);
-    padding:2rem;
     height:8rem;
     width:100vw;
     max-width:100%;
@@ -188,81 +157,44 @@ h1 {
     flex-direction:column;
     width:50rem;
     border:0.126rem solid var(--quadro-border);
-    background-color:var(--quadro-bg);
     border-radius:1rem;
     padding:1rem;
     margin-top:1rem;
+    background-image:url(/images/kkArtboard\ 1.png);
+    background-color:var(--quadro-bg);
+}
+
+/* newHeight - Altera a altura do quadro*/
+.newHeight {
+    text-align:justify;
 }
 
 .quadro p {
-    text-align:justify;
     font-size:1.2rem;
     margin:0.5rem 0rem;
-    width:fit-content;
     color: var(--quadro-p);
 }
 
 #titulo {
     font-size:2rem;
     font-weight:700;
-    color:var(--quadro-p);
+    color:var(--quadro-title);
     margin:0.5rem 0rem;
 }
 
-
-
-.painelInfo {
-    display:flex;
-    width:fit-content;
-    margin-bottom:1rem;
-}
-
-.topicos, .valores {
-    padding:0.5rem;
-    margin:0.1rem;
-    border-radius:0.3rem;
-}
-
-.topicos {
-    background-color:var(--topicosLi-bg);
-    color:var(--topicosLi-text);
-}
-
-.valores {
-    background-color:var(--valoresLi-bg);
-    margin-left:2rem;
-}
-
-.painelInfo:nth-child(3n) .topicos {
-    background-color:var(--painelInfoTopicos-bg);
-}
-
-.painelInfo:nth-child(3n) .valores {
-    background-color:var(--painelInfoValores-bg);
-}
-
-.seta {
-    position:relative;
-    top:-1.8rem;
-    left:0.6rem;
-    height:1rem;
-    width:1rem;
-}
-
-.allTooltips {
-    display:flex;
-    flex-direction:column;
-}
-
 .divTooltip {
-    margin-top:0.5rem;
-    margin-bottom:4rem;
+    display: inline-block;
+    margin-top: -1.23rem;
+    transform: translateX(-7.5rem);
+
 }
 
 .iconeInfo {
     display: inline-block;
     width: 1.2rem;
     height: 1.2rem;
+    margin-top: -1.2rem;
+    transform: translate(16rem, -0.3rem);
     cursor: pointer;
 }
 
@@ -276,7 +208,7 @@ h1 {
     color: var(--tooltip-text);
     border-radius: 0.37rem;
     padding: 0.5rem 0.6rem;
-    width: 9rem;
+    width: 12rem;
     text-align: justify;
     font-size: 0.8rem;
  
@@ -284,7 +216,7 @@ h1 {
     position: absolute;
     z-index: 1;
     /* transform: translate(52.5%, 1rem); */
-    transform: translate(5%, -35%);
+    transform: translate(138%, -47%);
 }
   
 .iconeInfo + .tooltiptext::after {
@@ -305,6 +237,52 @@ h1 {
     opacity: 1;
 }
 
+.valoresTotais {
+    font-size:2rem;
+    background-color:var(--valoresTotais-bg);
+    color:var(--valoresTotais-texto);
+    border-radius:0.3rem;
+    padding:0.3rem;
+    width:fit-content;
+}
+
+.painelInfo {
+    display:flex;
+    width:48rem;
+    margin-bottom:1rem;
+}
+
+.topicos, .valores {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+
+.topicos li, .valores li {
+    padding:0.5rem;
+    margin:0.030rem;
+    border:0.030rem solid var(--topicosLi-border);
+    border-radius:0.3rem;
+    list-style:none;
+}
+
+.topicos li {
+    background-color:var(--topicosLi-bg);
+    color:var(--topicosLi-text);
+}
+
+.valores li {
+    background-color:var(--valoresLi-bg);
+}
+
+.painelInfo:nth-child(3n) .topicos li {
+        background-color:var(--painelInfoTopicos-bg);
+}
+
+.painelInfo:nth-child(3n) .valores li {
+    background-color:var(--painelInfoValores-bg);
+}
+
 
 
 #btnCalcNovamente {
@@ -318,6 +296,7 @@ h1 {
     border-radius: 0.5rem;
     color: var(--buttonCalc-text);
     background-color: var(--buttonCalc-bg);
+    border: 1px solid var(--buttonCalc-border);
     cursor: pointer;
     margin:2.5rem 0rem;
     text-decoration:none;
@@ -403,144 +382,4 @@ footer a:hover {
     line-height: 1.5;
     font-size: 0.7rem;
     font-weight: 400;
-}
-
-
-
-@media (max-width: 830px) {
-    .quadro {
-        width: 43.8rem;
-    }
-    .column {
-        padding:1rem;
-        width:45.8rem;
-    }
-    footer {
-        width:51.9rem;
-    }
-    .infoFooter {
-        width:42rem;
-    }
-}
-
-@media (max-width: 715px) {
-    .quadro {
-        width:35rem;
-    }
-    .column {
-        width:37.5rem;
-    }
-    footer {
-        width:51.9rem;
-    }
-    .infoFooter {
-        width:35rem;
-    } 
-}
-
-@media (max-width: 595px) {
-    .menuMobile {
-        display:flex;
-    }
-    .menu {
-        display:none;
-        flex-direction:column;
-        position:absolute;
-        left:0;
-        top:0;
-        width:100%;
-        background-color:var(--header-bg);
-    }
-    .menu a:hover {
-        color:var(--menu-text);
-        background-color:var(--menu-hover);
-    }
-    #resultadoPagina {
-        text-align:center;
-    }
-    .quadro {
-        width:24rem;
-    }
-    .painelInfo {
-        font-size:0.9rem;
-    }
-    .tooltiptext {
-        width: 10rem;
-        text-align: justify;
-        transform: translate(-116%, -25%);
-    }
-    .iconeInfo + .tooltiptext::after {
-        transform: rotate(90deg);
-        left: 100%; /* To the left of the tooltip */
-    }
-    .divider {
-        top:12.5rem;
-    }
-    .column {
-        width:25rem;
-    }
-    footer {
-        flex-direction:column;
-        height:auto;
-    }
-    .infoFooter {
-        flex-direction:column;
-        width:fit-content;
-    }
-    .infoFooter p {
-        margin-top:1rem;
-    }
-    .linksFooter {
-        margin:1rem 0rem 1.5rem 0rem;
-    }
-    .linksFooter a {
-        padding:0.2rem;
-    }
-    .direitosFooter {
-        width:fit-content;
-    }
-}
-
-@media (max-width:410px) {
-    .quadro {
-        width:21rem;
-    }
-    .quadro p {
-        font-size:1rem;
-    }
-    #titulo {
-        font-size:1.5rem;
-    }
-    .painelInfo {
-        font-size:0.82rem;
-    }
-    .divTooltip {
-        margin-top:0.5rem;
-        margin-bottom:3.4rem;
-    }
-    .divider {
-        top:12.5rem;
-    }
-    .column {
-        width:22.5rem;
-    }
-}
-
-@media (max-width:355px) {
-    .quadro {
-        width:18rem;
-    }
-    .topicos {
-        min-height:3rem;
-    }
-    .divTooltip {
-        margin-top:1rem;
-        margin-bottom:4.1rem;
-    }
-    .column {
-        width:20rem;
-    }
-    .infoFooter p {
-        font-size:0.75rem;
-    }
 }

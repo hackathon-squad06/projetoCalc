@@ -14,162 +14,198 @@
 </head>
 
 <body>
-
-    <header>
-        <div class="container">
-            <img src="/images/squad06-logo.svg" alt="logoSquad" class="logoSquad" id='logoSquadHeader' />
-            <nav>
-                <a href="/imovelCalc.html">Home</a>
-                <a href="/imovelResult.html">Result AP</a>
-                <a href="/imovelCalc.html">Sobre nós</a>
-                <div class="modeSwitch">
+<header>
+    <div class="container">
+        <img src="/images/s6-logo-black.png" alt="logoSquad" class="logoSquad" id='logoSquadHeader' />
+        <nav>
+            <div class="menuMobile">
+                <div class="menuLine"></div>
+                <div class="menuLine"></div>
+                <div class="menuLine"></div>
+            </div>
+            <div class="menu">
+                <a href="/index.html">Home</a>
+                <a href="/imovelCalc.html">Imóvel</a>
+                <a href="/carroCalc.html">Automóvel</a>
+            </div>
+            <div class="modeSwitch">
                     <img src="/images/dark-mode-black.svg" id='modeSwitch' />
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <section id="resultadoPagina">
-        <h1>O ideal para você é <span id="melhorOpcao"></span></h1>
-    </section>
-
-    <section id="resultadoInfo">
-        <div class="quadro">
-            <p id="titulo">Compare as opções
-            <p>
-
-            <p>Dados gerais</p>
-            <div class="painelInfo">
-                <ul class="topicos">
-                    <li>Valor do imóvel atual</li>
-                    <li>Valor do imóvel corrigido após <span id='anos'>X</span> anos</li>
-                </ul>
-
-                <ul class="valores">
-                    <li id="valorImovelAtual">R$0.000,00</li>
-                    <div title="" class="divTooltip">
-                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                        <span class="tooltiptext">Valor do imóvel atual.</span>
-                    </div>
-                    <li id="valorImovelFuturo">R$0.000,00</li>
-                    <div title="" class="divTooltip">
-                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                        <span class="tooltiptext">Valor do imóvel corrigido.</span>
-                    </div>
-                </ul>
-                </ul>
             </div>
-
-            <p>Opção de financiamento</p>
-            <div class="painelInfo">
-                <ul class="topicos">
-                    <li>Valor total pago no imóvel financiado</li>
-                    <li>Valor financiado</li>
-                    <li>Valor total pago no financiamento</li>
-                    <li>Valor total pago em juros</li>
-                    <li>Valor da parcela na "tabela price"</li>
-                </ul>
-
-                <ul class="valores">
-                    <li id="totalPagoImovel">R$0.000,00</li>
-                    <div title="" class="divTooltip">
-                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                        <span class="tooltiptext">Valor total pago no imóvel financiado</span>
-                    </div>
-                    <li id="valorFinanciado">R$0.000,00</li>
-                    <div title="" class="divTooltip">
-                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                        <span class="tooltiptext">Valor financiado</span>
-                    </div>
-                    <li id="totalPagoFinanciado">R$0.000,00</li>
-                    <div title="" class="divTooltip">
-                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                        <span class="tooltiptext">Valor total pago no financiamento</span>
-                    </div>
-                    <li id="totalJurosPago">R$0.000,00</li>
-                    <div title="" class="divTooltip">
-                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                        <span class="tooltiptext">Valor total pago em juros.</span>
-                    </div>
-                    <li id="valorParcela">R$0,00</li>
-                    <div title="" class="divTooltip">
-                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                        <span class="tooltiptext">Valor da parcela na "tabela price"</span>
-                    </div>
-                </ul>
-            </div>
-
-            <p>Opção de alugar e investir</p>
-            <div class="painelInfo">
-                <ul class="topicos">
-                    <li>Valor investido mensalmente</li>
-                    <li>Valor total do investimento após <span id='anosFinal'>X</span> anos</li>
-                    <li>Valor restante após a compra do imóvel</li>
-                    <li>Você atingiria o valor do imóvel corrigido em</li>
-                </ul>
-
-                <ul class="valores">
-                    <li id="valorInvestidoMensal">R$0,00</li>
-                    <div title="" class="divTooltip">
-                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                        <span class="tooltiptext">Valor investido mensalmente.</span>
-                    </div>
-                    <li id="valorTotalInvestimento">R$0.000,00</li>
-                    <div title="" class="divTooltip">
-                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                        <span class="tooltiptext">Valor total do investimento após o período do financiamento.</span>
-                    </div>
-                    <li id="valorRestante">R$0.000,00</li>
-                    <div title="" class="divTooltip">
-                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                        <span class="tooltiptext">Valor restante após a compra do imóvel.</span>
-                    </div>
-                    <li id="prazoRentabilidade">0</li>
-                    <div title="" class="divTooltip">
-                        <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                        <span class="tooltiptext">Você atingiria o valor do imóvel corrigido em.</span>
-                    </div>
-                </ul>
-            </div>
-        </div>
-
-        <div class="quadro newHeight">
-            <p>A decisão de adquirir um imóvel é muito importante e muitos fatores precisam ser ponderados. A
-                calculadora do <strong>Squad 6 Consultoria</strong> aborda apenas lado financeiro e apresenta
-                estimativas baseadas nos valores digitados. É relevante lembrar que seus objetivos de vida precisam
-                ser
-                levados em consideração juntamente com o lado financeiro e talvez faça sentido para você e sua
-                família
-                adquirirem um imóvel por meio de um financiamento.</p>
-        </div>
-
-        <a id="btnCalcNovamente" onclick="retornar()">CALCULAR NOVAMENTE</a>
-
-    </section>
-
-    <div class="wrapper">
-        <div class="divider div-transparent"></div>
+        </nav>
     </div>
-    <footer>
-        <div class="container column">
-            <img src="/images/squad06-logo-white.svg" alt="logoSquad" class="logoSquad" />
-            <div class="infoFooter">
-                <p>SQUAD 06 é parte do Hackathon promovido pelo Grupo FCamara<br> em conjunto com Alura.</p>
-                <div class="linksFooter">
-                    <a href="/imovelCalc.html">Home</a>
-                    <a href="/imovelResult.html">Result AP</a>
-                    <a href="/imovelCalc.html">Sobre nós</a>
+</header>
+
+<section id="resultadoPagina">
+    <h1>O ideal para você é <span id="melhorOpcao"></span></h1>
+</section>
+
+<section id="resultadoInfo">
+    <div class="quadro">
+        <p id="titulo">Compare as opções<p>
+
+        <p>Dados gerais</p>
+        <div class="painelInfo">
+            <div class="dados">
+                <div class="topicos">Valor do imóvel atual</div>
+                <div class="valores" id="valorImovelAtual">R$0.000,00</div>
+                <img class="seta" src="images/blueArrow.png">
+                
+
+                <div class="topicos">Valor do imóvel corrigido após <span id='anos'>X</span> anos</div>
+                <div class="valores" id="valorImovelFuturo">R$0.000,00</div>
+                <img class="seta" src="images/blueArrow.png">
+                
+            </div>
+            <div class="allTooltips">
+                <div title="" class="divTooltip">
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Valor do imóvel atual.</span>
+                </div>
+                
+                <div title="" class="divTooltip">
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Valor do imóvel corrigido.</span>
                 </div>
             </div>
-            <div class="direitosFooter">
-                ® SQUAD 06 Consultoria Ltda.<br>2021 - Todos os direitos reservados
+        </div>
+
+        <p>Opção de financiamento</p>
+        <div class="painelInfo">
+            <div class="dados">
+                <div class="topicos">Valor total pago no imóvel financiado</div>
+                <div class="valores" id="totalPagoImovel">R$0.000,00</div>
+                <img class="seta" src="images/blueArrow.png">
+                
+
+                <div class="topicos">Valor financiado</div>
+                <div class="valores" id="valorFinanciado">R$0.000,00</div>
+                <img class="seta" src="images/blueArrow.png">
+                
+
+                <div class="topicos">Valor total pago no financiamento</div>
+                <div class="valores" id="totalPagoFinanciado">R$0.000,00</div>
+                <img class="seta" src="images/blueArrow.png">
+                
+
+                <div class="topicos">Valor total pago em juros</div>
+                <div class="valores" id="totalJurosPago">R$0.000,00</div>
+                <img class="seta" src="images/blueArrow.png">
+                
+
+                <div class="topicos">Valor da parcela na "tabela price"</div>
+                <div class="valores" id="valorParcela">R$0,00</div>
+                <img class="seta" src="images/blueArrow.png">
+                
+            </div>
+            <div class="allTooltips">
+                <div title="" class="divTooltip">
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Valor total pago no imóvel financiado</span>
+                </div>
+
+                <div title="" class="divTooltip">
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Valor financiado</span>
+                </div>
+
+                <div title="" class="divTooltip">
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Valor total pago no financiamento</span>
+                </div>
+
+                <div title="" class="divTooltip">
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Valor total pago em juros.</span>
+                </div>
+
+                <div title="" class="divTooltip">
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Valor da parcela na "tabela price"</span>
+                </div>
             </div>
         </div>
-    </footer>
 
-    <script src="/scripts/imovelResult.js"></script>
-    <script src="/scripts/darkMode.js"></script>
+        <p>Opção de alugar e investir</p>
+        <div class="painelInfo">
+            <div class="dados">
+                <div class="topicos">Valor investido mensalmente</div>
+                <div class="valores" id="valorInvestidoMensal">R$0,00</div>
+                <img class="seta" src="images/blueArrow.png">
+
+                <div class="topicos">Valor do investimento após <span id='anosFinal'>X</span> anos</div>
+                <div class="valores" id="valorTotalInvestimento">R$0.000,00</div>
+                <img class="seta" src="images/blueArrow.png">
+                
+                <div class="topicos">Valor restante após a compra do imóvel</div>
+                <div class="valores" id="valorRestante">R$0.000,00</div>
+                <img class="seta" src="images/blueArrow.png">
+                
+                <div class="topicos">Você atingiria o valor do imóvel em</div>
+                <div class="valores" id="prazoRentabilidade">0</div>
+                <img class="seta" src="images/blueArrow.png">
+            </div>
+
+            <div class="allTooltips">
+                <div title="" class="divTooltip">
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Valor investido mensalmente. Você atingiria o valor do imóvel corrigido em Você atingiria o valor do imóvel corrigido em Você atingiria o valor do imóvel corrigido em</span>
+                </div>
+
+                <div title="" class="divTooltip">
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Valor total do investimento após o período do financiamento.</span>
+                </div>
+
+                <div title="" class="divTooltip">
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Valor restante após a compra do imóvel.</span>
+                </div>
+
+                <div title="" class="divTooltip">
+                    <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                    <span class="tooltiptext">Você atingiria o valor do imóvel corrigido em.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quadro">
+        <p>A decisão de adquirir um imóvel é muito importante e muitos fatores precisam ser ponderados. A
+            calculadora do <strong>Squad 6 Consultoria</strong> aborda apenas lado financeiro e apresenta
+            estimativas baseadas nos valores digitados. É relevante lembrar que seus objetivos de vida precisam
+            ser
+            levados em consideração juntamente com o lado financeiro e talvez faça sentido para você e sua
+            família
+            adquirirem um imóvel por meio de um financiamento.</p>
+    </div>
+
+    <a id="btnCalcNovamente" onclick="retornar()">CALCULAR NOVAMENTE</a>
+
+</section>
+
+<div class="wrapper">
+    <div class="divider div-transparent"></div>
+</div>
+<footer>
+    <div class="container column">
+        <img src="/images/s6-logo-white.png" alt="logoSquad" class="logoSquad" />
+        <div class="infoFooter">
+            <p>SQUAD 06 é parte do Hackathon promovido<br>pelo Grupo FCamara em conjunto com Alura.</p>
+            <div class="linksFooter">
+                <a href="/index.html">Home</a>
+                <a href="/imovelCalc.html">Imóvel</a>
+                <a href="/carroCalc.html">Automóvel</a>
+            </div>
+        </div>
+        <div class="direitosFooter">
+            ® SQUAD 06 Consultoria Ltda.<br>2021 - Todos os direitos reservados
+        </div>
+    </div>
+</footer>
+
+<script src="/scripts/imovelResult.js"></script>
+<script src="/scripts/darkMode.js"></script>
+<script src="scripts/menuMobile.js"></script>
 
 </body>
-
 </html>

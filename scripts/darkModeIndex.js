@@ -6,7 +6,6 @@ const currentTheme = localStorage.getItem("theme");
 
 if (currentTheme == "dark") {
   html.classList.add('dark-mode');
-  logoSquadHeader.src = "/images/s6-logo-white.png";
   switchDarkMode.src = "/images/light-mode-white.svg";
 }
 
@@ -15,11 +14,9 @@ switchDarkMode.addEventListener("click", function () {
   html.classList.toggle('dark-mode');
 
   let theme = "light";
-  logoSquadHeader.src = "/images/s6-logo-black.png";
-  switchDarkMode.src = "/images/dark-mode-black.svg";
+  switchDarkMode.src = "/images/dark-mode-white.svg";
   if (html.classList.contains('dark-mode')) {
     theme = "dark";
-    logoSquadHeader.src = "/images/s6-logo-white.png";
     switchDarkMode.src = "/images/light-mode-white.svg";
   }
   localStorage.setItem("theme", theme);
