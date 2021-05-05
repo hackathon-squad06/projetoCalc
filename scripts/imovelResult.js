@@ -65,13 +65,9 @@ const melhorOpcaoDisplay = document.getElementById("melhorOpcao");
 melhorOpcaoDisplay.innerHTML = melhorOpcao;
 
 
-
-
-
-
 function retornar() {
   sessionStorage.clear();
-  window.location.href = "/home/home.html";
+  window.location.href = "/imovelCalc.html";
 }
 
 function formatarMoeda(valor) {
