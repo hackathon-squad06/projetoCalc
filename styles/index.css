@@ -1,0 +1,476 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+/* style="display: none;" */
+:root {
+  --body-bg: #f3f3f3;
+  --header-bg: #933380;
+  --menu-text: #fff;
+  --menu-hover: #2782B9;
+  --calc-bg: #f3f3f3;
+  --contDados-bg: #fff;
+  --contDados-title: #2782B9;
+  --contDados-label: #2a88c2;
+  --contDados-text: #000;
+  --footer-bg: #933380;
+  --footer-text: #fff;
+  --footer-hover: #178bd3;
+  --footer-divider: #bfc1c4;
+}
+
+.dark-mode:root {
+  --body-bg: #202040;
+  --header-bg: #602080;
+  --menu-text: #fff;
+  --menu-hover: #b030b0;
+  --calc-bg: #202040;
+  --contDados-bg: #292953;
+  --contDados-title: #f3f3f3;
+  --contDados-label: #e7e7e7;
+  --contDados-text: #f3f3f3;
+  --footer-bg: #602080;
+  --footer-text: #e7e7e7;
+  --footer-hover: #b030b0;
+  --footer-divider: #bfc1c4;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--body-bg);
+}
+
+header{
+  display:flex;
+  justify-content:center;
+  height: 3.5rem;
+  background-color: var(--header-bg);
+}
+
+.container {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0rem 2rem;
+  width:100rem;
+}
+
+.container img {
+  display:flex;
+  height: 1.2rem;
+}
+
+nav {
+  display:flex;
+  align-items:center;
+}
+
+.menuMobile {
+  display:none;
+  flex-direction:column;
+  justify-content:space-evenly;
+  width:2.18rem;
+  height:2.18rem;
+}
+
+.menuLine {
+  background-color:var(--menu-text);
+  height:0.189rem;
+}
+
+.menuMobile:hover {
+  cursor:pointer;
+}
+
+.menuMobile:hover .menuLine {
+  background-color:var(--menu-hover);
+}
+
+.menu a {
+  font-size:1.2rem;
+  padding:0.7rem;
+  font-weight:500;
+  color:var(--menu-text);
+  border-bottom:0.3rem solid transparent;
+  text-decoration:none;
+}
+
+.menu a:hover {
+  color:var(--menu-hover);
+  border-bottom:0.3rem solid var(--menu-hover);
+}
+
+.modeSwitch {
+  margin-left:1.5rem;
+  padding:1rem;
+  cursor:pointer;
+}
+
+.modeSwitch:hover {
+  cursor: pointer;
+}
+
+
+/* SECTION CALC */
+.sectionHome {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background-color: var(--calc-bg);
+}
+
+.containerDados {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 22rem 22rem;
+  grid-gap: 1rem;
+  width: 50rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  border: 2px solid #000;
+  border: none;
+  background: transparent;
+  border-radius: 0.5rem;
+}
+
+#textoWelcome {
+  display:flex;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 3rem 3.18rem 2rem 3.18rem;
+}
+
+#textoWelcome h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: var(--contDados-title);
+}
+
+#textoWelcome h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 1rem;
+  color: var(--contDados-text);
+}
+
+#imagemImovel {
+    display:flex;
+    flex-direction:column;
+    margin-right:auto;
+    margin-left:auto;
+    height: 12rem;
+    background-image: url('/images/buildings_icon.png');
+    background-size: contain;
+}
+
+#imagemCarro {
+    display:flex;
+    flex-direction:column;
+    margin-right:auto;
+    margin-left:auto;
+    height: 8.5rem;
+    transform: translateY(3.5rem);
+    /* margin-top: 3rem; */
+    background-image: url('/images/car_icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#imovelA {
+    height: 12rem;
+    width: 12rem;
+}
+#carroA {
+    height: 8.5rem;
+    width: 12rem;
+}
+
+#labelImovel {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: -2rem;
+    transform: translateY(1rem);
+    margin-left: auto;
+    color: var(--contDados-label);
+}
+
+
+#labelCarro {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: -2rem;
+    transform: translate(-0.35rem, 1rem);
+    text-align: center;
+    color: var(--contDados-label);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#labelImovel a {
+    color: var(--contDados-label);
+    text-decoration: none;
+}
+
+#labelCarro a {
+    color: var(--contDados-label);
+    text-decoration: none;
+}
+
+footer {
+  display:flex;
+  justify-content:center;
+  height:16rem;
+  width:100vw;
+  max-width:100%;
+  background-color:var(--footer-bg);
+}
+
+/* .column usando no container do footer*/
+.column {
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:space-evenly;
+}
+
+.infoFooter {
+  display:flex;
+  justify-content:space-between;
+  width:46rem;
+  color:var(--footer-text);
+  line-height:1.5;
+  font-size:0.9rem;
+  font-weight:400;
+}
+
+.linksFooter {
+  display:flex;
+  flex-direction:column;
+  width:fit-content;
+  color: var(--footer-text);
+  text-align: left;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+footer a {
+  display:flex;
+  width:fit-content;
+  color: var(--footer-text);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--footer-hover);
+}
+
+.divider {
+position:relative;
+  top:11rem;
+height:0.063rem;
+  width:95vw;
+  max-width:100%;
+}
+
+.div-transparent:before {
+content:"";
+position:absolute;
+top:0;
+left:5%;
+right:5%;
+width:90%;
+height:0.063rem;
+  background-image: linear-gradient(to right, transparent, var(--footer-divider), transparent);
+}
+
+.direitosFooter {
+  display:flex;
+  width: 30rem;
+  color: var(--footer-text);
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+
+
+@media (max-width: 830px) {
+  .containerDados {
+      width: 43.8rem;
+      margin-left:0;
+      margin-right:0;
+  }
+  .titleContainer {
+      margin-left:1.63rem;
+  }
+  .column {
+      padding:1rem;
+      width:45.8rem;
+  }
+  footer {
+      width:51.9rem;
+  }
+  .infoFooter {
+      width:42rem;
+  }
+}
+
+@media (max-width: 715px) {
+  #textoWelcome {
+      width: 20rem;
+      margin-right: 1rem;
+      margin-left: -1rem;
+  }
+  #textoWelcome h1 {
+      font-size: 1.5rem;
+  }
+  #textoWelcome h2 {
+      font-size: 1rem;
+  }
+  #imagemWelcome {
+      height: 16rem;
+      width: 16rem;
+  }
+  .containerDados {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      grid-gap:0;
+      width:35rem;
+  }
+  .titleContainer{
+      width:fit-content;
+      justify-content:center;
+      margin:0;
+  }
+  .titleContainer {
+      margin: 3rem 1rem 2rem 1rem;
+  }
+  .column {
+      padding:1rem;
+      width:37.5rem;
+  }
+  footer {
+      width:51.9rem;
+  }
+  .infoFooter {
+      width:35rem;
+  }    
+}
+
+@media (max-width: 595px) {
+  html, body {
+      left:0;
+      overflow-x:hidden;
+  }
+  .menuMobile {
+      display:flex;
+  }
+  .menu {
+      display:none;
+      flex-direction:column;
+      position:absolute;
+      left:0;
+      top:0;
+      width:100%;
+      background-color:var(--header-bg);
+  }
+  .menu a:hover {
+      color:var(--menu-text);
+      background-color:var(--menu-hover);
+  }
+  .sectionWelcome {
+      flex-direction:column;
+      height:auto;
+  }
+  #textoWelcome {
+      width: 23rem;
+      margin:0;
+  }
+  #textoWelcome h1 {
+      font-size: 1.75rem;
+      margin-bottom:1rem;
+  }
+  #textoWelcome h2 {
+      font-size: 1rem;
+  }
+  #imagemWelcome {
+      height: 16rem;
+      width: 16rem;
+      margin-top:0;
+      margin-bottom:2rem;
+  }
+  .containerDados {
+      display:flex;
+      flex-direction:column;
+      grid-gap:0;
+      width: 24rem;
+  }
+  .divider {
+      top:12.5rem;
+  }
+  .column {
+      width:25rem;
+  }
+  footer {
+      flex-direction:column;
+      height:auto;
+  }
+  .infoFooter {
+      flex-direction:column;
+      width:fit-content;
+  }
+  .infoFooter p {
+      margin-top:1rem;
+  }
+  .linksFooter {
+      margin:1rem 0rem 1.5rem 0rem;
+  }
+  .linksFooter a {
+      padding:0.2rem;
+  }
+  .direitosFooter {
+      width:fit-content;
+  }
+}
+
+@media (max-width:410px) {
+  .containerDados {
+      width:21rem;
+  }
+}
+
+@media (max-width:355px) {
+  #textoWelcome {
+      width: 20rem;
+      margin:0;
+  }
+  #textoWelcome h1 {
+      font-size: 1.5rem;
+      margin-bottom:1rem;
+  }
+  #textoWelcome h2 {
+      font-size:0.75rem;
+  }
+  .containerDados {
+      width:18.5rem;
+  }
+  .column {
+      width:20rem;
+  }
+  .infoFooter p {
+      font-size:0.75rem;
+  }
+}
