@@ -1,6 +1,6 @@
 # projetoCalc
 Projeto Hackathon - Squad 06
 
-feature-bugFix branch
+feature-paginaInicial branch
 
-Feature focada em resolver problemas voltados aos calculos que vão para a tela de resultado.
+Feature focada em criar uma página inicial para o site
