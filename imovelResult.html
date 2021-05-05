@@ -46,96 +46,127 @@
 
             <p>Dados gerais</p>
             <div class="painelInfo">
-                <ul class="topicos">
-                    <li>Valor do imóvel atual</li>
-                    <li>Valor do imóvel corrigido após <span id='anos'>X</span> anos</li>
-                </ul>
+                <div class="dados">
+                    <div class="topicos">Valor do imóvel atual</div>
+                    <div class="valores" id="valorImovelAtual">R$0.000,00</div>
+                    <img class="seta" src="images/blueArrow.png">
+                    
 
-                <ul class="valores">
-                    <li id="valorImovelAtual">R$0.000,00</li>
+                    <div class="topicos">Valor do imóvel corrigido após <span id='anos'>X</span> anos</div>
+                    <div class="valores" id="valorImovelFuturo">R$0.000,00</div>
+                    <img class="seta" src="images/blueArrow.png">
+                    
+                </div>
+                <div class="allTooltips">
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Valor do imóvel atual.</span>
                     </div>
-                    <li id="valorImovelFuturo">R$0.000,00</li>
+                    
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Valor do imóvel corrigido.</span>
                     </div>
-                </ul>
-                </ul>
+                </div>
             </div>
 
             <p>Opção de financiamento</p>
             <div class="painelInfo">
-                <tl class="topicos">
-                    <li>Valor total pago no imóvel financiado</li>
-                    <li>Valor financiado</li>
-                    <li>Valor total pago no financiamento</li>
-                    <li>Valor total pago em juros</li>
-                    <li>Valor da parcela na "tabela price"</li>
-                </tl>
+                <div class="dados">
+                    <div class="topicos">Valor total pago no imóvel financiado</div>
+                    <div class="valores" id="totalPagoImovel">R$0.000,00</div>
+                    <img class="seta" src="images/blueArrow.png">
+                    
 
-                <ul class="valores">
-                    <li id="totalPagoImovel">R$0.000,00</li>
+                    <div class="topicos">Valor financiado</div>
+                    <div class="valores" id="valorFinanciado">R$0.000,00</div>
+                    <img class="seta" src="images/blueArrow.png">
+                    
+
+                    <div class="topicos">Valor total pago no financiamento</div>
+                    <div class="valores" id="totalPagoFinanciado">R$0.000,00</div>
+                    <img class="seta" src="images/blueArrow.png">
+                   
+
+                    <div class="topicos">Valor total pago em juros</div>
+                    <div class="valores" id="totalJurosPago">R$0.000,00</div>
+                    <img class="seta" src="images/blueArrow.png">
+                    
+
+                    <div class="topicos">Valor da parcela na "tabela price"</div>
+                    <div class="valores" id="valorParcela">R$0,00</div>
+                    <img class="seta" src="images/blueArrow.png">
+                    
+                </div>
+                <div class="allTooltips">
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Valor total pago no imóvel financiado</span>
                     </div>
-                    <li id="valorFinanciado">R$0.000,00</li>
+
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Valor financiado</span>
                     </div>
-                    <li id="totalPagoFinanciado">R$0.000,00</li>
+
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Valor total pago no financiamento</span>
                     </div>
-                    <li id="totalJurosPago">R$0.000,00</li>
+
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Valor total pago em juros.</span>
                     </div>
-                    <li id="valorParcela">R$0,00</li>
+
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Valor da parcela na "tabela price"</span>
                     </div>
-                </ul>
+                </div>
             </div>
 
             <p>Opção de alugar e investir</p>
             <div class="painelInfo">
-                <ul class="topicos">
-                    <li>Valor investido mensalmente</li>
-                    <li>Valor total do investimento após <span id='anosFinal'>X</span> anos</li>
-                    <li>Valor restante após a compra do imóvel</li>
-                    <li>Você atingiria o valor do imóvel corrigido em</li>
-                </ul>
+                <div class="dados">
+                    <div class="topicos">Valor investido mensalmente</div>
+                    <div class="valores" id="valorInvestidoMensal">R$0,00</div>
+                    <img class="seta" src="images/blueArrow.png">
 
-                <ul class="valores">
-                    <li id="valorInvestidoMensal">R$0,00</li>
+                    <div class="topicos">Valor total do investimento após <span id='anosFinal'>X</span> anos</div>
+                    <div class="valores" id="valorTotalInvestimento">R$0.000,00</div>
+                    <img class="seta" src="images/blueArrow.png">
+                    
+                    <div class="topicos">Valor restante após a compra do imóvel</div>
+                    <div class="valores" id="valorRestante">R$0.000,00</div>
+                    <img class="seta" src="images/blueArrow.png">
+                    
+                    <div class="topicos">Você atingiria o valor do imóvel corrigido em</div>
+                    <div class="valores" id="prazoRentabilidade">0</div>
+                    <img class="seta" src="images/blueArrow.png">
+                </div>
+
+                <div class="allTooltips">
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Valor investido mensalmente.</span>
                     </div>
-                    <li id="valorTotalInvestimento">R$0.000,00</li>
+
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Valor total do investimento após o período do financiamento.</span>
                     </div>
-                    <li id="valorRestante">R$0.000,00</li>
+
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Valor restante após a compra do imóvel.</span>
                     </div>
-                    <li id="prazoRentabilidade">0</li>
+
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Você atingiria o valor do imóvel corrigido em.</span>
                     </div>
-                </ul>
+                </div>
             </div>
         </div>
 
