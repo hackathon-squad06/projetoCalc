@@ -57,7 +57,7 @@ valorRestanteDisplay.innerHTML = sobraInvestimento;
 const prazoRentabilidadeDisplay = document.getElementById("prazoRentabilidade");
 prazoRentabilidadeDisplay.style.textAlign = 'left';
 if (prazoRentabilidadeAnos == null) {
-  prazoRentabilidadeAnos = 0
+    prazoRentabilidadeAnos = 0
 }
 prazoRentabilidadeDisplay.innerHTML = prazoRentabilidadeAnos + ' anos';
 
@@ -66,17 +66,34 @@ melhorOpcaoDisplay.innerHTML = melhorOpcao;
 
 
 function retornar() {
-  sessionStorage.clear();
-  window.location.href = "/imovelCalc.html";
+    sessionStorage.clear();
+    window.location.href = "/imovelCalc.html";
 }
 
 function formatarMoeda(valor) {
-  var n = new Number(valor);
-  var myObj = {
-    style: "currency",
-    currency: "BRL",
-  }
-  valor = n.toLocaleString("pt-BR", myObj);
-  // valor = n.toLocaleString("pt-BR",  { minimumFractionDigits: 2 });
-  return valor
+    var n = new Number(valor);
+    var myObj = {
+        style: "currency",
+        currency: "BRL",
+    }
+    valor = n.toLocaleString("pt-BR", myObj);
+    // valor = n.toLocaleString("pt-BR",  { minimumFractionDigits: 2 });
+    return valor
+}
+
+function realParseFloat(s) {
+    s = s.replace(/[^\d,.-]/g, '');
+    if (navigator.language.substring(0, 2) !== "de" && /^-?(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?$/.test(s)) {
+        s = s.replace(/,/g, '');
+        return parseFloat(s);
+    }
+    else if (/^-?(?:\d+|\d{1,3}(?:\.\d{3})+)(?:,\d+)?$/.test(s)) {
+        s = s.replace(/\./g, '');
+        s = s.replace(/,/g, '.');
+        return parseFloat(s);
+    }
+    else {
+        s = s.replace(/,/g, '');
+        return parseFloat(s);
+    }
 }
