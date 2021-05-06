@@ -66,7 +66,7 @@
                             </div>
 
                             <input required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDeCompra)"
-                                id="inputValorImovel" placeholder="R$" type="text" maxlength="17" />
+                                id="inputValorImovel" placeholder="R$" type="text" maxlength="17" tabindex="1"/>
                         </div>
 
                         <div class="inputVar" id="valorValorizacao">
@@ -77,7 +77,7 @@
                             </div>
 
                             <input required id="inputValorizacao" placeholder="% anual" type="text" name="inputValorizacao"
-                                min="0" step=".01" onfocusout="formatarPorcentagem(this)" maxlength="6" />
+                                min="0" step=".01" onfocusout="formatarPorcentagem(this)" maxlength="6" tabindex="3"/>
                         </div>
                     </div>
 
@@ -92,7 +92,7 @@
                             </div>
 
                             <input required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDoAluguel)"
-                                id="inputAluguel" placeholder="R$" type="text" maxlength="17" />
+                                id="inputAluguel" placeholder="R$" type="text" maxlength="17" tabindex="2"/>
                         </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                             <input required onkeyup="formatarReais(this)" id="inputEntrada" class="dadosCampos"
                                 onchange="entrada()"
                                 onblur="calcDeposito(valorDaEntrada, custosAdicionais), valorInvestimentoMensal (valorDaEntrada)"
-                                placeholder="R$" type="text" maxlength="17" />
+                                placeholder="R$" type="text" maxlength="17" tabindex="4"/>
                         </div>
 
                         <div class="inputVar" id="valorPrazoFin">
@@ -131,7 +131,7 @@
 
                             <input required id="inputPrazoFin" onblur="valorInvestimentoMensal ()"
                                 onfocusout="formatarAnos(this)" placeholder="em anos" type="text" min="0" step="1"
-                                maxlength="3" />
+                                maxlength="3" tabindex="6"/>
                         </div>
                         
                     </div>
@@ -151,7 +151,7 @@
                             <input required onkeyup="formatarReais(this)" id="inputCustosAd" class="dadosCampos"
                                 onchange="custos()"
                                 onblur="calcDeposito(valorDaEntrada, custosAdicionais), valorInvestimentoMensal (custosAdicionais)"
-                                placeholder="R$" type="text" maxlength="17" />
+                                placeholder="R$" type="text" maxlength="17" tabindex="5"/>
                         </div>
 
                         <div class="inputVar" id="valorTaxaFin">
@@ -163,7 +163,7 @@
 
                             <input required id="inputTaxaFin" onblur="valorInvestimentoMensal ()"
                                 onfocusout="formatarPorcentagem(this)" placeholder="% anual" type="text" min="0" step=".01"
-                                maxlength="6" />
+                                maxlength="6" tabindex="7"/>
                         </div>
                     </div>
                 </div>
@@ -183,7 +183,7 @@
                             </div>
 
                             <input name="inputValorMensal" id="inputValorMensal" class='inputReadonly' placeholder="R$"
-                                type="number" readonly="true" />
+                                type="number" readonly="true"/>
                         </div>
 
                         <div class="inputVar" id="valorRentabilidade">
@@ -197,7 +197,7 @@
                             </div>
 
                             <input required id="inputRentabilidade" placeholder="% anual" type="text" min="0" step=".01"
-                                onfocusout="formatarPorcentagem(this)" maxlength="6" />
+                                onfocusout="formatarPorcentagem(this)" maxlength="6" tabindex="8"/>
                         </div>
                     </div>
 
@@ -213,7 +213,7 @@
                             </div>
 
                             <input name="inputDeposito" required id="inputDeposito" class='inputReadonly' placeholder="R$"
-                                type="number" readonly="true" />
+                                type="number" readonly="true"/>
                         </div>
                     </div>
                 </div>
