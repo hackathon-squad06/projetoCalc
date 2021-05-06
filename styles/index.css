@@ -179,6 +179,7 @@ nav {
     flex-direction:column;
     margin-right:auto;
     margin-left:auto;
+    width: 10.5rem;
     height: 8.5rem;
     transform: translateY(3.5rem);
     /* margin-top: 3rem; */
@@ -193,7 +194,7 @@ nav {
 }
 #carroA {
     height: 8.5rem;
-    width: 12rem;
+    width: 10.5rem;
 }
 
 #labelImovel {
@@ -266,23 +267,24 @@ footer {
   font-weight: 400;
 }
 
-footer a {
+.linksFooter a {
   display:flex;
   width:fit-content;
   color: var(--footer-text);
   text-decoration: none;
 }
 
-footer a:hover {
+.linksFooter a:hover {
   color: var(--footer-hover);
 }
 
 .divider {
-position:relative;
-  top:11rem;
-height:0.063rem;
-  width:95vw;
-  max-width:100%;
+    position:relative;
+    /* top:11rem; */
+    bottom:-10rem;
+    height:0.063rem;
+    width:95vw;
+    max-width:100%;
 }
 
 .div-transparent:before {
@@ -297,8 +299,9 @@ height:0.063rem;
 }
 
 .direitosFooter {
-  display:flex;
-  width: 30rem;
+  /* display:flex; */
+  width: 23rem;
+  padding-top: 3rem;
   color: var(--footer-text);
   text-align: justify;
   line-height: 1.5;
@@ -306,6 +309,16 @@ height:0.063rem;
   font-weight: 400;
 }
 
+.direitosFooter a {
+    /* display:flex;
+    width:fit-content; */
+    color: var(--footer-text);
+    text-decoration: none;
+}
+  
+.direitosFooter a:hover {
+    color: var(--footer-hover);
+}
 
 
 @media (max-width: 830px) {
@@ -324,16 +337,21 @@ height:0.063rem;
   footer {
       width:51.9rem;
   }
+  .divider {
+    bottom:-9rem;
+}
+  .direitosFooter {
+      margin-bottom: 2rem;
+  }
   .infoFooter {
       width:42rem;
+      transform: translateY(1rem);
   }
 }
 
 @media (max-width: 715px) {
   #textoWelcome {
-      width: 20rem;
-      margin-right: 1rem;
-      margin-left: -1rem;
+      width: 32rem;
   }
   #textoWelcome h1 {
       font-size: 1.5rem;
@@ -349,9 +367,27 @@ height:0.063rem;
       display:flex;
       flex-direction:column;
       align-items:center;
-      grid-gap:0;
+      margin-top: 2rem;
+      margin-bottom: 10rem;
+      grid-gap:3rem;
       width:35rem;
   }
+
+#imagemCarro {
+    width: 9.5rem;
+    height: 7.5rem;
+}
+#carroA {
+    width: 8rem;
+    height: 6.5rem;
+}
+
+#labelCarro {
+    font-size: 1.15rem;
+    margin-bottom: -2rem;
+    transform: translate(0rem, 1.8rem);
+    text-align: center;
+}
   .titleContainer{
       width:fit-content;
       justify-content:center;
@@ -417,11 +453,47 @@ height:0.063rem;
   .containerDados {
       display:flex;
       flex-direction:column;
-      grid-gap:0;
+      margin-top: 3rem;
+      /* grid-gap:0; */
       width: 24rem;
   }
+  #imagemImovel {
+    height: 10rem;
+    width: 10rem;
+    background-repeat: no-repeat;
+}
+
+#imagemCarro {
+    width: 8.5rem;
+    height: 6.5rem;
+}
+
+#imovelA {
+    height: 10rem;
+    width: 10rem;
+}
+
+#carroA {
+    width: 8.5rem;
+    height: 6.5rem;
+}
+
+#labelImovel {
+    width: 11rem;
+    font-size: 1.15rem;
+    margin-bottom: -2rem;
+    transform: translate(-0.4rem, 1rem);
+}
+
+#labelCarro {
+    font-size: 1.15rem;
+    margin-bottom: -2rem;
+    transform: translate(0rem, 1rem);
+    text-align: center;
+}
   .divider {
-      top:12.5rem;
+      /* top:12.5rem; */
+      bottom:-15rem;
   }
   .column {
       width:25rem;
@@ -449,14 +521,53 @@ height:0.063rem;
 }
 
 @media (max-width:410px) {
+  #textoWelcome {
+      width: 20rem;
+      margin:0;
+  }
   .containerDados {
       width:21rem;
+  }
+  #imagemImovel {
+    height: 10rem;
+    width: 10rem;
+    background-repeat: no-repeat;
+}
+
+#imagemCarro {
+    height: 6.5rem;
+}
+
+#imovelA {
+    height: 10rem;
+    width: 10rem;
+}
+#carroA {
+    height: 6.5rem;
+    width: 8.5rem;
+}
+
+#labelImovel {
+    width: 11rem;
+    font-size: 1.15rem;
+    margin-bottom: -2rem;
+    transform: translate(-0.4rem, 1rem);
+}
+
+#labelCarro {
+    font-size: 1.15rem;
+    margin-bottom: -2rem;
+    transform: translate(0rem, 1rem);
+    text-align: center;
+}
+  .direitosFooter {
+    width:20rem;
   }
 }
 
 @media (max-width:355px) {
   #textoWelcome {
-      width: 20rem;
+      width: 18rem;
       margin:0;
   }
   #textoWelcome h1 {
@@ -469,10 +580,47 @@ height:0.063rem;
   .containerDados {
       width:18.5rem;
   }
+    #imagemImovel {
+        height: 8rem;
+        width: 8rem;
+        background-repeat: no-repeat;
+    }
+
+    #imagemCarro {
+        height: 5rem;
+        width: 6rem;
+    }
+
+    #imovelA {
+        height: 8rem;
+        width: 8rem;
+    }
+    #carroA {
+        height: 5rem;
+        width: 6rem;
+    }
+
+    #labelImovel {
+        width: 10rem;
+        font-size: 1rem;
+        margin-bottom: -2rem;
+        transform: translate(-0.7rem, 0.5rem);
+    }
+
+    #labelCarro {
+        width: 7rem;
+        font-size: 1rem;
+        margin-bottom: -2rem;
+        transform: translate(-0.5rem, 0.2rem);
+        text-align: center;
+    }
   .column {
       width:20rem;
   }
   .infoFooter p {
       font-size:0.75rem;
   }
+  .direitosFooter {
+    width:18rem;
+}
 }
