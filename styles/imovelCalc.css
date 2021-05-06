@@ -265,18 +265,6 @@ nav {
 }
 
 
-/*
-.containerDados {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 7rem 10rem 10rem;
-    grid-gap: 1rem;
-    width: 50rem;
-    margin-top: 4rem;
-    border: 2px solid var(--contDados-border);
-    background: var(--contDados-bg);
-    border-radius: 0.5rem;
-}*/
 
 .containerDados {
     display:flex;
@@ -449,11 +437,24 @@ footer a:hover {
 @media (max-width: 830px) {
     .containerDados {
         width: 43.8rem;
-        margin-left:0;
-        margin-right:0;
     }
-    .titleContainer {
-        margin-left:1.63rem;
+    .inputArea {
+        display:flex;
+        flex-direction:column;
+    }
+    .welcomeArea {
+        display:flex;
+        justify-content:space-between;
+        width:43.8rem;
+    }
+    #textoWelcome {
+        width:23rem;
+    }
+    #textoWelcome h1 {
+        font-size: 1.65rem;
+    }
+    #textoWelcome h2 {
+        font-size:0.90rem;
     }
     .column {
         padding:1rem;
@@ -467,39 +468,25 @@ footer a:hover {
     }
 }
 
-@media (max-width: 715px) {
-    #textoWelcome {
-        width: 20rem;
-        margin-right: 1rem;
-        margin-left: -1rem;
-    }
-    #textoWelcome h1 {
-        font-size: 1.5rem;
-    }
-    #textoWelcome h2 {
-        font-size: 0.75rem;
-    }
-    #imagemWelcome {
-        height: 16rem;
-        width: 16rem;
-    }
-    .containerDados {
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        grid-gap:0;
+@media (max-width: 720px) {
+    .welcomeArea {
         width:35rem;
     }
-    .titleContainer{
-        width:fit-content;
-        justify-content:center;
-        margin:0;
+    #textoWelcome {
+        width:18rem;
     }
-    .titleContainer {
-        margin: 3rem 1rem 2rem 1rem;
+    #textoWelcome h1 {
+        font-size: 1.05rem;
     }
-    .inputVar {
-        height:10rem;
+    #textoWelcome h2 {
+        font-size:0.80rem;
+    }
+    #imagemWelcome {
+        height: 15rem;
+        width: 15rem;
+    }
+    .containerDados {
+        width:35rem;
     }
     .column {
         padding:1rem;
