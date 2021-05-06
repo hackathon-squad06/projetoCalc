@@ -1,0 +1,590 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+:root {
+    --body-bg: #f3f3f3;
+    --header-bg: #282852;
+    --menu-text: #f3f3f3;
+    --menu-hover: #72caec;
+    --resultado-bg: #1f648f;
+    --resultado-text: #fff;
+    --quadro-border: #C4C4C4;
+    --quadro-bg: #fff;
+    --quadro-title: #2782B9;
+    --quadro-p: #000;
+    --tooltip-bg: rgba(0, 0, 0, 0.8);
+    --tooltip-text: #fff;
+    --valoresTotais-bg: #933380;
+    --valoresTotais-texto: #fff;
+    --topicosLi-border: #fff;
+    --topicosLi-bg: #2782B9;
+    --topicosLi-text: #fff;
+    --valoresLi-bg: #B8D0DB;
+    --painelInfoTopicos-bg: #933380;
+    --painelInfoValores-bg: #B795B7;
+    --buttonCalc-bg: #2782B9;
+    --buttonCalc-text: #fff;
+    --buttonCalc-border: #C4C4C4;
+    --buttonCalc-hover: #178bd3;
+    --footer-bg: #282852;
+    --footer-text: #f3f3f3;
+    --footer-hover: #72caec;
+    --footer-divider: #bfc1c4;
+}
+
+.dark-mode:root {
+    --body-bg: #22272e;
+    --header-bg: #282852;
+    --menu-text: #f3f3f3;
+    --menu-hover: #72caec;
+    --resultado-bg: #602080;
+    --resultado-text: #f3f3f3;
+    --quadro-border: #b030b0;
+    --quadro-bg: #2d333b;
+    --quadro-title: #f3f3f3;
+    --quadro-p: #f3f3f3;
+    --tooltip-bg: #000;
+    --tooltip-text: #fff;
+    --valoresTotais-bg: #933380;
+    --valoresTotais-texto: #f3f3f3;
+    --topicosLi-border: #C4C4C4;
+    --topicosLi-bg: #2782B9;
+    --topicosLi-text: #f3f3f3;
+    --valoresLi-bg: #B8D0DB;
+    --painelInfoTopicos-bg: #933380;
+    --painelInfoValores-bg: #B795B7;
+    --buttonCalc-bg: #962b96;
+    --buttonCalc-text: #fff;
+    --buttonCalc-border: #C4C4C4;
+    --buttonCalc-hover: #b030b0;
+    --footer-bg: #282852;
+    --footer-text: #f3f3f3;
+    --footer-hover: #72caec;
+    --footer-divider: #bfc1c4;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--body-bg);
+}
+
+header{
+    display:flex;
+    justify-content:center;
+    height: 3.5rem;
+    /* position: -webkit-sticky;
+    position: sticky;
+    top: 0; */
+    background: var(--header-bg);
+}
+
+.container {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0rem 2rem;
+    width:100rem; /*50rem para ficar no centro da página*/
+}
+
+#modeSwitch {
+    display:flex;
+    height: 1.2rem;
+}
+
+.logoSquad {
+    height:1.2rem;
+}
+
+nav {
+    display:flex;
+    align-items:center;
+}
+
+.menuMobile {
+    display:none;
+    flex-direction:column;
+    justify-content:space-evenly;
+    width:2.18rem;
+    height:2.18rem;
+}
+
+.menuLine {
+    background-color:var(--menu-text);
+    height:0.189rem;
+}
+
+.menuMobile:hover {
+    cursor:pointer;
+}
+
+.menuMobile:hover .menuLine {
+    background-color:var(--menu-hover);
+}
+
+.menu a {
+    font-size:1.2rem;
+    padding:0.7rem;
+    font-weight:500;
+    color:var(--menu-text);
+    border-bottom:0.3rem solid transparent;
+    text-decoration:none;
+}
+
+.menu a:hover {
+    color:var(--menu-hover);
+    border-bottom:0.3rem solid var(--menu-hover);
+}
+
+.modeSwitch {
+    margin-left:1.5rem;
+    padding:1rem;
+    cursor:pointer;
+}
+
+.modeSwitch:hover {
+    cursor: pointer;
+}
+
+
+
+#melhorOpcao {
+    font-weight:700;
+    font-size: 1.9rem;
+}
+
+#resultadoPagina {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:var(--resultado-bg);
+    color: var(--resultado-text);
+    padding:2rem;
+    height:8rem;
+    width:100vw;
+    max-width:100%;
+}
+
+h1 {
+    font-size:1.75rem;
+    font-weight:400;
+    line-height:1.5;
+}
+
+#resultadoInfo {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.quadro {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:50rem;
+    border:0.126rem solid var(--quadro-border);
+    background-color:var(--quadro-bg);
+    border-radius:1rem;
+    padding:2rem;
+    margin-top:2rem;
+}
+
+.infoTitulo {
+    color: var(--quadro-p);
+    font-size:1.2rem;
+    margin:0.5rem 0rem;
+}
+
+#titulo {
+    font-size:1.5rem;
+    margin-bottom:0.5rem;
+    font-weight:700;
+    color:var(--quadro-p);
+}
+
+
+
+.painelInfo {
+    display:flex;
+    width:fit-content;
+    margin-bottom:1rem;
+}
+
+.quadroInfo {
+    text-align:left;
+    font-size:1.2rem;
+    width:fit-content;
+    color: var(--quadro-p);
+}
+
+.topicos, .valores {
+    display:flex;
+    align-items:center;
+    height:3rem;
+    padding:0.5rem;
+    margin:0.5rem;
+    border-radius:0.3rem;
+}
+
+.topicos {
+    background-color:var(--topicosLi-bg);
+    color:var(--topicosLi-text);
+    width:26rem;
+}
+
+.valores {
+    background-color:var(--valoresLi-bg);
+    margin-left:2rem;
+    width:24.5rem;
+    max-width:24.5rem;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.painelInfo:nth-child(3n) .topicos {
+    background-color:var(--painelInfoTopicos-bg);
+}
+
+.painelInfo:nth-child(3n) .valores {
+    background-color:var(--painelInfoValores-bg);
+}
+
+.seta {
+    position:relative;
+    top:-2.6rem;
+    left:0.6rem;
+    height:1rem;
+    width:1rem;
+}
+
+.allTooltips {
+    display:flex;
+    flex-direction:column;
+}
+
+.divTooltip {
+    margin-top:1.5rem;
+    margin-bottom:5.75rem;
+}
+
+.iconeInfo {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+}
+
+.tooltiptext {
+    opacity: 0;
+    /* display: none; */
+    visibility: hidden;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-text);
+    border-radius: 0.37rem;
+    padding: 0.5rem 0.6rem;
+    width: 12rem;
+    text-align:left;
+    font-size: 0.8rem;
+ 
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    transform: translate(-95%, -120%);
+}
+  
+.iconeInfo:hover + .tooltiptext {
+    /* display: inline-block; */
+    visibility: visible;
+    opacity: 1;
+}
+
+.iconeInfo + .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    transform: rotate(180deg);
+    top: 100%;  /* At the top of the tooltip */
+    left: 90%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--tooltip-bg) transparent;
+}
+
+
+
+#btnCalcNovamente {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 1rem;
+    width: 15rem;
+    height: 4rem;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    color: var(--buttonCalc-text);
+    background-color: var(--buttonCalc-bg);
+    cursor: pointer;
+    margin:2.5rem 0rem;
+    text-decoration:none;
+}
+
+#btnCalcNovamente:hover {
+    background-color: var(--buttonCalc-hover);
+}
+
+
+
+footer {
+    display:flex;
+    justify-content:center;
+    height:16rem;
+    width:100vw;
+    max-width:100%;
+    background-color:var(--footer-bg);
+}
+
+/* .column usando no container do footer*/
+.column {
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:space-evenly;
+}
+
+.infoFooter {
+    display:flex;
+    justify-content:space-between;
+    width:46rem;
+    color:var(--footer-text);
+    line-height:1.5;
+    font-size:0.9rem;
+    font-weight:400;
+}
+
+.linksFooter {
+    display: block;
+    width:fit-content;
+    color:var(--footer-text);
+    text-align: left;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+footer a {
+    display:flex;
+    width:fit-content;
+    color: var(--footer-text);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--footer-hover);
+}
+
+.divider {
+	position:relative;
+    top:11rem;
+	height:0.063rem;
+    width:95vw;
+    max-width:100%;
+}
+
+.div-transparent:before {
+	content:"";
+	position:absolute;
+	top:0;
+	left:5%;
+	right:5%;
+	width:90%;
+	height:0.063rem;
+    background-image: linear-gradient(to right, transparent, var(--footer-divider), transparent);
+}
+
+.direitosFooter {
+    display:flex;
+    width: 30rem;
+    color:var(--footer-text);
+    text-align:left;
+    line-height: 1.5;
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+
+
+@media (max-width: 830px) {
+    .quadro {
+        width: 43.8rem;
+    }
+    .column {
+        padding:1rem;
+        width:45.8rem;
+    }
+    footer {
+        width:51.9rem;
+    }
+    .infoFooter {
+        width:42rem;
+    }
+}
+
+@media (max-width: 720px) {
+    h1 {
+        font-size:1.5rem;
+    }
+    #melhorOpcao {
+        font-size: 1.7rem;
+    }
+    .quadro {
+        width:35rem;
+    }
+    .quadroInfo {
+        font-size:1.1rem;
+    }
+    .column {
+        padding:1rem;
+        width:37.5rem;
+    }
+    footer {
+        width:51.9rem;
+    }
+    .linksFooter {
+        font-size:0.8rem;
+    }
+    .infoFooter {
+        width:35rem;
+        font-size:0.8rem;
+    } 
+}
+
+@media (max-width: 595px) {
+    .menuMobile {
+        display:flex;
+    }
+    .menu {
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        background-color:var(--header-bg);
+    }
+    .menu a:hover {
+        color:var(--menu-text);
+        background-color:var(--menu-hover);
+    }
+    #resultadoPagina {
+        text-align:center;
+    }
+    h1 {
+        font-size:1.2rem;
+    }
+    #melhorOpcao {
+        font-size: 1.5rem;
+    }
+    .quadro {
+        width:24rem;
+    }
+    #titulo {
+        font-size:1.2rem;
+    }
+    .infoTitulo {
+        font-size:1rem;
+    }
+    .topicos {
+        width:18rem;
+    }
+    .valores {
+        width:16.5rem;
+        max-width:16.5rem;
+    }
+    .painelInfo {
+        font-size:0.9rem;
+    }
+    .tooltiptext {
+        transform: translate(-95%, -120%);
+    }
+    .quadroInfo {
+        font-size:1rem;
+    }
+    .divider {
+        top:12.5rem;
+    }
+    .column {
+        width:25rem;
+    }
+    footer {
+        flex-direction:column;
+        height:auto;
+    }
+    .infoFooter {
+        flex-direction:column;
+        width:fit-content;
+    }
+    .infoFooter p {
+        margin-top:1rem;
+    }
+    .linksFooter {
+        margin:1rem 0rem 1.5rem 0rem;
+    }
+    .linksFooter a {
+        padding:0.2rem;
+    }
+    .direitosFooter {
+        width:fit-content;
+    }
+}
+
+@media (max-width:410px) {
+    .quadro {
+        width:21rem;
+    }
+    .topicos {
+        width:15rem;
+    }
+    .valores {
+        width:13.5rem;
+        max-width:13.5rem;
+    }
+    .painelInfo {
+        font-size:0.82rem;
+    }
+    .divTooltip {
+        margin-top:1.3rem;
+        margin-bottom:6rem;
+    }
+    .divider {
+        top:12.5rem;
+    }
+    .column {
+        width:22.5rem;
+    }
+}
+
+@media (max-width:355px) {
+    .quadro {
+        width:18rem;
+    }
+    .topicos {
+        width:13rem;
+    }
+    .valores {
+        width:11.5rem;
+        max-width:11.5rem;
+    }
+    .quadroInfo {
+        font-size:1rem;
+    }
+    .column {
+        width:20rem;
+    }
+    .infoFooter p {
+        font-size:0.75rem;
+    }
+}
