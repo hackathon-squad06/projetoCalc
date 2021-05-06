@@ -243,7 +243,7 @@ nav {
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-    transform: translate(-54%, -102%);
+    transform: translate(-95%, -102%);
 }
   
 .iconeInfo:hover + .tooltiptext {
@@ -257,7 +257,7 @@ nav {
     position: absolute;
     transform: rotate(180deg);
     top: 100%;  /* At the top of the tooltip */
-    left: 50%;
+    left: 90%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
@@ -550,7 +550,7 @@ footer a:hover {
         width: 10rem;
         text-align:left;
         font-size: 0.8rem;
-        transform: translate(-55%, -102%);
+        transform: translate(-95%, -102%);
     }
     .inputVar input {
         width:16rem;
@@ -605,9 +605,6 @@ footer a:hover {
     }
     .tooltiptext {
         transform: translate(-95%, -102%);
-    }
-    .iconeInfo + .tooltiptext::after {
-        left: 90%;
     }
     .column {
         width:23rem;
