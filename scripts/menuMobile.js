@@ -13,12 +13,12 @@ onload = function () {
     if (window.matchMedia("(max-width: 595px)").matches) {
         document.querySelector(".menu").style.display = "none"
         var body = document.body;
-        var except = document.getElementsByTagName('header')[0];
+        var menuMobile = document.querySelector(".menuMobile");
 
         body.addEventListener("click", function () {
             document.querySelector(".menu").style.display = "none"
         }, false);
-        except.addEventListener("click", function (ev) {
+        menuMobile.addEventListener("click", function (ev) {
             document.querySelector(".menu").style.display = "flex"
             ev.stopPropagation();
         }, false);
@@ -30,12 +30,13 @@ onload = function () {
 onresize = function () {
     document.querySelector(".menu").style.display = "none"
     var body = document.body;
-    var header = document.getElementsByTagName('header')[0];
+    var menuMobile = document.querySelector(".menuMobile");
+
     if (window.matchMedia("(max-width: 595px)").matches) {
         body.addEventListener("click", function () {
             document.querySelector(".menu").style.display = "none"
         }, false);
-        header.addEventListener("click", function (ev) {
+        menuMobile.addEventListener("click", function (ev) {
             document.querySelector(".menu").style.display = "flex"
             ev.stopPropagation();
         }, false);
