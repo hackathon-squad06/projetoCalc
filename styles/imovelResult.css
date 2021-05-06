@@ -213,7 +213,7 @@ h1 {
 }
 
 .quadroInfo {
-    text-align:justify;
+    text-align:left;
     font-size:1.2rem;
     width:fit-content;
     color: var(--quadro-p);
@@ -238,6 +238,9 @@ h1 {
     background-color:var(--valoresLi-bg);
     margin-left:2rem;
     width:24.5rem;
+    /*white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;*/
 }
 
 .painelInfo:nth-child(3n) .topicos {
@@ -277,39 +280,38 @@ h1 {
     opacity: 0;
     /* display: none; */
     visibility: hidden;
-    -webkit-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
     background-color: var(--tooltip-bg);
     color: var(--tooltip-text);
     border-radius: 0.37rem;
     padding: 0.5rem 0.6rem;
-    width: 9rem;
-    text-align: justify;
+    width: 12rem;
+    text-align:left;
     font-size: 0.8rem;
  
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-    /* transform: translate(52.5%, 1rem); */
-    transform: translate(5%, -35%);
+    transform: translate(-95%, -120%);
 }
   
-.iconeInfo + .tooltiptext::after {
-    content: " ";
-    position: absolute;
-    transform: rotate(-90deg);
-    top: 50%;
-    right: 100%; /* To the left of the tooltip */
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent var(--tooltip-bg) transparent;
-}
-
 .iconeInfo:hover + .tooltiptext {
     /* display: inline-block; */
     visibility: visible;
     opacity: 1;
+}
+
+.iconeInfo + .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    transform: rotate(180deg);
+    top: 100%;  /* At the top of the tooltip */
+    left: 90%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--tooltip-bg) transparent;
 }
 
 
@@ -406,7 +408,7 @@ footer a:hover {
     display:flex;
     width: 30rem;
     color:var(--footer-text);
-    text-align: justify;
+    text-align:left;
     line-height: 1.5;
     font-size: 0.7rem;
     font-weight: 400;
@@ -504,13 +506,7 @@ footer a:hover {
         font-size:0.9rem;
     }
     .tooltiptext {
-        width: 10rem;
-        text-align: justify;
-        transform: translate(-116%, -25%);
-    }
-    .iconeInfo + .tooltiptext::after {
-        transform: rotate(90deg);
-        left: 100%; /* To the left of the tooltip */
+        transform: translate(-95%, -120%);
     }
     .quadroInfo {
         font-size:1rem;

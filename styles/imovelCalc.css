@@ -180,7 +180,7 @@ nav {
     flex-direction:column;
     justify-content:center;
     width:28rem;
-    text-align: justify;
+    text-align: left;
     color: var(--welcome-text);
 }
 
@@ -197,7 +197,7 @@ nav {
     font-weight: 400;
     line-height: 1.5;
     margin-top: 1rem;
-    text-align: justify;
+    text-align:left;
 }
 
 #imagemWelcome {
@@ -237,7 +237,7 @@ nav {
     border-radius: 0.37rem;
     padding: 0.5rem 0.6rem;
     width: 12rem;
-    text-align: justify;
+    text-align:left;
     font-size: 0.8rem;
  
     /* Position the tooltip */
@@ -426,7 +426,7 @@ footer a:hover {
     display:flex;
     width: 30rem;
     color: var(--footer-text);
-    text-align: justify;
+    text-align:left;
     line-height: 1.5;
     font-size: 0.7rem;
     font-weight: 400;
