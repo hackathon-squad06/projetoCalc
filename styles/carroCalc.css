@@ -259,11 +259,10 @@ nav {
 
 
 .containerDados {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 4rem 4rem 4rem 4rem; */
-    grid-gap: 3rem;
+    display:flex;
+    flex-direction:column;
     width: 50rem;
+    height:55rem;
     margin-top: 4rem;
     border: 2px solid var(--contDados-border);
     background: var(--contDados-bg);
@@ -280,6 +279,19 @@ nav {
     font-size: 1.2rem;
     color: var(--tituloInput-text);
     margin: 1rem 3.18rem 2rem 2.8rem;
+}
+
+
+.inputArea {
+    display:flex;
+    justify-content:space-between;
+}
+
+.inputColumn {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    height:45rem;
 }
 
 .inputVar {
@@ -300,7 +312,7 @@ nav {
 .inputVar input {
     display: block;
     padding: 1rem;
-    width: 18rem;
+    width: 20rem;
     height: 3rem;
     border-radius: 0.5rem;
     margin-top: 0.5rem;
