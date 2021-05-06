@@ -162,21 +162,25 @@ nav {
     display:flex;
     justify-content:center;
     align-items:center;
-    height:25rem;
+    height:23rem;
     width:100vw;
     max-width:100%;
     background-color: var(--welcome-bg);
     text-align: center;
 }
 
+.welcomeArea {
+    display:flex;
+    justify-content:space-between;
+    width:50rem;
+}
+
 #textoWelcome {
-    display: inline-block;
-    width: 23rem;
-    margin-top: 0rem;
-    margin-right: 2rem;
-    margin-left: -1rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width:28rem;
     text-align: justify;
-    padding: 1rem;
     color: var(--welcome-text);
 }
 
@@ -185,6 +189,7 @@ nav {
     font-weight: 500;
     line-height: 1.5;
     margin-bottom: 2rem;
+    text-align: left;
 }
 
 #textoWelcome h2 {
@@ -192,12 +197,12 @@ nav {
     font-weight: 400;
     line-height: 1.5;
     margin-top: 1rem;
+    text-align: justify;
 }
 
 #imagemWelcome {
     height: 19rem;
     width: 19rem;
-    margin-top:0rem;
     background-image: url('/images/img_welcome_imovel_2.png');
     border-radius: 2rem;
     background-size: cover;
