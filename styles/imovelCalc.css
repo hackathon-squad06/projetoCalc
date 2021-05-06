@@ -236,7 +236,7 @@ nav {
     color: var(--tooltip-text);
     border-radius: 0.37rem;
     padding: 0.5rem 0.6rem;
-    width: 15rem;
+    width: 12rem;
     text-align: justify;
     font-size: 0.8rem;
  
@@ -265,7 +265,7 @@ nav {
 }
 
 
-
+/*
 .containerDados {
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -276,17 +276,41 @@ nav {
     border: 2px solid var(--contDados-border);
     background: var(--contDados-bg);
     border-radius: 0.5rem;
+}*/
+
+.containerDados {
+    display:flex;
+    flex-direction:column;
+    width: 50rem;
+    margin-top: 4rem;
+    padding:2rem;
+    border: 2px solid var(--contDados-border);
+    background: var(--contDados-bg);
+    border-radius: 0.5rem;
 }
 
 .titleContainer {
-    display:flex;
-    grid-column-start: 1;
-    grid-column-end: 3;
     font-weight: bold;
     text-align: left;
     font-size: 1.2rem;
     color: var(--tituloInput-text);
-    margin: 3rem 3.18rem 2rem 3.18rem;
+}
+
+.inputArea {
+    display:flex;
+    justify-content:space-between;
+}
+
+.inputColumn {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    height:20rem;
+}
+
+/*Ajusta a coluna com um único item*/
+.singleItem {
+    height:10rem;
 }
 
 .inputVar {
@@ -307,7 +331,7 @@ nav {
 .inputVar input {
     display: block;
     padding: 1rem;
-    width: 18rem;
+    width: 20rem;
     height: 3rem;
     border-radius: 0.5rem;
     margin-top: 0.5rem;

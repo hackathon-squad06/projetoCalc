@@ -266,7 +266,7 @@ nav {
     display:flex;
     flex-direction:column;
     width: 50rem;
-    height:55rem;
+    height:56rem;
     margin-top: 4rem;
     border: 2px solid var(--contDados-border);
     background: var(--contDados-bg);
@@ -275,14 +275,10 @@ nav {
 }
 
 .titleContainer {
-    display:flex;
-    grid-column-start: 1;
-    grid-column-end: 3;
     font-weight: bold;
     text-align: left;
     font-size: 1.2rem;
     color: var(--tituloInput-text);
-    margin: 1rem 3.18rem 2rem 2.8rem;
 }
 
 
@@ -295,7 +291,7 @@ nav {
     display:flex;
     flex-direction:column;
     justify-content:space-around;
-    height:45rem;
+    height:50rem;
 }
 
 .inputVar {
