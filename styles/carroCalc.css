@@ -429,11 +429,28 @@ footer a:hover {
 @media (max-width: 830px) {
     .containerDados {
         width: 43.8rem;
-        margin-left:0;
-        margin-right:0;
+        height:105rem;
     }
-    .titleContainer {
-        margin-left:1.63rem;
+    .inputArea {
+        display:flex;
+        flex-direction:column;
+    }
+    .welcomeArea {
+        display:flex;
+        justify-content:space-between;
+        width:43.8rem;
+    }
+    #textoWelcome {
+        width:23rem;
+    }
+    #textoWelcome h1 {
+        font-size: 1.65rem;
+    }
+    #textoWelcome h2 {
+        font-size:0.90rem;
+    }
+    .divider {
+        top:10.5rem;
     }
     .column {
         padding:1rem;
@@ -447,39 +464,26 @@ footer a:hover {
     }
 }
 
-@media (max-width: 715px) {
-    #textoWelcome {
-        width: 20rem;
-        margin-right: 1rem;
-        margin-left: -1rem;
-    }
-    #textoWelcome h1 {
-        font-size: 1.5rem;
-    }
-    #textoWelcome h2 {
-        font-size: 0.75rem;
-    }
-    #imagemWelcome {
-        height: 16rem;
-        width: 16rem;
-    }
-    .containerDados {
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        grid-gap:0;
+@media (max-width: 720px) {
+    .welcomeArea {
         width:35rem;
     }
-    .titleContainer{
-        width:fit-content;
-        justify-content:center;
-        margin:0;
+    #textoWelcome {
+        width:19rem;
     }
-    .titleContainer {
-        margin: 3rem 1rem 2rem 1rem;
+    #textoWelcome h1 {
+        font-size: 1.05rem;
+        margin-bottom:1rem;
     }
-    .inputVar {
-        height:10rem;
+    #textoWelcome h2 {
+        font-size:0.80rem;
+    }
+    #imagemWelcome {
+        height: 15rem;
+        width: 15rem;
+    }
+    .containerDados {
+        width:35rem;
     }
     .column {
         padding:1rem;
@@ -488,16 +492,16 @@ footer a:hover {
     footer {
         width:51.9rem;
     }
+    .linksFooter {
+        font-size:0.8rem;
+    }
     .infoFooter {
         width:35rem;
+        font-size:0.8rem;
     }    
 }
 
 @media (max-width: 595px) {
-    html, body {
-        left:0;
-        overflow-x:hidden;
-    }
     .menuMobile {
         display:flex;
     }
@@ -515,43 +519,40 @@ footer a:hover {
         background-color:var(--menu-hover);
     }
     .sectionWelcome {
-        flex-direction:column;
         height:auto;
     }
+    .welcomeArea {
+        flex-direction:column;
+        align-items:center;
+        justify-content:space-evenly;
+        width:24rem;
+        height:30rem;
+    }
     #textoWelcome {
-        width: 23rem;
-        margin:0;
-    }
-    #textoWelcome h1 {
-        font-size: 1.75rem;
-        margin-bottom:1rem;
-    }
-    #textoWelcome h2 {
-        font-size: 1rem;
-    }
-    #imagemWelcome {
-        height: 16rem;
-        width: 16rem;
-        margin-top:0;
-        margin-bottom:2rem;
+        width: 24rem;
     }
     .containerDados {
         display:flex;
         flex-direction:column;
-        grid-gap:0;
         width: 24rem;
+    }
+    .titleContainer {
+        font-size:1rem;
     }
     .tooltiptext {
         width: 10rem;
         text-align:left;
         font-size: 0.8rem;
-        transform: translate(-60%, 2rem);
+        transform: translate(-55%, -102%);
     }
-    .inputVar {
-        height:10rem;
+    .inputVar input {
+        width:16rem;
+    }
+    .tituloInput {
+        font-size:0.80rem;
     }
     .divider {
-        top:12.5rem;
+        top:12rem;
     }
     .column {
         width:25rem;
@@ -579,34 +580,52 @@ footer a:hover {
 }
 
 @media (max-width:410px) {
+    .welcomeArea {
+        width:21rem;
+    }
+    #textoWelcome {
+        width:21rem;
+    }
+    #imagemWelcome {
+        height: 14rem;
+        width: 14rem;
+    }
     .containerDados {
         width:21rem;
     }
+    .inputVar {
+        width:16rem;
+    }
     .tooltiptext {
-        transform: translate(-80%, 2rem);
+        transform: translate(-95%, -102%);
+    }
+    .iconeInfo + .tooltiptext::after {
+        left: 90%;
+    }
+    .column {
+        width:23rem;
     }
 }
 
 @media (max-width:355px) {
+    .welcomeArea {
+        width:21rem;
+    }
     #textoWelcome {
-        width: 20rem;
-        margin:0;
+        width:18.5rem;
     }
-    #textoWelcome h1 {
-        font-size: 1.5rem;
-        margin-bottom:1rem;
-    }
-    #textoWelcome h2 {
-        font-size:0.75rem;
+    #imagemWelcome {
+        height: 13rem;
+        width: 13rem;
     }
     .containerDados {
         width:18.5rem;
     }
-    .inputVar input {
-        width:16rem;
+    .tituloInput {
+        font-size:0.70rem;
     }
-    .tooltiptext {
-        transform: translate(-95%, 2rem);
+    .inputVar input {
+        width:14rem;
     }
     .column {
         width:20rem;
