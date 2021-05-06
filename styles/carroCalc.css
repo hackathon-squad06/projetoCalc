@@ -165,10 +165,16 @@ nav {
     text-align: center;
 }
 
+.welcomeArea {
+    display:flex;
+    justify-content:space-between;
+    width:50rem;
+}
+
 #textoWelcome {
     display: inline-block;
-    width: 23rem;
-    margin-top: 0rem;
+    width: 30rem;
+    margin-top: 2rem;
     margin-right: 2rem;
     margin-left: -1rem;
     text-align: justify;
@@ -195,7 +201,7 @@ nav {
 #imagemWelcome {
     height: 19rem;
     width: 19rem;
-    margin-top:0rem;
+    margin-top:1.5rem;
     background-image: url('/images/img_welcome_carro_1.png');
     border-radius: 2rem;
     background-size: cover;
