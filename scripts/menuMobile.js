@@ -28,11 +28,10 @@ onload = function () {
 }
 
 onresize = function () {
+    document.querySelector(".menu").style.display = "none"
+    var body = document.body;
+    var header = document.getElementsByTagName('header')[0];
     if (window.matchMedia("(max-width: 595px)").matches) {
-        document.querySelector(".menu").style.display = "none"
-        var body = document.body;
-        var header = document.getElementsByTagName('header')[0];
-
         body.addEventListener("click", function () {
             document.querySelector(".menu").style.display = "none"
         }, false);
@@ -40,7 +39,10 @@ onresize = function () {
             document.querySelector(".menu").style.display = "flex"
             ev.stopPropagation();
         }, false);
-    } else {
+    } else if (!window.matchMedia("(max-width: 595px)").matches) {
+        body.addEventListener("click", function () {
+            document.querySelector(".menu").style.display = "flex"
+        }, false);
         document.querySelector(".menu").style.display = "flex"
     }
 }
