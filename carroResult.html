@@ -9,19 +9,25 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="styles/carroResult.css">
-    <title>Resultado Automóvel</title>
+    <link rel="stylesheet" type="text/css" href="styles/result.css">
+    <title>Economi-Z - Resultado Imóvel</title>
 </head>
 
 <body>
-
     <header>
         <div class="container">
             <img src="/images/s6-logo-white.png" alt="logoSquad" class="logoSquad" id='logoSquadHeader' />
             <nav>
-                <a href="/index.html">Home</a>
-                <a href="/imovelCalc.html">Imóvel</a>
-                <a href="/carroCalc.html">Automóvel</a>
+                <div class="menuMobile">
+                    <div class="menuLine"></div>
+                    <div class="menuLine"></div>
+                    <div class="menuLine"></div>
+                </div>
+                <div class="menu">
+                    <a href="/index.html">Home</a>
+                    <a href="/imovelCalc.html">Imóvel</a>
+                    <a href="/carroCalc.html">Automóvel</a>
+                </div>
                 <div class="modeSwitch">
                     <img src="/images/dark-mode-white.svg" id='modeSwitch' />
                 </div>
@@ -35,85 +41,108 @@
 
     <section id="resultadoInfo">
         <div class="quadro">
-            <p id="titulo">Compare os gastos (em anos):
-            <p>
+            <p id="titulo">Compare os gastos<p>
 
-            <p>Carro</p>
+            <p class="infoTitulo">Carro</p>
             <div class="painelInfo">
-                <ul class="topicos">
-                    <li>Gasto total do carro</li>
-                    <li>Gasto com seguro + IPVA + licenciamento</li>
-                    <li>Gasto com estacionamento</li>
-                    <li>Gasto com manutenção</li>
-                    <li>Gasto com combustível</li>
-                </ul>
+                <div class="dados">
+                    <div class="topicos">Gasto total do carro</div>
+                    <div class="valores" id="totalCarro"></div>
+                    <img class="seta" src="images/blueArrow.png">
 
-                <ul class="valores">
-                    <li id="totalCarro">R$0.000,00</li>
+
+                    <div class="topicos">Gasto com seguro + IPVA + licenciamento</div>
+                    <div class="valores" id="valorSeguro"></div>
+                    <img class="seta" src="images/blueArrow.png">
+
+
+                    <div class="topicos">Gasto com estacionamento</div>
+                    <div class="valores" id="totalEstacionamento"></div>
+                    <img class="seta" src="images/blueArrow.png">
+
+
+                    <div class="topicos">Gasto com manutenção</div>
+                    <div class="valores" id="totalManutencao"></div>
+                    <img class="seta" src="images/blueArrow.png">
+
+
+                    <div class="topicos">Gasto com combustível</div>
+                    <div class="valores" id="totalCombustivel"></div>
+                    <img class="seta" src="images/blueArrow.png">
+
+                </div>
+                <div class="allTooltips">
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Valor total gasto com o carro por ano.</span>
                     </div>
-                    <li id="valorSeguro">R$0.000,00</li>
+
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Valor gasto com o seguro, IPVA, seguro obrigatório e
                             licenciamento.</span>
                     </div>
-                    <li id="totalEstacionamento">R$0.000,00</li>
+
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Gasto anual com estacionamento.</span>
                     </div>
-                    <li id="totalManutencao">R$0.000,00</li>
+
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Gasto anual com manutenções.</span>
                     </div>
-                    <li id="totalCombustivel">R$0.000,00</li>
+
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Gasto anual com combustível.</span>
                     </div>
-                </ul>
+                </div>
             </div>
 
-            <p>Aplicativo de corridas</p>
+            <p class="infoTitulo">Aplicativo de corridas</p>
             <div class="painelInfo">
-                <ul class="topicos">
-                    <li>Gasto total com aplicativo</li>
-                    <li>Quantas vezes usou o aplicativo</li>
-                    <li>Diferença entre as opções</li>
-                </ul>
+                <div class="dados">
+                    <div class="topicos">Gasto total com aplicativo</div>
+                    <div class="valores" id="valorApp"></div>
+                    <img class="seta" src="images/blueArrow.png">
 
-                <ul class="valores">
-                    <li id="valorApp">R$0.000,00</li>
+                    <div class="topicos">Quantas vezes usou o aplicativo</div>
+                    <div class="valores" id="totalCorridas"></div>
+                    <img class="seta" src="images/blueArrow.png">
+
+                    <div class="topicos">Diferença entre as opções</div>
+                    <div class="valores" id="valorDif"></div>
+                    <img class="seta" src="images/blueArrow.png">
+                </div>
+
+                <div class="allTooltips">
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Valor total gasto com o aplicativo de corridas anualmente.</span>
                     </div>
-                    <li id="totalCorridas">vezes</li>
+
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Total de vezes que utilizou o aplicativo em 1 ano.</span>
                     </div>
-                    <li id="valorDif">R$0.000,00</li>
+
                     <div title="" class="divTooltip">
                         <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
                         <span class="tooltiptext">Diferença entre os gastos com o carro e o aplicativo. Se o valor for
                             negativo, significa que o gasto com o aplicativo é maior.</span>
                     </div>
-                </ul>
+                </div>
             </div>
         </div>
 
-        <div class="quadro newHeight">
-            <p>Vale a pena ressaltar que nossa calculadora leva em consideração apenas os gastos anuais com as duas
-                opções. Esta decisão não deve ser apenas baseada nos números. Nós do <strong>SQUAD6</strong>
+        <div class="quadro">
+            <p class="quadroInfo">Vale a pena ressaltar que nossa calculadora leva em consideração apenas os gastos anuais com as duas
+                opções. Esta decisão não deve ser apenas baseada nos números. Nós do <strong>SQUAD 06</strong>
                 recomendamos que você não considere apenas os pontos positivos, como a liberdade oferecida pelo carro,
                 mas considere também o estress causado pelo trânsito. Além disso, é importante que entenda sobre o custo
                 de oportunidade, ou seja, caso consiga economizar dinheiro com alguma das opções, quanto você
-                conseguiria transformar em rendimento através de aplicações financeiras? </p>
+                conseguiria transformar em rendimento através de aplicações financeiras?</p>
         </div>
 
         <a id="btnCalcNovamente" onclick="retornar()">CALCULAR NOVAMENTE</a>
@@ -125,9 +154,9 @@
     </div>
     <footer>
         <div class="container column">
-            <img src="/images/s6-logo-white.png" alt="logoSquad" class="logoSquad" id='logoSquadHeader' />
+            <img src="/images/s6-logo-white.png" alt="logoSquad" class="logoSquad" id='logoFooter' />
             <div class="infoFooter">
-                <p>SQUAD6 é parte do Hackathon promovido pelo Grupo FCamara<br> em conjunto com Alura.</p>
+                <p>SQUAD6 é parte do Hackathon promovido<br>pelo Grupo FCamara em conjunto com Alura.</p>
                 <div class="linksFooter">
                     <a href="/index.html">Home</a>
                     <a href="/imovelCalc.html">Imóvel</a>
@@ -135,13 +164,20 @@
                 </div>
             </div>
             <div class="direitosFooter">
-                ® SQUAD6 Consultoria Ltda.<br>2021 - Todos os direitos reservados
+                ® SQUAD 06 Consultoria Ltda.<br>2021 - Imagens utilizadas no site criadas por:
+                <div class="imgDireitos">
+                    <a href="https://www.flaticon.com/authors/anatoly" target="_blank">Anatoly</a>
+                    <a href="https://www.flaticon.com/authors/kiranshastry" target="_blank">Kiranshastry</a>
+                    <a href="https://www.freepik.com/vectorjuice" target="_blank">Vectorjuice</a>
+                    <a href="https://www.freepik.com/pch-vector" target="_blank">Pch-vector</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="/scripts/carroResult.js"></script>
     <script src="/scripts/darkMode.js"></script>
+    <script src="scripts/menuMobile.js"></script>
 
 </body>
 

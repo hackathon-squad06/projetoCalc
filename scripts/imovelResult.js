@@ -19,40 +19,40 @@ let melhorOpcao = sessionStorage.getItem("melhorOpcao");
 
 
 const valorImovelDisplay = document.getElementById("valorImovelAtual");
-valorImovelDisplay.innerHTML = valorImovel;
+valorImovelDisplay.innerHTML = "<p>" + valorImovel + "</p>";
 
 const prazoFinanciamentoAnosDisplay = document.getElementById('anos')
-prazoFinanciamentoAnosDisplay.innerHTML = prazoFinanciamentoAnos
+prazoFinanciamentoAnosDisplay.innerHTML = "Valor do imóvel corrigido após " + prazoFinanciamentoAnos + " anos" 
 
 const valorImovelFuturoDisplay = document.getElementById("valorImovelFuturo");
-valorImovelFuturoDisplay.innerHTML = valorImovelFuturo;
+valorImovelFuturoDisplay.innerHTML = "<p>" + valorImovelFuturo + "</p>";
 
 const totalPagoImovelDisplay = document.getElementById("totalPagoImovel");
-totalPagoImovelDisplay.innerHTML = valorTotalPagoFinancimento;
+totalPagoImovelDisplay.innerHTML = "<p>" + valorTotalPagoFinancimento + "</p>";
 
 const valorFinanciadoDisplay = document.getElementById("valorFinanciado");
-valorFinanciadoDisplay.innerHTML = valorFinanciado;
+valorFinanciadoDisplay.innerHTML = "<p>" + valorFinanciado + "</p>";
 
 const valorTotalPagoDisplay = document.getElementById("totalPagoFinanciado");
-valorTotalPagoDisplay.innerHTML = valorTotalPago;
+valorTotalPagoDisplay.innerHTML = "<p>" + valorTotalPago + "</p>";
 
 const valorJurosPagoDisplay = document.getElementById("totalJurosPago");
-valorJurosPagoDisplay.innerHTML = valorJurosPago;
+valorJurosPagoDisplay.innerHTML = "<p>" + valorJurosPago + "</p>";
 
 const valorParcelaDisplay = document.getElementById("valorParcela");
-valorParcelaDisplay.innerHTML = parcelaFinanciamento;
+valorParcelaDisplay.innerHTML = "<p>" + parcelaFinanciamento + "</p>";
 
 const valorInvestidoMensalDisplay = document.getElementById("valorInvestidoMensal");
-valorInvestidoMensalDisplay.innerHTML = valorInvestimentoMensalmente;
+valorInvestidoMensalDisplay.innerHTML = "<p>" + valorInvestimentoMensalmente + "</p>";
 
 const valorInvestimentoAnosDisplay = document.getElementById('anosFinal')
-valorInvestimentoAnosDisplay.innerHTML = prazoFinanciamentoAnos
+valorInvestimentoAnosDisplay.innerHTML = "Valor do investimento após " + prazoFinanciamentoAnos + " anos"
 
 const valorInvestimentoTotalDisplay = document.getElementById("valorTotalInvestimento");
-valorInvestimentoTotalDisplay.innerHTML = valorInvestimentoTotal;
+valorInvestimentoTotalDisplay.innerHTML = "<p>" + valorInvestimentoTotal + "</p>";
 
 const valorRestanteDisplay = document.getElementById("valorRestante");
-valorRestanteDisplay.innerHTML = sobraInvestimento;
+valorRestanteDisplay.innerHTML = "<p>" + sobraInvestimento + "</p>";
 
 const prazoRentabilidadeDisplay = document.getElementById("prazoRentabilidade");
 prazoRentabilidadeDisplay.style.textAlign = 'left';

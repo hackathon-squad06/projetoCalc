@@ -158,21 +158,25 @@ nav {
     display:flex;
     justify-content:center;
     align-items:center;
-    height:25rem;
+    height:23rem;
     width:100vw;
     max-width:100%;
     background-color: var(--welcome-bg);
     text-align: center;
 }
 
+.welcomeArea {
+    display:flex;
+    justify-content:space-between;
+    width:50rem;
+}
+
 #textoWelcome {
-    display: inline-block;
-    width: 23rem;
-    margin-top: 0rem;
-    margin-right: 2rem;
-    margin-left: -1rem;
-    text-align: justify;
-    padding: 1rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width:28rem;
+    text-align:left;
     color: var(--welcome-text);
 }
 
@@ -189,13 +193,12 @@ nav {
     font-weight: 400;
     line-height: 1.5;
     margin-top: 1rem;
-    text-align: justify;
+    text-align:left;
 }
 
 #imagemWelcome {
     height: 19rem;
     width: 19rem;
-    margin-top:0rem;
     background-image: url('/images/img_welcome_carro_1.png');
     border-radius: 2rem;
     background-size: cover;
@@ -229,14 +232,14 @@ nav {
     color: var(--tooltip-text);
     border-radius: 0.37rem;
     padding: 0.5rem 0.6rem;
-    width: 15rem;
-    text-align: justify;
+    width: 12rem;
+    text-align:left;
     font-size: 0.8rem;
  
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-    transform: translate(-54%, 2rem);
+    transform: translate(-95%, -105%);
 }
   
 .iconeInfo:hover + .tooltiptext {
@@ -248,8 +251,9 @@ nav {
 .iconeInfo + .tooltiptext::after {
     content: " ";
     position: absolute;
-    bottom: 100%;  /* At the top of the tooltip */
-    left: 50%;
+    transform: rotate(180deg);
+    top: 100%;  /* At the top of the tooltip */
+    left: 90%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
@@ -259,11 +263,10 @@ nav {
 
 
 .containerDados {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 4rem 4rem 4rem 4rem; */
-    grid-gap: 3rem;
+    display:flex;
+    flex-direction:column;
     width: 50rem;
+    height:56rem;
     margin-top: 4rem;
     border: 2px solid var(--contDados-border);
     background: var(--contDados-bg);
@@ -272,14 +275,22 @@ nav {
 }
 
 .titleContainer {
-    display:flex;
-    grid-column-start: 1;
-    grid-column-end: 3;
     font-weight: bold;
     text-align: left;
     font-size: 1.2rem;
     color: var(--tituloInput-text);
-    margin: 1rem 3.18rem 2rem 2.8rem;
+}
+
+.inputArea {
+    display:flex;
+    justify-content:space-between;
+}
+
+.inputColumn {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    height:50rem;
 }
 
 .inputVar {
@@ -300,7 +311,7 @@ nav {
 .inputVar input {
     display: block;
     padding: 1rem;
-    width: 18rem;
+    width: 20rem;
     height: 3rem;
     border-radius: 0.5rem;
     margin-top: 0.5rem;
@@ -363,10 +374,9 @@ footer {
 }
 
 .linksFooter {
-    display:flex;
-    flex-direction:column;
+    display: block;
     width:fit-content;
-    color: var(--footer-text);
+    color:var(--footer-text);
     text-align: left;
     line-height: 1.5;
     font-size: 0.9rem;
@@ -386,7 +396,7 @@ footer a:hover {
 
 .divider {
 	position:relative;
-    top:11rem;
+    top:10.5rem;
 	height:0.063rem;
     width:95vw;
     max-width:100%;
@@ -405,12 +415,21 @@ footer a:hover {
 
 .direitosFooter {
     display:flex;
+    flex-direction:column;
     width: 30rem;
-    color: var(--footer-text);
-    text-align: justify;
+    color:var(--footer-text);
+    text-align:left;
     line-height: 1.5;
     font-size: 0.7rem;
     font-weight: 400;
+}
+
+.imgDireitos {
+    display:flex;
+}
+  
+.imgDireitos a {
+    padding:0rem 0.25rem;
 }
 
 
@@ -418,11 +437,28 @@ footer a:hover {
 @media (max-width: 830px) {
     .containerDados {
         width: 43.8rem;
-        margin-left:0;
-        margin-right:0;
+        height:105rem;
     }
-    .titleContainer {
-        margin-left:1.63rem;
+    .inputArea {
+        display:flex;
+        flex-direction:column;
+    }
+    .welcomeArea {
+        display:flex;
+        justify-content:space-between;
+        width:43.8rem;
+    }
+    #textoWelcome {
+        width:23rem;
+    }
+    #textoWelcome h1 {
+        font-size: 1.65rem;
+    }
+    #textoWelcome h2 {
+        font-size:0.90rem;
+    }
+    .divider {
+        top:10rem;
     }
     .column {
         padding:1rem;
@@ -436,39 +472,26 @@ footer a:hover {
     }
 }
 
-@media (max-width: 715px) {
-    #textoWelcome {
-        width: 20rem;
-        margin-right: 1rem;
-        margin-left: -1rem;
-    }
-    #textoWelcome h1 {
-        font-size: 1.5rem;
-    }
-    #textoWelcome h2 {
-        font-size: 0.75rem;
-    }
-    #imagemWelcome {
-        height: 16rem;
-        width: 16rem;
-    }
-    .containerDados {
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        grid-gap:0;
+@media (max-width: 720px) {
+    .welcomeArea {
         width:35rem;
     }
-    .titleContainer{
-        width:fit-content;
-        justify-content:center;
-        margin:0;
+    #textoWelcome {
+        width:19rem;
     }
-    .titleContainer {
-        margin: 3rem 1rem 2rem 1rem;
+    #textoWelcome h1 {
+        font-size: 1.05rem;
+        margin-bottom:1rem;
     }
-    .inputVar {
-        height:10rem;
+    #textoWelcome h2 {
+        font-size:0.80rem;
+    }
+    #imagemWelcome {
+        height: 15rem;
+        width: 15rem;
+    }
+    .containerDados {
+        width:35rem;
     }
     .column {
         padding:1rem;
@@ -477,16 +500,16 @@ footer a:hover {
     footer {
         width:51.9rem;
     }
+    .linksFooter {
+        font-size:0.8rem;
+    }
     .infoFooter {
         width:35rem;
+        font-size:0.8rem;
     }    
 }
 
 @media (max-width: 595px) {
-    html, body {
-        left:0;
-        overflow-x:hidden;
-    }
     .menuMobile {
         display:flex;
     }
@@ -504,43 +527,40 @@ footer a:hover {
         background-color:var(--menu-hover);
     }
     .sectionWelcome {
-        flex-direction:column;
         height:auto;
     }
+    .welcomeArea {
+        flex-direction:column;
+        align-items:center;
+        justify-content:space-evenly;
+        width:24rem;
+        height:30rem;
+    }
     #textoWelcome {
-        width: 23rem;
-        margin:0;
-    }
-    #textoWelcome h1 {
-        font-size: 1.75rem;
-        margin-bottom:1rem;
-    }
-    #textoWelcome h2 {
-        font-size: 1rem;
-    }
-    #imagemWelcome {
-        height: 16rem;
-        width: 16rem;
-        margin-top:0;
-        margin-bottom:2rem;
+        width: 24rem;
     }
     .containerDados {
         display:flex;
         flex-direction:column;
-        grid-gap:0;
         width: 24rem;
+    }
+    .titleContainer {
+        font-size:1rem;
     }
     .tooltiptext {
         width: 10rem;
         text-align:left;
         font-size: 0.8rem;
-        transform: translate(-60%, 2rem);
+        transform: translate(-95%, -102%);
     }
-    .inputVar {
-        height:10rem;
+    .inputVar input {
+        width:16rem;
+    }
+    .tituloInput {
+        font-size:0.80rem;
     }
     .divider {
-        top:12.5rem;
+        top:12rem;
     }
     .column {
         width:25rem;
@@ -568,34 +588,52 @@ footer a:hover {
 }
 
 @media (max-width:410px) {
+    .welcomeArea {
+        width:21rem;
+    }
+    #textoWelcome {
+        width:21rem;
+    }
+    #imagemWelcome {
+        height: 14rem;
+        width: 14rem;
+    }
     .containerDados {
         width:21rem;
     }
+    .inputVar {
+        width:16rem;
+    }
     .tooltiptext {
-        transform: translate(-80%, 2rem);
+        transform: translate(-95%, -102%);
+    }
+    .iconeInfo + .tooltiptext::after {
+        left: 90%;
+    }
+    .column {
+        width:23rem;
     }
 }
 
 @media (max-width:355px) {
+    .welcomeArea {
+        width:21rem;
+    }
     #textoWelcome {
-        width: 20rem;
-        margin:0;
+        width:18.5rem;
     }
-    #textoWelcome h1 {
-        font-size: 1.5rem;
-        margin-bottom:1rem;
-    }
-    #textoWelcome h2 {
-        font-size:0.75rem;
+    #imagemWelcome {
+        height: 13rem;
+        width: 13rem;
     }
     .containerDados {
         width:18.5rem;
     }
-    .inputVar input {
-        width:16rem;
+    .tituloInput {
+        font-size:0.70rem;
     }
-    .tooltiptext {
-        transform: translate(-95%, 2rem);
+    .inputVar input {
+        width:14rem;
     }
     .column {
         width:20rem;

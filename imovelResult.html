@@ -9,8 +9,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="styles/imovelResult.css">
-    <title>Resultado Imóvel</title>
+    <link rel="stylesheet" type="text/css" href="styles/result.css">
+    <title>Economi-Z - Resultado Imóvel</title>
 </head>
 
 <body>
@@ -44,16 +44,16 @@
             <p id="titulo">Compare as opções
             <p>
 
-            <p>Dados gerais</p>
+            <p class="infoTitulo">Dados gerais</p>
             <div class="painelInfo">
                 <div class="dados">
                     <div class="topicos">Valor do imóvel atual</div>
-                    <div class="valores" id="valorImovelAtual">R$0.000,00</div>
+                    <div class="valores" id="valorImovelAtual"></div>
                     <img class="seta" src="images/blueArrow.png">
 
 
-                    <div class="topicos">Valor do imóvel corrigido após <span id='anos'>X</span> anos</div>
-                    <div class="valores" id="valorImovelFuturo">R$0.000,00</div>
+                    <div class="topicos" id='anos'></div>
+                    <div class="valores" id="valorImovelFuturo"></div>
                     <img class="seta" src="images/blueArrow.png">
 
                 </div>
@@ -70,31 +70,31 @@
                 </div>
             </div>
 
-            <p>Opção de financiamento</p>
+            <p class="infoTitulo">Opção de financiamento</p>
             <div class="painelInfo">
                 <div class="dados">
                     <div class="topicos">Valor total pago no imóvel financiado</div>
-                    <div class="valores" id="totalPagoImovel">R$0.000,00</div>
+                    <div class="valores" id="totalPagoImovel"></div>
                     <img class="seta" src="images/blueArrow.png">
 
 
                     <div class="topicos">Valor financiado</div>
-                    <div class="valores" id="valorFinanciado">R$0.000,00</div>
+                    <div class="valores" id="valorFinanciado"></div>
                     <img class="seta" src="images/blueArrow.png">
 
 
                     <div class="topicos">Valor total pago no financiamento</div>
-                    <div class="valores" id="totalPagoFinanciado">R$0.000,00</div>
+                    <div class="valores" id="totalPagoFinanciado"></div>
                     <img class="seta" src="images/blueArrow.png">
 
 
                     <div class="topicos">Valor total pago em juros</div>
-                    <div class="valores" id="totalJurosPago">R$0.000,00</div>
+                    <div class="valores" id="totalJurosPago"></div>
                     <img class="seta" src="images/blueArrow.png">
 
 
                     <div class="topicos">Valor da parcela na "tabela price"</div>
-                    <div class="valores" id="valorParcela">R$0,00</div>
+                    <div class="valores" id="valorParcela"></div>
                     <img class="seta" src="images/blueArrow.png">
 
                 </div>
@@ -129,23 +129,23 @@
                 </div>
             </div>
 
-            <p>Opção de alugar e investir</p>
+            <p class="infoTitulo">Opção de alugar e investir</p>
             <div class="painelInfo">
                 <div class="dados">
                     <div class="topicos">Valor investido mensalmente</div>
-                    <div class="valores" id="valorInvestidoMensal">R$0,00</div>
+                    <div class="valores" id="valorInvestidoMensal"></div>
                     <img class="seta" src="images/blueArrow.png">
 
-                    <div class="topicos">Valor do investimento após <span id='anosFinal'>X</span> anos</div>
-                    <div class="valores" id="valorTotalInvestimento">R$0.000,00</div>
+                    <div class="topicos" id='anosFinal'></div>
+                    <div class="valores" id="valorTotalInvestimento"></div>
                     <img class="seta" src="images/blueArrow.png">
 
                     <div class="topicos">Valor restante após a compra do imóvel</div>
-                    <div class="valores" id="valorRestante">R$0.000,00</div>
+                    <div class="valores" id="valorRestante"></div>
                     <img class="seta" src="images/blueArrow.png">
 
                     <div class="topicos">Você atingiria o valor do imóvel em</div>
-                    <div class="valores" id="prazoRentabilidade">0</div>
+                    <div class="valores" id="prazoRentabilidade"></div>
                     <img class="seta" src="images/blueArrow.png">
                 </div>
 
@@ -180,7 +180,7 @@
         </div>
 
         <div class="quadro">
-            <p>A decisão de adquirir um imóvel é muito importante e muitos fatores devem ser ponderados. A calculadora
+            <p class="quadroInfo">A decisão de adquirir um imóvel é muito importante e muitos fatores devem ser ponderados. A calculadora
                 do <strong>Economi-Z do SQUAD6</strong> aborda apenas o lado financeiro e apresenta estimativas baseadas
                 nos valores digitados. Pedimos que considere também seus planos de vida e construa o planejamento
                 adequado para sua situação. Nosso objetivo com essa calculadora é fazer as pessoas perceberem a
@@ -196,7 +196,7 @@
     </div>
     <footer>
         <div class="container column">
-            <img src="/images/s6-logo-white.png" alt="logoSquad" class="logoSquad" />
+            <img src="/images/s6-logo-white.png" alt="logoSquad" class="logoSquad" id='logoFooter' />
             <div class="infoFooter">
                 <p>SQUAD6 é parte do Hackathon promovido<br>pelo Grupo FCamara em conjunto com Alura.</p>
                 <div class="linksFooter">
@@ -206,7 +206,13 @@
                 </div>
             </div>
             <div class="direitosFooter">
-                ® SQUAD6 Consultoria Ltda.<br>2021 - Todos os direitos reservados
+                ® SQUAD 06 Consultoria Ltda.<br>2021 - Imagens utilizadas no site criadas por:
+                <div class="imgDireitos">
+                    <a href="https://www.flaticon.com/authors/anatoly" target="_blank">Anatoly</a>
+                    <a href="https://www.flaticon.com/authors/kiranshastry" target="_blank">Kiranshastry</a>
+                    <a href="https://www.freepik.com/vectorjuice" target="_blank">Vectorjuice</a>
+                    <a href="https://www.freepik.com/pch-vector" target="_blank">Pch-vector</a>
+                </div>
             </div>
         </div>
     </footer>
