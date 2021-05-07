@@ -54,7 +54,7 @@
                 <span class="titleContainer">Dados para comparação</span>
 
                 <div class="inputArea">
-                    <div class="inputColumn">
+                    <div class="inputRow">
                         <div class="inputVar" id="valorSeguro">
                             <div class="wrapper">
                                 <span class="tituloInput">Valor do seguro</span>
@@ -65,65 +65,9 @@
                             </div>
 
                             <input inputmode="numeric" required onkeyup="formatarReais(this)" id="inputValorSeguro" placeholder="R$" type="text"
-                                maxlength="12" tabindex="1"/>
+                                maxlength="12"/>
                         </div>
 
-                        <div class="inputVar" id="valorSeguroObr">
-                            <div class="wrapper">
-                                <span class="tituloInput">Valor do licenciamento</span>
-                                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                                <span class="tooltiptext">
-                                    Quanto você paga no licenciamento do seu carro?
-                                </span>
-                            </div>
-
-                            <input inputmode="numeric" required onkeyup="formatarReais(this)" id="inputSeguroObr" placeholder="R$" type="text"
-                                maxlength="9" tabindex="3"/>
-                        </div>
-
-                        <div class="inputVar" id="valorManutencao">
-                            <div class="wrapper">
-                                <span class="tituloInput">Manutenção nos últimos 6 meses</span>
-                                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                                <span class="tooltiptext">
-                                    Quanto você gastou com manutenção nos últimos 6 meses? Considere troca de óleo, lavagens,
-                                    revisões, balanceamento, acidentes, alinhamento, etc.
-                                </span>
-                            </div>
-
-                            <input inputmode="numeric" required onkeyup="formatarReais(this)" id="inputManutencao" placeholder="R$" type="text"
-                                maxlength="12" tabindex="5"/>
-                        </div>
-
-                        <div class="inputVar" id="valorConsumo">
-                            <div class="wrapper">
-                                <span class="tituloInput">Quantos KM seu carro faz por Litro?</span>
-                                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                                <span class="tooltiptext">
-                                    Qual é o rendimento do seu carro em KM.
-                                </span>
-                            </div>
-
-                            <input inputmode="numeric" required onfocusout="formatarKmLitro(this)" id="inputConsumo" placeholder="KM/Litro"
-                                type="text" maxlength="4" tabindex="7"/>
-                        </div>
-
-                        <div class="inputVar" id="valorApp">
-                            <div class="wrapper">
-                                <span class="tituloInput">Uso do aplicativo por semana</span>
-                                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                                <span class="tooltiptext">
-                                    Em sua rotina, faria quantas corridas por semana? Considere idas ao trabalho, mercado,
-                                    academia, etc.
-                                </span>
-                            </div>
-
-                            <input inputmode="numeric" required onfocusout="formatarCorridas(this)" id="inputApp" placeholder="Corridas/semana"
-                                type="text" maxlength="4" tabindex="9"/>
-                        </div>
-                    </div>
-
-                    <div class="inputColumn">
                         <div class="inputVar" id="valorIpva">
                             <div class="wrapper">
                                 <span class="tituloInput">Valor do IPVA</span>
@@ -134,8 +78,23 @@
                             </div>
 
                             <input inputmode="numeric" required onkeyup="formatarReais(this)" id="inputIpva" placeholder="R$" type="text"
-                                maxlength="10" tabindex="2"/>
-                        </div>     
+                                maxlength="10"/>
+                        </div> 
+                    </div>
+
+                    <div class="inputRow">
+                        <div class="inputVar" id="valorSeguroObr">
+                            <div class="wrapper">
+                                <span class="tituloInput">Valor do licenciamento</span>
+                                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                                <span class="tooltiptext">
+                                    Quanto você paga no licenciamento do seu carro?
+                                </span>
+                            </div>
+
+                            <input inputmode="numeric" required onkeyup="formatarReais(this)" id="inputSeguroObr" placeholder="R$" type="text"
+                                maxlength="9"/>
+                        </div>
 
                         <div class="inputVar" id="valorEstacionamento">
                             <div class="wrapper">
@@ -147,8 +106,25 @@
                             </div>
 
                             <input inputmode="numeric" required onkeyup="formatarReais(this)" id="inputEstacionamento" placeholder="R$" type="text"
-                                maxlength="9" tabindex="4"/>
+                                maxlength="9"/>
                         </div>
+                    </div>
+
+                    <div class="inputRow">    
+                        <div class="inputVar" id="valorManutencao">
+                            <div class="wrapper">
+                                <span class="tituloInput">Manutenção nos últimos 6 meses</span>
+                                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                                <span class="tooltiptext">
+                                    Quanto você gastou com manutenção nos últimos 6 meses? Considere troca de óleo, lavagens,
+                                    revisões, balanceamento, acidentes, alinhamento, etc.
+                                </span>
+                            </div>
+
+                            <input inputmode="numeric" required onkeyup="formatarReais(this)" id="inputManutencao" placeholder="R$" type="text"
+                                maxlength="12"/>
+                        </div>
+                        
 
                         <div class="inputVar" id="valorKm">
                             <div class="wrapper">
@@ -160,8 +136,23 @@
                             </div>
 
                             <input inputmode="numeric" required onfocusout="formatarKm(this)" id="inputKm" placeholder="KM/dia" type="text"
-                                maxlength="4" tabindex="6"/>
-                        </div>              
+                                maxlength="4"/>
+                        </div>
+                    </div>
+
+                    <div class="inputRow"> 
+                        <div class="inputVar" id="valorConsumo">
+                            <div class="wrapper">
+                                <span class="tituloInput">Quantos KM seu carro faz por Litro?</span>
+                                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                                <span class="tooltiptext">
+                                    Qual é o rendimento do seu carro em KM.
+                                </span>
+                            </div>
+
+                            <input inputmode="numeric" required onfocusout="formatarKmLitro(this)" id="inputConsumo" placeholder="KM/Litro"
+                                type="text" maxlength="4"/>
+                        </div>             
 
                         <div class="inputVar" id="valorCombustivel">
                             <div class="wrapper">
@@ -173,9 +164,25 @@
                             </div>
 
                             <input inputmode="numeric" required onkeyup="formatarReais(this)" id="inputCombustivel" placeholder="R$" type="text"
-                                maxlength="8" tabindex="8"/>
+                                maxlength="8"/>
                         </div>
-                        
+                    </div>
+
+                    <div class="inputRow">
+                        <div class="inputVar" id="valorApp">
+                            <div class="wrapper">
+                                <span class="tituloInput">Uso do aplicativo por semana</span>
+                                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                                <span class="tooltiptext">
+                                    Em sua rotina, faria quantas corridas por semana? Considere idas ao trabalho, mercado,
+                                    academia, etc.
+                                </span>
+                            </div>
+
+                            <input inputmode="numeric" required onfocusout="formatarCorridas(this)" id="inputApp" placeholder="Corridas/semana"
+                                type="text" maxlength="4"/>
+                        </div>
+
                         <div class="inputVar" id="valorCorrida">
                             <div class="wrapper">
                                 <span class="tituloInput">Qual o custo médio por corrida?</span>
@@ -187,7 +194,7 @@
                             </div>
 
                             <input inputmode="numeric" required onkeyup="formatarReais(this)" id="inputCorridas" placeholder="R$" type="text"
-                                maxlength="9" tabindex="10"/>
+                                maxlength="9"/>
                         </div>
                     </div>
                 </div>
