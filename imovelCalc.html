@@ -65,7 +65,7 @@
                                 </span>
                             </div>
 
-                            <input required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDeCompra)"
+                            <input inputmode="numeric" required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDeCompra)"
                                 id="inputValorImovel" placeholder="R$" type="text" maxlength="16" tabindex="1"/>
                         </div>
 
@@ -76,7 +76,7 @@
                                 <span class="tooltiptext">Leve em conta o IPCA anual. Não sabe? Considere entre 1% e 4%.</span>
                             </div>
 
-                            <input required id="inputValorizacao" placeholder="% anual" type="text" name="inputValorizacao"
+                            <input inputmode="numeric" required id="inputValorizacao" placeholder="% anual" type="text" name="inputValorizacao"
                                 min="0" step=".01" onfocusout="formatarPorcentagem(this)" maxlength="4" tabindex="3"/>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                                 </span>
                             </div>
 
-                            <input required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDoAluguel)"
+                            <input inputmode="numeric" required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDoAluguel)"
                                 id="inputAluguel" placeholder="R$" type="text" maxlength="12" tabindex="2"/>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                                 </span>
                             </div>
 
-                            <input required onkeyup="formatarReais(this)" id="inputEntrada" class="dadosCampos"
+                            <input inputmode="numeric" required onkeyup="formatarReais(this)" id="inputEntrada" class="dadosCampos"
                                 onchange="entrada()"
                                 onblur="calcDeposito(valorDaEntrada, custosAdicionais), valorInvestimentoMensal (valorDaEntrada)"
                                 placeholder="R$" type="text" maxlength="13" tabindex="4"/>
@@ -129,7 +129,7 @@
                                 </span>
                             </div>
 
-                            <input required id="inputPrazoFin" onblur="valorInvestimentoMensal ()"
+                            <input inputmode="numeric" required id="inputPrazoFin" onblur="valorInvestimentoMensal ()"
                                 onfocusout="formatarAnos(this)" placeholder="em anos" type="text" min="0" step="1"
                                 maxlength="2" tabindex="6"/>
                         </div>
@@ -148,7 +148,7 @@
                                 </span>
                             </div>
 
-                            <input required onkeyup="formatarReais(this)" id="inputCustosAd" class="dadosCampos"
+                            <input inputmode="numeric" required onkeyup="formatarReais(this)" id="inputCustosAd" class="dadosCampos"
                                 onchange="custos()"
                                 onblur="calcDeposito(valorDaEntrada, custosAdicionais), valorInvestimentoMensal (custosAdicionais)"
                                 placeholder="R$" type="text" maxlength="13" tabindex="5"/>
@@ -161,7 +161,7 @@
                                 <span class="tooltiptext">Custo efetivo total (CET) presente no contrato.</span>
                             </div>
 
-                            <input required id="inputTaxaFin" onblur="valorInvestimentoMensal ()"
+                            <input inputmode="numeric" required id="inputTaxaFin" onblur="valorInvestimentoMensal ()"
                                 onfocusout="formatarPorcentagem(this)" placeholder="% anual" type="text" min="0" step=".01"
                                 maxlength="4" tabindex="7"/>
                         </div>
@@ -182,7 +182,7 @@
                                     o valor do aluguel, que deverá ser guardado e aplicado mensalmente.</span>
                             </div>
 
-                            <input required name="inputValorMensal" id="inputValorMensal" class='inputReadonly' placeholder="R$"
+                            <input inputmode="none" required name="inputValorMensal" id="inputValorMensal" class='inputReadonly' placeholder="R$"
                         type="text" onkeydown="return false;" style="caret-color: transparent !important" />
                         </div>
 
@@ -196,7 +196,7 @@
                                 </span>
                             </div>
 
-                            <input required id="inputRentabilidade" placeholder="% anual" type="text" min="0" step=".01"
+                            <input inputmode="numeric" required id="inputRentabilidade" placeholder="% anual" type="text" min="0" step=".01"
                                 onfocusout="formatarPorcentagem(this)" maxlength="4" tabindex="8"/>
                         </div>
                     </div>
@@ -212,7 +212,7 @@
                                 </span>
                             </div>
 
-                            <input required name="inputDeposito" required id="inputDeposito" class='inputReadonly'
+                            <input inputmode="none" required name="inputDeposito" required id="inputDeposito" class='inputReadonly'
                         placeholder="R$" type="text" onkeydown="return false;"
                         style="caret-color: transparent !important" />
                         </div>
