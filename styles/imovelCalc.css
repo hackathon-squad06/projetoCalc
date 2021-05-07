@@ -286,26 +286,26 @@ nav {
 
 .inputArea {
     display:flex;
-    justify-content:space-between;
-}
-
-.inputColumn {
-    display:flex;
     flex-direction:column;
-    justify-content:space-around;
-    height:20rem;
+    justify-content:space-evenly;
+    height:24rem;
 }
 
-/*Ajusta a coluna com um único item*/
+.inputRow {
+    display:flex;
+    justify-content:space-between;
+    height:8.25rem;
+    width:45.75rem;
+}
+
+/*Ajusta a "coluna" com um único item*/
 .singleItem {
-    height:10rem;
+    width:23rem;
 }
 
 .inputVar {
     display:flex;
     flex-direction:column;
-    margin-right:auto;
-    margin-left:auto;
 }
 
 .tituloInput {
@@ -445,11 +445,27 @@ footer a:hover {
 
 @media (max-width: 830px) {
     .containerDados {
+        align-items:center;
         width: 43.8rem;
+        height:auto;
     }
     .inputArea {
-        display:flex;
+        height:30rem;
+    }
+    /*Para blocos com numero par*/
+    .even {
+        height:40rem;
+    }
+    .inputRow {
         flex-direction:column;
+        justify-content:space-around;
+        align-items:center;
+        height:20rem;
+        width:fit-content;
+    }
+    .singleItem {
+        height:10rem;
+        width:auto;
     }
     .welcomeArea {
         display:flex;
@@ -633,6 +649,10 @@ footer a:hover {
     }
     .containerDados {
         width:18.5rem;
+    }
+    .inputVar {
+        display:flex;
+        align-items:center;
     }
     .inputVar input {
         width:14rem;
