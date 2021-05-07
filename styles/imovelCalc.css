@@ -366,6 +366,19 @@ nav {
     background-color: var(--buttonCalc-hover);
 }
 
+#btnScroll {
+    display:none;
+    width:2.5rem;
+    height:2.5rem;
+    border-radius:1rem;
+    background-color:#b030b0;
+    cursor:pointer;
+    position:fixed;
+    right:1.25rem;
+    bottom:1.25rem;
+    z-index:999;
+}
+
 
 
 footer {
