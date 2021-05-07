@@ -1,7 +1,5 @@
 const html = document.querySelector('html');
 const switchDarkMode = document.getElementById('modeSwitch');
-const logoSquadHeader = document.getElementById('logoSquadHeader');
-
 const currentTheme = localStorage.getItem("theme");
 
 if (currentTheme == "dark") {

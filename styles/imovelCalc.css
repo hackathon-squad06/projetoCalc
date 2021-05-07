@@ -23,6 +23,7 @@
     --inputVar-bg: #fcfcfc;
     --inputVar-border: #C4C4C4;
     --inputVar-focus: #daeef8;
+    --readOnly--bg: #eeeeee;
     --buttonCalc-bg: #2782B9;
     --buttonCalc-text: #fff;
     --buttonCalc-border: #C4C4C4;
@@ -51,6 +52,7 @@
     --inputVar-bg: #e7e7e7;
     --inputVar-border: #C4C4C4;
     --inputVar-focus: #f1f7fa;
+    --readOnly--bg: #C4C4C4;
     --buttonCalc-bg: #962b96;
     --buttonCalc-text: #fff;
     --buttonCalc-border: #C4C4C4;
@@ -332,11 +334,12 @@ nav {
 
 .tituloAviso {
     color:var(--tituloInput-text);
+    font-weight: 500;
 }
 
 .inputReadonly {
     font-size:0.8rem;
-    background-color:#C4C4C4;
+    background-color:var(--readOnly--bg);
 }
 
 .inputVar input:focus {

@@ -191,6 +191,7 @@ h1 {
 .infoTitulo {
     color: var(--quadro-p);
     font-size:1.2rem;
+    font-weight: 500;
     margin:0.5rem 0rem;
 }
 
@@ -212,6 +213,7 @@ h1 {
 .quadroInfo {
     text-align:left;
     font-size:1.2rem;
+    line-height: 1.5;
     width:fit-content;
     color: var(--quadro-p);
 }

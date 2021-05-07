@@ -177,7 +177,7 @@ function calcDeposito(valorDaEntrada, custosAdicionais) {
         custosAdicionais = 0
     }
     let deposito = valorDaEntrada + custosAdicionais
-    
+
     if (isNaN(deposito)) {
         depositoInicial.innerHTML = 'Adicione os dados para o cálculo'
         depositoInicial.value = null

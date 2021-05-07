@@ -32,26 +32,39 @@ diferencaDisplay.innerHTML = diferenca;
 const usoAppDisplay = document.getElementById("totalCorridas");
 usoAppDisplay.style.textAlign = 'left';
 if (usoApp == null) {
-  usoApp = 0
+    usoApp = 0
 }
-usoAppDisplay.innerHTML = usoApp + ' vezes no ano';
+usoAppDisplay.innerHTML = realParseFloat(usoApp).toLocaleString() + ' vezes no ano';
 
 const melhorOpcaoDisplay = document.getElementById("melhorOpcao");
 melhorOpcaoDisplay.innerHTML = melhorOpcao;
 
 
 function retornar() {
-  sessionStorage.clear();
-  window.location.href = "/carroCalc.html";
+    sessionStorage.clear();
+    window.location.href = "/carroCalc.html";
 }
 
 function formatarMoeda(valor) {
-  var n = new Number(valor);
-  var myObj = {
-    style: "currency",
-    currency: "BRL",
-  }
-  valor = n.toLocaleString("pt-BR", myObj);
-  // valor = n.toLocaleString("pt-BR",  { minimumFractionDigits: 2 });
-  return valor
+    var n = new Number(valor);
+    var formatoReais = { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' }
+    valor = n.toLocaleString("pt-BR", formatoReais);
+    return valor
+}
+
+function realParseFloat(s) {
+    s = s.replace(/[^\d,.-]/g, '');
+    if (navigator.language.substring(0, 2) !== "de" && /^-?(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?$/.test(s)) {
+        s = s.replace(/,/g, '');
+        return parseFloat(s);
+    }
+    else if (/^-?(?:\d+|\d{1,3}(?:\.\d{3})+)(?:,\d+)?$/.test(s)) {
+        s = s.replace(/\./g, '');
+        s = s.replace(/,/g, '.');
+        return parseFloat(s);
+    }
+    else {
+        s = s.replace(/,/g, '');
+        return parseFloat(s);
+    }
 }

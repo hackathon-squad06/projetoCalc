@@ -1,6 +1,6 @@
 # projetoCalc
 Projeto Hackathon - Squad 06
 
-feature-outputs branch
+develop branch
 
-Branch para melhorar a funcionalidade do menu-mobile
+Branch Develop, com as últimas funcionalidades e features para teste

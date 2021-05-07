@@ -22,7 +22,7 @@ const valorImovelDisplay = document.getElementById("valorImovelAtual");
 valorImovelDisplay.innerHTML = "<p>" + valorImovel + "</p>";
 
 const prazoFinanciamentoAnosDisplay = document.getElementById('anos')
-prazoFinanciamentoAnosDisplay.innerHTML = "Valor do imóvel corrigido após " + prazoFinanciamentoAnos + " anos" 
+prazoFinanciamentoAnosDisplay.innerHTML = "Valor do imóvel corrigido após " + prazoFinanciamentoAnos + " anos"
 
 const valorImovelFuturoDisplay = document.getElementById("valorImovelFuturo");
 valorImovelFuturoDisplay.innerHTML = "<p>" + valorImovelFuturo + "</p>";
@@ -72,12 +72,8 @@ function retornar() {
 
 function formatarMoeda(valor) {
     var n = new Number(valor);
-    var myObj = {
-        style: "currency",
-        currency: "BRL",
-    }
-    valor = n.toLocaleString("pt-BR", myObj);
-    // valor = n.toLocaleString("pt-BR",  { minimumFractionDigits: 2 });
+    var formatoReais = { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' }
+    valor = n.toLocaleString("pt-BR", formatoReais);
     return valor
 }
 
