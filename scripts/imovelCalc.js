@@ -172,27 +172,26 @@ function custos() {
 //Calcula o valor do deposito
 
 function calcDeposito(valorDaEntrada, custosAdicionais) {
-    let depositoInicial = document.getElementsByName('inputDeposito')[0];
+    let depositoInicial = document.getElementById('inputDeposito');
     if (custosAdicionais == undefined) {
         custosAdicionais = 0
     }
     let deposito = valorDaEntrada + custosAdicionais
-    var myObj = {
-        style: "currency",
-        currency: "BRL"
-    }
+    
     if (isNaN(deposito)) {
-        depositoInicial.placeholder = 'Adicione os dados para o cálculo'
+        depositoInicial.innerHTML = 'Adicione os dados para o cálculo'
         depositoInicial.value = null
     } else {
-        depositoInicial.value = deposito.toLocaleString("pt-BR", myObj);
+        var formatoReais = { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' }
+        depositoInicial.value = deposito.toLocaleString("pt-BR", formatoReais);
+        depositoInicial.innerHTML = depositoInicial.value
     }
 }
 
 //Calcula o investimento mensal
 
 function valorInvestimentoMensal() {
-    let investimentoMensal = document.getElementsByName('inputValorMensal')[0];
+    let investimentoMensal = document.getElementById('inputValorMensal');
     let taxaFin = realParseFloat(document.getElementById('inputTaxaFin').value);
     let prazoFin = realParseFloat(document.getElementById('inputPrazoFin').value);
 
@@ -205,16 +204,16 @@ function valorInvestimentoMensal() {
     const investimentoMensalFinal = investimentoMensalValor.toFixed(0)
 
     if (isNaN(investimentoMensalFinal)) {
-        investimentoMensal.placeholder = 'Adicione os dados para o cálculo'
+        investimentoMensal.innerHTML = 'Adicione os dados para o cálculo'
         investimentoMensal.value = null
     } else if (investimentoMensalFinal < 0) {
         investimentoMensal.value = 'R$ 0,00'
     } else {
-        var formato = { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' }
+        var formatoReais = { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' }
         let investimentoFloat = realParseFloat(investimentoMensalFinal)
-        let investimentoFinal = investimentoFloat.toLocaleString('pt-BR', formato)
-        // investimentoMensal.value = 'R$ ' + investimentoMensalFinal + ',00';
+        let investimentoFinal = investimentoFloat.toLocaleString('pt-BR', formatoReais)
         investimentoMensal.value = investimentoFinal
+        investimentoMensal.innerHTML = investimentoMensal.value
     }
 }
 

@@ -266,12 +266,12 @@ nav {
     display:flex;
     flex-direction:column;
     width: 50rem;
-    height:62rem;
+    height:60rem;
     margin-top: 4rem;
     border: 2px solid var(--contDados-border);
     background: var(--contDados-bg);
     border-radius: 0.5rem;
-    padding: 2rem;
+    padding:2rem 2rem 0rem 2rem;
 }
 
 .titleContainer {
@@ -439,9 +439,11 @@ footer a:hover {
         align-items:center;
         width: 43.8rem;
         height:105rem;
+        padding:2rem;
     }
     .inputArea {
         height:120rem;
+        align-items:center;
     }
     .inputRow {
         flex-direction:column;
