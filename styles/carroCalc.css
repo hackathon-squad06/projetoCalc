@@ -266,7 +266,7 @@ nav {
     display:flex;
     flex-direction:column;
     width: 50rem;
-    height:56rem;
+    height:62rem;
     margin-top: 4rem;
     border: 2px solid var(--contDados-border);
     background: var(--contDados-bg);
@@ -283,21 +283,21 @@ nav {
 
 .inputArea {
     display:flex;
-    justify-content:space-between;
+    flex-direction:column;
+    justify-content:space-evenly;
+    height:60rem;
 }
 
-.inputColumn {
+.inputRow {
     display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-    height:50rem;
+    justify-content:space-between;
+    height:8.25rem;
+    width:45.75rem;
 }
 
 .inputVar {
     display:flex;
     flex-direction:column;
-    margin-right:auto;
-    margin-left:auto;
 }
 
 .tituloInput {
@@ -436,12 +436,19 @@ footer a:hover {
 
 @media (max-width: 830px) {
     .containerDados {
+        align-items:center;
         width: 43.8rem;
         height:105rem;
     }
     .inputArea {
-        display:flex;
+        height:120rem;
+    }
+    .inputRow {
         flex-direction:column;
+        justify-content:space-around;
+        align-items:center;
+        height:20rem;
+        width:fit-content;
     }
     .welcomeArea {
         display:flex;
@@ -611,7 +618,7 @@ footer a:hover {
         left: 90%;
     }
     .column {
-        width:23rem;
+        width:22rem;
     }
 }
 
@@ -631,6 +638,10 @@ footer a:hover {
     }
     .tituloInput {
         font-size:0.70rem;
+    }
+    .inputVar {
+        display:flex;
+        align-items:center;
     }
     .inputVar input {
         width:14rem;
