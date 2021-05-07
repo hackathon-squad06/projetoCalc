@@ -62,7 +62,7 @@
                     </div>
 
                     <input required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDeCompra)"
-                        id="inputValorImovel" placeholder="R$" type="text" maxlength="16" />
+                        id="inputValorImovel" placeholder="R$" inputmode="numeric" type="text" maxlength="16" />
                 </div>
 
                 <div class="inputVar" id="valorAluguel">
@@ -75,7 +75,7 @@
                     </div>
 
                     <input required onkeyup="formatarReais(this)" onblur="valorInvestimentoMensal (valorDoAluguel)"
-                        id="inputAluguel" placeholder="R$" type="text" maxlength="12" />
+                        id="inputAluguel" placeholder="R$" type="text" maxlength="12" inputmode="numeric" />
                 </div>
 
                 <div class="inputVar" id="valorValorizacao">
@@ -86,7 +86,7 @@
                     </div>
 
                     <input required id="inputValorizacao" placeholder="% anual" type="text" name="inputValorizacao"
-                        min="0" step=".01" onfocusout="formatarPorcentagem(this)" maxlength="4" />
+                        min="0" step=".01" onfocusout="formatarPorcentagem(this)" maxlength="4" inputmode="numeric" />
                 </div>
             </div>
 
@@ -105,7 +105,7 @@
                     <input required onkeyup="formatarReais(this)" id="inputEntrada" class="dadosCampos"
                         onchange="entrada()"
                         onblur="calcDeposito(valorDaEntrada, custosAdicionais), valorInvestimentoMensal (valorDaEntrada)"
-                        placeholder="R$" type="text" maxlength="13" />
+                        placeholder="R$" type="text" maxlength="13" inputmode="numeric" />
                 </div>
 
                 <div class="inputVar" id="valorCustosFin">
@@ -123,7 +123,7 @@
                     <input required onkeyup="formatarReais(this)" id="inputCustosAd" class="dadosCampos"
                         onchange="custos()"
                         onblur="calcDeposito(valorDaEntrada, custosAdicionais), valorInvestimentoMensal (custosAdicionais)"
-                        placeholder="R$" type="text" maxlength="13" />
+                        placeholder="R$" type="text" maxlength="13" inputmode="numeric" />
                 </div>
 
                 <div class="inputVar" id="valorPrazoFin">
@@ -137,8 +137,8 @@
                     </div>
 
                     <input required id="inputPrazoFin" onblur="valorInvestimentoMensal ()"
-                        onfocusout="formatarAnos(this)" placeholder="em anos" type="text" min="0" step="1"
-                        maxlength="2" />
+                        onfocusout="formatarAnos(this)" placeholder="em anos" type="text" min="0" step="1" maxlength="2"
+                        inputmode="numeric" />
                 </div>
 
                 <div class="inputVar" id="valorTaxaFin">
@@ -150,7 +150,7 @@
 
                     <input required id="inputTaxaFin" onblur="valorInvestimentoMensal ()"
                         onfocusout="formatarPorcentagem(this)" placeholder="% anual" type="text" min="0" step=".01"
-                        maxlength="4" />
+                        maxlength="4" inputmode="numeric" />
                 </div>
             </div>
 
@@ -195,7 +195,7 @@
                     </div>
 
                     <input required id="inputRentabilidade" placeholder="% anual" type="text" min="0" step=".01"
-                        onfocusout="formatarPorcentagem(this)" maxlength="4" />
+                        onfocusout="formatarPorcentagem(this)" maxlength="4" inputmode="numeric" />
                 </div>
             </div>
 
