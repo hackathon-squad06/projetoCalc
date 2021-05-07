@@ -8,7 +8,7 @@
 :root {
     --body-bg: #f3f3f3;
     --header-bg: #282852;
-    --menu-text: #f3f3f3;
+    --menu-text: #e7e7e7;
     --menu-hover: #72caec;
     --welcome-bg: #1f648f;
     --welcome-text: #fff;
@@ -28,7 +28,7 @@
     --buttonCalc-border: #C4C4C4;
     --buttonCalc-hover: #178bd3;
     --footer-bg: #282852;
-    --footer-text: #f3f3f3;
+    --footer-text: #fff;
     --footer-hover: #72caec;
     --footer-divider: #bfc1c4;
 }
@@ -36,10 +36,10 @@
 .dark-mode:root {
     --body-bg: #202040;
     --header-bg: #282852;
-    --menu-text: #f3f3f3;
+    --menu-text: #e7e7e7;
     --menu-hover: #72caec;
     --welcome-bg: #602080;
-    --welcome-text: #f3f3f3;
+    --welcome-text: #e7e7e7;
     --box-shadow: rgba(0,0,0,0.18);
     --calc-bg: #22272e;
     --tooltip-bg: #000;
@@ -47,8 +47,8 @@
     --contDados-bg: #2d333b;
     --contDados-border: #b030b0;
     --contDados-title: #68bef3;
-    --tituloInput-text: #f3f3f3;
-    --inputVar-bg: #f3f3f3;
+    --tituloInput-text: #e7e7e7;
+    --inputVar-bg: #e7e7e7;
     --inputVar-border: #C4C4C4;
     --inputVar-focus: #f1f7fa;
     --buttonCalc-bg: #962b96;
@@ -56,7 +56,7 @@
     --buttonCalc-border: #C4C4C4;
     --buttonCalc-hover: #b030b0;
     --footer-bg: #282852;
-    --footer-text: #f3f3f3;
+    --footer-text: #e7e7e7;
     --footer-hover: #72caec;
     --footer-divider: #bfc1c4;
 }
@@ -271,7 +271,7 @@ nav {
     flex-direction:column;
     width: 50rem;
     margin-top: 4rem;
-    padding:2rem;
+    padding:2rem 2rem 0rem 2rem;
     border: 2px solid var(--contDados-border);
     background: var(--contDados-bg);
     border-radius: 0.5rem;
@@ -303,7 +303,7 @@ nav {
     width:23rem;
 }
 
-.inputVar {
+.inputVar, .inputReadonly {
     display:flex;
     flex-direction:column;
 }
@@ -316,7 +316,7 @@ nav {
     color: var(--tituloInput-text);
 }
 
-.inputVar input {
+.inputVar input, .inputReadonly {
     display: block;
     padding: 1rem;
     width: 20rem;
@@ -324,7 +324,19 @@ nav {
     border-radius: 0.5rem;
     margin-top: 0.5rem;
     border: 1px solid var(--inputVar-border);
+}
+
+.inputVar input {
     background-color: var(--inputVar-bg);
+}
+
+.tituloAviso {
+    color:var(--tituloInput-text);
+}
+
+.inputReadonly {
+    font-size:0.8rem;
+    background-color:#C4C4C4;
 }
 
 .inputVar input:focus {
@@ -447,10 +459,12 @@ footer a:hover {
     .containerDados {
         align-items:center;
         width: 43.8rem;
+        padding:2rem;
         height:auto;
     }
     .inputArea {
         height:30rem;
+        align-items:center;
     }
     /*Para blocos com numero par*/
     .even {
@@ -480,6 +494,9 @@ footer a:hover {
     }
     #textoWelcome h2 {
         font-size:0.90rem;
+    }
+    .aviso {
+        margin-top:3rem;
     }
     .divider {
         top:10rem;
@@ -516,6 +533,11 @@ footer a:hover {
     }
     .containerDados {
         width:35rem;
+    }
+    .aviso {
+        text-align:center;
+        max-width:16rem;
+        margin-top:2rem;
     }
     .column {
         padding:1rem;
@@ -577,11 +599,17 @@ footer a:hover {
         font-size: 0.8rem;
         transform: translate(-95%, -102%);
     }
-    .inputVar input {
+    .inputVar input, .inputReadonly {
         width:16rem;
     }
     .tituloInput {
-        font-size:0.80rem;
+        font-size:0.8rem;
+    }
+    .aviso {
+        max-width:14rem;
+    }
+    .tituloAviso {
+        font-size:0.8rem;
     }
     .divider {
         top:12rem;
@@ -625,7 +653,7 @@ footer a:hover {
     .containerDados {
         width:21rem;
     }
-    .inputVar {
+    .inputVar, .inputReadonly {
         width:16rem;
     }
     .tooltiptext {
@@ -654,8 +682,11 @@ footer a:hover {
         display:flex;
         align-items:center;
     }
-    .inputVar input {
+    .inputVar input, .inputReadonly {
         width:14rem;
+    }
+    .inputReadonly {
+        font-size:0.72rem;
     }
     .column {
         width:20rem;

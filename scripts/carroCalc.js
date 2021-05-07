@@ -16,11 +16,11 @@ function calcular() {
     const gastosEstacionamento = parseFloat(gastosEstacionamentoF.toFixed(2))
     const gastosManutencaoF = valorManutencao * 2
     const gastosManutencao = parseFloat(gastosManutencaoF.toFixed(2))
-    const gastosCombustivelF = ((valorKm / valorConsumo) * valorCombustivel) * 253
+    const gastosCombustivelF = ((valorKm / valorConsumo) * valorCombustivel) * 52
     const gastosCombustivel = parseFloat(gastosCombustivelF.toFixed(2))
-    const gastosAppF = (numeroCorridas * valorCorridas) * 36.14
+    const gastosAppF = (numeroCorridas * valorCorridas) * 52
     const gastosApp = parseFloat(gastosAppF.toFixed(2))
-    const usoApp = Math.ceil(numeroCorridas * 36.14)
+    const usoApp = Math.ceil(numeroCorridas * 52)
     var gastosTotaisCarroF = (gastosAnuais + gastosEstacionamento + gastosManutencao + gastosCombustivel)
     var gastosTotaisCarro = parseFloat(gastosTotaisCarroF.toFixed(2))
     var diferencaF = gastosTotaisCarro - gastosApp

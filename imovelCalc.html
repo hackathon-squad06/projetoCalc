@@ -172,36 +172,6 @@
             <div class="containerDados">
                 <span class="titleContainer">Dados do investimento </span>
                 <div class="inputArea">
-                    <div class="inputRow">
-                        <div class="inputVar" id="valorInvestimento">
-                            <div class="wrapper">
-                                <span class="tituloInput">Valor do investimento mensal</span>
-                                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                                <span class="tooltiptext" id='tipInvestimentoMensal'>Este campo é a diferença entre o valor da
-                                    prestação do financiamento e
-                                    o valor do aluguel, que deverá ser guardado e aplicado mensalmente.</span>
-                            </div>
-
-                            <input inputmode="none" required name="inputValorMensal" id="inputValorMensal" class='inputReadonly' placeholder="R$"
-                        type="text" onkeydown="return false;" style="caret-color: transparent !important" />
-                        </div>
-
-                        <div class="inputVar" id="valorDepositoIn">
-                            <div class="wrapper">
-                                <span class="tituloInput">Depósito inicial</span>
-                                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
-                                <span class="tooltiptext">
-                                    O valor do depósito será igual ao valor de entrada + custos do financiamento, pois
-                                    presume-se que você possui este valor em mãos.
-                                </span>
-                            </div>
-
-                            <input inputmode="none" required name="inputDeposito" required id="inputDeposito" class='inputReadonly'
-                        placeholder="R$" type="text" onkeydown="return false;"
-                        style="caret-color: transparent !important" />
-                        </div>   
-                    </div>
-
                     <div class="inputRow singleItem">
                         <div class="inputVar" id="valorRentabilidade">
                             <div class="wrapper">
@@ -216,6 +186,37 @@
                             <input inputmode="numeric" required id="inputRentabilidade" placeholder="% anual" type="text" min="0" step=".01"
                                 onfocusout="formatarPorcentagem(this)" maxlength="4"/>
                         </div>
+                    </div>
+                    
+                    <div class="aviso">
+                        <span class="tituloAviso">Os dados abaixo serão preenchidos automaticamente</span>
+                    </div>
+
+                    <div class="inputRow">
+                        <div class="inputVar" id="valorInvestimento">
+                            <div class="wrapper">
+                                <span class="tituloInput">Valor do investimento mensal</span>
+                                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                                <span class="tooltiptext" id='tipInvestimentoMensal'>Este campo é a diferença entre o valor da
+                                    prestação do financiamento e
+                                    o valor do aluguel, que deverá ser guardado e aplicado mensalmente.</span>
+                            </div>
+
+                            <div id="inputValorMensal" class='inputReadonly'>Adicione os dados para o cálculo</div>
+                        </div>
+
+                        <div class="inputVar" id="valorDepositoIn">
+                            <div class="wrapper">
+                                <span class="tituloInput">Depósito inicial</span>
+                                <img src="/images/info_icon.svg" alt="iconeInfo" class="iconeInfo" />
+                                <span class="tooltiptext">
+                                    O valor do depósito será igual ao valor de entrada + custos do financiamento, pois
+                                    presume-se que você possui este valor em mãos.
+                                </span>
+                            </div>
+
+                            <div id="inputDeposito" class='inputReadonly'>Adicione os dados para o cálculo</div>
+                        </div>   
                     </div>
                 </div>
             </div>
