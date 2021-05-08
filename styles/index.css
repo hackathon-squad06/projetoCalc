@@ -41,7 +41,6 @@
 }
 
 body {
-    height: 100vh;
     font-family: 'Montserrat', sans-serif;
     background-color: var(--body-bg);
 }
@@ -143,10 +142,6 @@ nav {
 }
 
 .containerDados {
-    /* display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 22rem 22rem;
-    grid-gap: 1rem; */
     width: 50rem;
     margin-top: 4rem;
     margin-bottom: 8rem;
@@ -157,10 +152,6 @@ nav {
 }
 
 #textoWelcome {
-    /* display:flex;
-    flex-direction: column;
-    grid-column-start: 1;
-    grid-column-end: 3; */
     display: inline-block;
     font-weight: bold;
     text-align: center;
@@ -187,29 +178,17 @@ nav {
 }
 
 #imagemImovel {
-    /* display:flex;
-    flex-direction:column;
-    margin:auto; */
     display: inline-block;
     height: 12rem;
     width: 12rem;
     margin-right: 13rem;
     margin-left: 7rem;
-    /*background-image: url('/images/buildings_icon.png');
-    background-size: contain;*/
 }
 
 #imagemCarro {
-    /* display:flex;
-    flex-direction:column;
-    margin:auto; */
     display: inline-block;
     height: 8rem;
     width: 9.5rem;
-    /* transform: translateY(3.5rem); */
-    /*background-image: url('/images/car_icon.png');
-    background-size: contain;
-    background-repeat: no-repeat;*/
 }
 
 #imovelA {
@@ -218,8 +197,6 @@ nav {
 }
 #carroA {
     display: block;
-    /* height: 8.5rem;
-    width: 10.5rem; */
 }
 
 #imovelImovel {
@@ -240,7 +217,6 @@ nav {
 #labelCarro {
     font-size: 1.25rem;
     font-weight: 600;
-    /* line-height: 1.5; */
     margin-bottom: -2rem;
     transform: translate(-0.35rem, 1rem);
     text-align: center;
@@ -419,12 +395,7 @@ footer a:hover {
     #imagemCarro {
         margin-top: 2rem;
         width: 9.5rem;
-        /* height: 7.5rem; */
     }
-    /* #carroA {
-        width: 9.7rem;
-        height: 7.5rem;
-    } */
 
     #labelCarro {
         font-size: 1.15rem;
@@ -525,12 +496,6 @@ footer a:hover {
         height: 10rem;
         width: 10rem;
     }
-
-    /* #carroA {
-        width: 8.5rem;
-        height: 6.5rem;
-    } */
-
     #labelImovel {
         display: block;
         width: 11rem;
@@ -586,27 +551,18 @@ footer a:hover {
         width: 10rem;
         background-repeat: no-repeat;
     }
-    /* #imagemCarro {
-        height: 6.5rem;
-    } */
     #imovelA {
         height: 10rem;
         width: 10rem;
     }
-    /* #carroA {
-        height: 6.5rem;
-        width: 8.5rem;
-    } */
     #labelImovel {
         width: 11rem;
         font-size: 1.15rem;
         margin-bottom: -2rem;
-        /* transform: translate(-0.4rem, 1rem); */
     }
     #labelCarro {
         font-size: 1.15rem;
         margin-bottom: -2rem;
-        /* transform: translate(0rem, 1rem); */
         text-align: center;
     }
     .column {
