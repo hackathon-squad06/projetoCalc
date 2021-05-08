@@ -34,7 +34,7 @@
 }
 
 .dark-mode:root {
-    --body-bg: #202040;
+    --body-bg: #22272e;
     --header-bg: #282852;
     --menu-text: #e7e7e7;
     --menu-hover: #72caec;
@@ -97,6 +97,13 @@ header{
     width:100rem;
 }
 
+#economiz {
+    color:var(--menu-text);
+    font-size:1.25rem;
+    font-weight:700;
+    text-decoration:none;
+  }
+
 .container img {
     display:flex;
     height: 1.2rem;
@@ -130,7 +137,7 @@ nav {
 
 .menu a {
     font-size:1.2rem;
-    padding:0.7rem;
+    padding:0.85rem;
     font-weight:500;
     color:var(--menu-text);
     border-bottom:0.3rem solid transparent;
@@ -144,7 +151,7 @@ nav {
 
 .modeSwitch {
     margin-left:1.5rem;
-    padding:1rem;
+    padding:1.15rem;
     cursor:pointer;
 }
 
@@ -346,6 +353,18 @@ nav {
     background-color: var(--buttonCalc-hover);
 }
 
+#btnScroll {
+    display:none;
+    width:2.5rem;
+    height:2.5rem;
+    filter:opacity(30%);
+    cursor:pointer;
+    position:fixed;
+    right:1.25rem;
+    bottom:1.25rem;
+    z-index:999;
+}
+
 
 footer {
     display:flex;
@@ -465,6 +484,10 @@ footer a:hover {
     }
     #textoWelcome h2 {
         font-size:0.90rem;
+    }
+    #btnScroll {
+        right:0.7rem;
+        bottom:1rem;
     }
     .divider {
         top:10rem;
@@ -647,6 +670,12 @@ footer a:hover {
     }
     .inputVar input {
         width:14rem;
+    }
+    #btnScroll {
+        width:2.25rem;
+        height:2.25rem;
+        right:0.5rem;
+        bottom:2rem;
     }
     .column {
         width:20rem;

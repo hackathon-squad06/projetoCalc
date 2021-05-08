@@ -90,6 +90,13 @@ header{
     width:100rem; /*50rem para ficar no centro da página*/
 }
 
+#economiz {
+    color:var(--menu-text);
+    font-size:1.25rem;
+    font-weight:700;
+    text-decoration:none;
+  }
+
 .container img {
     display:flex;
     height: 1.2rem;
@@ -123,7 +130,7 @@ nav {
 
 .menu a {
     font-size:1.2rem;
-    padding:0.7rem;
+    padding:0.85rem;
     font-weight:500;
     color:var(--menu-text);
     border-bottom:0.3rem solid transparent;
@@ -137,7 +144,7 @@ nav {
 
 .modeSwitch {
     margin-left:1.5rem;
-    padding:1rem;
+    padding:1.15rem;
     cursor:pointer;
 }
 
@@ -169,6 +176,8 @@ h1 {
     font-weight:400;
     line-height:1.5;
 }
+
+
 
 #resultadoInfo {
     display:flex;
@@ -340,6 +349,18 @@ h1 {
     background-color: var(--buttonCalc-hover);
 }
 
+#btnScroll {
+    display:none;
+    width:2.5rem;
+    height:2.5rem;
+    filter:opacity(30%);
+    cursor:pointer;
+    position:fixed;
+    right:1.25rem;
+    bottom:1.25rem;
+    z-index:999;
+}
+
 
 
 footer {
@@ -432,6 +453,10 @@ footer a:hover {
 @media (max-width: 830px) {
     .quadro {
         width: 43.8rem;
+    }
+    #btnScroll {
+        right:0.7rem;
+        bottom:1rem;
     }
     .divider {
         top:10rem;
@@ -592,6 +617,12 @@ footer a:hover {
     }
     .quadroInfo {
         font-size:1rem;
+    }
+    #btnScroll {
+        width:2.25rem;
+        height:2.25rem;
+        right:0.5rem;
+        bottom:2rem;
     }
     .column {
         width:20rem;

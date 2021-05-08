@@ -15,7 +15,6 @@ switchDarkMode.addEventListener("click", function () {
     switchDarkMode.src = "/images/dark-mode-white.svg";
     if (html.classList.contains('dark-mode')) {
         theme = "dark";
-
         switchDarkMode.src = "/images/light-mode-white.svg";
     }
     localStorage.setItem("theme", theme);

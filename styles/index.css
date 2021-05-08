@@ -20,10 +20,11 @@
   --footer-text: #fff;
   --footer-hover: #72caec;
   --footer-divider: #bfc1c4;
+  --nome-site:#b030b0;
 }
 
 .dark-mode:root {
-  --body-bg: #202040;
+  --body-bg: #22272e;
   --header-bg: #282852;
   --menu-text: #f3f3f3;
   --menu-hover: #72caec;
@@ -36,6 +37,7 @@
   --footer-text: #f3f3f3;
   --footer-hover: #72caec;
   --footer-divider: #bfc1c4;
+  --nome-site:#b030b0;
 }
 
 body {
@@ -56,6 +58,13 @@ header{
   align-items:center;
   padding:0rem 2rem;
   width:100rem;
+}
+
+#economiz {
+  color:var(--menu-text);
+  font-size:1.25rem;
+  font-weight:700;
+  text-decoration:none;
 }
 
 .container img {
@@ -91,7 +100,7 @@ nav {
 
 .menu a {
   font-size:1.2rem;
-  padding:0.7rem;
+  padding:0.85rem;
   font-weight:500;
   color:var(--menu-text);
   border-bottom:0.3rem solid transparent;
@@ -105,7 +114,7 @@ nav {
 
 .modeSwitch {
   margin-left:1.5rem;
-  padding:1rem;
+  padding:1.15rem;
   cursor:pointer;
 }
 
@@ -138,6 +147,8 @@ nav {
   background: transparent;
   border-radius: 0.5rem;
 }
+
+
 
 #textoWelcome {
   display:flex;
@@ -234,6 +245,17 @@ nav {
     text-decoration: none;
 }
 
+#btnScroll {
+  display:none;
+  width:2.5rem;
+  height:2.5rem;
+  filter:opacity(30%);
+  cursor:pointer;
+  position:fixed;
+  right:1.25rem;
+  bottom:1.25rem;
+  z-index:999;
+}
 
 footer {
   display:flex;
@@ -330,6 +352,10 @@ height:0.063rem;
   .titleContainer {
       margin-left:1.63rem;
   }
+  #btnScroll {
+    right:0.7rem;
+    bottom:1rem;
+}
   .divider {
     top:10rem;
 }
@@ -393,7 +419,7 @@ footer {
       margin: 3rem 1rem 2rem 1rem;
   }
   .divider {
-    top:12rem;
+    top:10rem;
   }
   .column {
       padding:1rem;
@@ -443,6 +469,9 @@ footer {
   #textoWelcome h1 {
       font-size: 1.75rem;
       margin-bottom:1rem;
+      width:16rem;
+      margin-left:auto;
+      margin-right:auto;
   }
   #textoWelcome h2 {
       font-size: 1rem;
@@ -495,8 +524,7 @@ footer {
     text-align: center;
 }
   .divider {
-      /* top:12.5rem; */
-      bottom:-15rem;
+    top:12rem;
   }
   .column {
       width:25rem;
@@ -617,6 +645,12 @@ footer {
         transform: translate(-0.5rem, 0.2rem);
         text-align: center;
     }
+    #btnScroll {
+      width:2.25rem;
+      height:2.25rem;
+      right:0.5rem;
+      bottom:2rem;
+  }
   .column {
         width:20rem;
     }
