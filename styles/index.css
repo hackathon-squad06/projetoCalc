@@ -1,8 +1,8 @@
 * {
-  padding: 0;
-  margin: 0;
-  outline: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
 }
 
 /* style="display: none;" */
@@ -41,124 +41,128 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--body-bg);
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--body-bg);
 }
 
 header{
-  display:flex;
-  justify-content:center;
-  height: 3.5rem;
-  background-color: var(--header-bg);
+    display:flex;
+    justify-content:center;
+    height: 3.5rem;
+    background-color: var(--header-bg);
 }
 
 .container {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:0rem 2rem;
-  width:100rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0rem 2rem;
+    width:100rem;
 }
 
 #economiz {
-  color:var(--menu-text);
-  font-size:1.25rem;
-  font-weight:700;
-  text-decoration:none;
+    color:var(--menu-text);
+    font-size:1.23rem;
+    font-weight:700;
+    text-decoration:none;
 }
 
 .container img {
-  display:flex;
-  height: 1.2rem;
+    display:flex;
+    height: 1.2rem;
 }
 
 nav {
-  display:flex;
-  align-items:center;
+    display:flex;
+    align-items:center;
 }
 
 .menuMobile {
-  display:none;
-  flex-direction:column;
-  justify-content:space-evenly;
-  width:2.18rem;
-  height:2.18rem;
+    display:none;
+    flex-direction:column;
+    justify-content:space-evenly;
+    width:2.18rem;
+    height:2.18rem;
 }
 
 .menuLine {
-  background-color:var(--menu-text);
-  height:0.189rem;
+    background-color:var(--menu-text);
+    height:0.189rem;
 }
 
 .menuMobile:hover {
-  cursor:pointer;
+    cursor:pointer;
 }
 
 .menuMobile:hover .menuLine {
-  background-color:var(--menu-hover);
+    background-color:var(--menu-hover);
+}
+
+.menu {
+    display: flex;
+    align-items: flex-start;
 }
 
 .menu a {
-  font-size:1.2rem;
-  padding:0.85rem;
-  font-weight:500;
-  color:var(--menu-text);
-  border-bottom:0.3rem solid transparent;
-  text-decoration:none;
+    width: 100%;
+    font-size:1.2rem;
+    padding:0.85rem;
+    font-weight:500;
+    color:var(--menu-text);
+    border-bottom:0.3rem solid transparent;
+    text-decoration:none;
 }
 
 .menu a:hover {
-  color:var(--menu-hover);
-  border-bottom:0.3rem solid var(--menu-hover);
+    color:var(--menu-hover);
+    border-bottom:0.3rem solid var(--menu-hover);
 }
 
 .modeSwitch {
-  margin-left:1.5rem;
-  padding:1.15rem;
-  cursor:pointer;
+    margin-left:1.5rem;
+    padding:1.15rem;
+    cursor:pointer;
 }
 
 .modeSwitch:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .logoSquad {
-  height:1.2rem;
+    height:1.2rem;
 }
 
 /* SECTION CALC */
 .sectionHome {
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  background-color: var(--calc-bg);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color: var(--calc-bg);
 }
 
 .containerDados {
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 22rem 22rem;
-  grid-gap: 1rem;
-  width: 50rem;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  border: 2px solid #000;
-  border: none;
-  background: transparent;
-  border-radius: 0.5rem;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 22rem 22rem;
+    grid-gap: 1rem;
+    width: 50rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border: 2px solid #000;
+    border: none;
+    background: transparent;
+    border-radius: 0.5rem;
 }
 
-
-
 #textoWelcome {
-  display:flex;
-  flex-direction: column;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  font-weight: bold;
-  text-align: center;
-  font-size: 1.2rem;
-  margin: 3rem 3.18rem 2rem 3.18rem;
+    display:flex;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 3rem 3.18rem 2rem 3.18rem;
 }
 
 #textoWelcome h1 {
@@ -197,7 +201,6 @@ nav {
     width: 10.5rem;
     height: 8.5rem;
     transform: translateY(3.5rem);
-    /* margin-top: 3rem; */
     background-image: url('/images/car_icon.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -222,7 +225,6 @@ nav {
     color: var(--contDados-label);
 }
 
-
 #labelCarro {
     font-size: 1.25rem;
     font-weight: 600;
@@ -246,382 +248,369 @@ nav {
 }
 
 #btnScroll {
-  display:none;
-  width:2.5rem;
-  height:2.5rem;
-  filter:opacity(30%);
-  cursor:pointer;
-  position:fixed;
-  right:1.25rem;
-  bottom:1.25rem;
-  z-index:999;
+    display:none;
+    width:2.5rem;
+    height:2.5rem;
+    filter:opacity(30%);
+    cursor:pointer;
+    position:fixed;
+    right:1.25rem;
+    bottom:1.25rem;
+    z-index:999;
 }
 
 footer {
-  display:flex;
-  justify-content:center;
-  height:16rem;
-  width:100vw;
-  max-width:100%;
-  background-color:var(--footer-bg);
+    display:flex;
+    justify-content:center;
+    height:16rem;
+    width:100vw;
+    max-width:100%;
+    background-color:var(--footer-bg);
 }
 
 /* .column usando no container do footer*/
 .column {
-  flex-direction:column;
-  align-items:flex-start;
-  justify-content:space-evenly;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:space-evenly;
 }
 
 .infoFooter {
-  display:flex;
-  justify-content:space-between;
-  width:46rem;
-  color:var(--footer-text);
-  line-height:1.5;
-  font-size:0.9rem;
-  font-weight:400;
+    display:flex;
+    justify-content:space-between;
+    width:46rem;
+    color:var(--footer-text);
+    line-height:1.5;
+    font-size:0.9rem;
+    font-weight:400;
 }
 
 .linksFooter {
-  display: block;
-  width:fit-content;
-  color:var(--footer-text);
-  text-align: left;
-  line-height: 1.5;
-  font-size: 0.9rem;
-  font-weight: 400;
+    display: block;
+    width:fit-content;
+    color:var(--footer-text);
+    text-align: left;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    font-weight: 400;
 }
 
 footer a {
-  display:flex;
-  width:fit-content;
-  color: var(--footer-text);
-  text-decoration: none;
+    display:flex;
+    width:fit-content;
+    color: var(--footer-text);
+    text-decoration: none;
 }
 
 footer a:hover {
-  color: var(--footer-hover);
+    color: var(--footer-hover);
 }
 
 .divider {
-position:relative;
-  top:10.5rem;
-height:0.063rem;
-  width:95vw;
-  max-width:100%;
+    position:relative;
+    top:10.5rem;
+    height:0.063rem;
+    width:95vw;
+    max-width:100%;
 }
 
 .div-transparent:before {
-content:"";
-position:absolute;
-top:0;
-left:5%;
-right:5%;
-width:90%;
-height:0.063rem;
-  background-image: linear-gradient(to right, transparent, var(--footer-divider), transparent);
+    content:"";
+    position:absolute;
+    top:0;
+    left:5%;
+    right:5%;
+    width:90%;
+    height:0.063rem;
+    background-image: linear-gradient(to right, transparent, var(--footer-divider), transparent);
 }
 
 .direitosFooter {
-  display:flex;
-  flex-direction:column;
-  width: 30rem;
-  color:var(--footer-text);
-  text-align:left;
-  line-height: 1.5;
-  font-size: 0.7rem;
-  font-weight: 400;
+    display:flex;
+    flex-direction:column;
+    width: 30rem;
+    color:var(--footer-text);
+    text-align:left;
+    line-height: 1.5;
+    font-size: 0.7rem;
+    font-weight: 400;
 }
 
 .imgDireitos {
-  display:flex;
+    display:flex;
 }
 
 .imgDireitos a {
-  padding:0rem 0.25rem;
+    padding:0rem 0.25rem;
 }
 
 
 @media (max-width: 830px) {
-  .containerDados {
-      width: 43.8rem;
-      margin-left:0;
-      margin-right:0;
-  }
-  .titleContainer {
-      margin-left:1.63rem;
-  }
-  #btnScroll {
-    right:0.7rem;
-    bottom:1rem;
-}
-  .divider {
-    top:10rem;
-}
-.column {
-    padding:1rem;
-    width:45.8rem;
-}
-footer {
-    width:51.9rem;
-}
-.infoFooter {
-    width:42rem;
-}
+    .containerDados {
+        width: 43.8rem;
+        margin-left:0;
+        margin-right:0;
+    }
+    .titleContainer {
+        margin-left:1.63rem;
+    }
+    #btnScroll {
+        right:0.7rem;
+        bottom:1rem;
+    }
+    .divider {
+        top:10rem;
+    }
+    .column {
+        padding:1rem;
+        width:45.8rem;
+    }
+    footer {
+        width:51.9rem;
+    }
+    .infoFooter {
+        width:42rem;
+    }
 }
 
 @media (max-width: 720px) {
-  #textoWelcome {
-      width: 32rem;
-  }
-  #textoWelcome h1 {
-      font-size: 1.5rem;
-  }
-  #textoWelcome h2 {
-      font-size: 1rem;
-  }
-  #imagemWelcome {
-      height: 16rem;
-      width: 16rem;
-  }
-  .containerDados {
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      margin-top: 2rem;
-      margin-bottom: 10rem;
-      grid-gap:3rem;
-      width:35rem;
-  }
+    #textoWelcome {
+        width: 32rem;
+    }
+    #textoWelcome h1 {
+        font-size: 1.5rem;
+    }
+    #textoWelcome h2 {
+        font-size: 1rem;
+    }
+    #imagemWelcome {
+        height: 16rem;
+        width: 16rem;
+    }
+    .containerDados {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin-top: 2rem;
+        margin-bottom: 10rem;
+        grid-gap:3rem;
+        width:35rem;
+    }
+    #imagemCarro {
+        width: 9.5rem;
+        height: 7.5rem;
+    }
+    #carroA {
+        width: 9.7rem;
+        height: 7.5rem;
+    }
 
-#imagemCarro {
-    width: 9.5rem;
-    height: 7.5rem;
-}
-#carroA {
-    width: 8rem;
-    height: 6.5rem;
-}
-
-#labelCarro {
-    font-size: 1.15rem;
-    margin-bottom: -2rem;
-    transform: translate(0rem, 1.8rem);
-    text-align: center;
-}
-  .titleContainer{
-      width:fit-content;
-      justify-content:center;
-      margin:0;
-  }
-  .titleContainer {
-      margin: 3rem 1rem 2rem 1rem;
-  }
-  .divider {
-    top:10rem;
-  }
-  .column {
-      padding:1rem;
-      width:37.5rem;
-  }
-  footer {
-      width:51.9rem;
-  }
-  .linksFooter {
-    font-size:0.8rem;
-}
-  .infoFooter {
-    width:35rem;
-    font-size:0.8rem;
-  }   
+    #labelCarro {
+        font-size: 1.15rem;
+        margin-bottom: -2rem;
+        transform: translate(0rem, 1rem);
+        text-align: center;
+    }
+    .titleContainer{
+        width:fit-content;
+        justify-content:center;
+        margin:0;
+    }
+    .titleContainer {
+        margin: 3rem 1rem 2rem 1rem;
+    }
+    .divider {
+        top:10rem;
+    }
+    .column {
+        padding:1rem;
+        width:37.5rem;
+    }
+    footer {
+        width:51.9rem;
+    }
+    .linksFooter {
+        font-size:0.8rem;
+    }
+    .infoFooter {
+        width:35rem;
+        font-size:0.8rem;
+    }   
 }
 
 @media (max-width: 595px) {
-  html, body {
-      left:0;
-      overflow-x:hidden;
-  }
-  .menuMobile {
-      display:flex;
-  }
-  .menu {
-      display:none;
-      flex-direction:column;
-      position:absolute;
-      left:0;
-      top:0;
-      width:100%;
-      background-color:var(--header-bg);
-  }
-  .menu a:hover {
-      color:var(--menu-text);
-      background-color:var(--menu-hover);
-  }
-  .sectionWelcome {
-      flex-direction:column;
-      height:auto;
-  }
-  #textoWelcome {
-      width: 23rem;
-      margin:0;
-  }
-  #textoWelcome h1 {
-      font-size: 1.75rem;
-      margin-bottom:1rem;
-      width:16rem;
-      margin-left:auto;
-      margin-right:auto;
-  }
-  #textoWelcome h2 {
-      font-size: 1rem;
-  }
-  #imagemWelcome {
-      height: 16rem;
-      width: 16rem;
-      margin-top:0;
-      margin-bottom:2rem;
-  }
-  .containerDados {
-      display:flex;
-      flex-direction:column;
-      margin-top: 3rem;
-      /* grid-gap:0; */
-      width: 24rem;
-  }
-  #imagemImovel {
-    height: 10rem;
-    width: 10rem;
-    background-repeat: no-repeat;
-}
+    .menuMobile {
+        display:flex;
+    }
+    .menu {
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        background-color:var(--header-bg);
+    }
+    .menu a:hover {
+        color:var(--menu-text);
+        background-color:var(--menu-hover);
+    }
+    .sectionWelcome {
+        flex-direction:column;
+        height:auto;
+    }
+    #textoWelcome {
+        width: 23rem;
+        margin:0;
+    }
+    #textoWelcome h1 {
+        font-size: 1.75rem;
+        margin-bottom:1rem;
+        width:16rem;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    #textoWelcome h2 {
+        font-size: 1rem;
+    }
+    #imagemWelcome {
+        height: 16rem;
+        width: 16rem;
+        margin-top:0;
+        margin-bottom:2rem;
+    }
+    .containerDados {
+        display:flex;
+        flex-direction:column;
+        margin-top: 3rem;
+        width: 24rem;
+    }
+    #imagemImovel {
+        height: 10rem;
+        width: 10rem;
+        background-repeat: no-repeat;
+    }
 
-#imagemCarro {
-    width: 8.5rem;
-    height: 6.5rem;
-}
+    #imagemCarro {
+        width: 8.5rem;
+        height: 6.5rem;
+    }
 
-#imovelA {
-    height: 10rem;
-    width: 10rem;
-}
+    #imovelA {
+        height: 10rem;
+        width: 10rem;
+    }
 
-#carroA {
-    width: 8.5rem;
-    height: 6.5rem;
-}
+    #carroA {
+        width: 8.5rem;
+        height: 6.5rem;
+    }
 
-#labelImovel {
-    width: 11rem;
-    font-size: 1.15rem;
-    margin-bottom: -2rem;
-    transform: translate(-0.4rem, 1rem);
-}
-
-#labelCarro {
-    font-size: 1.15rem;
-    margin-bottom: -2rem;
-    transform: translate(0rem, 1rem);
-    text-align: center;
-}
-  .divider {
-    top:12rem;
-  }
-  .column {
-      width:25rem;
-  }
-  footer {
-      flex-direction:column;
-      height:auto;
-  }
-  .infoFooter {
-      flex-direction:column;
-      width:fit-content;
-  }
-  .infoFooter p {
-      margin-top:1rem;
-  }
-  .linksFooter {
-      margin:1rem 0rem 1.5rem 0rem;
-  }
-  .linksFooter a {
-      padding:0.2rem;
-  }
-  .direitosFooter {
-      width:fit-content;
-  }
+    #labelImovel {
+        width: 11rem;
+        font-size: 1.15rem;
+        margin-bottom: -2rem;
+        transform: translate(-0.4rem, 1rem);
+    }
+    #labelCarro {
+        font-size: 1.15rem;
+        margin-bottom: -2rem;
+        transform: translate(0rem, 1rem);
+        text-align: center;
+    }
+    .divider {
+        top:12rem;
+    }
+    .column {
+        width:25rem;
+    }
+    footer {
+        flex-direction:column;
+        height:auto;
+    }
+    .infoFooter {
+        flex-direction:column;
+        width:fit-content;
+    }
+    .infoFooter p {
+        margin-top:1rem;
+    }
+    .linksFooter {
+        margin:1rem 0rem 1.5rem 0rem;
+    }
+    .linksFooter a {
+        padding:0.2rem;
+    }
+    .direitosFooter {
+        width:fit-content;
+    }
 }
 
 @media (max-width:410px) {
-  #textoWelcome {
-      width: 20rem;
-      margin:0;
-  }
-  .containerDados {
-      width:21rem;
-  }
-  #imagemImovel {
-    height: 10rem;
-    width: 10rem;
-    background-repeat: no-repeat;
-}
-
-#imagemCarro {
-    height: 6.5rem;
-}
-
-#imovelA {
-    height: 10rem;
-    width: 10rem;
-}
-#carroA {
-    height: 6.5rem;
-    width: 8.5rem;
-}
-
-#labelImovel {
-    width: 11rem;
-    font-size: 1.15rem;
-    margin-bottom: -2rem;
-    transform: translate(-0.4rem, 1rem);
-}
-
-#labelCarro {
-    font-size: 1.15rem;
-    margin-bottom: -2rem;
-    transform: translate(0rem, 1rem);
-    text-align: center;
-}
-  .direitosFooter {
-    width:20rem;
-  }
+    #textoWelcome {
+        width: 20rem;
+        margin:0;
+    }
+    .containerDados {
+        width:21rem;
+    }
+    #imagemImovel {
+        height: 10rem;
+        width: 10rem;
+        background-repeat: no-repeat;
+    }
+    #imagemCarro {
+        height: 6.5rem;
+    }
+    #imovelA {
+        height: 10rem;
+        width: 10rem;
+    }
+    #carroA {
+        height: 6.5rem;
+        width: 8.5rem;
+    }
+    #labelImovel {
+        width: 11rem;
+        font-size: 1.15rem;
+        margin-bottom: -2rem;
+        transform: translate(-0.4rem, 1rem);
+    }
+    #labelCarro {
+        font-size: 1.15rem;
+        margin-bottom: -2rem;
+        transform: translate(0rem, 1rem);
+        text-align: center;
+    }
+    .direitosFooter {
+        width:20rem;
+    }
 }
 
 @media (max-width:355px) {
-  #textoWelcome {
-      width: 18rem;
-      margin:0;
-  }
-  #textoWelcome h1 {
-      font-size: 1.5rem;
-      margin-bottom:1rem;
-  }
-  #textoWelcome h2 {
-      font-size:0.75rem;
-  }
-  .containerDados {
-      width:18.5rem;
-  }
+    #textoWelcome {
+        width: 18rem;
+        margin:0;
+    }
+    #textoWelcome h1 {
+        font-size: 1.5rem;
+        margin-bottom:1rem;
+    }
+    #textoWelcome h2 {
+        font-size:0.75rem;
+    }
+    .containerDados {
+        width:18.5rem;
+    }
     #imagemImovel {
         height: 8rem;
         width: 8rem;
         background-repeat: no-repeat;
     }
-
     #imagemCarro {
         height: 5rem;
         width: 6rem;
     }
-
     #imovelA {
         height: 8rem;
         width: 8rem;
@@ -630,14 +619,12 @@ footer {
         height: 5rem;
         width: 6rem;
     }
-
     #labelImovel {
         width: 10rem;
         font-size: 1rem;
         margin-bottom: -2rem;
         transform: translate(-0.7rem, 0.5rem);
     }
-
     #labelCarro {
         width: 7rem;
         font-size: 1rem;
@@ -646,18 +633,18 @@ footer {
         text-align: center;
     }
     #btnScroll {
-      width:2.25rem;
-      height:2.25rem;
-      right:0.5rem;
-      bottom:2rem;
-  }
-  .column {
+        width:2.25rem;
+        height:2.25rem;
+        right:0.5rem;
+        bottom:2rem;
+    }
+    .column {
         width:20rem;
     }
     .infoFooter p {
         font-size:0.75rem;
     }
-  .direitosFooter {
-    width:18rem;
-}
+    .direitosFooter {
+        width:18rem;
+    }
 }

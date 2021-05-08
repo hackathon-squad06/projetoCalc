@@ -73,7 +73,7 @@ input::-webkit-inner-spin-button {
 }
 
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 body {
@@ -85,9 +85,6 @@ header{
     display:flex;
     justify-content:center;
     height: 3.5rem;
-    /* position: -webkit-sticky;
-    position: sticky;
-    top: 0; */
     background-color: var(--header-bg);
 }
 
@@ -101,7 +98,7 @@ header{
 
 #economiz {
     color:var(--menu-text);
-    font-size:1.25rem;
+    font-size:1.23rem;
     font-weight:700;
     text-decoration:none;
 }
@@ -141,7 +138,13 @@ nav {
     background-color:var(--menu-hover);
 }
 
+.menu {
+    display: flex;
+    align-items: flex-start;
+}
+
 .menu a {
+    width: 100%;
     font-size:1.2rem;
     padding:0.85rem;
     font-weight:500;
@@ -237,7 +240,6 @@ nav {
 
 .tooltiptext {
     opacity: 0;
-    /* display: none; */
     visibility: hidden;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
@@ -256,7 +258,6 @@ nav {
 }
   
 .iconeInfo:hover + .tooltiptext {
-    /* display: inline-block; */
     visibility: visible;
     opacity: 1;
 }
@@ -318,8 +319,6 @@ nav {
 }
 
 .tituloInput {
-    /* display: inline-block;
-    text-align: left; */
     font-size: 1rem;
     font-weight: 500;
     color: var(--tituloInput-text);
