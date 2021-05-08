@@ -88,7 +88,7 @@ function formatarKm(element) {
         valor = valorA.replace(/[\D]+/g, '')
         campo.value = valor;
     }
-    if (valor == '' || valor < 0) {
+    if (valor == '' || valor <= 0) {
         valor = ''
         campo.value = null;
     } else if (campo.value.includes('Km/semana')) {
@@ -116,7 +116,7 @@ function formatarKmLitro(element) {
         valor = valorA.replace(/[\D]+/g, "");
         campo.value = valor;
     }
-    if (valor == "" || valor < 0) {
+    if (valor == "" || valor <= 0) {
         valor = "";
         campo.value = null;
     } else if (campo.value.includes("Km/litro")) {
@@ -144,7 +144,7 @@ function formatarCorridas(element) {
         valor = valorA.replace(/[\D]+/g, "");
         campo.value = valor;
     }
-    if (valor == "" || valor < 0) {
+    if (valor == "" || valor <= 0) {
         valor = "";
         campo.value = null;
     } else if (campo.value.includes("Corridas/semana")) {
@@ -175,5 +175,16 @@ function realParseFloat(s) {
     } else {
         s = s.replace(/,/g, "");
         return parseFloat(s);
+    }
+}
+
+function numCheck (element) {
+    var id = element.id
+    var campo = document.getElementById(id)
+    var valor = campo.value
+    if (valor == "R$ 0") {
+        console.log('é NaN')
+        valor = ''
+        campo.value = null;
     }
 }
