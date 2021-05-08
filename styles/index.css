@@ -186,8 +186,7 @@ nav {
 #imagemImovel {
     display:flex;
     flex-direction:column;
-    margin-right:auto;
-    margin-left:auto;
+    margin:auto;
     height: 12rem;
     background-image: url('/images/buildings_icon.png');
     background-size: contain;
@@ -196,8 +195,7 @@ nav {
 #imagemCarro {
     display:flex;
     flex-direction:column;
-    margin-right:auto;
-    margin-left:auto;
+    margin:auto;
     width: 10.5rem;
     height: 8.5rem;
     transform: translateY(3.5rem);
