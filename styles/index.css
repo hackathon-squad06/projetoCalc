@@ -141,10 +141,10 @@ nav {
 }
 
 .containerDados {
-    display:grid;
+    /* display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 22rem 22rem;
-    grid-gap: 1rem;
+    grid-gap: 1rem; */
     width: 50rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -155,10 +155,11 @@ nav {
 }
 
 #textoWelcome {
-    display:flex;
+    /* display:flex;
     flex-direction: column;
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 3; */
+    display: inline-block;
     font-weight: bold;
     text-align: center;
     font-size: 1.2rem;
@@ -184,33 +185,43 @@ nav {
 }
 
 #imagemImovel {
-    display:flex;
+    /* display:flex;
     flex-direction:column;
-    margin:auto;
+    margin:auto; */
+    display: inline-block;
     height: 12rem;
+    width: 12rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
     /*background-image: url('/images/buildings_icon.png');
     background-size: contain;*/
 }
 
 #imagemCarro {
-    display:flex;
+    /* display:flex;
     flex-direction:column;
-    margin:auto;
+    margin:auto; */
+    display: inline-block;
     width: 10.5rem;
     height: 8.5rem;
-    transform: translateY(3.5rem);
+    /* transform: translateY(3.5rem); */
     /*background-image: url('/images/car_icon.png');
     background-size: contain;
     background-repeat: no-repeat;*/
 }
 
-#imovelA {
+/* #imovelA {
     height: 12rem;
     width: 12rem;
 }
 #carroA {
     height: 8.5rem;
     width: 10.5rem;
+} */
+
+#imovelImovel {
+    width: 12rem;
+    height: 12rem;
 }
 
 #labelImovel {
