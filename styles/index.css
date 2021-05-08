@@ -147,7 +147,7 @@ nav {
     grid-gap: 1rem; */
     width: 50rem;
     margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
     border: 2px solid #000;
     border: none;
     background: transparent;
@@ -163,7 +163,7 @@ nav {
     font-weight: bold;
     text-align: center;
     font-size: 1.2rem;
-    margin: 3rem 3.18rem 2rem 3.18rem;
+    margin: 3rem 3.18rem 5rem 3.18rem;
 }
 
 #textoWelcome h1 {
@@ -171,7 +171,7 @@ nav {
     font-size: 1.75rem;
     font-weight: 600;
     line-height: 1.5;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: var(--contDados-title);
 }
 
@@ -191,8 +191,8 @@ nav {
     display: inline-block;
     height: 12rem;
     width: 12rem;
-    margin-right: 10rem;
-    margin-left: 10rem;
+    margin-right: 13rem;
+    margin-left: 7rem;
     /*background-image: url('/images/buildings_icon.png');
     background-size: contain;*/
 }
@@ -202,22 +202,23 @@ nav {
     flex-direction:column;
     margin:auto; */
     display: inline-block;
-    width: 10.5rem;
-    height: 8.5rem;
+    height: 8rem;
+    width: 9.5rem;
     /* transform: translateY(3.5rem); */
     /*background-image: url('/images/car_icon.png');
     background-size: contain;
     background-repeat: no-repeat;*/
 }
 
-/* #imovelA {
+#imovelA {
     height: 12rem;
     width: 12rem;
 }
 #carroA {
-    height: 8.5rem;
-    width: 10.5rem;
-} */
+    display: block;
+    /* height: 8.5rem;
+    width: 10.5rem; */
+}
 
 #imovelImovel {
     width: 12rem;
@@ -227,7 +228,7 @@ nav {
 #labelImovel {
     font-size: 1.25rem;
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 2;
     margin-bottom: -2rem;
     transform: translateY(1rem);
     margin-left: auto;
@@ -237,7 +238,7 @@ nav {
 #labelCarro {
     font-size: 1.25rem;
     font-weight: 600;
-    line-height: 1.5;
+    /* line-height: 1.5; */
     margin-bottom: -2rem;
     transform: translate(-0.35rem, 1rem);
     text-align: center;
@@ -374,6 +375,10 @@ footer a:hover {
         padding:1rem;
         width:45.8rem;
     }
+    #imagemImovel {
+        margin-right: 11rem;
+        margin-left: 5rem;
+    }
     footer {
         width:51.9rem;
     }
@@ -385,6 +390,7 @@ footer a:hover {
 @media (max-width: 720px) {
     #textoWelcome {
         width: 32rem;
+        margin-bottom: 2rem;
     }
     #textoWelcome h1 {
         font-size: 1.5rem;
@@ -405,14 +411,18 @@ footer a:hover {
         grid-gap:3rem;
         width:35rem;
     }
-    #imagemCarro {
-        width: 9.5rem;
-        height: 7.5rem;
+    #imagemImovel {
+        margin: auto;
     }
-    #carroA {
+    #imagemCarro {
+        margin-top: 2rem;
+        width: 9.5rem;
+        /* height: 7.5rem; */
+    }
+    /* #carroA {
         width: 9.7rem;
         height: 7.5rem;
-    }
+    } */
 
     #labelCarro {
         font-size: 1.15rem;
@@ -474,7 +484,7 @@ footer a:hover {
     }
     #textoWelcome h1 {
         font-size: 1.75rem;
-        margin-bottom:1rem;
+        margin-bottom:2rem;
         width:16rem;
         margin-left:auto;
         margin-right:auto;
@@ -494,6 +504,10 @@ footer a:hover {
         margin-top: 3rem;
         width: 24rem;
     }
+    #imovelImovel {
+        height: 10rem;
+        width: 10rem;
+    }
     #imagemImovel {
         height: 10rem;
         width: 10rem;
@@ -510,12 +524,13 @@ footer a:hover {
         width: 10rem;
     }
 
-    #carroA {
+    /* #carroA {
         width: 8.5rem;
         height: 6.5rem;
-    }
+    } */
 
     #labelImovel {
+        display: block;
         width: 11rem;
         font-size: 1.15rem;
         margin-bottom: -2rem;
@@ -568,17 +583,17 @@ footer a:hover {
         width: 10rem;
         background-repeat: no-repeat;
     }
-    #imagemCarro {
+    /* #imagemCarro {
         height: 6.5rem;
-    }
+    } */
     #imovelA {
         height: 10rem;
         width: 10rem;
     }
-    #carroA {
+    /* #carroA {
         height: 6.5rem;
         width: 8.5rem;
-    }
+    } */
     #labelImovel {
         width: 11rem;
         font-size: 1.15rem;
@@ -603,16 +618,22 @@ footer a:hover {
     #textoWelcome {
         width: 18rem;
         margin:0;
+        margin-bottom: 1rem;
     }
     #textoWelcome h1 {
         font-size: 1.5rem;
-        margin-bottom:1rem;
+        margin-bottom:2rem;
     }
     #textoWelcome h2 {
         font-size:0.75rem;
     }
     .containerDados {
         width:18.5rem;
+        margin-bottom: 8rem;
+    }
+    #imovelImovel {
+        height: 8rem;
+        width: 8rem;
     }
     #imagemImovel {
         height: 8rem;
@@ -628,8 +649,8 @@ footer a:hover {
         width: 8rem;
     }
     #carroA {
-        height: 5rem;
-        width: 6rem;
+        width: 6.8rem;
+        transform: inherit;
     }
     #labelImovel {
         width: 10rem;
@@ -641,7 +662,7 @@ footer a:hover {
         width: 7rem;
         font-size: 1rem;
         margin-bottom: -2rem;
-        transform: translate(-0.5rem, 0.2rem);
+        transform: translate(-0.4rem, 0.2rem);
         text-align: center;
     }
     #btnScroll {
