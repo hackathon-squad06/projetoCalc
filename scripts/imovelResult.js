@@ -1,21 +1,21 @@
-let valorImovel = formatarMoeda(sessionStorage.getItem("valorImovel"));
-let valorImovelFuturo = formatarMoeda(sessionStorage.getItem("valorImovelFuturo"));
-let valorTotalPago = formatarMoeda(sessionStorage.getItem("valorTotalPago"));
-let valorJurosPago = formatarMoeda(sessionStorage.getItem("valorJurosPago"));
-let valorInvestimentoTotal = formatarMoeda(sessionStorage.getItem("valorInvestimentoTotal"));
-let entrada = formatarMoeda(sessionStorage.getItem("entrada"));
-let taxaRendimento = sessionStorage.getItem("taxaRendimento");
-let taxaFinanciamento = sessionStorage.getItem("taxaFinanciamento");
-let prazoFinanciamento = sessionStorage.getItem("prazoFinanciamento");
-let prazoFinanciamentoAnos = sessionStorage.getItem("prazoFinanciamentoAnos");
-let valorFinanciado = formatarMoeda(sessionStorage.getItem("valorFinanciado"));
-let parcelaFinanciamento = formatarMoeda(sessionStorage.getItem("parcelaFinanciamento"));
-let valorInvestimentoMensalmente = formatarMoeda(sessionStorage.getItem("valorInvestimentoMensalmente"));
-let valorDepositoInicial = formatarMoeda(sessionStorage.getItem("valorDepositoInicial"));
-let prazoRentabilidadeAnos = sessionStorage.getItem("prazoRentabilidadeAnos");
-let valorTotalPagoFinancimento = formatarMoeda(sessionStorage.getItem("valorTotalPagoFinancimento"));
-let sobraInvestimento = formatarMoeda(sessionStorage.getItem("sobraInvestimento"));
-let melhorOpcao = sessionStorage.getItem("melhorOpcao");
+// let valorImovel = formatarMoeda(sessionStorage.getItem("valorImovel"));
+// let valorImovelFuturo = formatarMoeda(sessionStorage.getItem("valorImovelFuturo"));
+// let valorTotalPago = formatarMoeda(sessionStorage.getItem("valorTotalPago"));
+// let valorJurosPago = formatarMoeda(sessionStorage.getItem("valorJurosPago"));
+// let valorInvestimentoTotal = formatarMoeda(sessionStorage.getItem("valorInvestimentoTotal"));
+// let entrada = formatarMoeda(sessionStorage.getItem("entrada"));
+// let taxaRendimento = sessionStorage.getItem("taxaRendimento");
+// let taxaFinanciamento = sessionStorage.getItem("taxaFinanciamento");
+// let prazoFinanciamento = sessionStorage.getItem("prazoFinanciamento");
+// let prazoFinanciamentoAnos = sessionStorage.getItem("prazoFinanciamentoAnos");
+// let valorFinanciado = formatarMoeda(sessionStorage.getItem("valorFinanciado"));
+// let parcelaFinanciamento = formatarMoeda(sessionStorage.getItem("parcelaFinanciamento"));
+// let valorInvestimentoMensalmente = formatarMoeda(sessionStorage.getItem("valorInvestimentoMensalmente"));
+// let valorDepositoInicial = formatarMoeda(sessionStorage.getItem("valorDepositoInicial"));
+// let prazoRentabilidadeAnos = sessionStorage.getItem("prazoRentabilidadeAnos");
+// let valorTotalPagoFinancimento = formatarMoeda(sessionStorage.getItem("valorTotalPagoFinancimento"));
+// let sobraInvestimento = formatarMoeda(sessionStorage.getItem("sobraInvestimento"));
+// let melhorOpcao = sessionStorage.getItem("melhorOpcao");
 
 
 const valorImovelDisplay = document.getElementById("valorImovelAtual");
@@ -66,7 +66,7 @@ melhorOpcaoDisplay.innerHTML = melhorOpcao;
 
 
 function retornar() {
-    sessionStorage.clear();
+    // sessionStorage.clear();
     window.location.href = "/imovelCalc.html";
 }
 
