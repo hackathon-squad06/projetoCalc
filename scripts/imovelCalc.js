@@ -195,6 +195,14 @@ function valorInvestimentoMensal() {
     let taxaFin = realParseFloat(document.getElementById('inputTaxaFin').value);
     let prazoFin = realParseFloat(document.getElementById('inputPrazoFin').value);
 
+    if (taxaFin > 100) {
+        taxaFin = taxaFin + '';
+        taxaFin = parseInt(taxaFin.replace(/[\D]+/g, ''));
+        taxaFin = taxaFin + '';
+        taxaFin = taxaFin.replace(/(\d{2})$/, ",$1");
+        taxaFin = realParseFloat(taxaFin)
+    }
+
     let valorFinanciado = valorDeCompra - valorDaEntrada
     let prazoFinMes = prazoFin * 12
     let taxaFinMes = ((1 + (taxaFin / 100)) ** (1 / 12)) - 1
@@ -254,7 +262,7 @@ function formatarPorcentagem(element) {
     var containWord = /[a-z]/i.test(valor)
     var containSimbol = /[`~!@#$%^&*()_|+\-=?;:'"<>\{\}\[\]\\\/]/gi.test(valor)
 
-    if (valor > 50) {
+    if (valor > 100) {
         valor = valor + '';
         valor = parseInt(valor.replace(/[\D]+/g, ''));
         valor = valor + '';
