@@ -67,7 +67,7 @@
                             </div>
 
                             <input inputmode="numeric" required onkeyup="formatarReais(this)"
-                                onblur="valorInvestimentoMensal (valorDeCompra)" id="inputValorImovel" placeholder="R$"
+                                onblur="valorInvestimentoMensal (valorDeCompra)" onfocusout="numCheck(this)" id="inputValorImovel" placeholder="R$"
                                 type="text" maxlength="16" />
                         </div>
 
@@ -82,7 +82,7 @@
                             </div>
 
                             <input inputmode="numeric" required onkeyup="formatarReais(this)"
-                                onblur="valorInvestimentoMensal (valorDoAluguel)" id="inputAluguel" placeholder="R$"
+                                onblur="valorInvestimentoMensal (valorDoAluguel)" onfocusout="numCheck(this)" id="inputAluguel" placeholder="R$"
                                 type="text" maxlength="12" />
                         </div>
                     </div>
@@ -122,7 +122,7 @@
 
                             <input inputmode="numeric" required onkeyup="formatarReais(this)" id="inputEntrada"
                                 class="dadosCampos" onchange="entrada()"
-                                onblur="calcDeposito(valorDaEntrada, custosAdicionais), valorInvestimentoMensal (valorDaEntrada)"
+                                onblur="calcDeposito(valorDaEntrada, custosAdicionais), valorInvestimentoMensal (valorDaEntrada)" onfocusout="numCheck(this)"
                                 placeholder="R$" type="text" maxlength="13" />
                         </div>
 

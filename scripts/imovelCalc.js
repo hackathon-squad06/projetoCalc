@@ -110,7 +110,7 @@ function formatarReais(campo) {
     campo.value = "R$ " + valor;
     if (valor == 'NaN') {
         campo.value = '';
-    }
+    } 
 
     //Transforma a string em número
     digitou.onchange = function () {
@@ -176,9 +176,10 @@ function calcDeposito(valorDaEntrada, custosAdicionais) {
     if (custosAdicionais == undefined) {
         custosAdicionais = 0
     }
+
     let deposito = valorDaEntrada + custosAdicionais
 
-    if (isNaN(deposito)) {
+    if (isNaN(deposito) || deposito == custosAdicionais) {
         depositoInicial.innerHTML = 'Adicione os dados para o cálculo'
         depositoInicial.value = null
     } else {
@@ -211,11 +212,11 @@ function valorInvestimentoMensal() {
     const investimentoMensalValor = parcelaFin2 - valorDoAluguel
     const investimentoMensalFinal = investimentoMensalValor.toFixed(0)
 
-    if (isNaN(investimentoMensalFinal)) {
+    if (investimentoMensalFinal < 0) {
+        investimentoMensal.innerHTML = 'R$ 0,00'
+    } else if (isNaN(investimentoMensalFinal)) {
         investimentoMensal.innerHTML = 'Adicione os dados para o cálculo'
         investimentoMensal.value = null
-    } else if (investimentoMensalFinal < 0) {
-        investimentoMensal.value = 'R$ 0,00'
     } else {
         var formatoReais = { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' }
         let investimentoFloat = realParseFloat(investimentoMensalFinal)
@@ -238,7 +239,7 @@ function formatarAnos(element) {
         valor = valorA.replace(/[\D]+/g, '')
         campo.value = valor;
     }
-    if (valor == '' || valor < 0) {
+    if (valor == '' || valor <= 0) {
         console.log('é NaN')
         valor = ''
         campo.value = null;
@@ -275,7 +276,7 @@ function formatarPorcentagem(element) {
         valor = valorA.replace(/[\D]+/g, '')
         campo.value = valor;
     }
-    if (valor == '' || valor < 0) {
+    if (valor == '' || valor <= 0) {
         console.log('é NaN')
         valor = ''
         campo.value = null;
@@ -306,5 +307,16 @@ function realParseFloat(s) {
     else {
         s = s.replace(/,/g, '');
         return parseFloat(s);
+    }
+}
+
+function numCheck (element) {
+    var id = element.id
+    var campo = document.getElementById(id)
+    var valor = campo.value
+    if (valor == "R$ 0") {
+        console.log('é NaN')
+        valor = ''
+        campo.value = null;
     }
 }
