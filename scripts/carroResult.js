@@ -1,12 +1,12 @@
-// let gastosTotaisCarro = formatarMoeda(sessionStorage.getItem("gastosTotaisCarro"));
-// let gastosAnuais = formatarMoeda(sessionStorage.getItem("gastosAnuais"));
-// let gastosEstacionamento = formatarMoeda(sessionStorage.getItem("gastosEstacionamento"));
-// let gastosManutencao = formatarMoeda(sessionStorage.getItem("gastosManutencao"));
-// let gastosCombustivel = formatarMoeda(sessionStorage.getItem("gastosCombustivel"));
-// let gastosApp = formatarMoeda(sessionStorage.getItem("gastosApp"));
-// let usoApp = sessionStorage.getItem("usoApp");
-// let diferenca = formatarMoeda(sessionStorage.getItem("diferenca"));
-// let melhorOpcao = sessionStorage.getItem("melhorOpcao");
+let gastosTotaisCarro = formatarMoeda(sessionStorage.getItem("gastosTotaisCarro"));
+let gastosAnuais = formatarMoeda(sessionStorage.getItem("gastosAnuais"));
+let gastosEstacionamento = formatarMoeda(sessionStorage.getItem("gastosEstacionamento"));
+let gastosManutencao = formatarMoeda(sessionStorage.getItem("gastosManutencao"));
+let gastosCombustivel = formatarMoeda(sessionStorage.getItem("gastosCombustivel"));
+let gastosApp = formatarMoeda(sessionStorage.getItem("gastosApp"));
+let usoApp = sessionStorage.getItem("usoApp");
+let diferenca = formatarMoeda(sessionStorage.getItem("diferenca"));
+let melhorOpcao = sessionStorage.getItem("melhorOpcao");
 
 const gastosTotaisCarroDisplay = document.getElementById("totalCarro");
 gastosTotaisCarroDisplay.innerHTML = gastosTotaisCarro;
@@ -41,7 +41,7 @@ melhorOpcaoDisplay.innerHTML = melhorOpcao;
 
 
 function retornar() {
-    // sessionStorage.clear();
+    sessionStorage.clear();
     window.location.href = "/carroCalc.html";
 }
 

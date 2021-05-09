@@ -33,15 +33,15 @@ function calcular() {
 
     console.log(gastosTotaisCarro, gastosAnuais, gastosEstacionamento, gastosManutencao, gastosCombustivel, gastosApp, usoApp, diferenca, melhorOpcao);
 
-    // sessionStorage.setItem("gastosTotaisCarro", gastosTotaisCarro);
-    // sessionStorage.setItem("gastosAnuais", gastosAnuais);
-    // sessionStorage.setItem("gastosEstacionamento", gastosEstacionamento);
-    // sessionStorage.setItem("gastosManutencao", gastosManutencao);
-    // sessionStorage.setItem("gastosCombustivel", gastosCombustivel)
-    // sessionStorage.setItem("gastosApp", gastosApp);
-    // sessionStorage.setItem("usoApp", usoApp);
-    // sessionStorage.setItem("diferenca", diferenca);
-    // sessionStorage.setItem("melhorOpcao", melhorOpcao);
+    sessionStorage.setItem("gastosTotaisCarro", gastosTotaisCarro);
+    sessionStorage.setItem("gastosAnuais", gastosAnuais);
+    sessionStorage.setItem("gastosEstacionamento", gastosEstacionamento);
+    sessionStorage.setItem("gastosManutencao", gastosManutencao);
+    sessionStorage.setItem("gastosCombustivel", gastosCombustivel)
+    sessionStorage.setItem("gastosApp", gastosApp);
+    sessionStorage.setItem("usoApp", usoApp);
+    sessionStorage.setItem("diferenca", diferenca);
+    sessionStorage.setItem("melhorOpcao", melhorOpcao);
 
     window.location.href = "/carroResult.html";
 }
