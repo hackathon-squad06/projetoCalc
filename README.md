@@ -21,9 +21,9 @@ O projeto foi desenvolvido pelo SQUAD 6 durante o Hackathon oferecido pela FCama
 
 ### Imagens 🖼️
 <table>
-  <tr>
-    <td align="center" style="border: 0px"><img src="https://github.com/gfhdutra/backgrounds/blob/main/gif_imovel_540p.gif" width="1080px" alt=""/><br /><sub><b>Cálulo do Imóvel</b></sub><br /></td>
-    <td align="center" style="border: 0px"><img src="https://github.com/gfhdutra/backgrounds/blob/main/gif_carro_540p.gif" width="1080px" alt=""/><br /><sub><b>Cálulo do Automóvel</b></sub><br /></td>
+  <tr border>
+    <td align="center"><img src="https://github.com/gfhdutra/backgrounds/blob/main/gif_imovel_540p_zoom.gif" width="1080px" alt=""/><br /><sub><b>Cálulo do Imóvel</b></sub><br /></td>
+    <td align="center"><img src="https://github.com/gfhdutra/backgrounds/blob/main/gif_carro_540p_zoom.gif" width="1080px" alt=""/><br /><sub><b>Cálulo do Automóvel</b></sub><br /></td>
   </tr>
  </table>
 
