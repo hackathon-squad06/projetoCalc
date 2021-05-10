@@ -27,7 +27,7 @@ OBS: recomendamos utilizar o site pelos navegadores Chrome, Opera, Mozilla Firef
     <td align="center"><img src="https://github.com/hackathon-squad06/gifs/blob/main/gifs/gif_carro_540p_zoom.gif" width="1080px" alt=""/><br /><sub><b>Cálulo do Automóvel</b></sub><br /></td>
   </tr>
   <tr> 
-    <td align="center"><img src="https://github.com/hackathon-squad06/gifs/blob/main/gifs/gif_darkHome_1080p.gif" width="1080px" alt=""/><br /><sub><b>Dark Mode</b></sub><br /></td>
+    <td colspan="2" align="center"><img src="https://github.com/hackathon-squad06/gifs/blob/main/gifs/gif_darkHome_1080p.gif" width="700px" alt=""/><br /><sub><b>Dark Mode</b></sub><br /></td>
   </tr>
  </table>
 
