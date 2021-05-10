@@ -6,6 +6,7 @@
 O Economi-Z é uma calculadora de comparações criada com intuito de fomentar a educação financeira e o habito de se planejar.
 O projeto foi desenvolvido pelo SQUAD 6 durante o Hackathon oferecido pela FCamara em parceria com a Alura.
 ### Site: https://economiz.netlify.app 🖥️
+### Site em segunda hospedagem: https://economi-z.000webhostapp.com/index.html 🖥️
 OBS: recomendamos utilizar o site pelos navegadores Chrome, Opera ou Mozilla Firefox.
 <br>
 
@@ -32,15 +33,14 @@ OBS: recomendamos utilizar o site pelos navegadores Chrome, Opera ou Mozilla Fir
 ### Tecnologias utilizadas: 🧰
 <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" target="_blank"><img  src="https://img.shields.io/static/v1?label=&message=html5&color=0D1017&style=for-the-badge&logo=html5&logoColor=E34F26&link=https://leftgithub.com"/></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img  src="https://img.shields.io/static/v1?label=&message=css3&color=0D1017&style=for-the-badge&logo=css3&logoColor=1572B6"/></a>
-<a href="https://www.javascript.com/"><img  src="https://img.shields.io/static/v1?label=&message=javascript&color=0D1017&style=for-the-badge&logo=javascript&logoColor=F7DF1E"/></a>
+<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"><img  src="https://img.shields.io/static/v1?label=&message=javascript&color=0D1017&style=for-the-badge&logo=javascript&logoColor=F7DF1E"/></a>
 
 
 ### Links complementares: 🔗
-- Notion:
-- Figma: 
-- Vídeo pitch:
-- Vídeo funcionalidade:
-
+- <a href="https://www.notion.so/squad6/Programa-de-Forma-o-341ed514928d487da8a4dae16f6c248b" title="Link Notion">Notion</a>
+- <a href="https://www.figma.com/file/0oVJHDnoPJPGqMZQE8lIXc/Economi-Z?node-id=0%3A1" title="Link Figma">Figma</a>
+- <a href="https://www.youtube.com/watch?v=uSmSsfDlJ9Q" title="Link Pitch">Vídeo Pitch</a>
+- <a href="https://www.youtube.com/watch?v=LsJsFrEBUNA" title="Link Funcionalidades">Vídeo Funcionalidades</a>
 
 ### Autores do projeto: 🧙
 <table>
