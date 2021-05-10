@@ -6,7 +6,7 @@
 O Economi-Z é uma calculadora de comparações criada com intuito de fomentar a educação financeira e o habito de se planejar.
 O projeto foi desenvolvido pelo SQUAD 6 durante o Hackathon oferecido pela FCamara em parceria com a Alura.
 ### Site: https://economiz.netlify.app 🖥️
-
+### OBS: recomendamos utilizar o site pelos navegadores Chrome, Opera ou Mozilla Firefox.
 <br>
 
 ### Quais são as comparações? 🔍
